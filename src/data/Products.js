@@ -1,7 +1,7 @@
 const ProductsData = [
     {
         id: 1,
-        title: "3D™ wireless headset",
+        title: "Double Apple",
         thumbnail: "/images/product/product-big-03.png",
         hoverThumbnail: "/images/product/product-big-02.png",
         gallery: ["/images/product/product-big-01.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
@@ -84,7 +84,7 @@ const ProductsData = [
     },
     {
         id: 2,
-        title: "PS2 DualShock 2 Wireless Controller",
+        title: "Lee Punch",
         thumbnail: "/images/product/electric/product-08.png",
         hoverThumbnail: "/images/product/electric/product-08.png",
         gallery: ["/images/product/electric/product-08.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
@@ -126,7 +126,7 @@ const ProductsData = [
     },
     {
         id: 3,
-        title: "Wired Keyboard & Mouse Combo Pack",
+        title: "Love 69 Gold",
         thumbnail: "/images/product/electric/product-02.png",
         hoverThumbnail: "/images/product/electric/product-06.png",
         gallery: ["/images/product/electric/product-02.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
@@ -182,7 +182,7 @@ const ProductsData = [
     },
     {
         id: 4,
-        title: "Logitech Streamcam",
+        title: "Viva La Fiesta",
         thumbnail: "/images/product/electric/product-03.png",
         gallery: ["/images/product/electric/product-03.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Electronics",
@@ -237,7 +237,7 @@ const ProductsData = [
     },
     {
         id: 5,
-        title: "3D™ wireless headset",
+        title: "Ice Kaktuz",
         thumbnail: "/images/product/electric/product-04.png",
         hoverThumbnail: "/images/product/electric/product-06.png",
         gallery: ["/images/product/electric/product-04.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
@@ -279,7 +279,7 @@ const ProductsData = [
     },
     {
         id: 6,
-        title: "Bass Meets Clarity",
+        title: "Red Citruz",
         thumbnail: "/images/product/electric/product-05.png",
         hoverThumbnail: "/images/product/electric/product-04.png",
         gallery: ["/images/product/electric/product-05.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
@@ -335,7 +335,7 @@ const ProductsData = [
     },
     {
         id: 7,
-        title: "Mouce Logitech",
+        title: "Joosy",
         thumbnail: "/images/product/electric/product-06.png",
         gallery: ["/images/product/electric/product-06.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Electronics",
@@ -390,7 +390,7 @@ const ProductsData = [
     },
     {
         id: 8,
-        title: "Playstation Controller",
+        title: "Kiwi P.",
         thumbnail: "/images/product/electric/product-01.png",
         hoverThumbnail: "/images/product/electric/product-08.png",
         pCate: "Electronics",
@@ -447,7 +447,7 @@ const ProductsData = [
     },
     {
         id: 9,
-        title: "Zone Headphone",
+        title: "Grape Mint",
         thumbnail: "/images/product/electric/product-07.png",
         hoverThumbnail: "/images/product/electric/product-08.png",
         gallery: ["/images/product/electric/product-07.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
@@ -489,7 +489,7 @@ const ProductsData = [
     },
     {
         id: 10,
-        title: "Playstation Black Controller",
+        title: "Ice Finger",
         thumbnail: "/images/product/electric/product-08.png",
         gallery: ["/images/product/electric/product-08.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Electronics",
@@ -544,7 +544,7 @@ const ProductsData = [
     },
     {
         id: 11,
-        title: "Media Remote",
+        title: "Charly Punch Noir",
         thumbnail: "/images/product/electric/product-09.png",
         gallery: ["/images/product/electric/product-09.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Electronics",
@@ -585,7 +585,7 @@ const ProductsData = [
     },
     {
         id: 12,
-        title: "HD Camera",
+        title: "Ice Kaktuz Noir",
         thumbnail: "/images/product/electric/product-10.png",
         gallery: ["/images/product/electric/product-10.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Electronics",
@@ -625,7 +625,7 @@ const ProductsData = [
     },
     {
         id: 13,
-        title: "Gaming Controller",
+        title: "Joosy Noir",
         thumbnail: "/images/product/electric/product-11.png",
         gallery: ["/images/product/electric/product-11.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Electronics",
@@ -665,7 +665,7 @@ const ProductsData = [
     },
     {
         id: 14,
-        title: "Wall Mount",
+        title: "Red Citruz Noir",
         thumbnail: "/images/product/electric/product-12.png",
         gallery: ["/images/product/electric/product-12.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Electronics",
@@ -705,7 +705,7 @@ const ProductsData = [
     },
     {
         id: 15,
-        title: "Lenevo Laptop",
+        title: "Kiwi P. Noir",
         thumbnail: "/images/product/electric/product-13.png",
         gallery: ["/images/product/electric/product-13.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Electronics",
@@ -785,7 +785,7 @@ const ProductsData = [
     },
     {
         id: 17,
-        title: "Wireless Headphone",
+        title: "Grape Mint Noir",
         thumbnail: "/images/product/electric/product-15.png",
         gallery: ["/images/product/electric/product-15.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Electronics",
