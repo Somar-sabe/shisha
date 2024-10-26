@@ -5,64 +5,43 @@ const HeaderMenu = [
         hasChildren: true,
         children: [
             {
-                name: "Electronics",
-                url: "/home/electronics"
+                name: "Shisha Tabak",
+                url: "/home/furniture"
             },
             
             {
-                name: "Jewellery",
-                url: "/home/jewellery"
+                name: "Shisha Tabak",
+                url: "/home/furniture"
             },
            
             {
-                name: "Fashion",
-                url: "/home/fashion"
+                name: "pipe tobacco",
+                url: "/home/furniture"
             },
            
             {
-                name: "Furniture",
+                name: "shisha / water pipe",
                 url: "/home/furniture"
             },
             {
-                name: "NFT",
-                url: "/home/nft"
+                name: "shisha coal",
+                url: "/home/furniture"
+            },
+            {
+                name: "charcoal lighter",
+                url: "/home/furniture"
+            },
+            {
+                name: "shisha accessories",
+                url: "/home/furniture"
             },
         ]
     },
     {
         name: "Shop",
-        url: "#",
-        hasChildren: true,
-        children: [
-            {
-                name: "Shop",
-                url: "/shop"
-            },
-            {
-                name: "Shop Without Sidebar",
-                url: "/shop?layout=no-sidebar"
-            },
-            {
-                name: "Product Variation 1",
-                url: "/products/43"
-            },
-            {
-                name: "Product Variation 2",
-                url: "/products/65"
-            },
-            {
-                name: "Product Variation 3",
-                url: "/products/2"
-            },
-            {
-                name: "Product Variation 4",
-                url: "/products/77"
-            },
-            {
-                name: "Product Variation 5",
-                url: "/products/19"
-            }
-        ]
+        url: "/shop?layout=no-sidebar",
+        hasChildren: false,
+       
     },
     {
         name: "Pages",
