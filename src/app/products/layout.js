@@ -10,7 +10,7 @@ const SingleProductLayout = ({ children }) => {
         <HeaderFive headerSlider/>
         <main className="main-wrapper">
            {children}
-            <NewsLetter />
+            
             <ServiceTwo />
         </main>
         <FooterTwo />
