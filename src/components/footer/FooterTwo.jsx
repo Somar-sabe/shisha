@@ -66,7 +66,7 @@ const FooterTwo = () => {
                       <div className="qr-code">
                         <Image
                           src={FooterData.footerAppInfo.qrCode}
-                          alt="Axilthemes"
+                          alt="Evolabs"
                           height={98}
                           width={98}
                         />
@@ -123,8 +123,8 @@ const FooterTwo = () => {
                   <ul className="quick-link">
                     <li>
                       © {new Date().getFullYear()}. All rights reserved by {" "}
-                      <a target="_blank" href="https://axilthemes.com/">
-                        Axilthemes
+                      <a target="_blank" href="https://Evolabs.com/">
+                        Evolabs
                       </a>
                       .
                     </li>

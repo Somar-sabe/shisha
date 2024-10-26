@@ -70,8 +70,8 @@ const FooterData = {
     ],
     footerInfo: {
         address: "685 Market Street, <br /> Las Vegas, LA 95820, <br /> United States.",
-        email: "example@domain.com",
-        phone: "(+01) 850-315-5862"
+        email: "Info@holster-tobacco.com",
+        phone: "+971 55 429 1019"
     },
     footerAppInfo: {
         title: "Save $3 With App & New User only",
