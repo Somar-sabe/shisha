@@ -1,7 +1,7 @@
 const HeaderMenu = [
     {
         name: "Home",
-        url: "",
+        url: "/home/furniture",
         hasChildren: true,
         children: [
             {
