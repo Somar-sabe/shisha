@@ -219,7 +219,6 @@ const HomeFurniture = () => {
 
                 </SlickSlider>
             </Section>
-            <NewsLetter bgImage="bg_image--6"/>
             <ServiceTwo />
         </main>
         <FooterTwo />
