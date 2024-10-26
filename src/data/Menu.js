@@ -5,12 +5,7 @@ const HeaderMenu = [
         hasChildren: true,
         children: [
             {
-                name: "Shisha Tabak",
-                url: "/home/furniture"
-            },
-            
-            {
-                name: "Shisha Tabak",
+                name: "Shisha Tobaco",
                 url: "/home/furniture"
             },
            
