@@ -69,7 +69,7 @@ const FooterData = {
         }
     ],
     footerInfo: {
-        address: "685 Market Street, <br /> Las Vegas, LA 95820, <br /> United States.",
+        address: "Marasi Street, <br /> Dubai, Buissness bay, <br /> UAE.",
         email: "Info@holster-tobacco.com",
         phone: "+971 55 429 1019"
     },
