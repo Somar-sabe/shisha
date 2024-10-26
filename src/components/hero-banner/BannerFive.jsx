@@ -10,7 +10,7 @@ const BannerFive = () => {
         <div className="container">
           <div className="slider-box-wrap">
             <SlickSlider class="axil-slick-dots slider-activation-two" slidesToShow={1} fade={true} arrows={false} dots={true}>
-              {FurnitureSlider.map((data, index) => (
+              {Furniture.map((data, index) => (
                 <div key={index}>
                   <div className="single-slide">
                       <div className="main-slider-content">

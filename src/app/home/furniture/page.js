@@ -85,21 +85,7 @@ const HomeFurniture = () => {
                 ))}
             </SlickSlider>
             </Section>
-            <Section pClass="pb--0" borderBottom="pb--50">
-                <SectionTitle
-                title="Best Sellers"
-                subtitle="This Month"
-                subtitleIcon="far fa-shopping-basket"
-                subColor="highlighter-secondary"
-                />
-                <div className="row">
-                    {transparentProduct.slice(0, 8).map((data) => (
-                        <div className="col-xl-3 col-lg-4 col-sm-6" key={data.id}>
-                            <ProductSeven product={data} />
-                        </div>
-                    ))}
-                </div>
-            </Section>
+
             <WhoWeAre />
             <Section pClass="pb--50 pb_sm--30">
                 <SectionTitle
