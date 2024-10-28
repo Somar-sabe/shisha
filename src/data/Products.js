@@ -86,8 +86,8 @@ const ProductsData = [
     {
         id: 2,
         title: "Lee Punch",
-        thumbnail: "/images/product/Lee Punch_webshop_UAE.png",
-        hoverThumbnail: "/images/product/Lee Punch_webshop_UAE.png",
+        thumbnail: "/images/product/furniture/Lee Punch_webshop_UAE.png",
+        hoverThumbnail: "/images/product/furniture/Lee Punch_webshop_UAE.png",
         gallery: ["/images/product/product-big-01.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Furniture",
         cate: ["Headphones", "Computers"],
