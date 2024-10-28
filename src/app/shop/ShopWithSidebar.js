@@ -5,9 +5,7 @@ import ProductsData from "@/data/Products";
 import ProductOne from "@/components/product/ProductOne";
 import { slugify } from "@/utils";
 import { Category } from "@/data/ProductCategory";
-import { Gender } from "@/data/ProductAttribute";
-import { ColorAttribute } from "@/data/ProductAttribute";
-import { SizeAttribute } from "@/data/ProductAttribute";
+
 
 
 const ShopWithSidebar = () => {
@@ -15,36 +13,12 @@ const ShopWithSidebar = () => {
     const [productShow, setProductShow] = useState(9);
     const [filterText, setFilterText] = useState('');
     const [cateToggle, setcateToggle] = useState(true);
-    const [genderToggle, setgenderToggle] = useState(true);
-    const [colorToggle, setcolorToggle] = useState(true);
-    const [sizeToggle, setsizeToggle] = useState(true);
     const [priceRangeToggle, setpriceRangeToggle] = useState(true);
 
     const categoryHandler = (cateSelect) => {
         const cateFilterProduct = ProductsData.filter((data) =>(slugify(data.pCate) === cateSelect));
         setFilterProduct(cateFilterProduct)
         setFilterText(cateSelect);
-    }
-    const genderHandler = (genderSelect) => {
-        const genderFilterProduct = ProductsData.filter(data => data.gender === genderSelect);
-        setFilterProduct(genderFilterProduct)
-        setFilterText(genderSelect);
-    }
-    const colorHandler = (colorSelect) => {
-        let getColorData = ProductsData.filter((items) => {
-            let colors = items.colorAttribute?.filter(color => slugify(color.color) === colorSelect)
-            return colors?.length > 0;
-        })
-        setFilterProduct(getColorData)
-        setFilterText(colorSelect);
-    }
-    const sizeHandler = (sizeSelect) => {
-        let getSizeData = ProductsData.filter((items) => {
-            let sizes = items.sizeAttribute?.filter(size => slugify(size) === sizeSelect)
-            return sizes?.length > 0;
-        })
-        setFilterProduct(getSizeData);
-        setFilterText(sizeSelect);
     }
 
     const priceRangeHandler = (rangeSelect) => {
