@@ -84,7 +84,7 @@ const ProductsData = [
         ],
     },
     {
-        id: 1,
+        id: 2,
         title: "Lee Punch",
         thumbnail: "/images/product/Lee Punch_webshop_UAE.png",
         hoverThumbnail: "/images/product/Lee Punch_webshop_UAE.png",
@@ -225,8 +225,8 @@ const ProductsData = [
     {
         id: 4,
         title: "Viva La Fiesta",
-        thumbnail: "/images/product/furniture/product-03.png",
-        gallery: ["/images/product/furniture/product-03.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
+        thumbnail: "/images/product/furniture/Viva La Fiesta_webshop_UAE.png",
+        gallery: ["/images/product/furniture/Viva La Fiesta_webshop_UAE.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Furniture",
         cate: ["Camera & Photo"],
         price: 219,
