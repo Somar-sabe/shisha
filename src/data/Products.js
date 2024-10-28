@@ -83,16 +83,31 @@ const ProductsData = [
         ],
     },
     {
-        id: 2,
+        id: 1,
         title: "Lee Punch",
-        thumbnail: "/images/product/electric/product-08.png",
-        hoverThumbnail: "/images/product/electric/product-08.png",
-        gallery: ["/images/product/electric/product-08.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
+        thumbnail: "/images/product/product-big-03.png",
+        hoverThumbnail: "/images/product/product-big-02.png",
+        gallery: ["/images/product/product-big-01.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Furniture",
-        cate: ["PC Gaming"],
-        price: 49.99,
-        salePrice: 29.99,
+        cate: ["Headphones", "Computers"],
+        price: 500,
+        salePrice: 400,
         productType: "variable",
+        sizeAttribute: [ 'XL', 'L', 'M', 'S', 'XS'],
+        colorAttribute: [
+            {
+                color: 'red',
+                img:"/images/product/product-big-03.png",
+            },
+            {
+                color: 'black',
+                img:"/images/product/product-big-02.png"
+            },
+            {
+                color: 'skyblue',
+                img:"/images/product/product-big-01.png"
+            }
+        ],
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
             listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
@@ -122,7 +137,33 @@ const ProductsData = [
                     title: "Original Product"
                 }
             ]
-        }
+        },
+        addInfo: [
+            {
+                title: "Brand",
+                text: "eTrade"
+            },
+            {
+                title: "Collection",
+                text: "eTrade Capsules"
+            },
+            {
+                title: "Creator",
+                text: "Arnold Ray"
+            },
+            {
+                title: "Gen",
+                text: "1"
+            },
+            {
+                title: "Rarity",
+                text: "Epic"
+            },
+            {
+                title: "Type",
+                text: "Digital Art"
+            }
+        ],
     },
     {
         id: 3,
