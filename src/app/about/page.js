@@ -138,7 +138,7 @@ const AboutUs = () => {
                     ))}
                 </div>
             </section>
-            <NewsLetter />
+           
             <ServiceTwo />
         </main>
         <FooterTwo />

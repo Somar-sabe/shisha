@@ -182,7 +182,7 @@ const HomeJewellery = () => {
 
                 </SlickSlider>
             </Section>
-            <NewsLetter bgImage="bg_image--11"/>
+           
             <ServiceTwo />
         </main>
         <FooterTwo />

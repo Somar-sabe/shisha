@@ -77,7 +77,7 @@ const BlogPage = ({searchParams}) => {
                     </div>
                 </div>
             </Section>
-            <NewsLetter />
+            
             <ServiceTwo />
         </main>
         <FooterTwo />

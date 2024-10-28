@@ -13,7 +13,7 @@ const Shop = ({searchParams}) => {
         <Breadcrumb activeItem="Shop" title="Explore All Products" />
         <main className="main-wrapper">
             {searchParams.layout === "no-sidebar" ? <ShopNoSidebar />:<ShopWithSidebar />}
-            <NewsLetter />
+           
             <ServiceTwo />
         </main>
         <FooterTwo />

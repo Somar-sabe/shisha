@@ -33,7 +33,7 @@ const BlogCategory = ({params}) => {
                     ))}
                 </div> 
             </Section>
-            <NewsLetter />
+            
             <ServiceTwo />
         </main>
         <FooterTwo />

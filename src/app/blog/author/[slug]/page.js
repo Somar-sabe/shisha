@@ -33,7 +33,7 @@ const BlogAuthor = ({params}) => {
                     ))}
                 </div> 
             </Section>
-            <NewsLetter />
+            
             <ServiceTwo />
         </main>
         <FooterTwo />

@@ -63,7 +63,7 @@ const BlogDetails = async ({params}) => {
                     ))}
                 </SlickSlider>
             </Section>
-            <NewsLetter />
+            
             <ServiceTwo />
         </main>
         <FooterTwo />
