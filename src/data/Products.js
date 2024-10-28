@@ -587,8 +587,8 @@ const ProductsData = [
     {
         id: 11,
         title: "Charly Punch Noir",
-        thumbnail: "/images/product/electric/product-09.png",
-        gallery: ["/images/product/electric/product-09.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
+        thumbnail: "/images/product/furniture/NOIR_Charly Punch_webshop_UAE.png",
+        gallery: ["/images/product/furniture/NOIR_Charly Punch_webshop_UAE.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Furniture",
         cate: ["Accessories"],
         price: 50,
@@ -628,8 +628,8 @@ const ProductsData = [
     {
         id: 12,
         title: "Ice Kaktuz Noir",
-        thumbnail: "/images/product/electric/product-10.png",
-        gallery: ["/images/product/electric/product-10.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
+        thumbnail: "/images/product/furniture/Ice Kaktuz_webshop_UAE.png",
+        gallery: ["/images/product/furniture/Ice Kaktuz_webshop_UAE.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Furniture",
         cate: ["Accessories"],
         price: 49.99,
@@ -668,8 +668,8 @@ const ProductsData = [
     {
         id: 13,
         title: "Joosy Noir",
-        thumbnail: "/images/product/electric/product-11.png",
-        gallery: ["/images/product/electric/product-11.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
+        thumbnail: "/images/product/furniture/NOIR_Joosy_webshop_UAE.png",
+        gallery: ["/images/product/furniture/NOIR_Joosy_webshop_UAE.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Furniture",
         cate: ["Accessories"],
         price: 50,
@@ -708,8 +708,8 @@ const ProductsData = [
     {
         id: 14,
         title: "Red Citruz Noir",
-        thumbnail: "/images/product/electric/product-12.png",
-        gallery: ["/images/product/electric/product-12.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
+        thumbnail: "/images/product/furniture/NOIR_Red Citruz_webshop_UAE.png",
+        gallery: ["/images/product/furniture/NOIR_Red Citruz_webshop_UAE.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Furniture",
         cate: ["Accessories"],
         price: 19,
@@ -748,8 +748,8 @@ const ProductsData = [
     {
         id: 15,
         title: "Kiwi P. Noir",
-        thumbnail: "/images/product/electric/product-13.png",
-        gallery: ["/images/product/electric/product-13.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
+        thumbnail: "/images/product/furniture/NOIR_Kiwi P_webshop_UAE.png",
+        gallery: ["/images/product/furniture/NOIR_Kiwi P_webshop_UAE.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Furniture",
         cate: ["Laptops"],
         price: 999.99,
@@ -865,47 +865,7 @@ const ProductsData = [
             ]
         }
     },
-    {
-        id: 18,
-        title: "Asus Zenbook Laptop",
-        thumbnail: "/images/product/electric/product-16.png",
-        gallery: ["/images/product/electric/product-16.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
-        pCate: "Furniture",
-        cate: ["Laptops"],
-        price: 899.00,
-        productType: "simple",
-        shortDes: {
-            text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
-            listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
-        },
-        description: {
-            textDesc: [
-                {
-                    title: "Specifications:",
-                    text: "We’ve created a full-stack structure for our working workflow processes, were from the funny the century initial all the made, have spare to negatives. But the structure was from the funny the century rather, initial all the made, have spare to negatives."
-                },
-                {
-                    title: "Care & Maintenance:",
-                    text: "Use warm water to describe us as a product team that creates amazing UI/UX experiences, by crafting top-notch user experience."
-                }
-            ],
-            listDesc: [
-                {
-                    icon: "/images/product/product-thumb/icon-3.png",
-                    title: "Easy Returns"
-                },
-                {
-                    icon: "/images/product/product-thumb/icon-2.png",
-                    title: "Quality Service"
-                },
-                {
-                    icon: "/images/product/product-thumb/icon-1.png",
-                    title: "Original Product"
-                }
-            ]
-        }
-    },
-
+   
    
 ]
 
