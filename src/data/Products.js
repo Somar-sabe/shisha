@@ -5,7 +5,7 @@ const ProductsData = [
         thumbnail: "/images/product/furniture/Double Apple_webshop_UAE.png",
         
         hoverThumbnail: "/images/product/furniture/Double Apple_webshop_UAE.png",
-        gallery: ["/images/product/furniture/Double Apple_webshop_UAE.png","/images/product/furniture/Double Apple_webshop_UAE.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
+        gallery: ["/images/product/furniture/Double Apple_webshop_UAE.png","/images/product/furniture/Double Apple_webshop_UAE.png","/images/product/furniture/Double Apple_webshop_UAE.png","/images/product/furniture/Double Apple_webshop_UAE.png"],
         pCate: "Shisha Topaco",
         cate: ["Headphones", "Computers"],
         price: 500,
