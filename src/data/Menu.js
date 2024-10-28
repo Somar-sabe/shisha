@@ -7,7 +7,7 @@ const HeaderMenu = [
     },
     {
         name: "Shop",
-        url: "/shop?layout=no-sidebar",
+        url: "/shop",
         hasChildren: true,
         children: [
             {
