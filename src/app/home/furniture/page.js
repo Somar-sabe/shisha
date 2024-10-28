@@ -51,16 +51,14 @@ const HomeFurniture = () => {
                 <div className="sale-countdown countdown">
                     <CountDown date="2024-10-01T23:59:59" />
                 </div>
-
-                <div className="row">
+            </div>
+            <div className="row">
                     {furnitureProduct.slice(0, 8).map((data) => (
                         <div className="col-xl-3 col-lg-4 col-sm-6" key={data.id}>
                             <ProductSeven product={data} />
                         </div>
                     ))}
                 </div>
-            </div>
-
 
 
          
