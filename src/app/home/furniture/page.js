@@ -74,7 +74,7 @@ const HomeFurniture = () => {
                 subColor="highlighter-secondary"
                 />
                 <div className="row">
-                    {transparentProduct.slice(0, 8).map((data) => (
+                    {furnitureProduct.slice(0, 8).map((data) => (
                         <div className="col-xl-3 col-lg-4 col-sm-6" key={data.id}>
                             <ProductSeven product={data} />
                         </div>
