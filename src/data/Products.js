@@ -785,50 +785,11 @@ const ProductsData = [
             ]
         }
     },
-    {
-        id: 16,
-        title: "Juice Grinder Machine",
-        thumbnail: "/images/product/electric/product-14.png",
-        gallery: ["/images/product/electric/product-14.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
-        pCate: "Furniture",
-        cate: ["Accessories"],
-        price: 99.00,
-        productType: "simple",
-        shortDes: {
-            text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
-            listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
-        },
-        description: {
-            textDesc: [
-                {
-                    title: "Specifications:",
-                    text: "We’ve created a full-stack structure for our working workflow processes, were from the funny the century initial all the made, have spare to negatives. But the structure was from the funny the century rather, initial all the made, have spare to negatives."
-                },
-                {
-                    title: "Care & Maintenance:",
-                    text: "Use warm water to describe us as a product team that creates amazing UI/UX experiences, by crafting top-notch user experience."
-                }
-            ],
-            listDesc: [
-                {
-                    icon: "/images/product/product-thumb/icon-3.png",
-                    title: "Easy Returns"
-                },
-                {
-                    icon: "/images/product/product-thumb/icon-2.png",
-                    title: "Quality Service"
-                },
-                {
-                    icon: "/images/product/product-thumb/icon-1.png",
-                    title: "Original Product"
-                }
-            ]
-        }
-    },
+   
     {
         id: 17,
         title: "Grape Mint Noir",
-        thumbnail: "/images/product/electric/product-15.png",
+        thumbnail: "/images/product/furniture/NOIR_Grape Mint_webshop_UAE.png",
         gallery: ["/images/product/electric/product-15.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Furniture",
         cate: ["Headphones"],
