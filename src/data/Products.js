@@ -2,9 +2,10 @@ const ProductsData = [
     {
         id: 1,
         title: "Double Apple",
-        thumbnail: "/images/product/product-big-03.png",
-        hoverThumbnail: "/images/product/product-big-02.png",
-        gallery: ["/images/product/product-big-01.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
+        thumbnail: "/images/product/furniture/Double Apple_webshop_UAE.png",
+        
+        hoverThumbnail: "/images/product/furniture/Double Apple_webshop_UAE.png",
+        gallery: ["/images/product/furniture/Double Apple_webshop_UAE.png","/images/product/furniture/Double Apple_webshop_UAE.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Shisha Topaco",
         cate: ["Headphones", "Computers"],
         price: 500,
@@ -85,8 +86,8 @@ const ProductsData = [
     {
         id: 1,
         title: "Lee Punch",
-        thumbnail: "/images/product/product-big-03.png",
-        hoverThumbnail: "/images/product/product-big-02.png",
+        thumbnail: "/images/product/Lee Punch_webshop_UAE.png",
+        hoverThumbnail: "/images/product/Lee Punch_webshop_UAE.png",
         gallery: ["/images/product/product-big-01.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Furniture",
         cate: ["Headphones", "Computers"],
@@ -168,8 +169,8 @@ const ProductsData = [
     {
         id: 3,
         title: "Love 69 Gold",
-        thumbnail: "/images/product/electric/product-02.png",
-        hoverThumbnail: "/images/product/electric/product-06.png",
+        thumbnail: "/images/product/furniture/Love69_webshop_UAE.png",
+        hoverThumbnail: "/images/product/furniture/Love69_webshop_UAE.png",
         gallery: ["/images/product/electric/product-02.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Furniture",
         cate: ["Accessories"],
@@ -224,8 +225,8 @@ const ProductsData = [
     {
         id: 4,
         title: "Viva La Fiesta",
-        thumbnail: "/images/product/electric/product-03.png",
-        gallery: ["/images/product/electric/product-03.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
+        thumbnail: "/images/product/furniture/product-03.png",
+        gallery: ["/images/product/furniture/product-03.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Furniture",
         cate: ["Camera & Photo"],
         price: 219,
@@ -279,8 +280,8 @@ const ProductsData = [
     {
         id: 5,
         title: "Ice Kaktuz",
-        thumbnail: "/images/product/electric/product-04.png",
-        hoverThumbnail: "/images/product/electric/product-06.png",
+        thumbnail: "/images/product/furniture/Ice Kaktuz_webshop_UAE.png",
+        hoverThumbnail: "/images/product/furniture/Ice Kaktuz_webshop_UAE.png",
         gallery: ["/images/product/electric/product-04.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Shisha Topaco",
         cate: ["Headphones"],
@@ -321,8 +322,8 @@ const ProductsData = [
     {
         id: 6,
         title: "Red Citruz",
-        thumbnail: "/images/product/electric/product-05.png",
-        hoverThumbnail: "/images/product/electric/product-04.png",
+        thumbnail: "/images/product/furniture/NOIR_Red Citruz_webshop_UAE.png",
+        hoverThumbnail: "/images/product/furniture/NOIR_Red Citruz_webshop_UAE.png",
         gallery: ["/images/product/electric/product-05.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Furniture",
         cate: ["Accessories"],
@@ -377,7 +378,7 @@ const ProductsData = [
     {
         id: 7,
         title: "Joosy",
-        thumbnail: "/images/product/electric/product-06.png",
+        thumbnail: "/images/product/furniture/Joosy_webshop_UAE.png",
         gallery: ["/images/product/electric/product-06.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Furniture",
         cate: ["Computers"],
@@ -432,8 +433,8 @@ const ProductsData = [
     {
         id: 8,
         title: "Kiwi P.",
-        thumbnail: "/images/product/electric/product-01.png",
-        hoverThumbnail: "/images/product/electric/product-08.png",
+        thumbnail: "/images/product/furniture/Kiwi P_webshop_UAE.png",
+        hoverThumbnail: "/images/product/electric/Kiwi P_webshop_UAE.png",
         pCate: "Furniture",
         cate: ["Accessories", "Video Games"],
         price: 49.99,
@@ -489,8 +490,8 @@ const ProductsData = [
     {
         id: 9,
         title: "Grape Mint",
-        thumbnail: "/images/product/electric/product-07.png",
-        hoverThumbnail: "/images/product/electric/product-08.png",
+        thumbnail: "/images/product/furniture/Grape Mint_webshop_UAE.png",
+        hoverThumbnail: "/images/product/electric/Grape Mint_webshop_UAE.png",
         gallery: ["/images/product/electric/product-07.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Furniture",
         cate: ["Headphones"],
@@ -531,7 +532,7 @@ const ProductsData = [
     {
         id: 10,
         title: "Ice Finger",
-        thumbnail: "/images/product/electric/product-08.png",
+        thumbnail: "/images/product/furniture/Ice Finger_webshop_UAE.png",
         gallery: ["/images/product/electric/product-08.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Furniture",
         cate: ["PC Gaming"],
