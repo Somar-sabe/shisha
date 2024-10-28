@@ -11,6 +11,7 @@ import Section from '@/components/elements/Section';
 import SectionTitle from '@/components/elements/SectionTitle';
 import SlickSlider from '@/components/elements/SlickSlider';
 import ProductTwo from '@/components/product/ProductTwo';
+import ProductTwo from '@/components/product/ProductSeven';
 import TestimonialOne from '@/components/testimonial/TestimonialOne';
 import WhyChoose from '@/components/why-choose/WhyChoose';
 import PosterOne from '@/components/poster/PosterOne';
