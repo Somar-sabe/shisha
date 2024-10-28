@@ -94,51 +94,6 @@ const ShopWithSidebar = () => {
                                 </div>
                             }
                         </div> 
-                        {/* Gender Filter  */}
-                        <div className={`toggle-list product-categories product-gender ${genderToggle ? "active" : ""}`}>
-                            <h6 onClick={() => setgenderToggle(!genderToggle)} className="title">GENDER</h6>
-                            {genderToggle && 
-                            <div className="shop-submenu">
-                            <ul>
-                                {Gender?.map((data, index) => (
-                                    <li className={filterText === data ? "chosen" :""} key={index}>
-                                        <button onClick={() => genderHandler(data)}>{data}</button>
-                                    </li>
-                                ))}
-                            </ul>
-                            </div>
-                            }
-                        </div>
-                        {/* Color Filter  */}
-                        <div className={`toggle-list product-color ${colorToggle ? "active" : ""}`}>
-                            <h6 onClick={() => setcolorToggle(!colorToggle)} className="title">COLORS</h6>
-                            {colorToggle && 
-                            <div className="shop-submenu">
-                                <ul>
-                                    {ColorAttribute?.map((data, index) => (
-                                        <li className={filterText === slugify(data) ? "chosen" :""} key={index}>
-                                            <button onClick={() => colorHandler(slugify(data))} className={slugify(data)}></button>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                            }
-                        </div>
-                        {/* Size Filter  */}
-                        <div className={`toggle-list product-size ${sizeToggle ? "active" : ""}`}>
-                            <h6 onClick={() => setsizeToggle(!sizeToggle)} className="title">SIZE</h6>
-                            {sizeToggle && 
-                            <div className="shop-submenu">
-                                <ul>
-                                    {SizeAttribute?.map((data, index) => (
-                                        <li className={filterText === slugify(data) ? "chosen" :""} key={index}>
-                                            <button onClick={() => sizeHandler(slugify(data))}>{data}</button>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                            }
-                        </div>
                         {/* Price Filter  */}
                         <div className={`toggle-list product-price-range ${priceRangeToggle ? "active" : ""}`}>
                             <h6 onClick={() => setpriceRangeToggle(!priceRangeToggle)} className="title">PRICE</h6>
