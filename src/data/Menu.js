@@ -1,11 +1,5 @@
 const HeaderMenu = [
     {
-        name: "Home",
-        url: "/home/furniture",
-        hasChildren: false,
-
-    },
-    {
         name: "Shop",
         url: "/shop",
         hasChildren: true,
