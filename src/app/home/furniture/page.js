@@ -52,80 +52,34 @@ const HomeFurniture = () => {
                     <CountDown date="2024-10-01T23:59:59" />
                 </div>
             </div>
-            <SlickSlider
-            class="slick-layout-wrapper--15 axil-slick-arrow arrow-top-slide"
-            slidesToShow={4}
-            infinite={false}
-            responsive = {[
-                {
-                  breakpoint: 1400,
-                  settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                  }
-                },
-                {
-                  breakpoint: 992,
-                  settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                  }
-                },
-                {
-                  breakpoint: 575,
-                  settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                  }
-                },
-              ]}
-            >
-                {furnitureProduct.map((data) => (
-                    <ProductThree product={data} key={data.id}/>
-                ))}
-            </SlickSlider>
+
+            <div className="row">
+                    {transparentProduct.slice(0, 8).map((data) => (
+                        <div className="col-xl-3 col-lg-4 col-sm-6" key={data.id}>
+                            <ProductSeven product={data} />
+                        </div>
+                    ))}
+                </div>
+
+
+         
             </Section>
 
             <WhoWeAre />
-            <Section pClass="pb--50 pb_sm--30">
+            <Section pClass="pb--0" borderBottom="pb--50">
                 <SectionTitle
                 title="Best Sellers"
                 subtitle="This Month"
                 subtitleIcon="far fa-shopping-basket"
                 subColor="highlighter-secondary"
                 />
-                 <SlickSlider
-                    class="slick-layout-wrapper--15 axil-slick-arrow arrow-top-slide product-slide-mobile"
-                    slidesToShow={4}
-                    infinite={false}
-                    responsive = {[
-                        {
-                          breakpoint: 1400,
-                          settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 3,
-                          }
-                        },
-                        {
-                          breakpoint: 992,
-                          settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 2,
-                          }
-                        },
-                        {
-                          breakpoint: 575,
-                          settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                          }
-                        },
-                      ]}
-                    >
-                    {furnitureProduct.map((data) => (
-                        <ProductThree product={data} key={data.id}/>
+                <div className="row">
+                    {transparentProduct.slice(0, 8).map((data) => (
+                        <div className="col-xl-3 col-lg-4 col-sm-6" key={data.id}>
+                            <ProductSeven product={data} />
+                        </div>
                     ))}
-                </SlickSlider>
+                </div>
             </Section>
             <PosterOne 
              subtitleIcon="far fa-couch"
