@@ -37,10 +37,10 @@ const HomeFurniture = () => {
         <main className="main-wrapper">
             
             <BannerFive />
-            <Section pClass="pb--0" borderBottom="pb--50"
-            
+            <Section 
+            pClass="axil-new-arrivals-product-area fullwidth-container flash-sale-area pb--0"
             containerClass="ml--xxl-0"
-      
+            borderBottom="pb--50"
             >
             <div className="d-md-flex align-items-end flash-sale-section">
                 <SectionTitle 
@@ -51,14 +51,16 @@ const HomeFurniture = () => {
                 <div className="sale-countdown countdown">
                     <CountDown date="2024-10-01T23:59:59" />
                 </div>
-            </div>
-            <div className="row">
+
+                <div className="row">
                     {furnitureProduct.slice(0, 8).map((data) => (
                         <div className="col-xl-3 col-lg-4 col-sm-6" key={data.id}>
                             <ProductSeven product={data} />
                         </div>
                     ))}
                 </div>
+            </div>
+
 
 
          
