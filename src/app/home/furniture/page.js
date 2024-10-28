@@ -81,7 +81,7 @@ const HomeFurniture = () => {
               ]}
             >
                 {furnitureProduct.map((data) => (
-                    <ProductFour product={data} key={data.id}/>
+                  <ProductThree product={data} key={data.id}/>
                 ))}
             </SlickSlider>
             </Section>

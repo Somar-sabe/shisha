@@ -30,8 +30,8 @@ const Logo = {
 
 const StoreInfo = {
     address: "8212 E. Glen Creek Street Orchard Park, NY 14127, United States of America",
-    phone: "+123 456 7890",
-    email: "Hello@etrade.com",
+    phone: "+971 55 429 1019",
+    email: "Info@holster-tobacco.com",
     opening: {
         monToSat: "9am - 10pm",
         othersDay: "10am - 6pm"
