@@ -67,7 +67,7 @@ const FurnitureSlider = [
         subTitle: "Hot Deal In This Week",
         subIcon: "fas fa-fire",
         title: "Double Apple",
-        thumbnail: "/images/product/product-47.png"
+        thumbnail: "/images/product/furniture/Double Apple_webshop_UAE.png"
     },
     {
         subTitle: "Hot Deal In This Week",
