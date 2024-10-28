@@ -81,7 +81,7 @@ const HomeFurniture = () => {
               ]}
             >
                 {furnitureProduct.map((data) => (
-                  <ProductSeven product={data} key={data.id}/>
+                    <ProductThree product={data} key={data.id}/>
                 ))}
             </SlickSlider>
             </Section>
@@ -123,7 +123,7 @@ const HomeFurniture = () => {
                       ]}
                     >
                     {furnitureProduct.map((data) => (
-                        <ProductSeven product={data} key={data.id}/>
+                        <ProductThree product={data} key={data.id}/>
                     ))}
                 </SlickSlider>
             </Section>
@@ -150,7 +150,7 @@ const HomeFurniture = () => {
                             <div className="row row--15">
                             {product.map((data) => (
                                 <div className="col-xl-3 col-lg-4 col-sm-6 col-12 mb--30" key={data.id}>
-                                    <ProductSeven product={data} />
+                                    <ProductOne product={data} />
                                 </div>
                             ))}
                         </div>
