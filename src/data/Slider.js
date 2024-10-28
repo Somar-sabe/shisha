@@ -73,13 +73,13 @@ const FurnitureSlider = [
         subTitle: "Hot Deal In This Week",
         subIcon: "fas fa-fire",
         title: "Lee Punch",
-        thumbnail: "/images/product/product-48.png"
+        thumbnail: "/images/product/furniture/Lee Punch_webshop_UAE.png"
     },
     {
         subTitle: "Hot Deal In This Week",
         subIcon: "fas fa-fire",
         title: "Love 69 Gold",
-        thumbnail: "/images/product/product-47.png"
+        thumbnail: "/images/product/furniture/Love69_webshop_UAE.png"
     },
 ]
 
