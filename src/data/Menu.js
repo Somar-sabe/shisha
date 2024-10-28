@@ -67,7 +67,7 @@ const HeaderMenu = [
 
 const CateMenu = [
     {
-        name: "Fashion",
+        name: "Shisha",
         url: "/shop?category=fashion",
         icon: "/images/product/categories/cat-01.png",
         hasChildren: true,
