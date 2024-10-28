@@ -2,6 +2,12 @@ const HeaderMenu = [
     {
         name: "Home",
         url: "/home/furniture",
+        hasChildren: false,
+
+    },
+    {
+        name: "Shop",
+        url: "/shop?layout=no-sidebar",
         hasChildren: true,
         children: [
             {
@@ -9,33 +15,18 @@ const HeaderMenu = [
                 url: "/home/furniture"
             },
            
-            {
-                name: "pipe tobacco",
-                url: "/home/furniture"
-            },
+
            
             {
                 name: "shisha / water pipe",
                 url: "/home/furniture"
             },
-            {
-                name: "shisha coal",
-                url: "/home/furniture"
-            },
-            {
-                name: "charcoal lighter",
-                url: "/home/furniture"
-            },
+
             {
                 name: "shisha accessories",
                 url: "/home/furniture"
             },
         ]
-    },
-    {
-        name: "Shop",
-        url: "/shop?layout=no-sidebar",
-        hasChildren: false,
        
     },
     {
