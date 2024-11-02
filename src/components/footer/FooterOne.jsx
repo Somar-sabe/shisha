@@ -12,7 +12,7 @@ const FooterOne = (props) => {
             <div className="col-md-3 col-sm-12">
               <div className="axil-footer-widget">
                 <div className="logo mb--30">
-					<Link href="/">
+					<Link href="/Furniture">
 						<Image 
 						 className="light-logo"
 						 src={props.dark ? Logo.light: Logo.dark}
