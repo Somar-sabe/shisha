@@ -3,29 +3,12 @@ const ProductsData = [
         id: 1,
         title: "Double Apple",
         thumbnail: "/images/product/furniture/Double Apple_webshop_UAE.png",
-        
         hoverThumbnail: "/images/product/furniture/Double Apple_webshop_UAE.png",
-        gallery: ["/images/product/furniture/Double Apple_webshop_UAE.png","/images/product/furniture/Double Apple_webshop_UAE.png","/images/product/furniture/Double Apple_webshop_UAE.png","/images/product/furniture/Double Apple_webshop_UAE.png"],
         pCate: "Shisha Topaco",
         cate: ["Headphones", "Computers"],
         price: 500,
         salePrice: 400,
         productType: "variable",
-        sizeAttribute: [ 'XL', 'L', 'M', 'S', 'XS'],
-        colorAttribute: [
-            {
-                color: 'red',
-                img:"/images/product/product-big-03.png",
-            },
-            {
-                color: 'black',
-                img:"/images/product/product-big-02.png"
-            },
-            {
-                color: 'skyblue',
-                img:"/images/product/product-big-01.png"
-            }
-        ],
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
             listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
@@ -88,27 +71,12 @@ const ProductsData = [
         title: "Lee Punch",
         thumbnail: "/images/product/furniture/Lee Punch_webshop_UAE.png",
         hoverThumbnail: "/images/product/furniture/Lee Punch_webshop_UAE.png",
-        gallery: ["/images/product/product-big-01.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Furniture",
-        cate: ["Headphones", "Computers"],
-        price: 500,
-        salePrice: 400,
+        cate: ["Accessories"],
+        price: 55.99,
+        salePrice: 32.99,
         productType: "variable",
-        sizeAttribute: [ 'XL', 'L', 'M', 'S', 'XS'],
-        colorAttribute: [
-            {
-                color: 'red',
-                img:"/images/product/product-big-03.png",
-            },
-            {
-                color: 'black',
-                img:"/images/product/product-big-02.png"
-            },
-            {
-                color: 'skyblue',
-                img:"/images/product/product-big-01.png"
-            }
-        ],
+      
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
             listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
@@ -171,26 +139,11 @@ const ProductsData = [
         title: "Love 69 Gold",
         thumbnail: "/images/product/furniture/Love69_webshop_UAE.png",
         hoverThumbnail: "/images/product/furniture/Love69_webshop_UAE.png",
-        gallery: ["/images/product/electric/product-02.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Furniture",
         cate: ["Accessories"],
         price: 55.99,
         salePrice: 32.99,
         productType: "variable",
-        colorAttribute: [
-            {
-                color: 'red',
-                img:"/images/product/electric/product-05.png",
-            },
-            {
-                color: 'black',
-                img:"/images/product/electric/product-04.png"
-            },
-            {
-                color: 'skyblue',
-                img:"/images/product/electric/product-03.png"
-            }
-        ],
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
             listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'

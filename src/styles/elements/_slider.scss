@@ -9,7 +9,7 @@ Slider Style
         display: flex;
         align-items: center;
         margin-bottom: 16px;
-        color: var(--color-secondary);
+        color: #EBA800;
         i {
             height: 24px;
             width: 24px;
@@ -18,7 +18,7 @@ Slider Style
             font-size: 12px;
             text-align: center;
             margin-right: 10px;
-            background-color: var(--color-secondary);
+            background-color: #EBA800;
             color: var(--color-white);
         }
     }
@@ -196,7 +196,7 @@ Slider Style
                 }
                 &.slick-active {
                     button {
-                        background-color: var(--color-secondary);
+                        background-color: #EBA800;
                         opacity: 1;
                     }
                 }
@@ -347,7 +347,7 @@ Slider Style
                     }
                     &.slick-active {
                         button {
-                            background-color: var(--color-secondary);
+                            background-color: #EBA800;
                             opacity: 1;
                         }
                     }
@@ -741,12 +741,13 @@ Slider Style
                     }
                 }
                 .price {
-                    color: var(--color-secondary);
+                    color: #EBA800;
                     font-size: 24px;
                     font-weight: 700;
                 }
                 .product-rating {
                     margin-bottom: 5px;
+                    display:none;
                     .icon {
                         font-size: 16px;
                         color: #FACC15;
@@ -809,7 +810,7 @@ Slider Style
 .main-slider-style-5 {
     
     .slider-box-wrap {
-        background-color: #f7f7f7;
+        background-color: #eeb3080f;
         border-radius: 6px;
         padding: 90px 100px;
         position: relative;
@@ -865,7 +866,8 @@ Slider Style
     .main-slider-content {
         flex: 1;
         .title {
-            width: 70%;
+            width: 80%;
+            color:#3e300c;
             @media only screen and (max-width: 1399px) {
                 width: 90%;
             }

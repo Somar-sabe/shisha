@@ -443,7 +443,7 @@
                     font-size: 18px;
                     color: var(--color-white);
                     &:hover {
-                        background-color: var(--color-secondary);
+                        background-color: #EBA800;
                     }
                 }
             }
@@ -534,7 +534,7 @@
                 color: var(--color-white);
                 padding: 0 24px;
                 &:hover {
-                    background-color: var(--color-secondary);
+                    background-color: #EBA800;
                 }
             }
         }
@@ -600,7 +600,7 @@
             top: -30px;
             right: -30px;
             &:hover {
-                background-color: var(--color-secondary);
+                background-color: #EBA800;
             }
             @media only screen and (max-width: 767px){
                 height: 30px;

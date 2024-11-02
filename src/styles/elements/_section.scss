@@ -20,23 +20,23 @@ Section Heading
       
     }
 	&.highlighter-primary {
-		color: var(--light-primary);
+		color: #EBA800;
 		i {
-		background-color: var(--light-primary);
+		background-color: #EBA800;
 		color: var(--color-white);
 		}
 	}
 	&.highlighter-primary2 {
-		color: var(--color-primary);
+		color: #EBA800;
 		i {
-		background-color: var(--color-primary);
+		background-color: #EBA800;
 		color: var(--color-white);
 		}
 	}
 	&.highlighter-secondary {
-		color: var(--color-secondary);
+		color: #EBA800;
 		i {
-			background-color: var(--color-secondary);
+			background-color: #EBA800;
 			color: var(--color-white);
 		}
 	}
@@ -78,7 +78,7 @@ Section Heading
 			font-weight: 700;
 			transition: 0.3s;
 			&:hover {
-				color: var(--color-secondary);
+				color: #EBA800;
 			}
 		}
 	}

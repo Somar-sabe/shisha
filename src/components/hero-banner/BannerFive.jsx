@@ -19,7 +19,7 @@ const BannerFive = () => {
                         </span>
                         <h1 className="title">{data.title}</h1>
                         <div className="shop-btn">
-                            <Link href="/shop" className="axil-btn btn-bg-white"><i className="fal fa-shopping-cart" /> Shop Now</Link>
+                            <Link style={{ color: 'white', backgroundColor: '#EBA800' }} href="/shop" className="axil-btn btn-bg-white"><i className="fal fa-shopping-cart" /> Shop Now</Link>
                         </div>
                       </div>
                       <div className="main-slider-thumb">

@@ -3,7 +3,7 @@
 --------------------------*/
 .axil-breadcrumb-area {
     position: relative;
-    background-color: #f8f8f8;
+    background-color: rgba(238, 179, 8, 0.0588235294);
     padding: 40px 0 45px;
     .inner {
         .title {
@@ -59,7 +59,7 @@
         }
         &.axil-breadcrumb-item {
             &.active {
-                color: var(--color-primary);
+                color: #EBA800;
             }
         }
         &.separator {

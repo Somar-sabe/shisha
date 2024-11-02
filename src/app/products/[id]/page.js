@@ -1,5 +1,5 @@
 import ProductsData from "@/data/Products";
-import ProductOne from "@/components/product/ProductOne";
+import ProductSeven from "@/components/product/ProductSeven";
 import { slugify } from "@/utils";
 import SlickSlider from "@/components/elements/SlickSlider";
 import SingleLayouThree from "./SingleLayouThree";
@@ -75,7 +75,7 @@ const ProductDetails = ({ params }) => {
                   ]}
                 >
                     {relatedProduct?.slice(0, 10).map((data) => (
-                        <ProductOne product={data} key={data.id}/>
+                        <ProductSeven product={data} key={data.id}/>
                     ))}
                 </SlickSlider>
             </Section>

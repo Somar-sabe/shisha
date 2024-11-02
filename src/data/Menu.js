@@ -1,5 +1,11 @@
 const HeaderMenu = [
     {
+        name: "Home",
+        url: "/home/furniture",
+        hasChildren: false,
+       
+    },
+    {
         name: "Shop",
         url: "/shop",
         hasChildren: true,
@@ -23,33 +29,7 @@ const HeaderMenu = [
         ]
        
     },
-    {
-        name: "Pages",
-        url: "#",
-        hasChildren: true,
-        children: [
-            {
-                name: "Wishlist",
-                url: "/wishlist"
-            },
-            {
-                name: "Cart",
-                url: "/cart"
-            },
-            {
-                name: "Sign Up",
-                url: "/sign-up"
-            },
-            {
-                name: "Privacy Policy",
-                url: "/privacy-policy"
-            },
-            {
-                name: "Coming Soon",
-                url: "/coming-soon"
-            },
-        ]
-    },
+
     {
         name: "About",
         url: "/about",

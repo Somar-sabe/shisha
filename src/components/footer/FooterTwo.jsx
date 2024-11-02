@@ -131,37 +131,7 @@ const FooterTwo = () => {
                   </ul>
                 </div>
               </div>
-              <div className="col-xl-4 col-lg-12">
-                <div className="copyright-right d-flex flex-wrap justify-content-xl-end justify-content-center align-items-center">
-                  <span className="card-text">Accept For</span>
-                  <ul className="payment-icons-bottom quick-link">
-                    <li>
-                      <Image
-                        src="/images/icons/cart/cart-1.png"
-                        alt="paypal cart"
-                        width={17}
-                        height={20}
-                      />
-                    </li>
-                    <li>
-                      <Image
-                        src="/images/icons/cart/cart-2.png"
-                        alt="Master card"
-                        width={33}
-                        height={20}
-                      />
-                    </li>
-                    <li>
-                      <Image
-                        src="/images/icons/cart/cart-5.png"
-                        alt="Visa card"
-                        width={46}
-                        height={20}
-                      />
-                    </li>
-                  </ul>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>

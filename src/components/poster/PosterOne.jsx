@@ -13,15 +13,11 @@ const PosterOne = (props) => {
               <div className="col-xl-5 col-lg-6">
                 <div className="poster-countdown-content">
                   <SectionTitle 
-                    title={props.title ?? "Enhance Your Music Experience"}
+                     title={`<span style="font-weight: bold; color: #EBA800;">ICE KAKTUZ</span> took first place in 2022 for the <span style="font-weight: bold; color: #EBA800;">BEST FLAVOR</span> on the market`}
                     subtitle={props.subtitle ?? "Don’t Miss!!"}
                     subColor={props.subColor ?? "highlighter-secondary"}
                     subtitleIcon={props.subtitleIcon ?? "fal fa-headphones-alt"}
-                  />
-                  <div className="poster-countdown countdown mb--40">
-                    <CountDown unit date={props.CountTime ?? "2024-10-01T23:59:59"}/>
-                  </div>
-                  <Link href="/shop" className="axil-btn btn-bg-primary">Check it Out!</Link>
+                  />       
                 </div>
               </div>
               <div className="col-xl-7 col-lg-6">

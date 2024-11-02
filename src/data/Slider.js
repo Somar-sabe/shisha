@@ -8,7 +8,7 @@ const ElectronicsSlider = [
     },
     {
         title: "Smart Digital Watch",
-        subTitle: "Hot Deal In This Week",
+        subTitle: "Hot Deal",
         subIcon: "fas fa-fire",
         price: "$89.00",
         thumb: "/images/product/product-39.png"
@@ -64,22 +64,22 @@ const JewellerySlider = {
 
 const FurnitureSlider = [
     {
-        subTitle: "Hot Deal In This Week",
+        subTitle: "Hot Deal",
         subIcon: "fas fa-fire",
-        title: "Double Apple",
-        thumbnail: "/images/product/furniture/Double Apple_webshop_UAE.png"
+        title: "BEST SELLING FLAVOUR!",
+        thumbnail: "/images/product/furniture/Best Flavor (1).png"
     },
     {
-        subTitle: "Hot Deal In This Week",
+        subTitle: "Hot Deal",
         subIcon: "fas fa-fire",
         title: "Lee Punch",
-        thumbnail: "/images/product/furniture/Lee Punch_webshop_UAE.png"
+        thumbnail: "/images/product/furniture/Starter Pack.png"
     },
     {
-        subTitle: "Hot Deal In This Week",
+        subTitle: "Hot Deal",
         subIcon: "fas fa-fire",
         title: "Love 69 Gold",
-        thumbnail: "/images/product/furniture/Love69_webshop_UAE.png"
+        thumbnail: "/images/product/furniture/Sisha Accesuares.png"
     },
 ]
 

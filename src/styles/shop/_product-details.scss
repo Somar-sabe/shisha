@@ -509,7 +509,6 @@
             font-weight: 700;
             color: #FFFFFF;
             border-radius: 4px;
-            box-shadow: 0 8px 16px 0 rgba(53, 119, 240, .30);
             
         }
 
@@ -755,7 +754,7 @@
 
             }
             &.quality {
-                color: var(--color-secondary);
+                color: #EBA800;
             }
             &.original {
                 color: var(--light-primary);

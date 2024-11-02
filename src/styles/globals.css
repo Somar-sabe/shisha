@@ -1,0 +1,9 @@
+/* Inside styles/globals.css */
+@font-face {
+    font-family: 'Gotham Ultra';
+    src: url('/fonts/GothamUltra.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  

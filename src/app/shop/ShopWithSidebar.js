@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Section from "@/components/elements/Section";
 import ProductsData from "@/data/Products";
-import ProductOne from "@/components/product/ProductOne";
+import ProductSeven from "@/components/product/ProductSeven";
 import { slugify } from "@/utils";
 import { Category } from "@/data/ProductCategory";
 
@@ -90,7 +90,7 @@ const ShopWithSidebar = () => {
                     <div className="row row--15">
                         {filterProduct.length > 0 ? filterProduct.slice(0, productShow).map((data) => (
                             <div className="col-xl-4 col-sm-6" key={data.id}>
-                                <ProductOne product={data} pClass="mb--30" />
+                                <ProductSeven product={data} pClass="mb--30" />
                             </div>
                         )) : <h4 className="text-center pt--30">No Product Found</h4>}
                     </div>

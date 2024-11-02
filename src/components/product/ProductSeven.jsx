@@ -30,7 +30,7 @@ const ProductSeven = ({product}) => {
           <div className="inner">
             <ProductTitle productTitle={product}/>
             <ProductPrice price={product} />
-            <ProductRating rating={product} />
+            
           </div>
         </div>
         <ProductThumbnail productThumb={product}/>   

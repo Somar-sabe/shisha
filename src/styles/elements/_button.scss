@@ -35,7 +35,7 @@ button {
         i {
             font-weight: 400;
             margin-right: 10px;
-            color: var(--color-heading);
+            color: white;
             transition: 0.3s;
         }
         &:hover {
@@ -57,7 +57,7 @@ button {
             color: var(--color-heading);
             box-shadow: 0 16px 32px 0 rgba(103, 103, 103, .06);
             &:before {
-                background-color: var(--color-white);
+                background-color: #EBA800;
             }
         }
         &.btn-bg-lighter {
@@ -77,20 +77,20 @@ button {
                 color: var(--color-white);
             }
             &:hover {
-                // background-color: var(--color-secondary);
+                // background-color: #EBA800;
                 &:after {
                     transform: scale(1.1);
                 }
             }
         }
         &.btn-bg-secondary {
-            background-color: var(--color-secondary);
+            background-color: #EBA800;
             color: var(--color-white);
             i {
                 color: var(--color-white);
             }
             &:before {
-                background-color: var(--color-secondary);
+                background-color: #EBA800;
             }
         }
         &.btn-outline {

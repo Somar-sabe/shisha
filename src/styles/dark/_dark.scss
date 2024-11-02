@@ -6,7 +6,7 @@
     position: fixed;
     top: 200px;
     left: 0;
-    background-color: var(--color-secondary);
+    background-color: #EBA800;
     border-radius: 0 30px 30px 0;
     padding: 10px;
     z-index: 5;
@@ -190,10 +190,10 @@
                     a {
                         color: var(--dark-body-text-color);
                         &:hover {
-                            color: var(--color-secondary);
+                            color: #EBA800;
                         }
                         &.active {
-                            color: var(--color-secondary);
+                            color: #EBA800;
     
                         }
                     }
@@ -866,6 +866,7 @@
             background-color: var(--dark-bg-color);
             &:after {
                 background-color: var(--dark-body-bg);
+                display:none;
             }
         }
     }
@@ -896,7 +897,7 @@
             li {
                 &.slick-active {
                     button {
-                        background-color: var(--color-secondary);
+                        background-color: #EBA800;
                     }
                 }
             }

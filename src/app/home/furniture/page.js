@@ -39,7 +39,7 @@ const HomeFurniture = () => {
             <BannerFive />
           
 
-            <WhoWeAre />
+      
             <Section pClass="pb--0" borderBottom="pb--50">
                 <SectionTitle
                 title="Best Sellers"
@@ -57,8 +57,8 @@ const HomeFurniture = () => {
             </Section>
             <PosterOne 
              subtitleIcon="far fa-couch"
-             title="Decorate Your House with Us"
-             thumbnail="/images/product/poster/poster-07.png"
+             title="ICE KAKTUZ took first place in 2022 for the BEST FLAVOR on the market"
+             thumbnail="/images/product/poster/Group 6 Copy 4 (1).png"
              thumbWidth={661}
              thumbHeight={502}
             />
@@ -78,7 +78,7 @@ const HomeFurniture = () => {
                             <div className="row row--15">
                             {product.map((data) => (
                                 <div className="col-xl-3 col-lg-4 col-sm-6 col-12 mb--30" key={data.id}>
-                                    <ProductOne product={data} />
+                                    <ProductSeven product={data} />
                                 </div>
                             ))}
                         </div>
@@ -92,7 +92,7 @@ const HomeFurniture = () => {
                 </div>
             </Section>
             <WhyChoose />
-            <TestimonialOne />
+   
             <Section pClass="pb--50">
                 <SectionTitle 
                     title="New Arrivals"
@@ -133,7 +133,7 @@ const HomeFurniture = () => {
 
                 </SlickSlider>
             </Section>
-            <ServiceTwo />
+           
         </main>
         <FooterTwo />
         </>

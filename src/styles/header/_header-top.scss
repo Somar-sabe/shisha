@@ -27,7 +27,7 @@
                 text-decoration: underline;
                 transition: all .3s ease-in-out;
                 &:hover {
-                    color: var(--color-secondary);
+                    color: #EBA800;
                 }
             }
         }
@@ -139,7 +139,7 @@
                 font-size: 14px;
                 border-radius: 6px;
                 &:hover {
-                    background-color: var(--color-secondary);
+                    background-color: #EBA800;
                     color: var(--color-white);
                 }
             }
@@ -368,7 +368,7 @@
                 a {
                     color: var(--color-white);   
                     &:hover {
-                        color: var(--color-secondary);
+                        color: #EBA800;
                     }
                 }
             }

@@ -112,34 +112,8 @@ const AboutUs = () => {
                     </div>
                 </div>
             </section>
-            <section className="axil-about-area about-style-2">
-                <div className="container">
-                    {AboutFeatures?.map((data, index) => (
-                        <div className="row align-items-center mb--80 mb_sm--60" key={index}>
-                            <div className={`col-lg-5 ${index % 2 === 0 ? "" : "order-lg-2"}`}>
-                                <div className="about-thumbnail">
-                                    <Image 
-                                    src={data.thumbnail}
-                                    width={545}
-                                    height={440}
-                                    alt="About Us"
-                                    />
-                                </div>
-                            </div>
-                            <div className={`col-lg-7 ${index % 2 === 0 ? "" : "order-lg-1"}`}>
-                                <div className={`about-content ${index % 2 === 0 ? "content-right" : "content-left"}`}>
-                                    <span className="subtitle">{data.subtitle}</span>
-                                    <h4 className="title">{data.title}</h4>
-                                    <p>{data.text}</p>
-                                    <Link href="/contact" className="axil-btn btn-outline">Get In Touch</Link>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </section>
-           
-            <ServiceTwo />
+          
+          
         </main>
         <FooterTwo />
         </>

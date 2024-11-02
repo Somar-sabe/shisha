@@ -386,13 +386,13 @@
                             overflow: hidden;
                             border-bottom: 1px solid #f3f3f3;
                             &:hover {
-                                color: var(--color-secondary);
+                                color: #EBA800;
                                 background: transparent;
                             }
                             &.active {
-                                color: var(--color-secondary);
+                                color: #EBA800;
                                 &:hover {
-                                    color: var(--color-secondary);
+                                    color: #EBA800;
                                 }
                             }
                             @media (max-width: 991px) {
@@ -484,7 +484,7 @@
                     content: "";
                     height: 45px;
                     width: 45px;
-                    background-color: var(--color-secondary);
+                    background-color: #EBA800;
                     transform: scale(0);
                     border-radius: 50%;
                     position: absolute;
@@ -1363,7 +1363,7 @@
             content: "";
             height: 40px;
             width: 40px;
-            background: var(--color-secondary);
+            background: #EBA800;
             border-radius: 50%;
             position: absolute;
             z-index: -1;

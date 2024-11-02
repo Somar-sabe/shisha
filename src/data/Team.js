@@ -1,34 +1,21 @@
 const TeamData = [
     {
-        thumbnail: "/images/team/team-01.png",
+        thumbnail: "/images/team/Group 22-min.png",
         designation: "Founder",
-        name: "Rosalina D. Willson"
+        name: "Ninur Akjul"
     },
     {
-        thumbnail: "/images/team/team-02.png",
-        designation: "CEO",
-        name: "Ukolilix X. Xilanorix"
+        thumbnail: "/images/team/Group 25-min.png",
+        
+        designation: "UAE General Director",
+        name: "Didar chulpayiev"
     },
     {
-        thumbnail: "/images/team/team-03.png",
-        designation: "Designer",
-        name: "Alonso M. Miklonax"
+        thumbnail: "/images/team/Group 23-min.png",
+        designation: "Marketing Director",
+        name: "Valerya Weber"
     },
-    {
-        thumbnail: "/images/team/team-04.png",
-        designation: "Designer",
-        name: "Alonso M. Miklonax"
-    },
-    {
-        thumbnail: "/images/team/team-02.png",
-        designation: "Designer",
-        name: "Alonso M. Miklonax"
-    },
-    {
-        thumbnail: "/images/team/team-01.png",
-        designation: "Founder",
-        name: "Rosalina D. Willson"
-    },
+   
 ]
 
 export{TeamData};

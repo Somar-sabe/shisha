@@ -109,7 +109,7 @@ Poster
         margin-bottom: 0;
         padding-right: 0;
         .title {
-            font-size: 48px;
+            font-size: 40px;
             @media #{$smlg-device} {
                 font-size: 40px;
             }
@@ -226,7 +226,7 @@ Poster
             font-size: 12px;
             font-weight: 500;
             color: var(--color-white);
-            background-color: var(--color-secondary);
+            background-color: #EBA800;
             padding: 8px 10px;
             border-radius: 4px;
             display: inline-block;

@@ -28,7 +28,7 @@ const Breadcrumb = (props) => {
               <div className="inner">
                 <div className="bradcrumb-thumb">
                     <Image 
-                    src="/images/product/product-45.png"
+                    src="/images/product/Holster-min.png"
                     width={126}
                     height={120}
                     alt="Image"

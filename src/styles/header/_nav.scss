@@ -112,13 +112,13 @@
                     z-index: 1;
                     overflow: hidden;
                     &:hover {
-                        color: var(--color-secondary);
-                        // background: var(--color-secondary);
+                        color: #EBA800;
+                        // background: #EBA800;
                     }
                     &.active {
-                        color: var(--color-secondary);
+                        color: #EBA800;
                         &:hover {
-                            color: var(--color-secondary);
+                            color: #EBA800;
                         }
                     }
                 }
