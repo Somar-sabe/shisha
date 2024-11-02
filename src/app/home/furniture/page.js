@@ -128,7 +128,7 @@ const HomeFurniture = () => {
                   ]}
                 >
                     {furnitureProduct.slice(0, 8).map((data) => (
-                        <ProductTwo product={data} key={data.id}/>
+                        <ProductSeven product={data} key={data.id}/>
                     ))}
 
                 </SlickSlider>
