@@ -185,20 +185,6 @@ const ProductsData = [
         price: 219,
         salePrice: 199,
         productType: "variable",
-        colorAttribute: [
-            {
-                color: 'red',
-                img:"/images/product/electric/product-07.png",
-            },
-            {
-                color: 'black',
-                img:"/images/product/electric/product-04.png"
-            },
-            {
-                color: 'skyblue',
-                img:"/images/product/electric/product-03.png"
-            }
-        ],
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
             listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
@@ -283,20 +269,7 @@ const ProductsData = [
         price: 400,
         salePrice: 233,
         productType: "variable",
-        colorAttribute: [
-            {
-                color: 'red',
-                img:"/images/product/electric/product-05.png",
-            },
-            {
-                color: 'black',
-                img:"/images/product/electric/product-04.png"
-            },
-            {
-                color: 'skyblue',
-                img:"/images/product/electric/product-03.png"
-            }
-        ],
+       
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
             listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
@@ -338,20 +311,7 @@ const ProductsData = [
         price: 130,
         salePrice: 100,
         productType: "variable",
-        colorAttribute: [
-            {
-                color: 'red',
-                img:"/images/product/electric/product-06.png",
-            },
-            {
-                color: 'black',
-                img:"/images/product/electric/product-04.png"
-            },
-            {
-                color: 'skyblue',
-                img:"/images/product/electric/product-03.png"
-            }
-        ],
+
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
             listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
@@ -394,21 +354,7 @@ const ProductsData = [
         salePrice: 29.99,
         productType: "variable",
         sizeAttribute: [ 'XL', 'L', 'M', 'S', 'XS'],
-        colorAttribute: [
-            {
-                color: 'red',
-                img:"/images/product/jewellery/product-12.png",
-                
-            },
-            {
-                color: 'black',
-                img:"/images/product/jewellery/product-13.png"
-            },
-            {
-                color: 'skyblue',
-                img:"/images/product/jewellery/product-14.png"
-            }
-        ],
+
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
             listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
@@ -492,20 +438,7 @@ const ProductsData = [
         price: 310,
         salePrice: 251,
         productType: "variable",
-        colorAttribute: [
-            {
-                color: 'red',
-                img:"/images/product/electric/product-08.png",
-            },
-            {
-                color: 'black',
-                img:"/images/product/electric/product-08.png"
-            },
-            {
-                color: 'skyblue',
-                img:"/images/product/electric/product-03.png"
-            }
-        ],
+
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
             listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
