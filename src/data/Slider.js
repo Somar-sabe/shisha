@@ -72,7 +72,7 @@ const FurnitureSlider = [
     {
         subTitle: "Hot Deal",
         subIcon: "fas fa-fire",
-        title: "Lee Punch",
+        title: "Starter Pack 10%",
         thumbnail: "/images/product/furniture/Starter Pack.png"
     },
     {
