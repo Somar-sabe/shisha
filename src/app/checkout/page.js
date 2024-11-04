@@ -226,18 +226,18 @@ const Checkout = () => {
                                             {cartProducts.cartItems.map((items, index) => (
                                                 <tr className="order-product" key={index}>
                                                     <td>{items.title} <span className="quantity">x{items.cartQuantity}</span></td>
-                                                    <td>${items.salePrice ? items.salePrice : items.price}</td>
+                                                    <td>{items.salePrice ? items.salePrice : items.price} AED</td>
                                                 </tr>
                                             ))}
                                             <tr className="order-subtotal">
                                                 <td>Subtotal</td>
-                                                <td>${cartProducts.cartTotalAmount}</td>
+                                                <td>{cartProducts.cartTotalAmount} AED</td>
                                             </tr>
                                             <tr className="order-shipping">
                                                 <td colSpan={2}>
                                                     <div className="shipping-amount">
                                                         <span className="title">Shipping Method</span>
-                                                        <span className="amount">$35.00</span>
+                                                        <span className="amount">35.00 AED</span>
                                                     </div>
                                                     <div className="input-group">
                                                         <input type="radio" id="radio1" name="shipping" defaultChecked />
@@ -255,7 +255,7 @@ const Checkout = () => {
                                             </tr>
                                             <tr className="order-total">
                                                 <td>Total</td>
-                                                <td className="order-total-amount">${cartProducts.cartTotalAmount}</td>
+                                                <td className="order-total-amount">{cartProducts.cartTotalAmount} AED</td>
                                             </tr>
                                         </tbody>
                                     </table>

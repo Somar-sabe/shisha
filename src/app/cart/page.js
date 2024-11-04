@@ -77,8 +77,9 @@ const Cart = () => {
                                             </Link>
                                         </td>
                                         <td className="product-price" data-title="Price">
-                                            <span className="currency-symbol">$</span>
+                                            
                                             {product.salePrice ? product.salePrice : product.price}
+                                            <span className="currency-symbol">AED</span>
                                             </td>
                                         <td className="product-quantity" data-title="Qty">
                                             <div className="pro-qty">
@@ -88,8 +89,9 @@ const Cart = () => {
                                             </div>
                                         </td>
                                         <td className="product-subtotal" data-title="Subtotal">
-                                            <span className="currency-symbol">$</span>
+                                            
                                             {parseFloat(product.salePrice ? product.salePrice * product.cartQuantity : product.price * product.cartQuantity).toFixed(2)}
+                                            <span className="currency-symbol">AED</span>
                                             </td>
                                     </tr>
                                     ))}
@@ -117,7 +119,7 @@ const Cart = () => {
                                     <tbody>
                                         <tr className="order-subtotal">
                                         <td>Subtotal</td>
-                                        <td>${cartProducts.cartTotalAmount}</td>
+                                        <td>{cartProducts.cartTotalAmount} AED</td>
                                         </tr>
                                         <tr className="order-shipping">
                                         <td>Shipping</td>
@@ -128,17 +130,17 @@ const Cart = () => {
                                             </div>
                                             <div className="input-group">
                                             <input type="radio" id="radio2" name="shipping" />
-                                            <label htmlFor="radio2">Local: $35.00</label>
+                                            <label htmlFor="radio2">Local: 35.00 AED</label>
                                             </div>
                                             <div className="input-group">
                                             <input type="radio" id="radio3" name="shipping" />
-                                            <label htmlFor="radio3">Flat rate: $12.00</label>
+                                            <label htmlFor="radio3">Flat rate: 12.00 AED</label>
                                             </div>
                                         </td>
                                         </tr>
                                         <tr className="order-total">
                                         <td>Total</td>
-                                        <td className="order-total-amount">${cartProducts.cartTotalAmount}</td>
+                                        <td className="order-total-amount">{cartProducts.cartTotalAmount} AED</td>
                                         </tr>
                                     </tbody>
                                     </table>

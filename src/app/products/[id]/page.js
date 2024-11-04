@@ -22,13 +22,16 @@ const ProductDetails = ({ params }) => {
                 return <SingleLayouSeven singleData={singleProduct} />
                 break;
             case "Electronics":
-                return <SingleLayouThree singleData={singleProduct} />
+                return <SingleLayoutOne singleData={singleProduct} />
+             
                 break;
             case "Fashion":
-                return <SingleLayoutOne singleData={singleProduct} />
+                return <SingleLayoutFour singleData={singleProduct} />
                 break;
             case "Furniture":
-                return <SingleLayoutFour singleData={singleProduct} />
+                return <SingleLayouThree singleData={singleProduct} />
+                
+                
                 break;
             default:
                 return <SingleLayoutTwo singleData={singleProduct} />
@@ -78,6 +81,13 @@ const ProductDetails = ({ params }) => {
                         <ProductSeven product={data} key={data.id}/>
                     ))}
                 </SlickSlider>
+                <div className="row">
+                {relatedProduct?.slice(0, 10).map((data) => (
+                        <div className="col-xl-3 col-lg-4 col-sm-6" key={data.id}>
+                            <ProductSeven product={data} />
+                        </div>
+                    ))}
+                </div>
             </Section>
         </>
     );

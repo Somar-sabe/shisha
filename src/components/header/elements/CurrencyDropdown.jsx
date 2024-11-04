@@ -7,17 +7,17 @@ const CuurencyDropdown = () => {
         data-bs-toggle="dropdown"
         aria-expanded="false"
       >
-        USD
+        AED
       </button>
       <ul className="dropdown-menu">
         <li>
           <a className="dropdown-item" href="#">
-            USD
+           AED
           </a>
         </li>
         <li>
           <a className="dropdown-item" href="#">
-            AUD
+            USD
           </a>
         </li>
         <li>

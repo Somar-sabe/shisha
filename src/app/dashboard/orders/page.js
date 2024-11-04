@@ -19,7 +19,7 @@ const UserOrders = () => {
                             <th scope="row">#6523</th>
                             <td>October 16, 2023</td>
                             <td>Processing</td>
-                            <td>$326.63 for 1 items</td>
+                            <td>326.63 AED for 1 items</td>
                             <td>
                                 <Link href="dashboard/orders/view" className="axil-btn view-btn">View</Link>
                             </td>

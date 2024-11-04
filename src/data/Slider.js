@@ -3,21 +3,21 @@ const ElectronicsSlider = [
         title: "Roco Wireless Headphone",
         subTitle: "Hot Deal In This Week",
         subIcon: "fas fa-fire",
-        price: "$49.00",
+        price: "49.00 AED",
         thumb: "/images/product/product-38.png"
     },
     {
         title: "Smart Digital Watch",
         subTitle: "Hot Deal",
         subIcon: "fas fa-fire",
-        price: "$89.00",
+        price: "89.00 AED",
         thumb: "/images/product/product-39.png"
     },
     {
         title: "Smart Digital Watch",
         subTitle: "Hot Deal In This Week",
         subIcon: "fas fa-fire",
-        price: "$89.00",
+        price: "89.00 AED",
         thumb: "/images/product/product-39.png"
     }
 ]

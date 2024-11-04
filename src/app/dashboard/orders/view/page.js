@@ -14,13 +14,13 @@ const OrderView = () => {
                     <tbody>
                         <tr>
                             <td>Asus Zenbook Laptop <strong>X 1</strong></td>
-                            <td>$326.63</td>
+                            <td>326.63 AED</td>
                         </tr>
                     </tbody>
                     <tfoot>
                         <tr>
                             <th>Subtotal:</th>
-                            <th>$326.63</th>
+                            <th>326.63 AED</th>
                         </tr>
                         <tr>
                             <th>Shipping:</th>
@@ -32,7 +32,7 @@ const OrderView = () => {
                         </tr>
                         <tr>
                             <th>Total:</th>
-                            <th>$326.63</th>
+                            <th>326.63 AED</th>
                         </tr>
                         <tr>
                             <th>Note:</th>
