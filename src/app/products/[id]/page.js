@@ -19,7 +19,7 @@ const ProductDetails = ({ params }) => {
     const ProductSingleLayout = () => {
         switch (singleProduct.pCate) {
             case "NFT":
-                return <SingleLayouFour singleData={singleProduct} />
+                return <SingleLayouSeven singleData={singleProduct} />
                 break;
             case "Electronics":
                 return <SingleLayouThree singleData={singleProduct} />
@@ -28,7 +28,7 @@ const ProductDetails = ({ params }) => {
                 return <SingleLayoutOne singleData={singleProduct} />
                 break;
             case "Furniture":
-                return <SingleLayoutSeven singleData={singleProduct} />
+                return <SingleLayoutFour singleData={singleProduct} />
                 break;
             default:
                 return <SingleLayoutTwo singleData={singleProduct} />
