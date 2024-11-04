@@ -69,22 +69,13 @@ const HomeFurniture = () => {
                 subtitleIcon="far fa-shopping-basket"
                 subColor="highlighter-secondary"
                 />
-                <SlickSlider
-                class="explore-product-activation slick-layout-wrapper slick-layout-wrapper--15 axil-slick-arrow arrow-top-slide"
-                slidesToShow={1}
-                >                    
-                    {exploreProduct.slice(0, 2).map((product, index) => (
-                        <div key={index}>
-                            <div className="row row--15">
-                            {product.map((data) => (
-                                <div className="col-xl-3 col-lg-4 col-sm-6 col-12 mb--30" key={data.id}>
-                                    <ProductSeven product={data} />
-                                </div>
-                            ))}
-                        </div>
+                 <div className="row">
+                    {furnitureProduct.slice(0, 8).map((data) => (
+                        <div className="col-xl-3 col-lg-4 col-sm-6" key={data.id}>
+                            <ProductSeven product={data} />
                         </div>
                     ))}
-                </SlickSlider>
+                </div>
                 <div className="row">
                     <div className="col-lg-12 text-center mt--20 mt_sm--0">
                         <Link href="/shop" className="axil-btn btn-bg-lighter btn-load-more">View All Products</Link>
@@ -99,39 +90,13 @@ const HomeFurniture = () => {
                     subtitle="This Week’s"
                     subtitleIcon="far fa-shopping-basket"
                 />
-                <SlickSlider 
-                class="slick-layout-wrapper--30 axil-slick-arrow arrow-top-slide"
-                slidesToShow={4}
-                infinite={false}
-                responsive = {[
-                    {
-                      breakpoint: 1400,
-                      settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3,
-                      }
-                    },
-                    {
-                      breakpoint: 992,
-                      settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                      }
-                    },
-                    {
-                      breakpoint: 575,
-                      settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                      }
-                    },
-                  ]}
-                >
+                          <div className="row">
                     {furnitureProduct.slice(0, 8).map((data) => (
-                        <ProductSeven product={data} key={data.id}/>
+                        <div className="col-xl-3 col-lg-4 col-sm-6" key={data.id}>
+                            <ProductSeven product={data} />
+                        </div>
                     ))}
-
-                </SlickSlider>
+                </div>
             </Section>
            
         </main>

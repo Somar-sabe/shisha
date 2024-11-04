@@ -20,11 +20,7 @@ const LangDropdown = () => {
               Arabic
             </a>
           </li>
-          <li>
-            <a className="dropdown-item" href="#">
-              Spanish
-            </a>
-          </li>
+
         </ul>
       </div>
      );

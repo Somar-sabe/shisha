@@ -12,19 +12,19 @@ const HeaderMenu = [
         children: [
             {
                 name: "Shisha Tobaco",
-                url: "/Category/furniture"
+                url: "/shop"
             },
            
 
            
             {
                 name: "shisha / water pipe",
-                url: "/home/furniture"
+                url: "/shop"
             },
 
             {
                 name: "shisha accessories",
-                url: "/home/furniture"
+                url: "/shop"
             },
         ]
        

@@ -57,42 +57,7 @@ const FooterTwo = () => {
                   </div>
                 </div>
               ))}
-              <div className="col-lg-3 col-sm-6">
-                <div className="axil-footer-widget">
-                  <h5 className="widget-title">Download App</h5>
-                  <div className="inner">
-                    <span>{FooterData.footerAppInfo.title}</span>
-                    <div className="download-btn-group">
-                      <div className="qr-code">
-                        <Image
-                          src={FooterData.footerAppInfo.qrCode}
-                          alt="Evolabs"
-                          height={98}
-                          width={98}
-                        />
-                      </div>
-                      <div className="app-link">
-                        <a href={FooterData.footerAppInfo.appStoreLink}>
-                          <Image
-                            src={FooterData.footerAppInfo.appStoreLogo}
-                            alt="App Store"
-                            height={42}
-                            width={140}
-                          />
-                        </a>
-                        <a href={FooterData.footerAppInfo.googlePlayLink}>
-                          <Image
-                            src={FooterData.footerAppInfo.googlePlayLogo}
-                            alt="Google Play Store"
-                            height={42}
-                            width={140}
-                          />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+ 
             </div>
           </div>
         </div>
