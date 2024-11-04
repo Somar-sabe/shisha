@@ -6,8 +6,8 @@ const ProductsData = [
         hoverThumbnail: "/images/product/furniture/Double Apple_webshop_UAE.png",
         pCate: "Shisha Topaco",
         cate: ["Headphones", "Computers"],
-        price: 500,
-        salePrice: 400,
+        price: 85,
+        salePrice: 85,
         productType: "variable",
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
@@ -73,8 +73,8 @@ const ProductsData = [
         hoverThumbnail: "/images/product/furniture/Lee Punch_webshop_UAE.png",
         pCate: "Furniture",
         cate: ["Accessories"],
-        price: 55.99,
-        salePrice: 32.99,
+        price: 85,
+        salePrice: 85,
         productType: "variable",
       
         shortDes: {
@@ -141,8 +141,8 @@ const ProductsData = [
         hoverThumbnail: "/images/product/furniture/Love69_webshop_UAE.png",
         pCate: "Furniture",
         cate: ["Accessories"],
-        price: 55.99,
-        salePrice: 32.99,
+        price: 85,
+        salePrice: 85,
         productType: "variable",
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
@@ -182,8 +182,8 @@ const ProductsData = [
         gallery: ["/images/product/furniture/Viva La Fiesta_webshop_UAE.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Furniture",
         cate: ["Camera & Photo"],
-        price: 219,
-        salePrice: 199,
+        price: 85,
+        salePrice: 85,
         productType: "variable",
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
@@ -224,8 +224,8 @@ const ProductsData = [
         gallery: ["/images/product/electric/product-04.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Shisha Topaco",
         cate: ["Headphones"],
-        price: 417,
-        salePrice: 387,
+        price: 85,
+        salePrice: 85,
         productType: "simple",
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
@@ -266,8 +266,8 @@ const ProductsData = [
         gallery: ["/images/product/electric/product-05.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Furniture",
         cate: ["Accessories"],
-        price: 400,
-        salePrice: 233,
+        price: 85,
+        salePrice: 85,
         productType: "variable",
        
         shortDes: {
@@ -305,11 +305,10 @@ const ProductsData = [
         id: 7,
         title: "Joosy",
         thumbnail: "/images/product/furniture/Joosy_webshop_UAE.png",
-        gallery: ["/images/product/electric/product-06.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Furniture",
         cate: ["Computers"],
-        price: 130,
-        salePrice: 100,
+        price: 85,
+        salePrice: 85,
         productType: "variable",
 
         shortDes: {
@@ -350,8 +349,8 @@ const ProductsData = [
         hoverThumbnail: "/images/product/electric/Kiwi P_webshop_UAE.png",
         pCate: "Furniture",
         cate: ["Accessories", "Video Games"],
-        price: 49.99,
-        salePrice: 29.99,
+        price: 85,
+        salePrice: 85,
         productType: "variable",
         sizeAttribute: [ 'XL', 'L', 'M', 'S', 'XS'],
 
@@ -394,8 +393,8 @@ const ProductsData = [
         gallery: ["/images/product/electric/product-07.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Furniture",
         cate: ["Headphones"],
-        price: 200,
-        salePrice: 179,
+        price: 65,
+        salePrice: 65,
         productType: "simple",
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
@@ -435,8 +434,8 @@ const ProductsData = [
         gallery: ["/images/product/electric/product-08.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Furniture",
         cate: ["PC Gaming"],
-        price: 310,
-        salePrice: 251,
+        price:65,
+        salePrice: 65,
         productType: "variable",
 
         shortDes: {
@@ -477,8 +476,8 @@ const ProductsData = [
         gallery: ["/images/product/furniture/NOIR_Charly Punch_webshop_UAE.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Furniture",
         cate: ["Accessories"],
-        price: 50,
-        salePrice: 39,
+        price: 65,
+        salePrice: 65,
         productType: "simple",
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
@@ -518,7 +517,7 @@ const ProductsData = [
         gallery: ["/images/product/furniture/Ice Kaktuz_webshop_UAE.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Furniture",
         cate: ["Accessories"],
-        price: 49.99,
+        price: 65,
         productType: "simple",
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
@@ -558,7 +557,7 @@ const ProductsData = [
         gallery: ["/images/product/furniture/NOIR_Joosy_webshop_UAE.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Furniture",
         cate: ["Accessories"],
-        price: 50,
+        price: 65,
         productType: "simple",
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
@@ -598,7 +597,7 @@ const ProductsData = [
         gallery: ["/images/product/furniture/NOIR_Red Citruz_webshop_UAE.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Furniture",
         cate: ["Accessories"],
-        price: 19,
+        price: 65,
         productType: "simple",
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
@@ -638,7 +637,7 @@ const ProductsData = [
         gallery: ["/images/product/furniture/NOIR_Kiwi P_webshop_UAE.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Furniture",
         cate: ["Laptops"],
-        price: 999.99,
+        price: 65,
         productType: "simple",
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
@@ -679,7 +678,7 @@ const ProductsData = [
         gallery: ["/images/product/electric/product-15.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
         pCate: "Furniture",
         cate: ["Headphones"],
-        price: 59.99,
+        price: 65,
         productType: "simple",
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
