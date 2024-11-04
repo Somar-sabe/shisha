@@ -78,7 +78,7 @@ const FurnitureSlider = [
     {
         subTitle: "Hot Deal",
         subIcon: "fas fa-fire",
-        title: "Love 69 Gold",
+        title: "Shisha Accessories",
         thumbnail: "/images/product/furniture/Sisha Accesuares.png"
     },
 ]
