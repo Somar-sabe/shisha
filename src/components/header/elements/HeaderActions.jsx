@@ -30,7 +30,7 @@ const mobileMneuHandler = (data) => {
     <div className="header-action">
       <ul className="action-list">
         {props.searchBox && (
-          <li className="axil-search" onClick={searchBoxToggleHandler}>
+          <li className="axil-search somar" onClick={searchBoxToggleHandler}>
             <input
               type="search"
               className="placeholder product-search-input"
@@ -113,6 +113,14 @@ const mobileMneuHandler = (data) => {
           toggler={searchToggle}
         />
       )}
+
+
+      <style jsx>{` 
+@media (max-width: 768px) {
+    .somar{
+       display:none;
+    }}
+`}</style>
     </div>
   );
 };

@@ -829,7 +829,7 @@ Slider Style
         }
         &::after {
             content: "";
-            height: 260px;
+            
             width: 260px;
             background-color: var(--color-white);
             border-radius: 50%;
@@ -894,7 +894,7 @@ Slider Style
             }
             @media #{$large-mobile} {
                 min-height: 165px;
-                max-height: 165px;
+               
             }
 
         }

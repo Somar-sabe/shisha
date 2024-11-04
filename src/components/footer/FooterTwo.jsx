@@ -14,7 +14,7 @@ const FooterTwo = () => {
       <footer className="axil-footer-area footer-style-2">
         <div className="footer-top separator-top">
           <div className="container">
-            <div className="row">
+            <div className="row" style={{    display: "flex",   justifyContent: "space-around" }}>
               <div className="col-lg-3 col-sm-6">
                 <div className="axil-footer-widget">
                   <h5 className="widget-title">Support</h5>
