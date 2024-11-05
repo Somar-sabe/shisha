@@ -35,7 +35,7 @@ const ProductsData = [
                 },
                 {
                     title: "Type of tobacco",
-                    text: "Verginia"
+                    text: "Virginia"
                 },
                 {
                     title: "Country of origin",
@@ -133,7 +133,7 @@ const ProductsData = [
                 },
                 {
                     title: "Type of tobacco",
-                    text: "Verginia"
+                    text: "Virginia"
                 },
                 {
                     title: "Country of origin",
@@ -233,7 +233,7 @@ const ProductsData = [
                 },
                 {
                     title: "Type of tobacco",
-                    text: "Verginia"
+                    text: "Virginia"
                 },
                 {
                     title: "Country of origin",
@@ -330,7 +330,7 @@ const ProductsData = [
                 },
                 {
                     title: "Type of tobacco",
-                    text: "Verginia"
+                    text: "Virginia"
                 },
                 {
                     title: "Country of origin",
@@ -424,7 +424,7 @@ const ProductsData = [
                 },
                 {
                     title: "Type of tobacco",
-                    text: "Verginia"
+                    text: "Virginia"
                 },
                 {
                     title: "Country of origin",
@@ -485,7 +485,7 @@ const ProductsData = [
                 },
                 {
                     title: "Type of tobacco",
-                    text: "Verginia"
+                    text: "Virginia"
                 },
                 {
                     title: "Country of origin",
@@ -582,7 +582,7 @@ const ProductsData = [
                 },
                 {
                     title: "Type of tobacco",
-                    text: "Verginia"
+                    text: "Virginia"
                 },
                 {
                     title: "Country of origin",
