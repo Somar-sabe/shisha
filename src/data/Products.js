@@ -20,31 +20,27 @@ const ProductsData = [
             },
             listDesc: [
     
-            {
-                title: "Weight",
-                text: "25 g"
-            },
-            {
-                title: "Aroma",
-                text: "Rasbery"
-            },
-            {
-                title: "Fsk",
-                text: "18"
-            },
-            {
-                title: "Teste",
-                text: "Fruity/refresh"
-            },
-            {
-                title: "EAN",
-                text: "12865924729486"
-            },
-            {
-                title: "Articale Number",
-                text: "SHWD23674"
-            }
-      
+                  
+                {
+                    title: "Weight",
+                    text: "250g"
+                },
+                {
+                    title: "Aroma",
+                    text: "Rasbery"
+                },
+                {
+                    title: "Taste",
+                    text: "Fruity/refresh"
+                },
+                {
+                    title: "Type of tobacco",
+                    text: "Verginia"
+                },
+                {
+                    title: "Country of origin",
+                    text: "Germany"
+                }
             ]
         },
         addInfo: [
@@ -122,30 +118,27 @@ const ProductsData = [
             },
             listDesc: [
               
-                    {
-                        title: "Weight",
-                        text: "25 g"
-                    },
-                    {
-                        title: "Aroma",
-                        text: "Rasbery"
-                    },
-                    {
-                        title: "Fsk",
-                        text: "18"
-                    },
-                    {
-                        title: "Teste",
-                        text: "Fruity/refresh"
-                    },
-                    {
-                        title: "EAN",
-                        text: "12865924729486"
-                    },
-                    {
-                        title: "Articale Number",
-                        text: "SHWD23674"
-                    }
+                                   
+                {
+                    title: "Weight",
+                    text: "250g"
+                },
+                {
+                    title: "Aroma",
+                    text: "Rasbery"
+                },
+                {
+                    title: "Taste",
+                    text: "Fruity/refresh"
+                },
+                {
+                    title: "Type of tobacco",
+                    text: "Verginia"
+                },
+                {
+                    title: "Country of origin",
+                    text: "Germany"
+                }
              
             ]
         },
@@ -225,30 +218,27 @@ const ProductsData = [
             },
             listDesc: [
                 
-                    {
-                        title: "Weight",
-                        text: "25 g"
-                    },
-                    {
-                        title: "Aroma",
-                        text: "Rasbery"
-                    },
-                    {
-                        title: "Fsk",
-                        text: "18"
-                    },
-                    {
-                        title: "Teste",
-                        text: "Fruity/refresh"
-                    },
-                    {
-                        title: "EAN",
-                        text: "12865924729486"
-                    },
-                    {
-                        title: "Articale Number",
-                        text: "SHWD23674"
-                    }
+                                   
+                {
+                    title: "Weight",
+                    text: "250g"
+                },
+                {
+                    title: "Aroma",
+                    text: "Rasbery"
+                },
+                {
+                    title: "Taste",
+                    text: "Fruity/refresh"
+                },
+                {
+                    title: "Type of tobacco",
+                    text: "Verginia"
+                },
+                {
+                    title: "Country of origin",
+                    text: "Germany"
+                }
                 ],
            
         },
@@ -325,31 +315,27 @@ const ProductsData = [
                 text: "Viva La Fiesta is a tropical fruit mix that brings you to Africa. It has fresh, juicy fruits that smell great and are perfect for relaxing with friends or after a long day. Enjoy this tasty mix and let your worries go!"
             },
             listDesc: [
-                
-                    {
-                        title: "Weight",
-                        text: "25 g"
-                    },
-                    {
-                        title: "Aroma",
-                        text: "Rasbery"
-                    },
-                    {
-                        title: "Fsk",
-                        text: "18"
-                    },
-                    {
-                        title: "Teste",
-                        text: "Fruity/refresh"
-                    },
-                    {
-                        title: "EAN",
-                        text: "12865924729486"
-                    },
-                    {
-                        title: "Articale Number",
-                        text: "SHWD23674"
-                    }
+                                
+                {
+                    title: "Weight",
+                    text: "250g"
+                },
+                {
+                    title: "Aroma",
+                    text: "Rasbery"
+                },
+                {
+                    title: "Taste",
+                    text: "Fruity/refresh"
+                },
+                {
+                    title: "Type of tobacco",
+                    text: "Verginia"
+                },
+                {
+                    title: "Country of origin",
+                    text: "Germany"
+                }
                 ],
           
         },
@@ -423,31 +409,27 @@ const ProductsData = [
         },
         description: {
             textDesc: [
-                
-                    {
-                        title: "Weight",
-                        text: "25 g"
-                    },
-                    {
-                        title: "Aroma",
-                        text: "Rasbery"
-                    },
-                    {
-                        title: "Fsk",
-                        text: "18"
-                    },
-                    {
-                        title: "Teste",
-                        text: "Fruity/refresh"
-                    },
-                    {
-                        title: "EAN",
-                        text: "12865924729486"
-                    },
-                    {
-                        title: "Articale Number",
-                        text: "SHWD23674"
-                    }
+                                
+                {
+                    title: "Weight",
+                    text: "250g"
+                },
+                {
+                    title: "Aroma",
+                    text: "Rasbery"
+                },
+                {
+                    title: "Taste",
+                    text: "Fruity/refresh"
+                },
+                {
+                    title: "Type of tobacco",
+                    text: "Verginia"
+                },
+                {
+                    title: "Country of origin",
+                    text: "Germany"
+                }
                 ],
             
             listDesc: [
@@ -488,31 +470,27 @@ const ProductsData = [
                 text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis culpa error modi tenetur ratione inventore ipsam voluptate praesentium quod nemo."
             },
             listDesc: [
-               
-                    {
-                        title: "Weight",
-                        text: "25 g"
-                    },
-                    {
-                        title: "Aroma",
-                        text: "Rasbery"
-                    },
-                    {
-                        title: "Fsk",
-                        text: "18"
-                    },
-                    {
-                        title: "Teste",
-                        text: "Fruity/refresh"
-                    },
-                    {
-                        title: "EAN",
-                        text: "12865924729486"
-                    },
-                    {
-                        title: "Articale Number",
-                        text: "SHWD23674"
-                    }
+                               
+                {
+                    title: "Weight",
+                    text: "250g"
+                },
+                {
+                    title: "Aroma",
+                    text: "Rasbery"
+                },
+                {
+                    title: "Taste",
+                    text: "Fruity/refresh"
+                },
+                {
+                    title: "Type of tobacco",
+                    text: "Verginia"
+                },
+                {
+                    title: "Country of origin",
+                    text: "Germany"
+                }
                 ],
            
         },
@@ -590,30 +568,26 @@ const ProductsData = [
             },
             listDesc: [
                 
-                    {
-                        title: "Weight",
-                        text: "25 g"
-                    },
-                    {
-                        title: "Aroma",
-                        text: "Rasbery"
-                    },
-                    {
-                        title: "Fsk",
-                        text: "18"
-                    },
-                    {
-                        title: "Teste",
-                        text: "Fruity/refresh"
-                    },
-                    {
-                        title: "EAN",
-                        text: "12865924729486"
-                    },
-                    {
-                        title: "Articale Number",
-                        text: "SHWD23674"
-                    }
+                {
+                    title: "Weight",
+                    text: "250g"
+                },
+                {
+                    title: "Aroma",
+                    text: "Rasbery"
+                },
+                {
+                    title: "Taste",
+                    text: "Fruity/refresh"
+                },
+                {
+                    title: "Type of tobacco",
+                    text: "Verginia"
+                },
+                {
+                    title: "Country of origin",
+                    text: "Germany"
+                }
                 ],
             
         },
@@ -692,21 +666,26 @@ const ProductsData = [
                 text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis culpa error modi tenetur ratione inventore ipsam voluptate praesentium quod nemo."
             },
             listDesc: [
+                
                 {
-                    title: "Contract Address",
-                    text: "0xd4fio...se520",
+                    title: "Weight",
+                    text: "250g"
                 },
                 {
-                    title: "Token ID",
-                    text: "420"
+                    title: "Aroma",
+                    text: "Rasbery"
                 },
                 {
-                    title: "Token Standard",
-                    text: "Bna-420"
+                    title: "Taste",
+                    text: "Fruity/refresh"
                 },
                 {
-                    title: "Blockchain",
-                    text: "Ethereum"
+                    title: "Type of tobacco",
+                    text: "Verginia"
+                },
+                {
+                    title: "Country of origin",
+                    text: "Germany"
                 }
             ]
         },
@@ -784,21 +763,26 @@ const ProductsData = [
                 text: "Grape Mint blends sour black grape with a hint of fresh mint for a refreshing taste. Sweet white grapes add smoothness, creating a perfect balance. This mix brings the juicy flavour of ripe fruit,perfect for relaxing after a long day."
             },
             listDesc: [
+                
                 {
-                    title: "Contract Address",
-                    text: "0xd4fio...se520",
+                    title: "Weight",
+                    text: "250g"
                 },
                 {
-                    title: "Token ID",
-                    text: "420"
+                    title: "Aroma",
+                    text: "Rasbery"
                 },
                 {
-                    title: "Token Standard",
-                    text: "Bna-420"
+                    title: "Taste",
+                    text: "Fruity/refresh"
                 },
                 {
-                    title: "Blockchain",
-                    text: "Ethereum"
+                    title: "Type of tobacco",
+                    text: "Verginia"
+                },
+                {
+                    title: "Country of origin",
+                    text: "Germany"
                 }
             ]
         },
@@ -876,21 +860,26 @@ const ProductsData = [
                 text: "Cool down on a hot summer day with refreshing, icy fruits! The Ice Finger flavour gives a cool,refreshing taste with every puff. With zesty lime, rich orange, and tart raspberry, Holster brings back nostalgic ice flavours to enjoy on your coals."
             },
             listDesc: [
+                
                 {
-                    title: "Contract Address",
-                    text: "0xd4fio...se520",
+                    title: "Weight",
+                    text: "250g"
                 },
                 {
-                    title: "Token ID",
-                    text: "420"
+                    title: "Aroma",
+                    text: "Rasbery"
                 },
                 {
-                    title: "Token Standard",
-                    text: "Bna-420"
+                    title: "Taste",
+                    text: "Fruity/refresh"
                 },
                 {
-                    title: "Blockchain",
-                    text: "Ethereum"
+                    title: "Type of tobacco",
+                    text: "Verginia"
+                },
+                {
+                    title: "Country of origin",
+                    text: "Germany"
                 }
             ]
         },
@@ -967,21 +956,26 @@ const ProductsData = [
                 text: "Holster Noir Cherry flavour is a tasty smoke that everyone can enjoy. Its rich and smooth taste makes your smoking experience better. Don't miss this delightful blend that promises satisfaction with every puff!"
             },
             listDesc: [
+                 
                 {
-                    title: "Contract Address",
-                    text: "0xd4fio...se520",
+                    title: "Weight",
+                    text: "250g"
                 },
                 {
-                    title: "Token ID",
-                    text: "420"
+                    title: "Aroma",
+                    text: "Rasbery"
                 },
                 {
-                    title: "Token Standard",
-                    text: "Bna-420"
+                    title: "Taste",
+                    text: "Fruity/refresh"
                 },
                 {
-                    title: "Blockchain",
-                    text: "Ethereum"
+                    title: "Type of tobacco",
+                    text: "Verginia"
+                },
+                {
+                    title: "Country of origin",
+                    text: "Germany"
                 }
             ]
         },
@@ -1057,21 +1051,26 @@ const ProductsData = [
                 text: "Holster Noir Cherry flavour is a tasty smoke that everyone can enjoy. Its rich and smooth taste makes your smoking experience better. Don't miss this delightful blend that promises satisfaction with every puff!"
             },
             listDesc: [
+                
                 {
-                    title: "Contract Address",
-                    text: "0xd4fio...se520",
+                    title: "Weight",
+                    text: "250g"
                 },
                 {
-                    title: "Token ID",
-                    text: "420"
+                    title: "Aroma",
+                    text: "Rasbery"
                 },
                 {
-                    title: "Token Standard",
-                    text: "Bna-420"
+                    title: "Taste",
+                    text: "Fruity/refresh"
                 },
                 {
-                    title: "Blockchain",
-                    text: "Ethereum"
+                    title: "Type of tobacco",
+                    text: "Verginia"
+                },
+                {
+                    title: "Country of origin",
+                    text: "Germany"
                 }
             ]
         },
@@ -1146,21 +1145,26 @@ const ProductsData = [
                 text: "Holster Noir Joosy is an exciting new flavour of strawberry and raspberry. It is a big upgrade from the classic version, offering a richer taste. This dark blend of tobacco mixed with sweet and tart flavours is sure to please everyone."
             },
             listDesc: [
+                
                 {
-                    title: "Contract Address",
-                    text: "0xd4fio...se520",
+                    title: "Weight",
+                    text: "250g"
                 },
                 {
-                    title: "Token ID",
-                    text: "420"
+                    title: "Aroma",
+                    text: "Rasbery"
                 },
                 {
-                    title: "Token Standard",
-                    text: "Bna-420"
+                    title: "Taste",
+                    text: "Fruity/refresh"
                 },
                 {
-                    title: "Blockchain",
-                    text: "Ethereum"
+                    title: "Type of tobacco",
+                    text: "Verginia"
+                },
+                {
+                    title: "Country of origin",
+                    text: "Germany"
                 }
             ]
         },
@@ -1236,21 +1240,26 @@ const ProductsData = [
                 text: "Holster Noir Cherry flavour is a tasty smoke that everyone can enjoy. Its rich and smooth taste makes your smoking experience better. Don't miss this delightful blend that promises satisfaction with every puff!"
             },
             listDesc: [
+                
                 {
-                    title: "Contract Address",
-                    text: "0xd4fio...se520",
+                    title: "Weight",
+                    text: "250g"
                 },
                 {
-                    title: "Token ID",
-                    text: "420"
+                    title: "Aroma",
+                    text: "Rasbery"
                 },
                 {
-                    title: "Token Standard",
-                    text: "Bna-420"
+                    title: "Taste",
+                    text: "Fruity/refresh"
                 },
                 {
-                    title: "Blockchain",
-                    text: "Ethereum"
+                    title: "Type of tobacco",
+                    text: "Verginia"
+                },
+                {
+                    title: "Country of origin",
+                    text: "Germany"
                 }
             ]
         },
@@ -1326,48 +1335,50 @@ const ProductsData = [
                 text: "Kiwi. P gives you a true kiwi taste that is delicious and juicy! The new Holster Noir version adds a darker, smokier flavour. This makes the kiwi taste even better for a bold and refreshing smoking experience."
             },
             listDesc: [
+                    
                 {
-                    title: "Contract Address",
-                    text: "0xd4fio...se520",
+                    title: "Weight",
+                    text: "250g"
                 },
                 {
-                    title: "Token ID",
-                    text: "420"
+                    title: "Aroma",
+                    text: "Rasbery"
                 },
                 {
-                    title: "Token Standard",
-                    text: "Bna-420"
+                    title: "Taste",
+                    text: "Fruity/refresh"
                 },
                 {
-                    title: "Blockchain",
-                    text: "Ethereum"
+                    title: "Type of tobacco",
+                    text: "Verginia"
+                },
+                {
+                    title: "Country of origin",
+                    text: "Germany"
                 }
             ]
         },
         addInfo: [
+                
             {
                 title: "Weight",
-                text: "25 g"
+                text: "250g"
             },
             {
                 title: "Aroma",
                 text: "Rasbery"
             },
             {
-                title: "Fsk",
-                text: "18"
-            },
-            {
-                title: "Teste",
+                title: "Taste",
                 text: "Fruity/refresh"
             },
             {
-                title: "EAN",
-                text: "12865924729486"
+                title: "Type of tobacco",
+                text: "Verginia"
             },
             {
-                title: "Articale Number",
-                text: "SHWD23674"
+                title: "Country of origin",
+                text: "Germany"
             }
         ],
         property: [
@@ -1417,21 +1428,26 @@ const ProductsData = [
                 text: "Grape Mint is one of the most popular grape flavours, known for creating special moments of enjoyment. With the new Holster Noir variety, you can now enjoy even more flavours with every puff. Experience the rich taste and delightful aromas!"
             },
             listDesc: [
+                
                 {
-                    title: "Contract Address",
-                    text: "0xd4fio...se520",
+                    title: "Weight",
+                    text: "250g"
                 },
                 {
-                    title: "Token ID",
-                    text: "420"
+                    title: "Aroma",
+                    text: "Rasbery"
                 },
                 {
-                    title: "Token Standard",
-                    text: "Bna-420"
+                    title: "Taste",
+                    text: "Fruity/refresh"
                 },
                 {
-                    title: "Blockchain",
-                    text: "Ethereum"
+                    title: "Type of tobacco",
+                    text: "Verginia"
+                },
+                {
+                    title: "Country of origin",
+                    text: "Germany"
                 }
             ]
         },
