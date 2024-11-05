@@ -27,11 +27,11 @@ const ProductsData = [
                 },
                 {
                     title: "Aroma",
-                    text: "Rasbery"
+                    text: "Apple"
                 },
                 {
                     title: "Taste",
-                    text: "Fruity/refresh"
+                    text: "Apple/refresh"
                 },
                 {
                     title: "Type of tobacco",
@@ -125,7 +125,7 @@ const ProductsData = [
                 },
                 {
                     title: "Aroma",
-                    text: "Rasbery"
+                    text: "Lemon"
                 },
                 {
                     title: "Taste",
@@ -150,7 +150,7 @@ const ProductsData = [
                 },
                 {
                     title: "Aroma",
-                    text: "Rasbery"
+                    text: "Lemon"
                 },
                 {
                     title: "Fsk",
@@ -322,11 +322,11 @@ const ProductsData = [
                 },
                 {
                     title: "Aroma",
-                    text: "Rasbery"
+                    text: "Fruchtmix"
                 },
                 {
                     title: "Taste",
-                    text: "Fruity/refresh"
+                    text: "Fruity"
                 },
                 {
                     title: "Type of tobacco",
@@ -416,11 +416,11 @@ const ProductsData = [
                 },
                 {
                     title: "Aroma",
-                    text: "Rasbery"
+                    text: "Cactus Coward"
                 },
                 {
                     title: "Taste",
-                    text: "Fruity/refresh"
+                    text: "Fruity"
                 },
                 {
                     title: "Type of tobacco",
@@ -564,7 +564,7 @@ const ProductsData = [
         description: {
             textDesc: {
                 title: "About this Product",
-                text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis culpa error modi tenetur ratione inventore ipsam voluptate praesentium quod nemo."
+                text: "Juicy raspberries and sweet strawberries blend together in this fruity mix. JOOSY captures the best berry flavour, making it a top choice for fruit lovers. It uses only the ripest and juiciest fruits for the best taste!"
             },
             listDesc: [
                 
@@ -867,11 +867,11 @@ const ProductsData = [
                 },
                 {
                     title: "Aroma",
-                    text: "Rasbery"
+                    text: "Raspberry, Lime"
                 },
                 {
                     title: "Taste",
-                    text: "Fruity/refresh"
+                    text: "Fruity, Cool / Refreshing"
                 },
                 {
                     title: "Type of tobacco",
@@ -963,15 +963,15 @@ const ProductsData = [
                 },
                 {
                     title: "Aroma",
-                    text: "Rasbery"
+                    text: "Charly"
                 },
                 {
                     title: "Taste",
-                    text: "Fruity/refresh"
+                    text: "Fruity"
                 },
                 {
                     title: "Type of tobacco",
-                    text: "Verginia"
+                    text: "Burley"
                 },
                 {
                     title: "Country of origin",
@@ -1058,7 +1058,7 @@ const ProductsData = [
                 },
                 {
                     title: "Aroma",
-                    text: "Rasbery"
+                    text: "Cactus Coward"
                 },
                 {
                     title: "Taste",
@@ -1066,7 +1066,7 @@ const ProductsData = [
                 },
                 {
                     title: "Type of tobacco",
-                    text: "Verginia"
+                    text: "Burley"
                 },
                 {
                     title: "Country of origin",
@@ -1160,7 +1160,7 @@ const ProductsData = [
                 },
                 {
                     title: "Type of tobacco",
-                    text: "Verginia"
+                    text: "Virginia"
                 },
                 {
                     title: "Country of origin",
@@ -1435,7 +1435,7 @@ const ProductsData = [
                 },
                 {
                     title: "Aroma",
-                    text: "Rasbery"
+                    text: "Fruity"
                 },
                 {
                     title: "Taste",
@@ -1443,7 +1443,7 @@ const ProductsData = [
                 },
                 {
                     title: "Type of tobacco",
-                    text: "Verginia"
+                    text: "Burley"
                 },
                 {
                     title: "Country of origin",
