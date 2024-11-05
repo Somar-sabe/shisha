@@ -14,28 +14,26 @@ const ProductsData = [
             listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
         },
         description: {
-            textDesc: [
-                {
-                    title: "Specifications:",
-                    text: "We’ve created a full-stack structure for our working workflow processes, were from the funny the century initial all the made, have spare to negatives. But the structure was from the funny the century rather, initial all the made, have spare to negatives."
-                },
-                {
-                    title: "Care & Maintenance:",
-                    text: "Use warm water to describe us as a product team that creates amazing UI/UX experiences, by crafting top-notch user experience."
-                }
-            ],
+            textDesc: {
+                title: "About this Product",
+                text: "Double Apple is a blend of red and green apple flavours with a hint of anise. It tastes like fresh apples with a gentle anise note. This mix combines classic flavours with a modern touch for a unique smoking experience"
+            },
             listDesc: [
                 {
-                    icon: "/images/product/product-thumb/icon-3.png",
-                    title: "Easy Returns"
+                    title: "Contract Address",
+                    text: "0xd4fio...se520",
                 },
                 {
-                    icon: "/images/product/product-thumb/icon-2.png",
-                    title: "Quality Service"
+                    title: "Token ID",
+                    text: "420"
                 },
                 {
-                    icon: "/images/product/product-thumb/icon-1.png",
-                    title: "Original Product"
+                    title: "Token Standard",
+                    text: "Bna-420"
+                },
+                {
+                    title: "Blockchain",
+                    text: "Ethereum"
                 }
             ]
         },
@@ -65,6 +63,32 @@ const ProductsData = [
                 text: "Digital Art"
             }
         ],
+        property: [
+            {
+                title: "Brand",
+                text: "eTrade"
+            },
+            {
+                title: "Collection",
+                text: "eTrade Capsules"
+            },
+            {
+                title: "Creator",
+                text: "Arnold Ray"
+            },
+            {
+                title: "Gen",
+                text: "1"
+            },
+            {
+                title: "Rarity",
+                text: "Epic"
+            },
+            {
+                title: "Type",
+                text: "Digital Art"
+            }
+        ]
     },
     {
         id: 2,
@@ -82,28 +106,26 @@ const ProductsData = [
             listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
         },
         description: {
-            textDesc: [
-                {
-                    title: "Specifications:",
-                    text: "We’ve created a full-stack structure for our working workflow processes, were from the funny the century initial all the made, have spare to negatives. But the structure was from the funny the century rather, initial all the made, have spare to negatives."
-                },
-                {
-                    title: "Care & Maintenance:",
-                    text: "Use warm water to describe us as a product team that creates amazing UI/UX experiences, by crafting top-notch user experience."
-                }
-            ],
+            textDesc: {
+                title: "About this Product",
+                text: "Introducing Lee Punch, a lively new flavour in the Holster Punch lineup! Its exotic lemon flavour delivers an exciting burst, blending juicy lemon juice with a hint of freshness. The refreshing aroma and sour kick create a smooth sensation that feels energetic."
+            },
             listDesc: [
                 {
-                    icon: "/images/product/product-thumb/icon-3.png",
-                    title: "Easy Returns"
+                    title: "Contract Address",
+                    text: "0xd4fio...se520",
                 },
                 {
-                    icon: "/images/product/product-thumb/icon-2.png",
-                    title: "Quality Service"
+                    title: "Token ID",
+                    text: "420"
                 },
                 {
-                    icon: "/images/product/product-thumb/icon-1.png",
-                    title: "Original Product"
+                    title: "Token Standard",
+                    text: "Bna-420"
+                },
+                {
+                    title: "Blockchain",
+                    text: "Ethereum"
                 }
             ]
         },
@@ -133,6 +155,32 @@ const ProductsData = [
                 text: "Digital Art"
             }
         ],
+        property: [
+            {
+                title: "Brand",
+                text: "eTrade"
+            },
+            {
+                title: "Collection",
+                text: "eTrade Capsules"
+            },
+            {
+                title: "Creator",
+                text: "Arnold Ray"
+            },
+            {
+                title: "Gen",
+                text: "1"
+            },
+            {
+                title: "Rarity",
+                text: "Epic"
+            },
+            {
+                title: "Type",
+                text: "Digital Art"
+            }
+        ]
     },
     {
         id: 3,
@@ -149,31 +197,81 @@ const ProductsData = [
             listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
         },
         description: {
-            textDesc: [
-                {
-                    title: "Specifications:",
-                    text: "We’ve created a full-stack structure for our working workflow processes, were from the funny the century initial all the made, have spare to negatives. But the structure was from the funny the century rather, initial all the made, have spare to negatives."
-                },
-                {
-                    title: "Care & Maintenance:",
-                    text: "Use warm water to describe us as a product team that creates amazing UI/UX experiences, by crafting top-notch user experience."
-                }
-            ],
+            textDesc: {
+                title: "About this Product",
+                text: "Enjoy “Love 69,” a refreshing mix of juicy melons and sweet passion fruit. Each puff gives you a tasty and energetic experience that is vibrant and memorable. Let “Love 69” take you on a journey of tropical flavours and fun."
+            },
             listDesc: [
                 {
-                    icon: "/images/product/product-thumb/icon-3.png",
-                    title: "Easy Returns"
+                    title: "Contract Address",
+                    text: "0xd4fio...se520",
                 },
                 {
-                    icon: "/images/product/product-thumb/icon-2.png",
-                    title: "Quality Service"
+                    title: "Token ID",
+                    text: "420"
                 },
                 {
-                    icon: "/images/product/product-thumb/icon-1.png",
-                    title: "Original Product"
+                    title: "Token Standard",
+                    text: "Bna-420"
+                },
+                {
+                    title: "Blockchain",
+                    text: "Ethereum"
                 }
             ]
-        }
+        },
+        addInfo: [
+            {
+                title: "Brand",
+                text: "eTrade"
+            },
+            {
+                title: "Collection",
+                text: "eTrade Capsules"
+            },
+            {
+                title: "Creator",
+                text: "Arnold Ray"
+            },
+            {
+                title: "Gen",
+                text: "1"
+            },
+            {
+                title: "Rarity",
+                text: "Epic"
+            },
+            {
+                title: "Type",
+                text: "Digital Art"
+            }
+        ],
+        property: [
+            {
+                title: "Brand",
+                text: "eTrade"
+            },
+            {
+                title: "Collection",
+                text: "eTrade Capsules"
+            },
+            {
+                title: "Creator",
+                text: "Arnold Ray"
+            },
+            {
+                title: "Gen",
+                text: "1"
+            },
+            {
+                title: "Rarity",
+                text: "Epic"
+            },
+            {
+                title: "Type",
+                text: "Digital Art"
+            }
+        ]
     },
     {
         id: 4,
@@ -190,31 +288,81 @@ const ProductsData = [
             listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
         },
         description: {
-            textDesc: [
-                {
-                    title: "Specifications:",
-                    text: "We’ve created a full-stack structure for our working workflow processes, were from the funny the century initial all the made, have spare to negatives. But the structure was from the funny the century rather, initial all the made, have spare to negatives."
-                },
-                {
-                    title: "Care & Maintenance:",
-                    text: "Use warm water to describe us as a product team that creates amazing UI/UX experiences, by crafting top-notch user experience."
-                }
-            ],
+            textDesc: {
+                title: "About this Product",
+                text: "Viva La Fiesta is a tropical fruit mix that brings you to Africa. It has fresh, juicy fruits that smell great and are perfect for relaxing with friends or after a long day. Enjoy this tasty mix and let your worries go!"
+            },
             listDesc: [
                 {
-                    icon: "/images/product/product-thumb/icon-3.png",
-                    title: "Easy Returns"
+                    title: "Contract Address",
+                    text: "0xd4fio...se520",
                 },
                 {
-                    icon: "/images/product/product-thumb/icon-2.png",
-                    title: "Quality Service"
+                    title: "Token ID",
+                    text: "420"
                 },
                 {
-                    icon: "/images/product/product-thumb/icon-1.png",
-                    title: "Original Product"
+                    title: "Token Standard",
+                    text: "Bna-420"
+                },
+                {
+                    title: "Blockchain",
+                    text: "Ethereum"
                 }
             ]
-        }
+        },
+        addInfo: [
+            {
+                title: "Brand",
+                text: "eTrade"
+            },
+            {
+                title: "Collection",
+                text: "eTrade Capsules"
+            },
+            {
+                title: "Creator",
+                text: "Arnold Ray"
+            },
+            {
+                title: "Gen",
+                text: "1"
+            },
+            {
+                title: "Rarity",
+                text: "Epic"
+            },
+            {
+                title: "Type",
+                text: "Digital Art"
+            }
+        ],
+        property: [
+            {
+                title: "Brand",
+                text: "eTrade"
+            },
+            {
+                title: "Collection",
+                text: "eTrade Capsules"
+            },
+            {
+                title: "Creator",
+                text: "Arnold Ray"
+            },
+            {
+                title: "Gen",
+                text: "1"
+            },
+            {
+                title: "Rarity",
+                text: "Epic"
+            },
+            {
+                title: "Type",
+                text: "Digital Art"
+            }
+        ]
     },
     {
         id: 5,
@@ -228,7 +376,7 @@ const ProductsData = [
         salePrice: 85,
         productType: "simple",
         shortDes: {
-            text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
+            text: "With a refreshing cactus taste, !ce Kaktuz offers a perfect balance of coolness and sour-sweetness. It’s a fan favourite and the best-seller at Holster. Try this blend that keeps customers returning for more.", 
             listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
         },
         description: {
@@ -275,31 +423,81 @@ const ProductsData = [
             listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
         },
         description: {
-            textDesc: [
-                {
-                    title: "Specifications:",
-                    text: "We’ve created a full-stack structure for our working workflow processes, were from the funny the century initial all the made, have spare to negatives. But the structure was from the funny the century rather, initial all the made, have spare to negatives."
-                },
-                {
-                    title: "Care & Maintenance:",
-                    text: "Use warm water to describe us as a product team that creates amazing UI/UX experiences, by crafting top-notch user experience."
-                }
-            ],
+            textDesc: {
+                title: "About this Product",
+                text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis culpa error modi tenetur ratione inventore ipsam voluptate praesentium quod nemo."
+            },
             listDesc: [
                 {
-                    icon: "/images/product/product-thumb/icon-3.png",
-                    title: "Easy Returns"
+                    title: "Contract Address",
+                    text: "0xd4fio...se520",
                 },
                 {
-                    icon: "/images/product/product-thumb/icon-2.png",
-                    title: "Quality Service"
+                    title: "Token ID",
+                    text: "420"
                 },
                 {
-                    icon: "/images/product/product-thumb/icon-1.png",
-                    title: "Original Product"
+                    title: "Token Standard",
+                    text: "Bna-420"
+                },
+                {
+                    title: "Blockchain",
+                    text: "Ethereum"
                 }
             ]
-        }
+        },
+        addInfo: [
+            {
+                title: "Brand",
+                text: "eTrade"
+            },
+            {
+                title: "Collection",
+                text: "eTrade Capsules"
+            },
+            {
+                title: "Creator",
+                text: "Arnold Ray"
+            },
+            {
+                title: "Gen",
+                text: "1"
+            },
+            {
+                title: "Rarity",
+                text: "Epic"
+            },
+            {
+                title: "Type",
+                text: "Digital Art"
+            }
+        ],
+        property: [
+            {
+                title: "Brand",
+                text: "eTrade"
+            },
+            {
+                title: "Collection",
+                text: "eTrade Capsules"
+            },
+            {
+                title: "Creator",
+                text: "Arnold Ray"
+            },
+            {
+                title: "Gen",
+                text: "1"
+            },
+            {
+                title: "Rarity",
+                text: "Epic"
+            },
+            {
+                title: "Type",
+                text: "Digital Art"
+            }
+        ]
     },
     {
         id: 7,
@@ -316,31 +514,81 @@ const ProductsData = [
             listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
         },
         description: {
-            textDesc: [
-                {
-                    title: "Specifications:",
-                    text: "We’ve created a full-stack structure for our working workflow processes, were from the funny the century initial all the made, have spare to negatives. But the structure was from the funny the century rather, initial all the made, have spare to negatives."
-                },
-                {
-                    title: "Care & Maintenance:",
-                    text: "Use warm water to describe us as a product team that creates amazing UI/UX experiences, by crafting top-notch user experience."
-                }
-            ],
+            textDesc: {
+                title: "About this Product",
+                text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis culpa error modi tenetur ratione inventore ipsam voluptate praesentium quod nemo."
+            },
             listDesc: [
                 {
-                    icon: "/images/product/product-thumb/icon-3.png",
-                    title: "Easy Returns"
+                    title: "Contract Address",
+                    text: "0xd4fio...se520",
                 },
                 {
-                    icon: "/images/product/product-thumb/icon-2.png",
-                    title: "Quality Service"
+                    title: "Token ID",
+                    text: "420"
                 },
                 {
-                    icon: "/images/product/product-thumb/icon-1.png",
-                    title: "Original Product"
+                    title: "Token Standard",
+                    text: "Bna-420"
+                },
+                {
+                    title: "Blockchain",
+                    text: "Ethereum"
                 }
             ]
-        }
+        },
+        addInfo: [
+            {
+                title: "Brand",
+                text: "eTrade"
+            },
+            {
+                title: "Collection",
+                text: "eTrade Capsules"
+            },
+            {
+                title: "Creator",
+                text: "Arnold Ray"
+            },
+            {
+                title: "Gen",
+                text: "1"
+            },
+            {
+                title: "Rarity",
+                text: "Epic"
+            },
+            {
+                title: "Type",
+                text: "Digital Art"
+            }
+        ],
+        property: [
+            {
+                title: "Brand",
+                text: "eTrade"
+            },
+            {
+                title: "Collection",
+                text: "eTrade Capsules"
+            },
+            {
+                title: "Creator",
+                text: "Arnold Ray"
+            },
+            {
+                title: "Gen",
+                text: "1"
+            },
+            {
+                title: "Rarity",
+                text: "Epic"
+            },
+            {
+                title: "Type",
+                text: "Digital Art"
+            }
+        ]
     },
     {
         id: 8,
@@ -355,35 +603,85 @@ const ProductsData = [
         sizeAttribute: [ 'XL', 'L', 'M', 'S', 'XS'],
 
         shortDes: {
-            text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
+            text: "Fresh green kiwis are picked and washed in ice water, full of juicy flavour. Each drop of juice is carefully squeezed to ensure pure kiwi taste. Kiwi. P is a delicious blend of tangy and sweet that shisha lovers will enjoy.", 
             listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
         },
         description: {
-            textDesc: [
-                {
-                    title: "Specifications:",
-                    text: "We’ve created a full-stack structure for our working workflow processes, were from the funny the century initial all the made, have spare to negatives. But the structure was from the funny the century rather, initial all the made, have spare to negatives."
-                },
-                {
-                    title: "Care & Maintenance:",
-                    text: "Use warm water to describe us as a product team that creates amazing UI/UX experiences, by crafting top-notch user experience."
-                }
-            ],
+            textDesc: {
+                title: "About this Product",
+                text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis culpa error modi tenetur ratione inventore ipsam voluptate praesentium quod nemo."
+            },
             listDesc: [
                 {
-                    icon: "/images/product/product-thumb/icon-3.png",
-                    title: "Easy Returns"
+                    title: "Contract Address",
+                    text: "0xd4fio...se520",
                 },
                 {
-                    icon: "/images/product/product-thumb/icon-2.png",
-                    title: "Quality Service"
+                    title: "Token ID",
+                    text: "420"
                 },
                 {
-                    icon: "/images/product/product-thumb/icon-1.png",
-                    title: "Original Product"
+                    title: "Token Standard",
+                    text: "Bna-420"
+                },
+                {
+                    title: "Blockchain",
+                    text: "Ethereum"
                 }
             ]
-        }
+        },
+        addInfo: [
+            {
+                title: "Brand",
+                text: "eTrade"
+            },
+            {
+                title: "Collection",
+                text: "eTrade Capsules"
+            },
+            {
+                title: "Creator",
+                text: "Arnold Ray"
+            },
+            {
+                title: "Gen",
+                text: "1"
+            },
+            {
+                title: "Rarity",
+                text: "Epic"
+            },
+            {
+                title: "Type",
+                text: "Digital Art"
+            }
+        ],
+        property: [
+            {
+                title: "Brand",
+                text: "eTrade"
+            },
+            {
+                title: "Collection",
+                text: "eTrade Capsules"
+            },
+            {
+                title: "Creator",
+                text: "Arnold Ray"
+            },
+            {
+                title: "Gen",
+                text: "1"
+            },
+            {
+                title: "Rarity",
+                text: "Epic"
+            },
+            {
+                title: "Type",
+                text: "Digital Art"
+            }
+        ]
     },
     {
         id: 9,
@@ -401,31 +699,81 @@ const ProductsData = [
             listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
         },
         description: {
-            textDesc: [
-                {
-                    title: "Specifications:",
-                    text: "We’ve created a full-stack structure for our working workflow processes, were from the funny the century initial all the made, have spare to negatives. But the structure was from the funny the century rather, initial all the made, have spare to negatives."
-                },
-                {
-                    title: "Care & Maintenance:",
-                    text: "Use warm water to describe us as a product team that creates amazing UI/UX experiences, by crafting top-notch user experience."
-                }
-            ],
+            textDesc: {
+                title: "About this Product",
+                text: "Grape Mint blends sour black grape with a hint of fresh mint for a refreshing taste. Sweet white grapes add smoothness, creating a perfect balance. This mix brings the juicy flavour of ripe fruit,perfect for relaxing after a long day."
+            },
             listDesc: [
                 {
-                    icon: "/images/product/product-thumb/icon-3.png",
-                    title: "Easy Returns"
+                    title: "Contract Address",
+                    text: "0xd4fio...se520",
                 },
                 {
-                    icon: "/images/product/product-thumb/icon-2.png",
-                    title: "Quality Service"
+                    title: "Token ID",
+                    text: "420"
                 },
                 {
-                    icon: "/images/product/product-thumb/icon-1.png",
-                    title: "Original Product"
+                    title: "Token Standard",
+                    text: "Bna-420"
+                },
+                {
+                    title: "Blockchain",
+                    text: "Ethereum"
                 }
             ]
-        }
+        },
+        addInfo: [
+            {
+                title: "Brand",
+                text: "eTrade"
+            },
+            {
+                title: "Collection",
+                text: "eTrade Capsules"
+            },
+            {
+                title: "Creator",
+                text: "Arnold Ray"
+            },
+            {
+                title: "Gen",
+                text: "1"
+            },
+            {
+                title: "Rarity",
+                text: "Epic"
+            },
+            {
+                title: "Type",
+                text: "Digital Art"
+            }
+        ],
+        property: [
+            {
+                title: "Brand",
+                text: "eTrade"
+            },
+            {
+                title: "Collection",
+                text: "eTrade Capsules"
+            },
+            {
+                title: "Creator",
+                text: "Arnold Ray"
+            },
+            {
+                title: "Gen",
+                text: "1"
+            },
+            {
+                title: "Rarity",
+                text: "Epic"
+            },
+            {
+                title: "Type",
+                text: "Digital Art"
+            }
+        ]
     },
     {
         id: 10,
@@ -443,72 +791,172 @@ const ProductsData = [
             listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
         },
         description: {
-            textDesc: [
-                {
-                    title: "Specifications:",
-                    text: "We’ve created a full-stack structure for our working workflow processes, were from the funny the century initial all the made, have spare to negatives. But the structure was from the funny the century rather, initial all the made, have spare to negatives."
-                },
-                {
-                    title: "Care & Maintenance:",
-                    text: "Use warm water to describe us as a product team that creates amazing UI/UX experiences, by crafting top-notch user experience."
-                }
-            ],
+            textDesc: {
+                title: "About this Product",
+                text: "Cool down on a hot summer day with refreshing, icy fruits! The Ice Finger flavour gives a cool,refreshing taste with every puff. With zesty lime, rich orange, and tart raspberry, Holster brings back nostalgic ice flavours to enjoy on your coals."
+            },
             listDesc: [
                 {
-                    icon: "/images/product/product-thumb/icon-3.png",
-                    title: "Easy Returns"
+                    title: "Contract Address",
+                    text: "0xd4fio...se520",
                 },
                 {
-                    icon: "/images/product/product-thumb/icon-2.png",
-                    title: "Quality Service"
+                    title: "Token ID",
+                    text: "420"
                 },
                 {
-                    icon: "/images/product/product-thumb/icon-1.png",
-                    title: "Original Product"
+                    title: "Token Standard",
+                    text: "Bna-420"
+                },
+                {
+                    title: "Blockchain",
+                    text: "Ethereum"
                 }
             ]
-        }
+        },
+        addInfo: [
+            {
+                title: "Brand",
+                text: "eTrade"
+            },
+            {
+                title: "Collection",
+                text: "eTrade Capsules"
+            },
+            {
+                title: "Creator",
+                text: "Arnold Ray"
+            },
+            {
+                title: "Gen",
+                text: "1"
+            },
+            {
+                title: "Rarity",
+                text: "Epic"
+            },
+            {
+                title: "Type",
+                text: "Digital Art"
+            }
+        ],
+        property: [
+            {
+                title: "Brand",
+                text: "eTrade"
+            },
+            {
+                title: "Collection",
+                text: "eTrade Capsules"
+            },
+            {
+                title: "Creator",
+                text: "Arnold Ray"
+            },
+            {
+                title: "Gen",
+                text: "1"
+            },
+            {
+                title: "Rarity",
+                text: "Epic"
+            },
+            {
+                title: "Type",
+                text: "Digital Art"
+            }
+        ]
     },
     {
         id: 11,
         title: "Charly Punch Noir",
         thumbnail: "/images/product/furniture/NOIR_Charly Punch_webshop_UAE.png",
-        gallery: ["/images/product/furniture/NOIR_Charly Punch_webshop_UAE.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
+        
         pCate: "shisha accessories",
         cate: ["Accessories"],
         price: 65,
         salePrice: 65,
         productType: "simple",
         shortDes: {
-            text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
+            text: "Holster Noir Cherry flavour is a tasty smoke that everyone can enjoy. Its rich and smooth taste makes your smoking experience better. Don't miss this delightful blend that promises satisfaction with every puff!.", 
             listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
         },
         description: {
-            textDesc: [
-                {
-                    title: "Specifications:",
-                    text: "We’ve created a full-stack structure for our working workflow processes, were from the funny the century initial all the made, have spare to negatives. But the structure was from the funny the century rather, initial all the made, have spare to negatives."
-                },
-                {
-                    title: "Care & Maintenance:",
-                    text: "Use warm water to describe us as a product team that creates amazing UI/UX experiences, by crafting top-notch user experience."
-                }
-            ],
+            textDesc: {
+                title: "About this Product",
+                text: "Holster Noir Cherry flavour is a tasty smoke that everyone can enjoy. Its rich and smooth taste makes your smoking experience better. Don't miss this delightful blend that promises satisfaction with every puff!"
+            },
             listDesc: [
                 {
-                    icon: "/images/product/product-thumb/icon-3.png",
-                    title: "Easy Returns"
+                    title: "Contract Address",
+                    text: "0xd4fio...se520",
                 },
                 {
-                    icon: "/images/product/product-thumb/icon-2.png",
-                    title: "Quality Service"
+                    title: "Token ID",
+                    text: "420"
                 },
                 {
-                    icon: "/images/product/product-thumb/icon-1.png",
-                    title: "Original Product"
+                    title: "Token Standard",
+                    text: "Bna-420"
+                },
+                {
+                    title: "Blockchain",
+                    text: "Ethereum"
                 }
             ]
-        }
+        },
+        addInfo: [
+            {
+                title: "Brand",
+                text: "eTrade"
+            },
+            {
+                title: "Collection",
+                text: "eTrade Capsules"
+            },
+            {
+                title: "Creator",
+                text: "Arnold Ray"
+            },
+            {
+                title: "Gen",
+                text: "1"
+            },
+            {
+                title: "Rarity",
+                text: "Epic"
+            },
+            {
+                title: "Type",
+                text: "Digital Art"
+            }
+        ],
+        property: [
+            {
+                title: "Brand",
+                text: "eTrade"
+            },
+            {
+                title: "Collection",
+                text: "eTrade Capsules"
+            },
+            {
+                title: "Creator",
+                text: "Arnold Ray"
+            },
+            {
+                title: "Gen",
+                text: "1"
+            },
+            {
+                title: "Rarity",
+                text: "Epic"
+            },
+            {
+                title: "Type",
+                text: "Digital Art"
+            }
+        ]
     },
     {
         id: 12,
@@ -524,31 +972,81 @@ const ProductsData = [
             listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
         },
         description: {
-            textDesc: [
-                {
-                    title: "Specifications:",
-                    text: "We’ve created a full-stack structure for our working workflow processes, were from the funny the century initial all the made, have spare to negatives. But the structure was from the funny the century rather, initial all the made, have spare to negatives."
-                },
-                {
-                    title: "Care & Maintenance:",
-                    text: "Use warm water to describe us as a product team that creates amazing UI/UX experiences, by crafting top-notch user experience."
-                }
-            ],
+            textDesc: {
+                title: "About this Product",
+                text: "Holster Noir Cherry flavour is a tasty smoke that everyone can enjoy. Its rich and smooth taste makes your smoking experience better. Don't miss this delightful blend that promises satisfaction with every puff!"
+            },
             listDesc: [
                 {
-                    icon: "/images/product/product-thumb/icon-3.png",
-                    title: "Easy Returns"
+                    title: "Contract Address",
+                    text: "0xd4fio...se520",
                 },
                 {
-                    icon: "/images/product/product-thumb/icon-2.png",
-                    title: "Quality Service"
+                    title: "Token ID",
+                    text: "420"
                 },
                 {
-                    icon: "/images/product/product-thumb/icon-1.png",
-                    title: "Original Product"
+                    title: "Token Standard",
+                    text: "Bna-420"
+                },
+                {
+                    title: "Blockchain",
+                    text: "Ethereum"
                 }
             ]
-        }
+        },
+        addInfo: [
+            {
+                title: "Brand",
+                text: "eTrade"
+            },
+            {
+                title: "Collection",
+                text: "eTrade Capsules"
+            },
+            {
+                title: "Creator",
+                text: "Arnold Ray"
+            },
+            {
+                title: "Gen",
+                text: "1"
+            },
+            {
+                title: "Rarity",
+                text: "Epic"
+            },
+            {
+                title: "Type",
+                text: "Digital Art"
+            }
+        ],
+        property: [
+            {
+                title: "Brand",
+                text: "eTrade"
+            },
+            {
+                title: "Collection",
+                text: "eTrade Capsules"
+            },
+            {
+                title: "Creator",
+                text: "Arnold Ray"
+            },
+            {
+                title: "Gen",
+                text: "1"
+            },
+            {
+                title: "Rarity",
+                text: "Epic"
+            },
+            {
+                title: "Type",
+                text: "Digital Art"
+            }
+        ]
     },
     {
         id: 13,
@@ -563,31 +1061,81 @@ const ProductsData = [
             listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
         },
         description: {
-            textDesc: [
-                {
-                    title: "Specifications:",
-                    text: "We’ve created a full-stack structure for our working workflow processes, were from the funny the century initial all the made, have spare to negatives. But the structure was from the funny the century rather, initial all the made, have spare to negatives."
-                },
-                {
-                    title: "Care & Maintenance:",
-                    text: "Use warm water to describe us as a product team that creates amazing UI/UX experiences, by crafting top-notch user experience."
-                }
-            ],
+            textDesc: {
+                title: "About this Product",
+                text: "Holster Noir Cherry flavour is a tasty smoke that everyone can enjoy. Its rich and smooth taste makes your smoking experience better. Don't miss this delightful blend that promises satisfaction with every puff!"
+            },
             listDesc: [
                 {
-                    icon: "/images/product/product-thumb/icon-3.png",
-                    title: "Easy Returns"
+                    title: "Contract Address",
+                    text: "0xd4fio...se520",
                 },
                 {
-                    icon: "/images/product/product-thumb/icon-2.png",
-                    title: "Quality Service"
+                    title: "Token ID",
+                    text: "420"
                 },
                 {
-                    icon: "/images/product/product-thumb/icon-1.png",
-                    title: "Original Product"
+                    title: "Token Standard",
+                    text: "Bna-420"
+                },
+                {
+                    title: "Blockchain",
+                    text: "Ethereum"
                 }
             ]
-        }
+        },
+        addInfo: [
+            {
+                title: "Brand",
+                text: "eTrade"
+            },
+            {
+                title: "Collection",
+                text: "eTrade Capsules"
+            },
+            {
+                title: "Creator",
+                text: "Arnold Ray"
+            },
+            {
+                title: "Gen",
+                text: "1"
+            },
+            {
+                title: "Rarity",
+                text: "Epic"
+            },
+            {
+                title: "Type",
+                text: "Digital Art"
+            }
+        ],
+        property: [
+            {
+                title: "Brand",
+                text: "eTrade"
+            },
+            {
+                title: "Collection",
+                text: "eTrade Capsules"
+            },
+            {
+                title: "Creator",
+                text: "Arnold Ray"
+            },
+            {
+                title: "Gen",
+                text: "1"
+            },
+            {
+                title: "Rarity",
+                text: "Epic"
+            },
+            {
+                title: "Type",
+                text: "Digital Art"
+            }
+        ]
     },
     {
         id: 14,
@@ -603,31 +1151,81 @@ const ProductsData = [
             listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
         },
         description: {
-            textDesc: [
-                {
-                    title: "Specifications:",
-                    text: "We’ve created a full-stack structure for our working workflow processes, were from the funny the century initial all the made, have spare to negatives. But the structure was from the funny the century rather, initial all the made, have spare to negatives."
-                },
-                {
-                    title: "Care & Maintenance:",
-                    text: "Use warm water to describe us as a product team that creates amazing UI/UX experiences, by crafting top-notch user experience."
-                }
-            ],
+            textDesc: {
+                title: "About this Product",
+                text: "Holster Noir Cherry flavour is a tasty smoke that everyone can enjoy. Its rich and smooth taste makes your smoking experience better. Don't miss this delightful blend that promises satisfaction with every puff!"
+            },
             listDesc: [
                 {
-                    icon: "/images/product/product-thumb/icon-3.png",
-                    title: "Easy Returns"
+                    title: "Contract Address",
+                    text: "0xd4fio...se520",
                 },
                 {
-                    icon: "/images/product/product-thumb/icon-2.png",
-                    title: "Quality Service"
+                    title: "Token ID",
+                    text: "420"
                 },
                 {
-                    icon: "/images/product/product-thumb/icon-1.png",
-                    title: "Original Product"
+                    title: "Token Standard",
+                    text: "Bna-420"
+                },
+                {
+                    title: "Blockchain",
+                    text: "Ethereum"
                 }
             ]
-        }
+        },
+        addInfo: [
+            {
+                title: "Brand",
+                text: "eTrade"
+            },
+            {
+                title: "Collection",
+                text: "eTrade Capsules"
+            },
+            {
+                title: "Creator",
+                text: "Arnold Ray"
+            },
+            {
+                title: "Gen",
+                text: "1"
+            },
+            {
+                title: "Rarity",
+                text: "Epic"
+            },
+            {
+                title: "Type",
+                text: "Digital Art"
+            }
+        ],
+        property: [
+            {
+                title: "Brand",
+                text: "eTrade"
+            },
+            {
+                title: "Collection",
+                text: "eTrade Capsules"
+            },
+            {
+                title: "Creator",
+                text: "Arnold Ray"
+            },
+            {
+                title: "Gen",
+                text: "1"
+            },
+            {
+                title: "Rarity",
+                text: "Epic"
+            },
+            {
+                title: "Type",
+                text: "Digital Art"
+            }
+        ]
     },
     {
         id: 15,
@@ -643,31 +1241,81 @@ const ProductsData = [
             listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
         },
         description: {
-            textDesc: [
-                {
-                    title: "Specifications:",
-                    text: "We’ve created a full-stack structure for our working workflow processes, were from the funny the century initial all the made, have spare to negatives. But the structure was from the funny the century rather, initial all the made, have spare to negatives."
-                },
-                {
-                    title: "Care & Maintenance:",
-                    text: "Use warm water to describe us as a product team that creates amazing UI/UX experiences, by crafting top-notch user experience."
-                }
-            ],
+            textDesc: {
+                title: "About this Product",
+                text: "Kiwi. P gives you a true kiwi taste that is delicious and juicy! The new Holster Noir version adds a darker, smokier flavour. This makes the kiwi taste even better for a bold and refreshing smoking experience."
+            },
             listDesc: [
                 {
-                    icon: "/images/product/product-thumb/icon-3.png",
-                    title: "Easy Returns"
+                    title: "Contract Address",
+                    text: "0xd4fio...se520",
                 },
                 {
-                    icon: "/images/product/product-thumb/icon-2.png",
-                    title: "Quality Service"
+                    title: "Token ID",
+                    text: "420"
                 },
                 {
-                    icon: "/images/product/product-thumb/icon-1.png",
-                    title: "Original Product"
+                    title: "Token Standard",
+                    text: "Bna-420"
+                },
+                {
+                    title: "Blockchain",
+                    text: "Ethereum"
                 }
             ]
-        }
+        },
+        addInfo: [
+            {
+                title: "Brand",
+                text: "eTrade"
+            },
+            {
+                title: "Collection",
+                text: "eTrade Capsules"
+            },
+            {
+                title: "Creator",
+                text: "Arnold Ray"
+            },
+            {
+                title: "Gen",
+                text: "1"
+            },
+            {
+                title: "Rarity",
+                text: "Epic"
+            },
+            {
+                title: "Type",
+                text: "Digital Art"
+            }
+        ],
+        property: [
+            {
+                title: "Brand",
+                text: "eTrade"
+            },
+            {
+                title: "Collection",
+                text: "eTrade Capsules"
+            },
+            {
+                title: "Creator",
+                text: "Arnold Ray"
+            },
+            {
+                title: "Gen",
+                text: "1"
+            },
+            {
+                title: "Rarity",
+                text: "Epic"
+            },
+            {
+                title: "Type",
+                text: "Digital Art"
+            }
+        ]
     },
    
     {
@@ -684,34 +1332,84 @@ const ProductsData = [
             listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
         },
         description: {
-            textDesc: [
-                {
-                    title: "Specifications:",
-                    text: "We’ve created a full-stack structure for our working workflow processes, were from the funny the century initial all the made, have spare to negatives. But the structure was from the funny the century rather, initial all the made, have spare to negatives."
-                },
-                {
-                    title: "Care & Maintenance:",
-                    text: "Use warm water to describe us as a product team that creates amazing UI/UX experiences, by crafting top-notch user experience."
-                }
-            ],
+            textDesc: {
+                title: "About this Product",
+                text: "Grape Mint is one of the most popular grape flavours, known for creating special moments of enjoyment. With the new Holster Noir variety, you can now enjoy even more flavours with every puff. Experience the rich taste and delightful aromas!"
+            },
             listDesc: [
                 {
-                    icon: "/images/product/product-thumb/icon-3.png",
-                    title: "Easy Returns"
+                    title: "Contract Address",
+                    text: "0xd4fio...se520",
                 },
                 {
-                    icon: "/images/product/product-thumb/icon-2.png",
-                    title: "Quality Service"
+                    title: "Token ID",
+                    text: "420"
                 },
                 {
-                    icon: "/images/product/product-thumb/icon-1.png",
-                    title: "Original Product"
+                    title: "Token Standard",
+                    text: "Bna-420"
+                },
+                {
+                    title: "Blockchain",
+                    text: "Ethereum"
                 }
             ]
-        }
+        },
+        addInfo: [
+            {
+                title: "Brand",
+                text: "eTrade"
+            },
+            {
+                title: "Collection",
+                text: "eTrade Capsules"
+            },
+            {
+                title: "Creator",
+                text: "Arnold Ray"
+            },
+            {
+                title: "Gen",
+                text: "1"
+            },
+            {
+                title: "Rarity",
+                text: "Epic"
+            },
+            {
+                title: "Type",
+                text: "Digital Art"
+            }
+        ],
+        property: [
+            {
+                title: "Brand",
+                text: "eTrade"
+            },
+            {
+                title: "Collection",
+                text: "eTrade Capsules"
+            },
+            {
+                title: "Creator",
+                text: "Arnold Ray"
+            },
+            {
+                title: "Gen",
+                text: "1"
+            },
+            {
+                title: "Rarity",
+                text: "Epic"
+            },
+            {
+                title: "Type",
+                text: "Digital Art"
+            }
+        ]
     },
    
-   
+  
 ]
 
 export default ProductsData;

@@ -8,7 +8,7 @@ import ProductRating from "@/components/product/elements/ProductRating";
 
 const SingleLayoutFour = ({singleData}) => {
     return (
-        <section className="axil-single-product-area bg-color-white" style={{ backgroundColor: "#f9f3f0" }}>
+        <section className="axil-single-product-area bg-color-white">
             <div className="single-product-thumb axil-section-gap pb--30 pb_sm--20">
                 <div className="container">
                     <div className="row row--50">
@@ -74,7 +74,9 @@ const SingleLayoutFour = ({singleData}) => {
                                                         <li className="nav-item " role="presentation">
                                                             <a id="additional-info-tab" data-bs-toggle="tab" href="#additional-info" role="tab" aria-controls="additional-info" aria-selected="false">Additional Information</a>
                                                         </li>
-
+                                                        <li className="nav-item" role="presentation">
+                                                            <a id="reviews-tab" data-bs-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="false">Property</a>
+                                                        </li>
                                                     </ul>
                                                     <div className="tab-content" id="myTabContent">
                                                         <div className="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
@@ -111,7 +113,7 @@ const SingleLayoutFour = ({singleData}) => {
                                                                 </div>
                                                             </div>
                                                         </div>
-                                     
+                                     z
                                                     </div>
                                                 </div>
                                             </div>

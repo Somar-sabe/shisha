@@ -81,6 +81,8 @@ const SingleLayouThree = ({ singleData }) => {
                                                         </div>
                                                         <div className="tab-pane fade" id="additional-info" role="tabpanel" aria-labelledby="additional-info-tab">
                                                             <div className="product-additional-info">
+                                                            <p className="mb--15"><strong>{singleData.description.textDesc.title}</strong></p>
+                                                            <p>{singleData.description.textDesc.text}</p>
                                                                 <div className="table-responsive">
                                                                     <table>
                                                                         <tbody>
