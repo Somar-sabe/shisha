@@ -541,8 +541,8 @@ const ProductsData = [
     },
     {
         id: 11,
-        title: "cherry Punch Noir",
-        thumbnail: "/images/product/furniture/NOIR_cherry Punch_webshop_UAE.png",
+        title: "Charly Punch Noir",
+        thumbnail: "/images/product/furniture/NOIR_Charly Punch_webshop_UAE.png",
         
         pCate: "shisha accessories",
         cate: ["Accessories"],
@@ -550,13 +550,13 @@ const ProductsData = [
         salePrice: 65,
         productType: "simple",
         shortDes: {
-            text: "Holster Noir Cherry flavour is a tasty smoke that everyone can enjoy. Its rich and smooth taste makes your smoking experience better. Don't miss this delightful blend that promises satisfaction with every puff!.", 
+            text: "Holster Noir Charly flavour is a tasty smoke that everyone can enjoy. Its rich and smooth taste makes your smoking experience better. Don't miss this delightful blend that promises satisfaction with every puff!.", 
             listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
         },
         description: {
             textDesc: {
                 title: "About this Product",
-                text: "Holster Noir Cherry flavour is a tasty smoke that everyone can enjoy. Its rich and smooth taste makes your smoking experience better. Don't miss this delightful blend that promises satisfaction with every puff!"
+                text: "Holster Noir Charly flavour is a tasty smoke that everyone can enjoy. Its rich and smooth taste makes your smoking experience better. Don't miss this delightful blend that promises satisfaction with every puff!"
             },
             listDesc: [
                  
@@ -566,7 +566,7 @@ const ProductsData = [
                 },
                 {
                     title: "Aroma",
-                    text: "cherry"
+                    text: "Cherry"
                 },
                 {
                     title: "Taste",
@@ -611,7 +611,7 @@ const ProductsData = [
         description: {
             textDesc: {
                 title: "About this Product",
-                text: "Holster Noir Cherry flavour is a tasty smoke that everyone can enjoy. Its rich and smooth taste makes your smoking experience better. Don't miss this delightful blend that promises satisfaction with every puff!"
+                text: "Holster Noir Charly flavour is a tasty smoke that everyone can enjoy. Its rich and smooth taste makes your smoking experience better. Don't miss this delightful blend that promises satisfaction with every puff!"
             },
             listDesc: [
                 
