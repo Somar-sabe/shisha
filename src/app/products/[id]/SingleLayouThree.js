@@ -56,7 +56,7 @@ const SingleLayouThree = ({ singleData }) => {
                                                             <a className="active" id="description-tab" data-bs-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
                                                         </li>
                                                         <li className="nav-item " role="presentation">
-                                                            <a id="additional-info-tab" data-bs-toggle="tab" href="#additional-info" role="tab" aria-controls="additional-info" aria-selected="false">How to mix</a>
+                                                            <a id="additional-info-tab" data-bs-toggle="tab" href="#additional-info" role="tab" aria-controls="additional-info" aria-selected="false">Mixology</a>
                                                         </li>
 
                                                     </ul>
@@ -81,8 +81,7 @@ const SingleLayouThree = ({ singleData }) => {
                                                         </div>
                                                         <div className="tab-pane fade" id="additional-info" role="tabpanel" aria-labelledby="additional-info-tab">
                                                             <div className="product-additional-info">
-                                                            <p className="mb--15"><strong>{singleData.description.textDesc.title}</strong></p>
-                                                            <p>{singleData.description.textDesc.text}</p>
+                                                        
                                                                 <div className="table-responsive">
                                                                     <table>
                                                                         <tbody>
