@@ -527,14 +527,7 @@ const ProductsData = [
             ]
         },
         addInfo: [
-            {
-                title: "Weight",
-                text: "25 g"
-            },
-            {
-                title: "Aroma",
-                text: "Rasbery"
-            },
+
 
         ],
        
@@ -583,14 +576,7 @@ const ProductsData = [
             ]
         },
         addInfo: [
-            {
-                title: "Weight",
-                text: "25 g"
-            },
-            {
-                title: "Aroma",
-                text: "Rasbery"
-            },
+
 
         ],
        

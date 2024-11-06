@@ -1,14 +1,48 @@
 'use client';
 import { useState } from "react";
 import Image from "next/image";
-import { useDispatch, useSelector } from "react-redux";
 import SlickSlider from "@/components/elements/SlickSlider";
-import FsLightbox from "fslightbox-react";
+
 import { discountPercentage } from "@/utils";
-import { addToCart, addToWishlist } from "@/store/slices/productSlice";
 import ProductRating from "@/components/product/elements/ProductRating";
+import { useSelector, useDispatch } from "react-redux";
+import FsLightbox from "fslightbox-react";
+import { addToCart, addToWishlist } from "@/store/slices/productSlice";
+
+
 
 const SingleLayoutTwo = ({singleData}) => {
+    const dispatch = useDispatch();
+    const [quantity, setquantity] = useState(1);
+    const [productSize, setProductSize] = useState("");
+    const getWishlist = useSelector((state) => state.productData.wishlistItems);
+    const isWishlistAdded = getWishlist.filter((data) => data.id === singleData.id);
+
+    const decrementQuantity = () => {
+        if (quantity > 0) {
+            setquantity(quantity - 1);
+        }
+    }
+    const incrementQuantity = () => {
+        setquantity(quantity + 1);
+    }
+    const handleAddToCart = (cartAddedData) => {
+        let product = {...cartAddedData}
+        if (quantity > 0) {
+            product.cartQuantity = quantity;
+            product.productColor = colorImage.color;
+            product.productSize = productSize;
+            dispatch(addToCart(product));
+        }else {
+            alert("Please select minimum 1 quantity")
+        }
+    }
+    const handleAddToWishlist = (product) => {
+        dispatch(addToWishlist(product));
+    }
+    
+
+
     return (
         <section className="axil-single-product-area bg-color-white" style={{ backgroundColor: "#f9f3f0" }}>
             <div className="single-product-thumb axil-section-gap pb--30 pb_sm--20">
@@ -35,18 +69,26 @@ const SingleLayoutTwo = ({singleData}) => {
                                 <div className="position-sticky sticky-top">
                                     <div className="single-product-content nft-single-product-content">
                                         <div className="inner">
-                                            <h2 className="product-title">{singleData.title}</h2>
-                                            <div className="price-amount price-offer-amount">
+                                            <h2 className="product-title" style={{ paddingLeft: "25px" }}>{singleData.title}</h2>
+                                            <div className="price-amount price-offer-amount" style={{ paddingLeft: "25px" }}>
                                                 <span className="price current-price">{singleData.price} AED</span>
                                             </div>
                                             {/* Start Product Action Wrapper  */}
-                                            <div className="product-action-wrapper d-flex-center">
-                                                {/* Start Product Action  */}
-                                                <ul className="product-action action-style-two d-flex-center mb--0">
-                                                    <li className="add-to-cart"><a href={singleData.buyUrl} className="axil-btn btn-bg-primary">Buy Product</a></li>
-                                                </ul>
-                                                {/* End Product Action  */}
-                                            </div>
+                                            <div className="product-action-wrapper d-flex-center" style={{ paddingLeft: "25px" }}>
+                                        <div className="pro-qty">
+                                            <span className="qtybtn" onClick={decrementQuantity}>-</span>
+                                            <input type="number" className="quantity-input" value={quantity} readOnly />
+                                            <span className="qtybtn" onClick={incrementQuantity}>+</span>
+                                        </div>
+                                        <ul className="product-action d-flex-center mb--0">
+                                            <li className="add-to-cart">
+                                                <button disabled={(singleData.colorAttribute && !colorImage) || (singleData.sizeAttribute && !productSize) ? true : false} onClick={() => handleAddToCart(singleData)} className="axil-btn btn-bg-primary">Add to Cart</button>
+                                            </li>
+                                            <li className="wishlist">
+                                                <button className="axil-btn wishlist-btn" onClick={() => handleAddToWishlist(singleData)}><i className={isWishlistAdded.length === 1 ? "fas fa-heart" : "far fa-heart"} /></button>
+                                            </li>
+                                        </ul>
+                                    </div>
                                   
                                             <div className="woocommerce-tabs wc-tabs-wrapper bg-vista-white nft-info-tabs">
                                                 <div className="container">
