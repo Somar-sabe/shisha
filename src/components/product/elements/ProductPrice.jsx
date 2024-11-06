@@ -4,14 +4,14 @@ const ProductPrice = (props) => {
         <div className="product-price-variant">
               {props.price.salePrice ? (
                 <span className="price old-price">
-                  <span className="currency-symbol">$</span>
+                  <span className="currency-symbol">AED</span>
                   {props.price.price}
                 </span>
               ) : (
                 ""
               )}
               <span className="price current-price">
-                <span className="currency-symbol">$</span>
+                <span className="currency-symbol">AED</span>
                 {props.price.salePrice
                   ? props.price.salePrice
                   : props.price.price}

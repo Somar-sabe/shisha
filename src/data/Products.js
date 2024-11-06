@@ -44,57 +44,10 @@ const ProductsData = [
             ]
         },
         addInfo: [
-            {
-                title: "Weight",
-                text: "eTrade"
-            },
-            {
-                title: "Aroma",
-                text: "eTrade Capsules"
-            },
-            {
-                title: "Fsk",
-                text: "Arnold Ray"
-            },
-            {
-                title: "Teste",
-                text: "1"
-            },
-            {
-                title: "EAN",
-                text: "Epic"
-            },
-            {
-                title: "Articale Number",
-                text: "Digital Art"
-            }
+
+           
         ],
-        property: [
-            {
-                title: "Brand",
-                text: "eTrade"
-            },
-            {
-                title: "Collection",
-                text: "eTrade Capsules"
-            },
-            {
-                title: "Creator",
-                text: "Arnold Ray"
-            },
-            {
-                title: "Gen",
-                text: "1"
-            },
-            {
-                title: "Rarity",
-                text: "Epic"
-            },
-            {
-                title: "Type",
-                text: "Digital Art"
-            }
-        ]
+       
     },
     {
         id: 2,
@@ -143,59 +96,10 @@ const ProductsData = [
             ]
         },
         addInfo: [
-           
-                {
-                    title: "Weight",
-                    text: "25 g"
-                },
-                {
-                    title: "Aroma",
-                    text: "Lemon"
-                },
-                {
-                    title: "Fsk",
-                    text: "18"
-                },
-                {
-                    title: "Teste",
-                    text: "Fruity/refresh"
-                },
-                {
-                    title: "EAN",
-                    text: "12865924729486"
-                },
-                {
-                    title: "Articale Number",
-                    text: "SHWD23674"
-                }
+                
             ],
        
-        property: [
-            {
-                title: "Brand",
-                text: "eTrade"
-            },
-            {
-                title: "Collection",
-                text: "eTrade Capsules"
-            },
-            {
-                title: "Creator",
-                text: "Arnold Ray"
-            },
-            {
-                title: "Gen",
-                text: "1"
-            },
-            {
-                title: "Rarity",
-                text: "Epic"
-            },
-            {
-                title: "Type",
-                text: "Digital Art"
-            }
-        ]
+      
     },
     {
         id: 3,
@@ -243,57 +147,9 @@ const ProductsData = [
            
         },
         addInfo: [
-            {
-                title: "Weight",
-                text: "25 g"
-            },
-            {
-                title: "Aroma",
-                text: "Rasbery"
-            },
-            {
-                title: "Fsk",
-                text: "18"
-            },
-            {
-                title: "Teste",
-                text: "Fruity/refresh"
-            },
-            {
-                title: "EAN",
-                text: "12865924729486"
-            },
-            {
-                title: "Articale Number",
-                text: "SHWD23674"
-            }
+           
         ],
-        property: [
-            {
-                title: "Brand",
-                text: "eTrade"
-            },
-            {
-                title: "Collection",
-                text: "eTrade Capsules"
-            },
-            {
-                title: "Creator",
-                text: "Arnold Ray"
-            },
-            {
-                title: "Gen",
-                text: "1"
-            },
-            {
-                title: "Rarity",
-                text: "Epic"
-            },
-            {
-                title: "Type",
-                text: "Digital Art"
-            }
-        ]
+       
     },
     {
         id: 4,
@@ -326,7 +182,7 @@ const ProductsData = [
                 },
                 {
                     title: "Taste",
-                    text: "Fruity"
+                    text: "Fruity/refresh"
                 },
                 {
                     title: "Type of tobacco",
@@ -336,61 +192,13 @@ const ProductsData = [
                     title: "Country of origin",
                     text: "Germany"
                 }
+
                 ],
           
         },
         addInfo: [
-            {
-                title: "Weight",
-                text: "25 g"
-            },
-            {
-                title: "Aroma",
-                text: "Rasbery"
-            },
-            {
-                title: "Fsk",
-                text: "18"
-            },
-            {
-                title: "Teste",
-                text: "Fruity/refresh"
-            },
-            {
-                title: "EAN",
-                text: "12865924729486"
-            },
-            {
-                title: "Articale Number",
-                text: "SHWD23674"
-            }
+
         ],
-        property: [
-            {
-                title: "Brand",
-                text: "eTrade"
-            },
-            {
-                title: "Collection",
-                text: "eTrade Capsules"
-            },
-            {
-                title: "Creator",
-                text: "Arnold Ray"
-            },
-            {
-                title: "Gen",
-                text: "1"
-            },
-            {
-                title: "Rarity",
-                text: "Epic"
-            },
-            {
-                title: "Type",
-                text: "Digital Art"
-            }
-        ]
     },
     {
         id: 5,
@@ -408,66 +216,9 @@ const ProductsData = [
             listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
         },
         description: {
-            textDesc: [
-                                
-                {
-                    title: "Weight",
-                    text: "250g"
-                },
-                {
-                    title: "Aroma",
-                    text: "Cactus Coward"
-                },
-                {
-                    title: "Taste",
-                    text: "Fruity"
-                },
-                {
-                    title: "Type of tobacco",
-                    text: "Virginia"
-                },
-                {
-                    title: "Country of origin",
-                    text: "Germany"
-                }
-                ],
-            
-            listDesc: [
-                {
-                    icon: "/images/product/product-thumb/icon-3.png",
-                    title: "Easy Returns"
-                },
-                {
-                    icon: "/images/product/product-thumb/icon-2.png",
-                    title: "Quality Service"
-                },
-                {
-                    icon: "/images/product/product-thumb/icon-1.png",
-                    title: "Original Product"
-                }
-            ]
-        }
-    },
-    {
-        id: 6,
-        title: "Red Citruz",
-        thumbnail: "/images/product/furniture/NOIR_Red Citruz_webshop_UAE.png",
-        hoverThumbnail: "/images/product/furniture/NOIR_Red Citruz_webshop_UAE.png",
-        gallery: ["/images/product/electric/product-05.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
-        pCate: "Shisha Topaco",
-        cate: ["Accessories"],
-        price: 85,
-        salePrice: 85,
-        productType: "variable",
-       
-        shortDes: {
-            text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
-            listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
-        },
-        description: {
             textDesc: {
                 title: "About this Product",
-                text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis culpa error modi tenetur ratione inventore ipsam voluptate praesentium quod nemo."
+                text: "With a refreshing cactus taste, !ce Kaktuz offers a perfect balance of coolness and sour-sweetness. It’s a fan favourite and the best-seller at Holster. Try this blend that keeps customers returning for more."
             },
             listDesc: [
                                
@@ -496,56 +247,75 @@ const ProductsData = [
         },
         addInfo: [
             {
-                title: "Weight",
-                text: "25 g"
+                title: "Ice Kaktuz",
+                text: "70%"
             },
             {
-                title: "Aroma",
-                text: "Rasbery"
+                title: "NOIR Charly Punch",
+                text: "30%"
             },
-            {
-                title: "Fsk",
-                text: "18"
-            },
-            {
-                title: "Teste",
-                text: "Fruity/refresh"
-            },
-            {
-                title: "EAN",
-                text: "12865924729486"
-            },
-            {
-                title: "Articale Number",
-                text: "SHWD23674"
-            }
+ 
         ],
-        property: [
+       
+    },
+    {
+        id: 6,
+        title: "Red Citruz",
+        thumbnail: "/images/product/furniture/NOIR_Red Citruz_webshop_UAE.png",
+        hoverThumbnail: "/images/product/furniture/NOIR_Red Citruz_webshop_UAE.png",
+        gallery: ["/images/product/electric/product-05.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
+        pCate: "Shisha Topaco",
+        cate: ["Accessories"],
+        price: 85,
+        salePrice: 85,
+        productType: "variable",
+       
+        shortDes: {
+            text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
+            listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
+        },
+        description: {
+            textDesc: {
+                title: "About this Product",
+                text: "Holster Noir is a mix of dark blend tobacco, giving it a strong, earthy flavour. This flavour blends well with the sweet and fruity taste of grapefruit and the rich notes of blood orange in every puff. Each puff feels special and enjoyable."
+            },
+            listDesc: [
+                               
+                {
+                    title: "Weight",
+                    text: "250g"
+                },
+                {
+                    title: "Aroma",
+                    text: "Rasbery"
+                },
+                {
+                    title: "Taste",
+                    text: "Fruity/refresh"
+                },
+                {
+                    title: "Type of tobacco",
+                    text: "Burley"
+                },
+                {
+                    title: "Country of origin",
+                    text: "Germany"
+                }
+                ],
+           
+        },
+        addInfo: [
             {
-                title: "Brand",
-                text: "eTrade"
+                title: "Red Citruz",
+                text: "30%"
             },
             {
-                title: "Collection",
-                text: "eTrade Capsules"
+                title: "6. Kiwi P",
+                text: "70%"
             },
-            {
-                title: "Creator",
-                text: "Arnold Ray"
-            },
-            {
-                title: "Gen",
-                text: "1"
-            },
-            {
-                title: "Rarity",
-                text: "Epic"
-            },
-            {
-                title: "Type",
-                text: "Digital Art"
-            }
-        ]
+            
+        ],
+     
     },
     {
         id: 7,
@@ -592,57 +362,9 @@ const ProductsData = [
             
         },
         addInfo: [
-            {
-                title: "Weight",
-                text: "25 g"
-            },
-            {
-                title: "Aroma",
-                text: "Rasbery"
-            },
-            {
-                title: "Fsk",
-                text: "18"
-            },
-            {
-                title: "Teste",
-                text: "Fruity/refresh"
-            },
-            {
-                title: "EAN",
-                text: "12865924729486"
-            },
-            {
-                title: "Articale Number",
-                text: "SHWD23674"
-            }
+    
         ],
-        property: [
-            {
-                title: "Brand",
-                text: "eTrade"
-            },
-            {
-                title: "Collection",
-                text: "eTrade Capsules"
-            },
-            {
-                title: "Creator",
-                text: "Arnold Ray"
-            },
-            {
-                title: "Gen",
-                text: "1"
-            },
-            {
-                title: "Rarity",
-                text: "Epic"
-            },
-            {
-                title: "Type",
-                text: "Digital Art"
-            }
-        ]
+       
     },
     {
         id: 8,
@@ -691,56 +413,16 @@ const ProductsData = [
         },
         addInfo: [
             {
-                title: "Weight",
-                text: "25 g"
+                title: "Kiwi P",
+                text: "70%"
             },
             {
-                title: "Aroma",
-                text: "Rasbery"
+                title: "Red kitroz",
+                text: "30%"
             },
-            {
-                title: "Fsk",
-                text: "18"
-            },
-            {
-                title: "Teste",
-                text: "Fruity/refresh"
-            },
-            {
-                title: "EAN",
-                text: "12865924729486"
-            },
-            {
-                title: "Articale Number",
-                text: "SHWD23674"
-            }
+
         ],
-        property: [
-            {
-                title: "Brand",
-                text: "eTrade"
-            },
-            {
-                title: "Collection",
-                text: "eTrade Capsules"
-            },
-            {
-                title: "Creator",
-                text: "Arnold Ray"
-            },
-            {
-                title: "Gen",
-                text: "1"
-            },
-            {
-                title: "Rarity",
-                text: "Epic"
-            },
-            {
-                title: "Type",
-                text: "Digital Art"
-            }
-        ]
+       
     },
     {
         id: 9,
@@ -788,56 +470,17 @@ const ProductsData = [
         },
         addInfo: [
             {
-                title: "Weight",
-                text: "25 g"
+                title: " Grape Mint",
+                text: "80%"
             },
             {
-                title: "Aroma",
-                text: "Rasbery"
+                title: "NOIR Kiwi p",
+                text: "20%"
             },
-            {
-                title: "Fsk",
-                text: "18"
-            },
-            {
-                title: "Teste",
-                text: "Fruity/refresh"
-            },
-            {
-                title: "EAN",
-                text: "12865924729486"
-            },
-            {
-                title: "Articale Number",
-                text: "SHWD23674"
-            }
+
+
         ],
-        property: [
-            {
-                title: "Brand",
-                text: "eTrade"
-            },
-            {
-                title: "Collection",
-                text: "eTrade Capsules"
-            },
-            {
-                title: "Creator",
-                text: "Arnold Ray"
-            },
-            {
-                title: "Gen",
-                text: "1"
-            },
-            {
-                title: "Rarity",
-                text: "Epic"
-            },
-            {
-                title: "Type",
-                text: "Digital Art"
-            }
-        ]
+       
     },
     {
         id: 10,
@@ -892,49 +535,9 @@ const ProductsData = [
                 title: "Aroma",
                 text: "Rasbery"
             },
-            {
-                title: "Fsk",
-                text: "18"
-            },
-            {
-                title: "Teste",
-                text: "Fruity/refresh"
-            },
-            {
-                title: "EAN",
-                text: "12865924729486"
-            },
-            {
-                title: "Articale Number",
-                text: "SHWD23674"
-            }
+
         ],
-        property: [
-            {
-                title: "Brand",
-                text: "eTrade"
-            },
-            {
-                title: "Collection",
-                text: "eTrade Capsules"
-            },
-            {
-                title: "Creator",
-                text: "Arnold Ray"
-            },
-            {
-                title: "Gen",
-                text: "1"
-            },
-            {
-                title: "Rarity",
-                text: "Epic"
-            },
-            {
-                title: "Type",
-                text: "Digital Art"
-            }
-        ]
+       
     },
     {
         id: 11,
@@ -988,49 +591,9 @@ const ProductsData = [
                 title: "Aroma",
                 text: "Rasbery"
             },
-            {
-                title: "Fsk",
-                text: "18"
-            },
-            {
-                title: "Teste",
-                text: "Fruity/refresh"
-            },
-            {
-                title: "EAN",
-                text: "12865924729486"
-            },
-            {
-                title: "Articale Number",
-                text: "SHWD23674"
-            }
+
         ],
-        property: [
-            {
-                title: "Brand",
-                text: "eTrade"
-            },
-            {
-                title: "Collection",
-                text: "eTrade Capsules"
-            },
-            {
-                title: "Creator",
-                text: "Arnold Ray"
-            },
-            {
-                title: "Gen",
-                text: "1"
-            },
-            {
-                title: "Rarity",
-                text: "Epic"
-            },
-            {
-                title: "Type",
-                text: "Digital Art"
-            }
-        ]
+       
     },
     {
         id: 12,
@@ -1075,57 +638,8 @@ const ProductsData = [
             ]
         },
         addInfo: [
-            {
-                title: "Weight",
-                text: "25 g"
-            },
-            {
-                title: "Aroma",
-                text: "Rasbery"
-            },
-            {
-                title: "Fsk",
-                text: "18"
-            },
-            {
-                title: "Teste",
-                text: "Fruity/refresh"
-            },
-            {
-                title: "EAN",
-                text: "12865924729486"
-            },
-            {
-                title: "Articale Number",
-                text: "SHWD23674"
-            }
         ],
-        property: [
-            {
-                title: "Brand",
-                text: "eTrade"
-            },
-            {
-                title: "Collection",
-                text: "eTrade Capsules"
-            },
-            {
-                title: "Creator",
-                text: "Arnold Ray"
-            },
-            {
-                title: "Gen",
-                text: "1"
-            },
-            {
-                title: "Rarity",
-                text: "Epic"
-            },
-            {
-                title: "Type",
-                text: "Digital Art"
-            }
-        ]
+       
     },
     {
         id: 13,
@@ -1160,7 +674,7 @@ const ProductsData = [
                 },
                 {
                     title: "Type of tobacco",
-                    text: "Virginia"
+                    text: "Burley"
                 },
                 {
                     title: "Country of origin",
@@ -1170,56 +684,20 @@ const ProductsData = [
         },
         addInfo: [
             {
-                title: "Weight",
-                text: "25 g"
+                title: "Noir Joosy",
+                text: "70%"
             },
             {
-                title: "Aroma",
-                text: "Rasbery"
+                title: "Red kitruz",
+                text: "30%"
             },
             {
-                title: "Fsk",
-                text: "18"
+                title: "Kiwi p",
+                text: "30%"
             },
-            {
-                title: "Teste",
-                text: "Fruity/refresh"
-            },
-            {
-                title: "EAN",
-                text: "12865924729486"
-            },
-            {
-                title: "Articale Number",
-                text: "SHWD23674"
-            }
+
         ],
-        property: [
-            {
-                title: "Brand",
-                text: "eTrade"
-            },
-            {
-                title: "Collection",
-                text: "eTrade Capsules"
-            },
-            {
-                title: "Creator",
-                text: "Arnold Ray"
-            },
-            {
-                title: "Gen",
-                text: "1"
-            },
-            {
-                title: "Rarity",
-                text: "Epic"
-            },
-            {
-                title: "Type",
-                text: "Digital Art"
-            }
-        ]
+     
     },
     {
         id: 14,
@@ -1264,57 +742,9 @@ const ProductsData = [
             ]
         },
         addInfo: [
-            {
-                title: "Weight",
-                text: "25 g"
-            },
-            {
-                title: "Aroma",
-                text: "Rasbery"
-            },
-            {
-                title: "Fsk",
-                text: "18"
-            },
-            {
-                title: "Teste",
-                text: "Fruity/refresh"
-            },
-            {
-                title: "EAN",
-                text: "12865924729486"
-            },
-            {
-                title: "Articale Number",
-                text: "SHWD23674"
-            }
+
         ],
-        property: [
-            {
-                title: "Brand",
-                text: "eTrade"
-            },
-            {
-                title: "Collection",
-                text: "eTrade Capsules"
-            },
-            {
-                title: "Creator",
-                text: "Arnold Ray"
-            },
-            {
-                title: "Gen",
-                text: "1"
-            },
-            {
-                title: "Rarity",
-                text: "Epic"
-            },
-            {
-                title: "Type",
-                text: "Digital Art"
-            }
-        ]
+       
     },
     {
         id: 15,
@@ -1350,7 +780,7 @@ const ProductsData = [
                 },
                 {
                     title: "Type of tobacco",
-                    text: "Verginia"
+                    text: "Burley"
                 },
                 {
                     title: "Country of origin",
@@ -1360,53 +790,9 @@ const ProductsData = [
         },
         addInfo: [
                 
-            {
-                title: "Weight",
-                text: "250g"
-            },
-            {
-                title: "Aroma",
-                text: "Rasbery"
-            },
-            {
-                title: "Taste",
-                text: "Fruity/refresh"
-            },
-            {
-                title: "Type of tobacco",
-                text: "Verginia"
-            },
-            {
-                title: "Country of origin",
-                text: "Germany"
-            }
+
         ],
-        property: [
-            {
-                title: "Brand",
-                text: "eTrade"
-            },
-            {
-                title: "Collection",
-                text: "eTrade Capsules"
-            },
-            {
-                title: "Creator",
-                text: "Arnold Ray"
-            },
-            {
-                title: "Gen",
-                text: "1"
-            },
-            {
-                title: "Rarity",
-                text: "Epic"
-            },
-            {
-                title: "Type",
-                text: "Digital Art"
-            }
-        ]
+        
     },
    
     {
@@ -1452,57 +838,9 @@ const ProductsData = [
             ]
         },
         addInfo: [
-            {
-                title: "Weight",
-                text: "25 g"
-            },
-            {
-                title: "Aroma",
-                text: "Rasbery"
-            },
-            {
-                title: "Fsk",
-                text: "18"
-            },
-            {
-                title: "Teste",
-                text: "Fruity/refresh"
-            },
-            {
-                title: "EAN",
-                text: "12865924729486"
-            },
-            {
-                title: "Articale Number",
-                text: "SHWD23674"
-            }
+           
         ],
-        property: [
-            {
-                title: "Brand",
-                text: "eTrade"
-            },
-            {
-                title: "Collection",
-                text: "eTrade Capsules"
-            },
-            {
-                title: "Creator",
-                text: "Arnold Ray"
-            },
-            {
-                title: "Gen",
-                text: "1"
-            },
-            {
-                title: "Rarity",
-                text: "Epic"
-            },
-            {
-                title: "Type",
-                text: "Digital Art"
-            }
-        ]
+
     },
    
   

@@ -168,7 +168,7 @@ const incrementQuantity = () => {
                             {getQuickViewItem.title}
                           </h3>
                           <span className="price-amount">
-                            <span className="currency-symbol">$</span>
+                            <span className="currency-symbol">AED</span>
                             {getQuickViewItem.salePrice
                               ? getQuickViewItem.salePrice
                               : getQuickViewItem.price}
