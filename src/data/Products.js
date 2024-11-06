@@ -693,10 +693,10 @@ const ProductsData = [
         id: 14,
         title: "Red Citruz Noir",
         thumbnail: "/images/product/furniture/NOIR_Red Citruz_webshop_UAE.png",
-        pCate: "Furniture",
+        pCate: "Shisha Topaco",
         cate: ["Accessories"],
         price: 65,
-        productType: "simple",
+        productType: "variable",
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
             listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
