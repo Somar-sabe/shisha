@@ -938,8 +938,8 @@ const ProductsData = [
     },
     {
         id: 11,
-        title: "Charly Punch Noir",
-        thumbnail: "/images/product/furniture/NOIR_Charly Punch_webshop_UAE.png",
+        title: "cherry Punch Noir",
+        thumbnail: "/images/product/furniture/NOIR_cherry Punch_webshop_UAE.png",
         
         pCate: "shisha accessories",
         cate: ["Accessories"],
@@ -963,7 +963,7 @@ const ProductsData = [
                 },
                 {
                     title: "Aroma",
-                    text: "Charly"
+                    text: "cherry"
                 },
                 {
                     title: "Taste",
