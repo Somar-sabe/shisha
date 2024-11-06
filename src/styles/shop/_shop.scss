@@ -218,7 +218,7 @@
                     font-weight: 700;
                     font-size: 14px;
                     color: var(--color-white);
-                    background-color: #EBA800;
+                    background-color: var(EBA800);
                     transition: 0.3s;
                     box-shadow: 0 16px 32px 0 rgba(0,0,0,.06);
                     position: relative;
@@ -227,7 +227,7 @@
                         content: "";
                         height: 100%;
                         width: 100%;
-                        background-color: #EBA800;
+                        background-color: var(EBA800);
                         border-radius: 4px;
                         position: absolute;
                         top: 0;
@@ -238,7 +238,7 @@
                         transition: transform .5s cubic-bezier(.165,.84,.44,1);
                     }
                     &:hover {
-                        background-color: #EBA800;
+                        background-color: var(EBA800);
                         color: var(--color-white);
                         &:before {
                             transform: scale(1.1);
@@ -657,7 +657,7 @@
                 .price {
                     font-size: 32px;
                     font-weight: 700;
-                    color: #EBA800;
+                    color: var(EBA800);
                 }
             }
 
@@ -1538,7 +1538,7 @@
                 font-size: 32px;
                 line-height: 1.2;
                 font-weight: 700;
-                color: #EBA800;
+                color: var(EBA800);
             }
         }
         .plus-btn {
@@ -1651,7 +1651,7 @@
             .price {
                 line-height: 1.2;
                 font-weight: 700;
-                color: #EBA800;
+                color: var(EBA800);
             }
         }
     }
