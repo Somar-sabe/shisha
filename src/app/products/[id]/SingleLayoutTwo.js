@@ -1,12 +1,7 @@
 'use client';
 import { useState } from "react";
 import Image from "next/image";
-import SlickSlider from "@/components/elements/SlickSlider";
-
-import { discountPercentage } from "@/utils";
-import ProductRating from "@/components/product/elements/ProductRating";
 import { useSelector, useDispatch } from "react-redux";
-import FsLightbox from "fslightbox-react";
 import { addToCart, addToWishlist } from "@/store/slices/productSlice";
 
 
@@ -30,8 +25,6 @@ const SingleLayoutTwo = ({singleData}) => {
         let product = {...cartAddedData}
         if (quantity > 0) {
             product.cartQuantity = quantity;
-            product.productColor = colorImage.color;
-            product.productSize = productSize;
             dispatch(addToCart(product));
         }else {
             alert("Please select minimum 1 quantity")
@@ -41,8 +34,6 @@ const SingleLayoutTwo = ({singleData}) => {
         dispatch(addToWishlist(product));
     }
     
-
-
     return (
         <section className="axil-single-product-area bg-color-white" style={{ backgroundColor: "#f9f3f0" }}>
             <div className="single-product-thumb axil-section-gap pb--30 pb_sm--20">
