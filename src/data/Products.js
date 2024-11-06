@@ -155,7 +155,7 @@ const ProductsData = [
         id: 4,
         title: "Viva La Fiesta",
         thumbnail: "/images/product/furniture/Viva La Fiesta_webshop_UAE.png",
-        gallery: ["/images/product/furniture/Viva La Fiesta_webshop_UAE.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
+      
         pCate: "Furniture",
         cate: ["Camera & Photo"],
         price: 85,
@@ -205,7 +205,7 @@ const ProductsData = [
         title: "Ice Kaktuz",
         thumbnail: "/images/product/furniture/Ice Kaktuz_webshop_UAE.png",
         hoverThumbnail: "/images/product/furniture/Ice Kaktuz_webshop_UAE.png",
-        gallery: ["/images/product/electric/product-04.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
+      
         pCate: "Shisha Topaco",
         cate: ["Headphones"],
         price: 85,
@@ -263,7 +263,7 @@ const ProductsData = [
         title: "Red Citruz",
         thumbnail: "/images/product/furniture/NOIR_Red Citruz_webshop_UAE.png",
         hoverThumbnail: "/images/product/furniture/NOIR_Red Citruz_webshop_UAE.png",
-        gallery: ["/images/product/electric/product-05.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
+       
         pCate: "Shisha Topaco",
         cate: ["Accessories"],
         price: 85,
@@ -429,7 +429,7 @@ const ProductsData = [
         title: "Grape Mint",
         thumbnail: "/images/product/furniture/Grape Mint_webshop_UAE.png",
         hoverThumbnail: "/images/product/electric/Grape Mint_webshop_UAE.png",
-        gallery: ["/images/product/electric/product-07.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
+      
         pCate: "Shisha Topaco",
         cate: ["Headphones"],
         price: 65,
@@ -486,7 +486,7 @@ const ProductsData = [
         id: 10,
         title: "Ice Finger",
         thumbnail: "/images/product/furniture/Ice Finger_webshop_UAE.png",
-        gallery: ["/images/product/electric/product-08.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
+      
         pCate: "Shisha Topaco",
         cate: ["PC Gaming"],
         price:65,
@@ -585,7 +585,7 @@ const ProductsData = [
         id: 12,
         title: "Ice Kaktuz Noir",
         thumbnail: "/images/product/furniture/Ice Kaktuz_webshop_UAE.png",
-        gallery: ["/images/product/furniture/Ice Kaktuz_webshop_UAE.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
+       
         pCate: "Shisha Topaco",
         cate: ["Accessories"],
         price: 65,
@@ -631,7 +631,7 @@ const ProductsData = [
         id: 13,
         title: "Joosy Noir",
         thumbnail: "/images/product/furniture/NOIR_Joosy_webshop_UAE.png",
-        gallery: ["/images/product/furniture/NOIR_Joosy_webshop_UAE.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
+       
         pCate: "Shisha / Water Pipe",
         price: 65,
         productType: "simple",
@@ -689,8 +689,7 @@ const ProductsData = [
         id: 14,
         title: "Red Citruz Noir",
         thumbnail: "/images/product/furniture/NOIR_Red Citruz_webshop_UAE.png",
-        gallery: ["/images/product/furniture/NOIR_Red Citruz_webshop_UAE.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
-        pCate: "Furniture",
+        
         cate: ["Accessories"],
         price: 65,
         productType: "simple",
@@ -736,7 +735,7 @@ const ProductsData = [
         id: 15,
         title: "Kiwi P. Noir",
         thumbnail: "/images/product/furniture/NOIR_Kiwi P_webshop_UAE.png",
-        gallery: ["/images/product/furniture/NOIR_Kiwi P_webshop_UAE.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
+      
         pCate: "Furniture",
         cate: ["Laptops"],
         price: 65,
@@ -785,7 +784,7 @@ const ProductsData = [
         id: 17,
         title: "Grape Mint Noir",
         thumbnail: "/images/product/furniture/NOIR_Grape Mint_webshop_UAE.png",
-        gallery: ["/images/product/electric/product-15.png","/images/product/product-big-02.png","/images/product/product-big-03.png","/images/product/product-big-02.png"],
+        
         pCate: "Furniture",
         cate: ["Headphones"],
         price: 65,
