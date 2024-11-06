@@ -50,7 +50,7 @@ const SingleLayouSeven = ({ singleData }) => {
                                                             <a className="active" id="description-tab" data-bs-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
                                                         </li>
                                                         <li className="nav-item " role="presentation">
-                                                            <a id="additional-info-tab" data-bs-toggle="tab" href="#additional-info" role="tab" aria-controls="additional-info" aria-selected="false">Additional Information</a>
+                                                            <a id="additional-info-tab" data-bs-toggle="tab" href="#additional-info" role="tab" aria-controls="additional-info" aria-selected="false">Mixology</a>
                                                         </li>
 
                                                     </ul>
