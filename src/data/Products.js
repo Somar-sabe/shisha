@@ -225,7 +225,7 @@ const ProductsData = [
                 },
                 {
                     title: "Aroma",
-                    text: "Rasbery"
+                    text: "Melon, Watermelon, Passion Fruit, Mint"
                 },
                 {
                     title: "Taste",
