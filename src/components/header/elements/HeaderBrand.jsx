@@ -4,7 +4,7 @@ import { Logo } from "@/data/Common";
 const HeaderBrand = (props) => {
     return ( 
         <div className="header-brand">
-            <Link href="/home/furniture" className="logo">
+            <Link href="/" className="logo">
             <Image
                 src={props.light ? Logo.light : Logo.dark}
                 alt="Site Logo"

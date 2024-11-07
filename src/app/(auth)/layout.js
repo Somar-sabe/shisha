@@ -13,7 +13,7 @@ const AuthLayout = ({children, bgImage}) => {
             <div className="signin-header">
                 <div className="row align-items-center">
                     <div className="col-md-6">
-                        <Link href="/home/furniture" className="site-logo">
+                        <Link href="/" className="site-logo">
                         <Image 
                             src={Logo.dark}
                             height={40}
