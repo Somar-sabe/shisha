@@ -205,9 +205,7 @@ const ProductsData = [
         hoverThumbnail: "/images/product/furniture/Ice Kaktuz_webshop_UAE.png",
         cate: "Furniture",
         pCate: "Shisha Topaco",
-cate: "Furniture",
         price: 85,
-        salePrice: 85,
         productType: "simple",
         shortDes: {
             text: "With a refreshing cactus taste, !ce Kaktuz offers a perfect balance of coolness and sour-sweetness. It’s a fan favourite and the best-seller at Holster. Try this blend that keeps customers returning for more.", 
@@ -260,10 +258,9 @@ cate: "Furniture",
         id: 6,
         title: "Red Citruz",
         thumbnail: "/images/product/furniture/NOIR_Red Citruz_webshop_UAE.png",
-        hoverThumbnail: "/images/product/furniture/NOIR_Red Citruz_webshop_UAE.png",
-       
+        hoverThumbnail: "/images/product/furniture/NOIR_Red Citruz_webshop_UAE.png",  
         pCate: "Shisha Topaco",
-    cate: "Furniture",
+        cate: "Furniture",
         price: 85,
         productType: "variable",
        
@@ -319,11 +316,9 @@ cate: "Furniture",
         title: "Joosy",
         thumbnail: "/images/product/furniture/Joosy_webshop_UAE.png",
         pCate: "Shisha Topaco",
-       cate: "Furniture",
+        cate: "Furniture",
         price: 85,
-        salePrice: 85,
         productType: "variable",
-
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
             listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
@@ -371,7 +366,6 @@ cate: "Furniture",
         pCate: "Shisha Topaco",
         cate: "Furniture",
         price: 85,
-        salePrice: 85,
         productType: "variable",
         sizeAttribute: [ 'XL', 'L', 'M', 'S', 'XS'],
 
@@ -426,8 +420,8 @@ cate: "Furniture",
         title: "Grape Mint",
         thumbnail: "/images/product/furniture/Grape Mint_webshop_UAE.png",
         hoverThumbnail: "/images/product/electric/Grape Mint_webshop_UAE.png",
-        pCate: "Furniture",
-       cate: "Furniture",
+        pCate: "Shisha Topaco",
+        cate: "Furniture",
         price: 65,
         productType: "simple",
         shortDes: {
@@ -531,7 +525,7 @@ cate: "Furniture",
         title: "Charly Punch Noir",
         thumbnail: "/images/product/furniture/NOIR_Charly Punch_webshop_UAE.png",
         
-        pCate: "Shisha Tobaco",
+        pCate: "Shisha Topaco",
         cate: "Furniture",
         price: 65,
         salePrice: 65,
@@ -631,7 +625,7 @@ cate: "Furniture",
         id: 13,
         title: "Joosy Noir",
         thumbnail: "/images/product/furniture/NOIR_Joosy_webshop_UAE.png",
-        pCate: "Shisha / Water Pipe",
+        pCate: "Shisha Topaco",
         cate: "Furniture",
         price: 65,
         productType: "simple",
@@ -735,7 +729,7 @@ cate: "Furniture",
         id: 15,
         title: "Kiwi P. Noir",
         thumbnail: "/images/product/furniture/NOIR_Kiwi P_webshop_UAE.png",
-        pCate: "Furniture",
+        pCate: "Shisha Topaco",
       cate: "Furniture",
         price: 65,
         productType: "simple",
@@ -783,7 +777,7 @@ cate: "Furniture",
         id: 17,
         title: "Grape Mint Noir",
         thumbnail: "/images/product/furniture/NOIR_Grape Mint_webshop_UAE.png",
-        pCate: "Shisha Tobaco",
+        pCate: "Shisha Topaco",
         cate: "Furniture",
         price: 65,
         productType: "simple",
@@ -828,9 +822,9 @@ cate: "Furniture",
    
     {
         id: 22,
-        title: "Grape Mint Noir",
-        thumbnail: "/images/product/furniture/holster_bowl-mat_transparency.png",
-        pCate: "Shisha Tobaco",
+        title: "Holster bowl mat",
+        thumbnail: "/images/product/furniture/holster_bowl-mat_transparency.webp",
+        pCate: "Shisha Accssesores",
         cate: "Furniture",
         price: 65,
         productType: "simple",
@@ -872,57 +866,12 @@ cate: "Furniture",
         ],
 
     },
-    {
-        id: 18,
-        title: "Grape Mint Noir",
-        thumbnail: "/images/product/furniture/holster_bowl-mat.png",
-        pCate: "Shisha Tobaco",
-        cate: "Furniture",
-        price: 65,
-        productType: "simple",
-        shortDes: {
-            text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
-            listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
-        },
-        description: {
-            textDesc: {
-                title: "About this Product",
-                text: "Grape Mint is one of the most popular grape flavours, known for creating special moments of enjoyment. With the new Holster Noir variety, you can now enjoy even more flavours with every puff. Experience the rich taste and delightful aromas!"
-            },
-            listDesc: [
-                
-                {
-                    title: "Weight",
-                    text: "250g"
-                },
-                {
-                    title: "Aroma",
-                    text: "Fruity"
-                },
-                {
-                    title: "Taste",
-                    text: "Fruity/refresh"
-                },
-                {
-                    title: "Type of tobacco",
-                    text: "Burley"
-                },
-                {
-                    title: "Country of origin",
-                    text: "Germany"
-                }
-            ]
-        },
-        addInfo: [
-           
-        ],
-
-    },
+   
     {
         id: 19,
-        title: "Grape Mint Noir",
-        thumbnail: "/images/product/furniture/holster_mat-glow-in-the-dark_trans.png",
-        pCate: "Shisha Tobaco",
+        title: "holster mat turquoise trans",
+        thumbnail: "/images/product/furniture/holster_mat-turquoise_trans.webp",
+        pCate: "Shisha Accssesores",
         cate: "Furniture",
         price: 65,
         productType: "simple",
@@ -966,9 +915,9 @@ cate: "Furniture",
     },
     {
         id: 20,
-        title: "Grape Mint Noir",
-        thumbnail: "/images/product/furniture/holster_mat-pink_trans.png",
-        pCate: "Shisha Tobaco",
+        title: "holster mat pink",
+        thumbnail: "/images/product/furniture/holster_mat-pink_trans.webp",
+        pCate: "Shisha Accssesores",
         cate: "Furniture",
         price: 65,
         productType: "simple",
@@ -1010,149 +959,58 @@ cate: "Furniture",
         ],
 
     },
+    
     {
+        id: 18,
+        title: "holster mat red trans",
+        thumbnail: "/images/product/furniture/holster_mat-red_trans.webp",
+        pCate: "Shisha Accssesores",
+        cate: "Furniture",
+        price: 65,
+        productType: "simple",
+        shortDes: {
+            text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
+            listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
+        },
+        description: {
+            textDesc: {
+                title: "About this Product",
+                text: "Grape Mint is one of the most popular grape flavours, known for creating special moments of enjoyment. With the new Holster Noir variety, you can now enjoy even more flavours with every puff. Experience the rich taste and delightful aromas!"
+            },
+            listDesc: [
+                
+                {
+                    title: "Weight",
+                    text: "250g"
+                },
+                {
+                    title: "Aroma",
+                    text: "Fruity"
+                },
+                {
+                    title: "Taste",
+                    text: "Fruity/refresh"
+                },
+                {
+                    title: "Type of tobacco",
+                    text: "Burley"
+                },
+                {
+                    title: "Country of origin",
+                    text: "Germany"
+                }
+            ]
+        },
+        addInfo: [
+           
+        ],
+
+    },
+       {
         id: 21,
-        title: "Grape Mint Noir",
-        thumbnail: "/images/product/furniture/holster_mat-red.png",
-        pCate: "Shisha Tobaco",
-        cate: "Furniture",
-        price: 65,
-        productType: "simple",
-        shortDes: {
-            text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
-            listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
-        },
-        description: {
-            textDesc: {
-                title: "About this Product",
-                text: "Grape Mint is one of the most popular grape flavours, known for creating special moments of enjoyment. With the new Holster Noir variety, you can now enjoy even more flavours with every puff. Experience the rich taste and delightful aromas!"
-            },
-            listDesc: [
-                
-                {
-                    title: "Weight",
-                    text: "250g"
-                },
-                {
-                    title: "Aroma",
-                    text: "Fruity"
-                },
-                {
-                    title: "Taste",
-                    text: "Fruity/refresh"
-                },
-                {
-                    title: "Type of tobacco",
-                    text: "Burley"
-                },
-                {
-                    title: "Country of origin",
-                    text: "Germany"
-                }
-            ]
-        },
-        addInfo: [
-           
-        ],
-
-    },
-    {
-        id: 21,
-        title: "Grape Mint Noir",
-        thumbnail: "/images/product/furniture/holster_mat-red_trans.png",
-        pCate: "Shisha Tobaco",
-        cate: "Furniture",
-        price: 65,
-        productType: "simple",
-        shortDes: {
-            text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
-            listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
-        },
-        description: {
-            textDesc: {
-                title: "About this Product",
-                text: "Grape Mint is one of the most popular grape flavours, known for creating special moments of enjoyment. With the new Holster Noir variety, you can now enjoy even more flavours with every puff. Experience the rich taste and delightful aromas!"
-            },
-            listDesc: [
-                
-                {
-                    title: "Weight",
-                    text: "250g"
-                },
-                {
-                    title: "Aroma",
-                    text: "Fruity"
-                },
-                {
-                    title: "Taste",
-                    text: "Fruity/refresh"
-                },
-                {
-                    title: "Type of tobacco",
-                    text: "Burley"
-                },
-                {
-                    title: "Country of origin",
-                    text: "Germany"
-                }
-            ]
-        },
-        addInfo: [
-           
-        ],
-
-    },
-    {
-        id: 30,
-        title: "Grape Mint Noir",
-        thumbnail: "/images/product/furniture/ice-kaktuz_bowl-mat.png",
-        pCate: "Shisha Tobaco",
-        cate: "Furniture",
-        price: 65,
-        productType: "simple",
-        shortDes: {
-            text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
-            listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
-        },
-        description: {
-            textDesc: {
-                title: "About this Product",
-                text: "Grape Mint is one of the most popular grape flavours, known for creating special moments of enjoyment. With the new Holster Noir variety, you can now enjoy even more flavours with every puff. Experience the rich taste and delightful aromas!"
-            },
-            listDesc: [
-                
-                {
-                    title: "Weight",
-                    text: "250g"
-                },
-                {
-                    title: "Aroma",
-                    text: "Fruity"
-                },
-                {
-                    title: "Taste",
-                    text: "Fruity/refresh"
-                },
-                {
-                    title: "Type of tobacco",
-                    text: "Burley"
-                },
-                {
-                    title: "Country of origin",
-                    text: "Germany"
-                }
-            ]
-        },
-        addInfo: [
-           
-        ],
-
-    },
-    {
-        id: 21,
-        title: "Grape Mint Noir",
-        thumbnail: "/images/product/furniture/ice-kaktuz_bowl-mat_transparency.png",
-        pCate: "Shisha Tobaco",
+        title: "ice kaktuz bowl mat",
+        thumbnail: "/images/product/furniture/ice-kaktuz_bowl-mat_transparency.webp",
+        pCate: "Shisha Accssesores",
         cate: "Furniture",
         price: 65,
         productType: "simple",
@@ -1196,10 +1054,10 @@ cate: "Furniture",
 
     },
     {
-        id: 26,
+        id: 16,
         title: "Shisha Bowel",
-        thumbnail: "/images/product/furniture/Shisha_Bowl_Transparency.png",
-        pCate: "Shisha Tobaco",
+        thumbnail: "/images/product/furniture/Shisha_Bowl_Transparency.webp",
+        pCate: "Shisha / Water Pipe",
         cate: "Furniture",
         price: 65,
         productType: "simple",
@@ -1241,52 +1099,7 @@ cate: "Furniture",
         ],
 
     },
-    {
-        id: 27,
-        title: "Shisha Bowl Transparency",
-        thumbnail: "/images/product/furniture/ice-kaktuz_bowl-mat_transparency.png",
-        pCate: "Shisha Tobaco",
-        cate: "Furniture",
-        price: 65,
-        productType: "simple",
-        shortDes: {
-            text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
-            listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
-        },
-        description: {
-            textDesc: {
-                title: "About this Product",
-                text: "Grape Mint is one of the most popular grape flavours, known for creating special moments of enjoyment. With the new Holster Noir variety, you can now enjoy even more flavours with every puff. Experience the rich taste and delightful aromas!"
-            },
-            listDesc: [
-                
-                {
-                    title: "Weight",
-                    text: "250g"
-                },
-                {
-                    title: "Aroma",
-                    text: "Fruity"
-                },
-                {
-                    title: "Taste",
-                    text: "Fruity/refresh"
-                },
-                {
-                    title: "Type of tobacco",
-                    text: "Burley"
-                },
-                {
-                    title: "Country of origin",
-                    text: "Germany"
-                }
-            ]
-        },
-        addInfo: [
-           
-        ],
-
-    },
+    
 ]
 
 export default ProductsData;
