@@ -826,7 +826,467 @@ cate: "Furniture",
 
     },
    
-  
+    {
+        id: 22,
+        title: "Grape Mint Noir",
+        thumbnail: "/images/product/furniture/holster_bowl-mat_transparency.png",
+        pCate: "Shisha Tobaco",
+        cate: "Furniture",
+        price: 65,
+        productType: "simple",
+        shortDes: {
+            text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
+            listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
+        },
+        description: {
+            textDesc: {
+                title: "About this Product",
+                text: "Grape Mint is one of the most popular grape flavours, known for creating special moments of enjoyment. With the new Holster Noir variety, you can now enjoy even more flavours with every puff. Experience the rich taste and delightful aromas!"
+            },
+            listDesc: [
+                
+                {
+                    title: "Weight",
+                    text: "250g"
+                },
+                {
+                    title: "Aroma",
+                    text: "Fruity"
+                },
+                {
+                    title: "Taste",
+                    text: "Fruity/refresh"
+                },
+                {
+                    title: "Type of tobacco",
+                    text: "Burley"
+                },
+                {
+                    title: "Country of origin",
+                    text: "Germany"
+                }
+            ]
+        },
+        addInfo: [
+           
+        ],
+
+    },
+    {
+        id: 18,
+        title: "Grape Mint Noir",
+        thumbnail: "/images/product/furniture/holster_bowl-mat.png",
+        pCate: "Shisha Tobaco",
+        cate: "Furniture",
+        price: 65,
+        productType: "simple",
+        shortDes: {
+            text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
+            listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
+        },
+        description: {
+            textDesc: {
+                title: "About this Product",
+                text: "Grape Mint is one of the most popular grape flavours, known for creating special moments of enjoyment. With the new Holster Noir variety, you can now enjoy even more flavours with every puff. Experience the rich taste and delightful aromas!"
+            },
+            listDesc: [
+                
+                {
+                    title: "Weight",
+                    text: "250g"
+                },
+                {
+                    title: "Aroma",
+                    text: "Fruity"
+                },
+                {
+                    title: "Taste",
+                    text: "Fruity/refresh"
+                },
+                {
+                    title: "Type of tobacco",
+                    text: "Burley"
+                },
+                {
+                    title: "Country of origin",
+                    text: "Germany"
+                }
+            ]
+        },
+        addInfo: [
+           
+        ],
+
+    },
+    {
+        id: 19,
+        title: "Grape Mint Noir",
+        thumbnail: "/images/product/furniture/holster_mat-glow-in-the-dark_trans.png",
+        pCate: "Shisha Tobaco",
+        cate: "Furniture",
+        price: 65,
+        productType: "simple",
+        shortDes: {
+            text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
+            listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
+        },
+        description: {
+            textDesc: {
+                title: "About this Product",
+                text: "Grape Mint is one of the most popular grape flavours, known for creating special moments of enjoyment. With the new Holster Noir variety, you can now enjoy even more flavours with every puff. Experience the rich taste and delightful aromas!"
+            },
+            listDesc: [
+                
+                {
+                    title: "Weight",
+                    text: "250g"
+                },
+                {
+                    title: "Aroma",
+                    text: "Fruity"
+                },
+                {
+                    title: "Taste",
+                    text: "Fruity/refresh"
+                },
+                {
+                    title: "Type of tobacco",
+                    text: "Burley"
+                },
+                {
+                    title: "Country of origin",
+                    text: "Germany"
+                }
+            ]
+        },
+        addInfo: [
+           
+        ],
+
+    },
+    {
+        id: 20,
+        title: "Grape Mint Noir",
+        thumbnail: "/images/product/furniture/holster_mat-pink_trans.png",
+        pCate: "Shisha Tobaco",
+        cate: "Furniture",
+        price: 65,
+        productType: "simple",
+        shortDes: {
+            text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
+            listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
+        },
+        description: {
+            textDesc: {
+                title: "About this Product",
+                text: "Grape Mint is one of the most popular grape flavours, known for creating special moments of enjoyment. With the new Holster Noir variety, you can now enjoy even more flavours with every puff. Experience the rich taste and delightful aromas!"
+            },
+            listDesc: [
+                
+                {
+                    title: "Weight",
+                    text: "250g"
+                },
+                {
+                    title: "Aroma",
+                    text: "Fruity"
+                },
+                {
+                    title: "Taste",
+                    text: "Fruity/refresh"
+                },
+                {
+                    title: "Type of tobacco",
+                    text: "Burley"
+                },
+                {
+                    title: "Country of origin",
+                    text: "Germany"
+                }
+            ]
+        },
+        addInfo: [
+           
+        ],
+
+    },
+    {
+        id: 21,
+        title: "Grape Mint Noir",
+        thumbnail: "/images/product/furniture/holster_mat-red.png",
+        pCate: "Shisha Tobaco",
+        cate: "Furniture",
+        price: 65,
+        productType: "simple",
+        shortDes: {
+            text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
+            listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
+        },
+        description: {
+            textDesc: {
+                title: "About this Product",
+                text: "Grape Mint is one of the most popular grape flavours, known for creating special moments of enjoyment. With the new Holster Noir variety, you can now enjoy even more flavours with every puff. Experience the rich taste and delightful aromas!"
+            },
+            listDesc: [
+                
+                {
+                    title: "Weight",
+                    text: "250g"
+                },
+                {
+                    title: "Aroma",
+                    text: "Fruity"
+                },
+                {
+                    title: "Taste",
+                    text: "Fruity/refresh"
+                },
+                {
+                    title: "Type of tobacco",
+                    text: "Burley"
+                },
+                {
+                    title: "Country of origin",
+                    text: "Germany"
+                }
+            ]
+        },
+        addInfo: [
+           
+        ],
+
+    },
+    {
+        id: 21,
+        title: "Grape Mint Noir",
+        thumbnail: "/images/product/furniture/holster_mat-red_trans.png",
+        pCate: "Shisha Tobaco",
+        cate: "Furniture",
+        price: 65,
+        productType: "simple",
+        shortDes: {
+            text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
+            listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
+        },
+        description: {
+            textDesc: {
+                title: "About this Product",
+                text: "Grape Mint is one of the most popular grape flavours, known for creating special moments of enjoyment. With the new Holster Noir variety, you can now enjoy even more flavours with every puff. Experience the rich taste and delightful aromas!"
+            },
+            listDesc: [
+                
+                {
+                    title: "Weight",
+                    text: "250g"
+                },
+                {
+                    title: "Aroma",
+                    text: "Fruity"
+                },
+                {
+                    title: "Taste",
+                    text: "Fruity/refresh"
+                },
+                {
+                    title: "Type of tobacco",
+                    text: "Burley"
+                },
+                {
+                    title: "Country of origin",
+                    text: "Germany"
+                }
+            ]
+        },
+        addInfo: [
+           
+        ],
+
+    },
+    {
+        id: 30,
+        title: "Grape Mint Noir",
+        thumbnail: "/images/product/furniture/ice-kaktuz_bowl-mat.png",
+        pCate: "Shisha Tobaco",
+        cate: "Furniture",
+        price: 65,
+        productType: "simple",
+        shortDes: {
+            text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
+            listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
+        },
+        description: {
+            textDesc: {
+                title: "About this Product",
+                text: "Grape Mint is one of the most popular grape flavours, known for creating special moments of enjoyment. With the new Holster Noir variety, you can now enjoy even more flavours with every puff. Experience the rich taste and delightful aromas!"
+            },
+            listDesc: [
+                
+                {
+                    title: "Weight",
+                    text: "250g"
+                },
+                {
+                    title: "Aroma",
+                    text: "Fruity"
+                },
+                {
+                    title: "Taste",
+                    text: "Fruity/refresh"
+                },
+                {
+                    title: "Type of tobacco",
+                    text: "Burley"
+                },
+                {
+                    title: "Country of origin",
+                    text: "Germany"
+                }
+            ]
+        },
+        addInfo: [
+           
+        ],
+
+    },
+    {
+        id: 21,
+        title: "Grape Mint Noir",
+        thumbnail: "/images/product/furniture/ice-kaktuz_bowl-mat_transparency.png",
+        pCate: "Shisha Tobaco",
+        cate: "Furniture",
+        price: 65,
+        productType: "simple",
+        shortDes: {
+            text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
+            listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
+        },
+        description: {
+            textDesc: {
+                title: "About this Product",
+                text: "Grape Mint is one of the most popular grape flavours, known for creating special moments of enjoyment. With the new Holster Noir variety, you can now enjoy even more flavours with every puff. Experience the rich taste and delightful aromas!"
+            },
+            listDesc: [
+                
+                {
+                    title: "Weight",
+                    text: "250g"
+                },
+                {
+                    title: "Aroma",
+                    text: "Fruity"
+                },
+                {
+                    title: "Taste",
+                    text: "Fruity/refresh"
+                },
+                {
+                    title: "Type of tobacco",
+                    text: "Burley"
+                },
+                {
+                    title: "Country of origin",
+                    text: "Germany"
+                }
+            ]
+        },
+        addInfo: [
+           
+        ],
+        
+
+    },
+    {
+        id: 26,
+        title: "Shisha Bowel",
+        thumbnail: "/images/product/furniture/Shisha_Bowl_Transparency.png",
+        pCate: "Shisha Tobaco",
+        cate: "Furniture",
+        price: 65,
+        productType: "simple",
+        shortDes: {
+            text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
+            listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
+        },
+        description: {
+            textDesc: {
+                title: "About this Product",
+                text: "Grape Mint is one of the most popular grape flavours, known for creating special moments of enjoyment. With the new Holster Noir variety, you can now enjoy even more flavours with every puff. Experience the rich taste and delightful aromas!"
+            },
+            listDesc: [
+                
+                {
+                    title: "Weight",
+                    text: "250g"
+                },
+                {
+                    title: "Aroma",
+                    text: "Fruity"
+                },
+                {
+                    title: "Taste",
+                    text: "Fruity/refresh"
+                },
+                {
+                    title: "Type of tobacco",
+                    text: "Burley"
+                },
+                {
+                    title: "Country of origin",
+                    text: "Germany"
+                }
+            ]
+        },
+        addInfo: [
+           
+        ],
+
+    },
+    {
+        id: 27,
+        title: "Shisha Bowl Transparency",
+        thumbnail: "/images/product/furniture/ice-kaktuz_bowl-mat_transparency.png",
+        pCate: "Shisha Tobaco",
+        cate: "Furniture",
+        price: 65,
+        productType: "simple",
+        shortDes: {
+            text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
+            listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
+        },
+        description: {
+            textDesc: {
+                title: "About this Product",
+                text: "Grape Mint is one of the most popular grape flavours, known for creating special moments of enjoyment. With the new Holster Noir variety, you can now enjoy even more flavours with every puff. Experience the rich taste and delightful aromas!"
+            },
+            listDesc: [
+                
+                {
+                    title: "Weight",
+                    text: "250g"
+                },
+                {
+                    title: "Aroma",
+                    text: "Fruity"
+                },
+                {
+                    title: "Taste",
+                    text: "Fruity/refresh"
+                },
+                {
+                    title: "Type of tobacco",
+                    text: "Burley"
+                },
+                {
+                    title: "Country of origin",
+                    text: "Germany"
+                }
+            ]
+        },
+        addInfo: [
+           
+        ],
+
+    },
 ]
 
 export default ProductsData;
