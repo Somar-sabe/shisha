@@ -4,25 +4,13 @@ import { usePathname } from 'next/navigation';
 import { mapInSlices, slugify } from '@/utils';
 import FooterTwo from "@/components/footer/FooterTwo";
 import HeaderFive from "@/components/header/HeaderFive";
-
-import ServiceTwo from "@/components/services/ServiceTwo";
 import ProductsData from '@/data/Products';
 import Section from '@/components/elements/Section';
 import SectionTitle from '@/components/elements/SectionTitle';
-import SlickSlider from '@/components/elements/SlickSlider';
-import ProductTwo from '@/components/product/ProductTwo';
 import ProductSeven from '@/components/product/ProductSeven';
-import TestimonialOne from '@/components/testimonial/TestimonialOne';
 import WhyChoose from '@/components/why-choose/WhyChoose';
 import PosterOne from '@/components/poster/PosterOne';
 import BannerFive from '@/components/hero-banner/BannerFive';
-
-import CountDown from '@/components/elements/CountDown';
-
-import WhoWeAre from '@/components/about/WhoWeAre';
-
-import ProductOne from '@/components/product/ProductOne';
-
 
 const HomeFurniture = () => {
     const pathname = usePathname();
