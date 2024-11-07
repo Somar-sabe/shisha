@@ -1,4 +1,5 @@
 'use client';
+
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { mapInSlices, slugify } from '@/utils';
@@ -16,20 +17,13 @@ import TestimonialOne from '@/components/testimonial/TestimonialOne';
 import WhyChoose from '@/components/why-choose/WhyChoose';
 import PosterOne from '@/components/poster/PosterOne';
 import BannerFive from '@/components/hero-banner/BannerFive';
-
-import CountDown from '@/components/elements/CountDown';
-
-import WhoWeAre from '@/components/about/WhoWeAre';
-
-import ProductOne from '@/components/product/ProductOne';
-
-const HomeFurniture = () => {
+const Home = () => {
     const pathname = usePathname();
     const split = pathname.split("/");
     const pageCategory = split[split.length - 1];
-    const furnitureProduct = ProductsData.filter(data => slugify(data.pCate) === pageCategory);
-    const transparentProduct = ProductsData.filter(data => slugify(data.pCate) === pageCategory && data.thumbnailTransparent === true);
-    const exploreProduct = mapInSlices(furnitureProduct, 8);
+    const furnitureProduct = ProductsData.slice(0, 4);
+    const transparentProduct = ProductsData.filter(data => slugify(data.cate) === pageCategory && data.thumbnailTransparent === true);
+    const exploreProduct = mapInSlices(furnitureProduct, 4);
     
     return ( 
         <>
@@ -37,35 +31,9 @@ const HomeFurniture = () => {
         <main className="main-wrapper">
             
             <BannerFive />
-            <Section 
-            pClass="axil-new-arrivals-product-area fullwidth-container flash-sale-area pb--0"
-            containerClass="ml--xxl-0"
-            borderBottom="pb--50"
-            >
-            <div className="d-md-flex align-items-end flash-sale-section">
-                <SectionTitle 
-                        title="Flash Deals"
-                        subtitle="Today’s"
-                        subtitleIcon="far fa-shopping-basket"
-                />
-                <div className="sale-countdown countdown">
-                    <CountDown date="2024-10-01T23:59:59" />
-                </div>
-            </div>
+          
 
-            <div className="row">
-                    {transparentProduct.slice(0, 8).map((data) => (
-                        <div className="col-xl-3 col-lg-4 col-sm-6" key={data.id}>
-                            <ProductSeven product={data} />
-                        </div>
-                    ))}
-                </div>
-
-
-         
-            </Section>
-
-            <WhoWeAre />
+      
             <Section pClass="pb--0" borderBottom="pb--50">
                 <SectionTitle
                 title="Best Sellers"
@@ -95,22 +63,13 @@ const HomeFurniture = () => {
                 subtitleIcon="far fa-shopping-basket"
                 subColor="highlighter-secondary"
                 />
-                <SlickSlider
-                class="explore-product-activation slick-layout-wrapper slick-layout-wrapper--15 axil-slick-arrow arrow-top-slide"
-                slidesToShow={1}
-                >                    
-                    {exploreProduct.slice(0, 2).map((product, index) => (
-                        <div key={index}>
-                            <div className="row row--15">
-                            {product.map((data) => (
-                                <div className="col-xl-3 col-lg-4 col-sm-6 col-12 mb--30" key={data.id}>
-                                    <ProductOne product={data} />
-                                </div>
-                            ))}
-                        </div>
+                 <div className="row">
+                    {furnitureProduct.slice(0, 8).map((data) => (
+                        <div className="col-xl-3 col-lg-4 col-sm-6" key={data.id}>
+                            <ProductSeven product={data} />
                         </div>
                     ))}
-                </SlickSlider>
+                </div>
                 <div className="row">
                     <div className="col-lg-12 text-center mt--20 mt_sm--0">
                         <Link href="/shop" className="axil-btn btn-bg-lighter btn-load-more">View All Products</Link>
@@ -118,52 +77,26 @@ const HomeFurniture = () => {
                 </div>
             </Section>
             <WhyChoose />
-            <TestimonialOne />
+   
             <Section pClass="pb--50">
                 <SectionTitle 
                     title="New Arrivals"
                     subtitle="This Week’s"
                     subtitleIcon="far fa-shopping-basket"
                 />
-                <SlickSlider 
-                class="slick-layout-wrapper--30 axil-slick-arrow arrow-top-slide"
-                slidesToShow={4}
-                infinite={false}
-                responsive = {[
-                    {
-                      breakpoint: 1400,
-                      settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3,
-                      }
-                    },
-                    {
-                      breakpoint: 992,
-                      settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                      }
-                    },
-                    {
-                      breakpoint: 575,
-                      settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                      }
-                    },
-                  ]}
-                >
+                          <div className="row">
                     {furnitureProduct.slice(0, 8).map((data) => (
-                        <ProductSeven product={data} key={data.id}/>
+                        <div className="col-xl-3 col-lg-4 col-sm-6" key={data.id}>
+                            <ProductSeven product={data} />
+                        </div>
                     ))}
-
-                </SlickSlider>
+                </div>
             </Section>
-            <ServiceTwo />
+           
         </main>
         <FooterTwo />
         </>
      );
 }
  
-export default HomeFurniture;
+export default Home;

@@ -23,12 +23,13 @@ import WhoWeAre from '@/components/about/WhoWeAre';
 
 import ProductOne from '@/components/product/ProductOne';
 
+
 const HomeFurniture = () => {
     const pathname = usePathname();
     const split = pathname.split("/");
     const pageCategory = split[split.length - 1];
-    const furnitureProduct = ProductsData.filter(data => slugify(data.pCate) === pageCategory);
-    const transparentProduct = ProductsData.filter(data => slugify(data.pCate) === pageCategory && data.thumbnailTransparent === true);
+    const furnitureProduct = ProductsData.filter(data => slugify(data.cate) === pageCategory);
+    const transparentProduct = ProductsData.filter(data => slugify(data.cate) === pageCategory && data.thumbnailTransparent === true);
     const exploreProduct = mapInSlices(furnitureProduct, 8);
     
     return ( 

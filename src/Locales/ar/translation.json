@@ -1,0 +1,75 @@
+{
+  "Best Sellers": "افضل المبيعات",
+  "This Month": "هذا الشهر ",
+    "products": {
+      "doubleApple": {
+        "title": "تفاحة مزدوجة",
+        "pCate": "تبغ الشيشة",
+        "cate": "أثاث",
+        "shortDes": {
+          "text": "في أورنار لوريم أوت إست دابيبوس...",
+          "listItem": "<li><i class=\"fal fa-check\"></i>متوفر في المخزن</li><li><i class=\"fal fa-check\"></i>توصيل مجاني متاح</li><li><i class=\"fal fa-check\"></i>خصم 30% استخدم الرمز: MOTIVE30</li>"
+        },
+        "description": {
+          "textDesc": {
+            "title": "حول هذا المنتج",
+            "text": "تفاحة مزدوجة هي مزيج من نكهات التفاح الأحمر والأخضر..."
+          },
+          "listDesc": [
+            { "title": "الوزن", "text": "250غ" },
+            { "title": "الرائحة", "text": "تفاح" },
+            { "title": "الطعم", "text": "تفاح/انتعاش" },
+            { "title": "نوع التبغ", "text": "فيرجينيا" },
+            { "title": "بلد المنشأ", "text": "ألمانيا" }
+          ]
+        }
+      },
+      "leePunch": {
+        "title": "لي بانش",
+        "pCate": "إكسسوارات",
+        "cate": "أثاث",
+        "shortDes": {
+          "text": "مقدمة لي بانش، نكهة جديدة حيوية...",
+          "listItem": "<li><i class=\"fal fa-check\"></i>متوفر في المخزن</li><li><i class=\"fal fa-check\"></i>توصيل مجاني متاح</li><li><i class=\"fal fa-check\"></i>خصم 30% استخدم الرمز: MOTIVE30</li>"
+        },
+        "description": {
+          "textDesc": {
+            "title": "حول هذا المنتج",
+            "text": "مقدمة لي بانش، نكهة جديدة في مجموعة هولستر بانش..."
+          },
+          "listDesc": [
+            { "title": "الوزن", "text": "250غ" },
+            { "title": "الرائحة", "text": "ليمون" },
+            { "title": "الطعم", "text": "فواكه/انتعاش" },
+            { "title": "نوع التبغ", "text": "فيرجينيا" },
+            { "title": "بلد المنشأ", "text": "ألمانيا" }
+          ]
+        }
+      },
+      "love69Gold": {
+        "title": "لوف 69 جولد",
+        "pCate": "تبغ الشيشة",
+        "cate": "أثاث",
+        "shortDes": {
+          "text": "في أورنار لوريم أوت إست دابيبوس...",
+          "listItem": "<li><i class=\"fal fa-check\"></i>متوفر في المخزن</li><li><i class=\"fal fa-check\"></i>توصيل مجاني متاح</li><li><i class=\"fal fa-check\"></i>خصم 30% استخدم الرمز: MOTIVE30</li>"
+        },
+        "description": {
+          "textDesc": {
+            "title": "حول هذا المنتج",
+            "text": "استمتع بـ “لوف 69” مزيج منعش من البطيخ العصير وفاكهة العاطفة..."
+          },
+          "listDesc": [
+            { "title": "الوزن", "text": "250غ" },
+            { "title": "الرائحة", "text": "بطيخ، بطيخ أحمر، فاكهة العاطفة، نعناع" },
+            { "title": "الطعم", "text": "فواكه/انتعاش" },
+            { "title": "نوع التبغ", "text": "فيرجينيا" },
+            { "title": "بلد المنشأ", "text": "ألمانيا" }
+          ]
+        }
+      }
+    }
+  }
+  
+
+  

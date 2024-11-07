@@ -16,7 +16,6 @@ const Checkout = () => {
     const dispatch = useDispatch();
     const [openShippingForm, setopenShippingForm] = useState(false);
     const cartProducts = useSelector((state) => state.productData);
-
     const ShippingInfoHandler = (e) => {
         setopenShippingForm(e.target.checked)
     }

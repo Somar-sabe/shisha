@@ -1,3 +1,5 @@
+
+
 const ProductsData = [
     {
         id: 1,
@@ -5,9 +7,8 @@ const ProductsData = [
         thumbnail: "/images/product/furniture/Double Apple_webshop_UAE.png",
         hoverThumbnail: "/images/product/furniture/Double Apple_webshop_UAE.png",
         pCate: "Shisha Topaco",
-        cate: ["Headphones", "Computers"],
+        cate: "Furniture",
         price: 85,
-        salePrice: 85,
         productType: "variable",
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
@@ -54,8 +55,8 @@ const ProductsData = [
         title: "Lee Punch",
         thumbnail: "/images/product/furniture/Lee Punch_webshop_UAE.png",
         hoverThumbnail: "/images/product/furniture/Lee Punch_webshop_UAE.png",
-        pCate: "Shisha Topaco",
-        cate: ["Accessories"],
+        pCate: "Accessorie",
+        cate: "Furniture",
         price: 85,
         salePrice: 85,
         productType: "variable",
@@ -107,9 +108,8 @@ const ProductsData = [
         thumbnail: "/images/product/furniture/Love69_webshop_UAE.png",
         hoverThumbnail: "/images/product/furniture/Love69_webshop_UAE.png",
         pCate: "Shisha Topaco",
-        cate: "Shisha Accssesores",
-        price: 85,
-        salePrice: 85,
+        cate: "Furniture",
+        price: 85, 
         productType: "variable",
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
@@ -155,11 +155,9 @@ const ProductsData = [
         id: 4,
         title: "Viva La Fiesta",
         thumbnail: "/images/product/furniture/Viva La Fiesta_webshop_UAE.png",
-       
-        pCate: "Furniture",
-        cate: ["Camera & Photo"],
+        pCate: "Shisha Topaco",
+        cate: "Furniture",
         price: 85,
-        salePrice: 85,
         productType: "variable",
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
@@ -205,9 +203,9 @@ const ProductsData = [
         title: "Ice Kaktuz",
         thumbnail: "/images/product/furniture/Ice Kaktuz_webshop_UAE.png",
         hoverThumbnail: "/images/product/furniture/Ice Kaktuz_webshop_UAE.png",
-       
+        cate: "Furniture",
         pCate: "Shisha Topaco",
-        cate: ["Headphones"],
+cate: "Furniture",
         price: 85,
         salePrice: 85,
         productType: "simple",
@@ -265,9 +263,8 @@ const ProductsData = [
         hoverThumbnail: "/images/product/furniture/NOIR_Red Citruz_webshop_UAE.png",
        
         pCate: "Shisha Topaco",
-        cate: ["Accessories"],
+    cate: "Furniture",
         price: 85,
-        salePrice: 85,
         productType: "variable",
        
         shortDes: {
@@ -322,7 +319,7 @@ const ProductsData = [
         title: "Joosy",
         thumbnail: "/images/product/furniture/Joosy_webshop_UAE.png",
         pCate: "Shisha Topaco",
-        cate: ["Computers"],
+       cate: "Furniture",
         price: 85,
         salePrice: 85,
         productType: "variable",
@@ -372,7 +369,7 @@ const ProductsData = [
         thumbnail: "/images/product/furniture/Kiwi P_webshop_UAE.png",
         hoverThumbnail: "/images/product/electric/Kiwi P_webshop_UAE.png",
         pCate: "Shisha Topaco",
-        cate: ["Accessories", "Video Games"],
+        cate: "Furniture",
         price: 85,
         salePrice: 85,
         productType: "variable",
@@ -429,11 +426,9 @@ const ProductsData = [
         title: "Grape Mint",
         thumbnail: "/images/product/furniture/Grape Mint_webshop_UAE.png",
         hoverThumbnail: "/images/product/electric/Grape Mint_webshop_UAE.png",
-       
-        pCate: "Shisha Topaco",
-        cate: ["Headphones"],
+        pCate: "Furniture",
+       cate: "Furniture",
         price: 65,
-        salePrice: 65,
         productType: "simple",
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
@@ -487,7 +482,7 @@ const ProductsData = [
         title: "Ice Finger",
         thumbnail: "/images/product/furniture/Ice Finger_webshop_UAE.png",
         pCate: "Shisha Topaco",
-        cate: ["PC Gaming"],
+       cate: "Furniture",
         price:65,
         salePrice: 65,
         productType: "variable",
@@ -536,8 +531,8 @@ const ProductsData = [
         title: "Charly Punch Noir",
         thumbnail: "/images/product/furniture/NOIR_Charly Punch_webshop_UAE.png",
         
-        pCate: "shisha accessories",
-        cate: ["Accessories"],
+        pCate: "Shisha Tobaco",
+        cate: "Furniture",
         price: 65,
         salePrice: 65,
         productType: "simple",
@@ -592,7 +587,7 @@ const ProductsData = [
         title: "Ice Kaktuz Noir",
         thumbnail: "/images/product/furniture/Ice Kaktuz_webshop_UAE.png",
         pCate: "Shisha Topaco",
-        cate: ["Accessories"],
+       cate: "Furniture",
         price: 65,
         productType: "simple",
         shortDes: {
@@ -637,6 +632,7 @@ const ProductsData = [
         title: "Joosy Noir",
         thumbnail: "/images/product/furniture/NOIR_Joosy_webshop_UAE.png",
         pCate: "Shisha / Water Pipe",
+        cate: "Furniture",
         price: 65,
         productType: "simple",
         shortDes: {
@@ -694,7 +690,7 @@ const ProductsData = [
         title: "Red Citruz Noir",
         thumbnail: "/images/product/furniture/NOIR_Red Citruz_webshop_UAE.png",
         pCate: "Shisha Topaco",
-        cate: ["Accessories"],
+        cate: "Furniture",
         price: 65,
         productType: "variable",
         shortDes: {
@@ -740,7 +736,7 @@ const ProductsData = [
         title: "Kiwi P. Noir",
         thumbnail: "/images/product/furniture/NOIR_Kiwi P_webshop_UAE.png",
         pCate: "Furniture",
-        cate: ["Laptops"],
+      cate: "Furniture",
         price: 65,
         productType: "simple",
         shortDes: {
@@ -787,8 +783,8 @@ const ProductsData = [
         id: 17,
         title: "Grape Mint Noir",
         thumbnail: "/images/product/furniture/NOIR_Grape Mint_webshop_UAE.png",
-        pCate: "Furniture",
-        cate: ["Headphones"],
+        pCate: "Shisha Tobaco",
+        cate: "Furniture",
         price: 65,
         productType: "simple",
         shortDes: {
