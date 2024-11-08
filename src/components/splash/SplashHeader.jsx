@@ -56,7 +56,7 @@ const SplashHeader = () => {
                   <li>
                     <a
                       target="_blank"
-                      href="https://new.Evolabs.com/docs/etrade-react/"
+                      href="https://new.Baylabs.com/docs/etrade-react/"
                     >
                       Documentation
                     </a>
@@ -64,7 +64,7 @@ const SplashHeader = () => {
                   <li>
                     <a
                       target="_blank"
-                      href="https://support.Evolabs.com/support/"
+                      href="https://support.Baylabs.com/support/"
                     >
                       Support
                     </a>

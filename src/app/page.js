@@ -95,6 +95,7 @@ const Home = () => {
            
         </main>
         <FooterTwo />
+        
         </>
      );
 }

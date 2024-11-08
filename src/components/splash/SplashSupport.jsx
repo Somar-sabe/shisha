@@ -5,7 +5,7 @@ const SplashSupport = () => {
             icon: "fal fa-book",
             text: "Well organized and up to date",
             btnText: "View Documentation",
-            btnUrl: "https://new.Evolabs.com/docs/etrade-react/",
+            btnUrl: "https://new.Baylabs.com/docs/etrade-react/",
             class: "online-documentation"
         },
         {
@@ -13,7 +13,7 @@ const SplashSupport = () => {
             icon: "fal fa-user-headset",
             text: "We response within 1 business day. Weekends excluded",
             btnText: "Create Support",
-            btnUrl: "https://support.Evolabs.com/support/login/",
+            btnUrl: "https://support.Baylabs.com/support/login/",
             class: "datecated-support"
         }
     ]

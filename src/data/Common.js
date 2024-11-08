@@ -7,18 +7,15 @@ const ScocialLink = {
         url: "https://www.instagram.com/",
         icon: "fab fa-instagram",
     },
-    twitter: {
+    whatsapp: {
         url: "https://www.twitter.com/",
-        icon: "fab fa-twitter",
+        icon: "fab fa-whatsapp",
     },
     linkedin: {
         url: "https://www.linkedin.com/",
         icon: "fab fa-linkedin-in",
     },
-    discord: {
-        url: "https://www.discord.com/",
-        icon: "fab fa-discord",
-    }
+
     
 }
 

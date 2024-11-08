@@ -35,14 +35,11 @@ const FooterOne = (props) => {
                 <a href={ScocialLink.instagram.url}>
                   <i className={ScocialLink.instagram.icon} />
                 </a>
-                <a href={ScocialLink.twitter.url}>
+                <a href={ScocialLink.whatsapp.url}>
                   <i className={ScocialLink.twitter.icon} />
                 </a>
                 <a href={ScocialLink.linkedin.url}>
                   <i className={ScocialLink.linkedin.icon} />
-                </a>
-                <a href={ScocialLink.discord.url}>
-                  <i className={ScocialLink.discord.icon} />
                 </a>
               </div>
                 </div>
@@ -87,8 +84,8 @@ const FooterOne = (props) => {
                 <ul className="quick-link">
 				  <li>
                     © {new Date().getFullYear()}. All rights reserved by {" "}
-                    <a target="_blank" href="https://Evolabs.com/">
-                      Evolabs
+                    <a target="_blank" href="https://Baylabs.com/">
+                      Baylabs
                     </a>
                     .
                   </li>

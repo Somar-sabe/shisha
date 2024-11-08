@@ -7,8 +7,8 @@ const SplashFooter = () => {
             <ul className="quick-link">
               <li>
                 © {new Date().getFullYear()}. All rights reserved by {" "}
-                <a target="_blank" href="https://Evolabs.com/">
-                  Evolabs
+                <a target="_blank" href="https://Baylabs.com/">
+                  Baylabs
                 </a>
                 .
               </li>
