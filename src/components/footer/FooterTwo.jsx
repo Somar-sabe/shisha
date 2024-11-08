@@ -91,7 +91,7 @@ const FooterTwo = () => {
                   <ul className="quick-link">
                     <li>
                       © {new Date().getFullYear()}. All rights reserved by {" "}
-                      <a target="_blank" href="https://Baylabs.com/">
+                      <a target="_blank" href="https://baylabs.tech/">
                         Baylabs
                       </a>
                       .
