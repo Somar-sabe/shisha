@@ -103,7 +103,7 @@ const FooterTwo = () => {
             </div>
           </div>
         </div>
-        <a   style={{
+        <a href="https://wa.me/+97148345641?text=Hello!" style={{
     right: '44px',
     position: 'fixed',
     bottom: '105px'
