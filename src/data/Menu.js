@@ -16,11 +16,11 @@ const HeaderMenu = [
             },
             {
                 "name": "Shisha / Water Pipe",
-                "url": "/shop/waterpipe"  // A dedicated URL for Water Pipes
+                "url": "/shop"  // A dedicated URL for Water Pipes
             },
             {
                 "name": "Shisha Accessories",
-                "url": "/shop/accessories"  // A specific URL for Accessories
+                "url": "/shop"  // A specific URL for Accessories
             }
         ]
     },
