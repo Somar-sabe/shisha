@@ -16,6 +16,7 @@ const Checkout = () => {
     const dispatch = useDispatch();
     const [openShippingForm, setopenShippingForm] = useState(false);
     const cartProducts = useSelector((state) => state.productData);
+
     const ShippingInfoHandler = (e) => {
         setopenShippingForm(e.target.checked)
     }
@@ -87,7 +88,12 @@ const Checkout = () => {
                                             {errors.lastName && <p className="error">Last Name is required.</p>}
                                         </div>
                                     </div>
-
+                                    <div className="col-lg-12">
+                                        <div className="form-group">
+                                            <label>Company Name</label>
+                                            <input type="text" {...register('companyName')} />
+                                        </div>
+                                    </div>
                                     <div className="col-lg-12">
                                         <div className="form-group">
                                             <label>Country<span>*</span></label>

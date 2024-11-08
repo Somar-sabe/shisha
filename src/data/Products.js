@@ -51,7 +51,7 @@ const ProductsData = [
        
     },
     {
-        id: 2,
+        id: 100,
         title: "Lee Punch",
         thumbnail: "/images/product/furniture/Lee Punch_webshop_UAE.png",
         hoverThumbnail: "/images/product/furniture/Lee Punch_webshop_UAE.png",
@@ -72,7 +72,7 @@ const ProductsData = [
             },
             listDesc: [
               
-                                   
+                                
                 {
                     title: "Weight",
                     text: "250g"
@@ -103,7 +103,7 @@ const ProductsData = [
       
     },
     {
-        id: 3,
+        id: 4,
         title: "Love 69 Gold",
         thumbnail: "/images/product/furniture/Love69_webshop_UAE.png",
         hoverThumbnail: "/images/product/furniture/Love69_webshop_UAE.png",
@@ -152,7 +152,7 @@ const ProductsData = [
        
     },
     {
-        id: 4,
+        id: 2,
         title: "Viva La Fiesta",
         thumbnail: "/images/product/furniture/Viva La Fiesta_webshop_UAE.png",
         pCate: "Shisha Topaco",
@@ -199,7 +199,7 @@ const ProductsData = [
         ],
     },
     {
-        id: 5,
+        id: 3,
         title: "Ice Kaktuz",
         thumbnail: "/images/product/furniture/Ice Kaktuz_webshop_UAE.png",
         hoverThumbnail: "/images/product/furniture/Ice Kaktuz_webshop_UAE.png",
