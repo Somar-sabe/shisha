@@ -88,7 +88,21 @@ const Checkout = () => {
                                         </div>
                                     </div>
 
-                                
+                                    <div className="col-lg-12">
+                                        <div className="form-group">
+                                            <label>Country<span>*</span></label>
+                                            <select {...register('country', { required: true })}>
+                                                <option value="">Select a Country</option>
+                                                <option value="Australia">Australia</option>
+                                                <option value="Australia">England</option>
+                                                <option value="New Zealand">New Zealand</option>
+                                                <option value="Switzerland">Switzerland</option>
+                                                <option value="United Kindom (UK)">United Kindom (UK)</option>
+                                                <option value="United States (USA)">United States (USA)</option>
+                                            </select>
+                                            {errors.country && <p className="error">Country Name is required.</p>}
+                                        </div>
+                                    </div>
                                     <div className="col-lg-12">
                                         <div className="form-group">
                                             <label>Street Address <span>*</span></label>
@@ -136,7 +150,21 @@ const Checkout = () => {
                                             <label htmlFor="shippingDifferent">Ship to a different address?</label>
                                         </div>
                                     </div>
-                                  
+                                    {openShippingForm && 
+                                    <div className="col-lg-12">
+                                        <div className="form-group">
+                                            <label>Country<span>*</span></label>
+                                            <select {...register('shippingCountry', { required: true })}>
+                                                <option value="">Select a Country</option>
+                                                <option value="Australia">Australia</option>
+                                                <option value="Australia">England</option>
+                                                <option value="New Zealand">New Zealand</option>
+                                                <option value="Switzerland">Switzerland</option>
+                                                <option value="United Kindom (UK)">United Kindom (UK)</option>
+                                                <option value="United States (USA)">United States (USA)</option>
+                                            </select>
+                                            {errors.shippingCountry && <p className="error">Country Name is required.</p>}
+                                        </div>
                                         <div className="form-group">
                                             <label>Street Address <span>*</span></label>
                                             <input type="text" {...register('shippingStreet1', { required: true })} placeholder="House number and street name"/>
@@ -208,6 +236,14 @@ const Checkout = () => {
                                                     <div className="input-group">
                                                         <input type="radio" id="radio1" name="shipping" defaultChecked />
                                                         <label htmlFor="radio1">Free Shippping</label>
+                                                    </div>
+                                                    <div className="input-group">
+                                                        <input type="radio" id="radio2" name="shipping" />
+                                                        <label htmlFor="radio2">Local</label>
+                                                    </div>
+                                                    <div className="input-group">
+                                                        <input type="radio" id="radio3" name="shipping" />
+                                                        <label htmlFor="radio3">Flat rate</label>
                                                     </div>
                                                 </td>
                                             </tr>

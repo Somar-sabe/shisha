@@ -37,6 +37,12 @@ const FooterTwo = () => {
                           {FooterData.footerInfo.phone}
                         </a>
                       </li>
+                      <li>
+                        <a href={`tel:${FooterData.footerInfo.phone}`}>
+                          <i className="fal fa-phone-alt" />{" "}
+                          04 834 5641
+                        </a>
+                      </li>
                     </ul>
                   </div>
                 </div>
