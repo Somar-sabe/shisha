@@ -6,8 +6,6 @@ import ProductSeven from "@/components/product/ProductSeven";
 import { slugify } from "@/utils";
 import { Category } from "@/data/ProductCategory";
 
-
-
 const ShopWithSidebar = () => {
     const [filterProduct, setFilterProduct] = useState(ProductsData);
     const [productShow, setProductShow] = useState(9);

@@ -76,7 +76,7 @@ const Home = () => {
                     </div>
                 </div>
             </Section>
-            <WhyChoose />
+          
    
             <Section pClass="pb--50">
                 <SectionTitle 
