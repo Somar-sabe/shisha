@@ -51,107 +51,6 @@ const ProductsData = [
        
     },
     {
-        id: 100,
-        title: "Lee Punch",
-        thumbnail: "/images/product/furniture/Lee Punch_webshop_UAE.png",
-        hoverThumbnail: "/images/product/furniture/Lee Punch_webshop_UAE.png",
-        pCate: "Accessorie",
-        cate: "Furniture",
-        price: 85,
-        salePrice: 85,
-        productType: "variable",
-      
-        shortDes: {
-            text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
-            listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
-        },
-        description: {
-            textDesc: {
-                title: "About this Product",
-                text: "Introducing Lee Punch, a lively new flavour in the Holster Punch lineup! Its exotic lemon flavour delivers an exciting burst, blending juicy lemon juice with a hint of freshness. The refreshing aroma and sour kick create a smooth sensation that feels energetic."
-            },
-            listDesc: [
-              
-                                
-                {
-                    title: "Weight",
-                    text: "250g"
-                },
-                {
-                    title: "Aroma",
-                    text: "Lemon"
-                },
-                {
-                    title: "Taste",
-                    text: "Fruity/refresh"
-                },
-                {
-                    title: "Type of tobacco",
-                    text: "Virginia"
-                },
-                {
-                    title: "Country of origin",
-                    text: "Germany"
-                }
-             
-            ]
-        },
-        addInfo: [
-                
-            ],
-       
-      
-    },
-    {
-        id: 4,
-        title: "Love 69 Gold",
-        thumbnail: "/images/product/furniture/Love69_webshop_UAE.png",
-        hoverThumbnail: "/images/product/furniture/Love69_webshop_UAE.png",
-        pCate: "Shisha Topaco",
-        cate: "Furniture",
-        price: 85, 
-        productType: "variable",
-        shortDes: {
-            text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
-            listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
-        },
-        description: {
-            textDesc: {
-                title: "About this Product",
-                text: "Enjoy “Love 69,” a refreshing mix of juicy melons and sweet passion fruit. Each puff gives you a tasty and energetic experience that is vibrant and memorable. Let “Love 69” take you on a journey of tropical flavours and fun."
-            },
-            listDesc: [
-                
-                                   
-                {
-                    title: "Weight",
-                    text: "250g"
-                },
-                {
-                    title: "Aroma",
-                    text: "Melon, Watermelon, Passion Fruit, Mint"
-                },
-                {
-                    title: "Taste",
-                    text: "Fruity/refresh"
-                },
-                {
-                    title: "Type of tobacco",
-                    text: "Virginia"
-                },
-                {
-                    title: "Country of origin",
-                    text: "Germany"
-                }
-                ],
-           
-        },
-        addInfo: [
-           
-        ],
-       
-    },
-    {
         id: 2,
         title: "Viva La Fiesta",
         thumbnail: "/images/product/furniture/Viva La Fiesta_webshop_UAE.png",
@@ -254,6 +153,109 @@ const ProductsData = [
         ],
        
     },
+    {
+        id: 4,
+        title: "Love 69 Gold",
+        thumbnail: "/images/product/furniture/Love69_webshop_UAE.png",
+        hoverThumbnail: "/images/product/furniture/Love69_webshop_UAE.png",
+        pCate: "Shisha Topaco",
+        cate: "Furniture",
+        price: 85, 
+        productType: "variable",
+        shortDes: {
+            text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
+            listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
+        },
+        description: {
+            textDesc: {
+                title: "About this Product",
+                text: "Enjoy “Love 69,” a refreshing mix of juicy melons and sweet passion fruit. Each puff gives you a tasty and energetic experience that is vibrant and memorable. Let “Love 69” take you on a journey of tropical flavours and fun."
+            },
+            listDesc: [
+                
+                                   
+                {
+                    title: "Weight",
+                    text: "250g"
+                },
+                {
+                    title: "Aroma",
+                    text: "Melon, Watermelon, Passion Fruit, Mint"
+                },
+                {
+                    title: "Taste",
+                    text: "Fruity/refresh"
+                },
+                {
+                    title: "Type of tobacco",
+                    text: "Virginia"
+                },
+                {
+                    title: "Country of origin",
+                    text: "Germany"
+                }
+                ],
+           
+        },
+        addInfo: [
+           
+        ],
+       
+    },
+  
+    {
+        id: 100,
+        title: "Lee Punch",
+        thumbnail: "/images/product/furniture/Lee Punch_webshop_UAE.png",
+        hoverThumbnail: "/images/product/furniture/Lee Punch_webshop_UAE.png",
+        pCate: "Accessorie",
+        cate: "Furniture",
+        price: 85,
+        productType: "variable",
+      
+        shortDes: {
+            text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
+            listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
+        },
+        description: {
+            textDesc: {
+                title: "About this Product",
+                text: "Introducing Lee Punch, a lively new flavour in the Holster Punch lineup! Its exotic lemon flavour delivers an exciting burst, blending juicy lemon juice with a hint of freshness. The refreshing aroma and sour kick create a smooth sensation that feels energetic."
+            },
+            listDesc: [
+              
+                                
+                {
+                    title: "Weight",
+                    text: "250g"
+                },
+                {
+                    title: "Aroma",
+                    text: "Lemon"
+                },
+                {
+                    title: "Taste",
+                    text: "Fruity/refresh"
+                },
+                {
+                    title: "Type of tobacco",
+                    text: "Virginia"
+                },
+                {
+                    title: "Country of origin",
+                    text: "Germany"
+                }
+             
+            ]
+        },
+        addInfo: [
+                
+            ],
+       
+      
+    },
+  
+   
     {
         id: 6,
         title: "Red Citruz",
