@@ -1,72 +1,15 @@
 {
-  "Best Sellers": "Best Sellers",
-  "This Month": "This Month",
-  "products": {
-    "doubleApple": {
-      "title": "Double Apple",
-      "pCate": "Shisha Tobacco",
-      "cate": "Furniture",
-      "shortDes": {
-        "text": "In ornare lorem ut est dapibus...",
-        "listItem": "<li><i class=\"fal fa-check\"></i>In stock</li><li><i class=\"fal fa-check\"></i>Free delivery available</li><li><i class=\"fal fa-check\"></i>Sales 30% Off Use Code: MOTIVE30</li>"
-      },
-      "description": {
-        "textDesc": {
-          "title": "About this Product",
-          "text": "Double Apple is a blend of red and green apple flavours..."
-        },
-        "listDesc": [
-          { "title": "Weight", "text": "250g" },
-          { "title": "Aroma", "text": "Apple" },
-          { "title": "Taste", "text": "Apple/refresh" },
-          { "title": "Type of tobacco", "text": "Virginia" },
-          { "title": "Country of origin", "text": "Germany" }
-        ]
-      }
-    },
-    "leePunch": {
-      "title": "Lee Punch",
-      "pCate": "Accessories",
-      "cate": "Furniture",
-      "shortDes": {
-        "text": "Introducing Lee Punch, a lively new flavour...",
-        "listItem": "<li><i class=\"fal fa-check\"></i>In stock</li><li><i class=\"fal fa-check\"></i>Free delivery available</li><li><i class=\"fal fa-check\"></i>Sales 30% Off Use Code: MOTIVE30</li>"
-      },
-      "description": {
-        "textDesc": {
-          "title": "About this Product",
-          "text": "Introducing Lee Punch, a lively new flavour in the Holster Punch lineup..."
-        },
-        "listDesc": [
-          { "title": "Weight", "text": "250g" },
-          { "title": "Aroma", "text": "Lemon" },
-          { "title": "Taste", "text": "Fruity/refresh" },
-          { "title": "Type of tobacco", "text": "Virginia" },
-          { "title": "Country of origin", "text": "Germany" }
-        ]
-      }
-    },
-    "love69Gold": {
-      "title": "Love 69 Gold",
-      "pCate": "Shisha Tobacco",
-      "cate": "Furniture",
-      "shortDes": {
-        "text": "In ornare lorem ut est dapibus...",
-        "listItem": "<li><i class=\"fal fa-check\"></i>In stock</li><li><i class=\"fal fa-check\"></i>Free delivery available</li><li><i class=\"fal fa-check\"></i>Sales 30% Off Use Code: MOTIVE30</li>"
-      },
-      "description": {
-        "textDesc": {
-          "title": "About this Product",
-          "text": "Enjoy “Love 69,” a refreshing mix of juicy melons and sweet passion fruit..."
-        },
-        "listDesc": [
-          { "title": "Weight", "text": "250g" },
-          { "title": "Aroma", "text": "Melon, Watermelon, Passion Fruit, Mint" },
-          { "title": "Taste", "text": "Fruity/refresh" },
-          { "title": "Type of tobacco", "text": "Virginia" },
-          { "title": "Country of origin", "text": "Germany" }
-        ]
-      }
-    }
+  "best_sellers": "Best Sellers",
+  "this_month": "This Month",
+  "ice_kaktuz_award": "ICE KAKTUZ won first place in 2022 as the best flavor in the market",
+  "explore_our_products": "Explore Our Products",
+  "our_products": "Our Products",
+  "view_all_products": "View All Products",
+  "new_arrivals": "New Arrivals",
+  "this_weeks": "This Week",
+  "slider": {
+    "bestSellingFlavor": "BEST SELLING FLAVOUR!",
+    "starterPack": "Starter Pack 10%",
+    "shishaAccessories": "Shisha Accessories"
   }
 }

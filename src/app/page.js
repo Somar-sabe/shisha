@@ -1,23 +1,18 @@
 'use client';
-
+import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { mapInSlices, slugify } from '@/utils';
 import FooterTwo from "@/components/footer/FooterTwo";
 import HeaderFive from "@/components/header/HeaderFive";
-
-import ServiceTwo from "@/components/services/ServiceTwo";
 import ProductsData from '@/data/Products';
 import Section from '@/components/elements/Section';
 import SectionTitle from '@/components/elements/SectionTitle';
-import SlickSlider from '@/components/elements/SlickSlider';
-import ProductTwo from '@/components/product/ProductTwo';
 import ProductSeven from '@/components/product/ProductSeven';
-import TestimonialOne from '@/components/testimonial/TestimonialOne';
-import WhyChoose from '@/components/why-choose/WhyChoose';
 import PosterOne from '@/components/poster/PosterOne';
 import BannerFive from '@/components/hero-banner/BannerFive';
+import '../lib/i18n';
 const Home = () => {
+    const { t } = useTranslation(); 
     const pathname = usePathname();
     const split = pathname.split("/");
     const pageCategory = split[split.length - 1];
@@ -35,8 +30,8 @@ const Home = () => {
       
             <Section pClass="pb--0" borderBottom="pb--50">
                 <SectionTitle
-                title="Best Sellers"
-                subtitle="This Month"
+                        title={t('best_sellers')} // Translated text
+                        subtitle={t('this_month')} // Translated text
                 subtitleIcon="far fa-shopping-basket"
                 subColor="highlighter-secondary"
                 />
@@ -57,8 +52,8 @@ const Home = () => {
             />
             <Section pClass="pb--0" borderBottom="pb--80">
                 <SectionTitle
-                title="Explore our Products"
-                subtitle="Our Products"
+                        title={t('explore_our_products')} // Translated text
+                        subtitle={t('our_products')} // Translated text
                 subtitleIcon="far fa-shopping-basket"
                 subColor="highlighter-secondary"
                 />
@@ -79,8 +74,8 @@ const Home = () => {
    
             <Section pClass="pb--50">
                 <SectionTitle 
-                    title="New Arrivals"
-                    subtitle="This Week’s"
+                        title={t('new_arrivals')} // Translated text
+                        subtitle={t('this_weeks')} // Translated text
                     subtitleIcon="far fa-shopping-basket"
                 />
                           <div className="row">

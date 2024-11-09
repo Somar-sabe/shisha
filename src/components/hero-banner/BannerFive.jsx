@@ -2,9 +2,11 @@ import { FurnitureSlider } from "@/data/Slider";
 import SlickSlider from "../elements/SlickSlider";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from 'react-i18next';
 
 
 const BannerFive = () => {
+  const { t } = useTranslation(); 
     return (
       <div className="axil-main-slider-area main-slider-style-5">
         <div className="container">
@@ -17,7 +19,7 @@ const BannerFive = () => {
                         <span className="subtitle">
                           <i className={data.subIcon} /> {data.subTitle}
                         </span>
-                        <h1 className="title">{data.title}</h1>
+                        <h1 className="title">{t(data.titleKey)}</h1>
                         <div className="shop-btn">
                             <Link style={{ color: 'white', backgroundColor: '#EBA800' }} href="/shop" className="axil-btn btn-bg-white"><i className="fal fa-shopping-cart" /> Shop Now</Link>
                         </div>
