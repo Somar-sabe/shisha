@@ -75,7 +75,7 @@ const HomeFurniture = () => {
    
             <Section pClass="pb--50">
                 <SectionTitle 
-                    title="New Arrivals"
+                    title="Accessoires"
                     subtitle="This Week’s"
                     subtitleIcon="far fa-shopping-basket"
                 />
