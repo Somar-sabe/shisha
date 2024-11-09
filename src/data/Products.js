@@ -824,7 +824,7 @@ const ProductsData = [
    
     {
         id: 22,
-        title: "Holster bowl mat",
+        title: "Holster Bowl Mat",
         thumbnail: "/images/product/furniture/holster_bowl-mat_transparency.webp",
         pCate: "Shisha Accssesores",
         cate: "Furniture",
@@ -871,7 +871,7 @@ const ProductsData = [
    
     {
         id: 19,
-        title: "holster mat turquoise trans",
+        title: "Holster Mat Turquoise",
         thumbnail: "/images/product/furniture/holster_mat-turquoise_trans.webp",
         pCate: "Shisha Accssesores",
         cate: "Furniture",
@@ -917,7 +917,7 @@ const ProductsData = [
     },
     {
         id: 20,
-        title: "holster mat pink",
+        title: "Holster Mat Pink",
         thumbnail: "/images/product/furniture/holster_mat-pink_trans.webp",
         pCate: "Shisha Accssesores",
         cate: "Furniture",
@@ -964,7 +964,7 @@ const ProductsData = [
     
     {
         id: 18,
-        title: "holster mat red trans",
+        title: "Holster Mat Red",
         thumbnail: "/images/product/furniture/holster_mat-red_trans.webp",
         pCate: "Shisha Accssesores",
         cate: "Furniture",
@@ -1010,7 +1010,7 @@ const ProductsData = [
     },
        {
         id: 21,
-        title: "ice kaktuz bowl mat",
+        title: "Ice kaktuz Bowl Mat",
         thumbnail: "/images/product/furniture/ice-kaktuz_bowl-mat_transparency.webp",
         pCate: "Shisha Accssesores",
         cate: "Furnitur",
