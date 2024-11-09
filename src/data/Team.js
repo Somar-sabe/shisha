@@ -5,7 +5,7 @@ const TeamData = [
         name: "Ninor Akgul"
     },
     {
-        thumbnail: "/images/team/Group 25-min.png",
+        thumbnail: "/images/team/Group 25-min.webp",
         
         designation: "UAE General Director",
         name: "Didar Chulbayev"
