@@ -1013,7 +1013,7 @@ const ProductsData = [
         title: "ice kaktuz bowl mat",
         thumbnail: "/images/product/furniture/ice-kaktuz_bowl-mat_transparency.webp",
         pCate: "Shisha Accssesores",
-        cate: "Furniture",
+        cate: "Furnitur",
         price: 65,
         productType: "simple",
         shortDes: {
