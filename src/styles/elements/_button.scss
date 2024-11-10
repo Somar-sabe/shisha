@@ -1,7 +1,7 @@
 /*----------------------
     Button Styles  
 -----------------------*/
-
+.axil-product.product-style-seven .product-content .cart-btn button:hover {box-shadow:none !important}
 a,
 button {
     &.axil-btn {
@@ -77,7 +77,7 @@ button {
                 color: var(--color-white);
             }
             &:hover {
-                // background-color: #EBA800;
+                //background-color: #EBA800;
                 &:after {
                     transform: scale(1.1);
                 }
