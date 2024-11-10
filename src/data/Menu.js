@@ -12,7 +12,7 @@ const HeaderMenu = [
         "children": [
             {
                 "name": "Shisha Tobaco",
-                "url": "/shop/tobaco"  // A specific URL for Shisha Tobacco
+                "url": "/shop"  // A specific URL for Shisha Tobacco
             },
             {
                 "name": "Shisha / Water Pipe",
