@@ -10,6 +10,7 @@ import SectionTitle from '@/components/elements/SectionTitle';
 import ProductSeven from '@/components/product/ProductSeven';
 import PosterOne from '@/components/poster/PosterOne';
 import BannerFive from '@/components/hero-banner/BannerFive';
+import ChatWidget from '@/components/widget/ChatWidget';
 import '../lib/i18n';
 const Home = () => {
     const { t } = useTranslation(); 
@@ -86,7 +87,7 @@ const Home = () => {
                     ))}
                 </div>
             </Section>
-           
+            <ChatWidget />
         </main>
         <FooterTwo />
         

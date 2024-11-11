@@ -96,15 +96,15 @@ const Checkout = () => {
                                     </div>
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>Country<span>*</span></label>
+                                            <label>City<span>*</span></label>
                                             <select {...register('country', { required: true })}>
                                                 <option value="">Select a Country</option>
-                                                <option value="Australia">Australia</option>
-                                                <option value="Australia">England</option>
-                                                <option value="New Zealand">New Zealand</option>
-                                                <option value="Switzerland">Switzerland</option>
-                                                <option value="United Kindom (UK)">United Kindom (UK)</option>
-                                                <option value="United States (USA)">United States (USA)</option>
+                                                <option value="Australia">Dubai</option>
+                                                <option value="Australia">Sharjah</option>
+                                                <option value="New Zealand">Abo Dhabi</option>
+                                                <option value="Switzerland">Ajman</option>
+                                                <option value="United Kindom (UK)">RAK</option>
+                                                <option value="United States (USA)">Alfujeirah</option>
                                             </select>
                                             {errors.country && <p className="error">Country Name is required.</p>}
                                         </div>
@@ -247,10 +247,6 @@ const Checkout = () => {
                                                         <input type="radio" id="radio2" name="shipping" />
                                                         <label htmlFor="radio2">Local</label>
                                                     </div>
-                                                    <div className="input-group">
-                                                        <input type="radio" id="radio3" name="shipping" />
-                                                        <label htmlFor="radio3">Flat rate</label>
-                                                    </div>
                                                 </td>
                                             </tr>
                                             <tr className="order-total">
@@ -275,19 +271,7 @@ const Checkout = () => {
                                         </div>
                                         <p>Pay with cash upon delivery.</p>
                                     </div>
-                                    <div className="single-payment">
-                                        <div className="input-group justify-content-between align-items-center">
-                                            <input type="radio" {...register("paymentMethod")} id="paypal" value="paypal" />
-                                            <label htmlFor="paypal">Paypal</label>
-                                            <Image 
-                                                src="/images/others/payment.png" 
-                                                height={28}
-                                                width={156}
-                                                alt="Paypal payment"
-                                            />
-                                        </div>
-                                        <p>Pay via PayPal; you can pay with your credit card if you don’t have a PayPal account.</p>
-                                    </div>
+
                                 </div>
                                 <button type="submit" className="axil-btn btn-bg-primary checkout-btn">Process to Checkout</button>
                             </div>
