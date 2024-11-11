@@ -24,7 +24,7 @@ const ChatWidget = () => {
         brandName: "Holster UAE",
         brandSubTitle: "Premium Tobacco, Premium Moments",
         ctaText: "Start Chat",
-        phoneNumber: "97148345641",
+        phoneNumber: "971554291019",
         welcomeText: `🌟 Welcome to Holster UAE! 🌟
         Thank you for reaching out! 😊
 
