@@ -80,7 +80,7 @@ const Checkout = () => {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
-                        "Authorization": `Bearer ${cFkpU9xjfM13OyZ84EWFEzGPSyHAMz89fghUmRtpyq6lkwRonwYEtsVJq0XnOAG1}`,
+                        "Authorization": `Bearer ${kDeeT1QaJj7PXNDO29g7RnlC66DOU1Q2kD/CVcvGSjyIiColdkulLgELptycBRnB}`,
                     },
                     body: JSON.stringify(paymentRequest),
                 });
