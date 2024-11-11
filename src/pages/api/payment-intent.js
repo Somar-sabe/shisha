@@ -6,7 +6,7 @@ export default async function handler(req, res) {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    "Authorization": `Bearer ${kDeeT1QaJj7PXNDO29g7RnlC66DOU1Q2kD/CVcvGSjyIiColdkulLgELptycBRnB}`,
+                    "Authorization": "Bearer kDeeT1QaJj7PXNDO29g7RnlC66DOU1Q2kD/CVcvGSjyIiColdkulLgELptycBRnB",
                 },
                 body: JSON.stringify(paymentRequest),
             });
