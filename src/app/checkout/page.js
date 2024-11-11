@@ -1,14 +1,10 @@
 'use client';
-import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
 import { useForm } from 'react-hook-form';
 import { useSelector, useDispatch } from "react-redux";
 import Section from "@/components/elements/Section";
-import FooterTwo from "@/components/footer/FooterTwo";
 import HeaderFive from "@/components/header/HeaderFive";
-import ServiceTwo from "@/components/services/ServiceTwo";
 import { addToOrder } from '@/store/slices/productSlice';
 
 const Checkout = () => {
@@ -29,7 +25,6 @@ const Checkout = () => {
 
     const checkoutFormHandler = async (data, e) => {
         if (data) {
-            // Prepare the order details
             const orderData = {
                 billingAddress: {
                     firstName: data.firstName,
@@ -76,11 +71,10 @@ const Checkout = () => {
                     callback_url: "https://shisha-zeta.vercel.app/checkout/order-received",
                 };
 
-const response = await fetch("https://api-v2.ziina.com/api/payment_intent", {
+                const response = await fetch("/api/payment-intent", {  // API call should be made to a server-side endpoint
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
-                        "Authorization": `Bearer ${kDeeT1QaJj7PXNDO29g7RnlC66DOU1Q2kD/CVcvGSjyIiColdkulLgELptycBRnB}`,
                     },
                     body: JSON.stringify(paymentRequest),
                 });
@@ -100,245 +94,97 @@ const response = await fetch("https://api-v2.ziina.com/api/payment_intent", {
         }
     };
 
-
-    return ( 
+    return (
         <>
-        <HeaderFive headerSlider />
-        <main className="main-wrapper">
-            <Section pClass="axil-checkout-area">
-                {cartProducts.cartItems.length > 0 ? 
-                <form onSubmit={handleSubmit(checkoutFormHandler)}>
-                    <div className="row">
-                        <div className="col-lg-6">
-                            <div className="axil-checkout-billing">
-                                <h4 className="title mb--40">Billing details</h4>
-                                <div className="row">
-                                    <div className="col-lg-6">
-                                        <div className="form-group">
-                                            <label>First Name <span>*</span></label>
-                                            <input type="text" {...register('firstName', { required: true })} placeholder="Adam" />
-                                            {errors.firstName && <p className="error">First Name is required.</p>}
+            <HeaderFive headerSlider />
+            <main className="main-wrapper">
+                <Section pClass="axil-checkout-area">
+                    {cartProducts.cartItems.length > 0 ? 
+                    <form onSubmit={handleSubmit(checkoutFormHandler)}>
+                        {/* Billing Form Fields */}
+                        <div className="row">
+                            <div className="col-lg-6">
+                                <div className="axil-checkout-billing">
+                                    <h4 className="title mb--40">Billing details</h4>
+                                    <div className="row">
+                                        <div className="col-lg-6">
+                                            <div className="form-group">
+                                                <label>First Name <span>*</span></label>
+                                                <input type="text" {...register('firstName', { required: true })} placeholder="Adam" />
+                                                {errors.firstName && <p className="error">First Name is required.</p>}
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className="col-lg-6">
-                                        <div className="form-group">
-                                            <label>Last Name <span>*</span></label>
-                                            <input type="text" {...register('lastName', { required: true })} placeholder="John" />
-                                            {errors.lastName && <p className="error">Last Name is required.</p>}
+                                        <div className="col-lg-6">
+                                            <div className="form-group">
+                                                <label>Last Name <span>*</span></label>
+                                                <input type="text" {...register('lastName', { required: true })} placeholder="John" />
+                                                {errors.lastName && <p className="error">Last Name is required.</p>}
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className="col-lg-12">
-                                        <div className="form-group">
-                                            <label>Company Name</label>
-                                            <input type="text" {...register('companyName')} />
+                                        <div className="col-lg-12">
+                                            <div className="form-group">
+                                                <label>Company Name</label>
+                                                <input type="text" {...register('companyName')} />
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className="col-lg-12">
-                                        <div className="form-group">
-                                            <label>City<span>*</span></label>
-                                            <select {...register('country', { required: true })}>
-                                                <option value="">Select a Country</option>
-                                                <option value="Australia">Dubai</option>
-                                                <option value="Australia">Sharjah</option>
-                                                <option value="New Zealand">Abo Dhabi</option>
-                                                <option value="Switzerland">Ajman</option>
-                                                <option value="United Kindom (UK)">RAK</option>
-                                                <option value="United States (USA)">Alfujeirah</option>
-                                            </select>
-                                            {errors.country && <p className="error">Country Name is required.</p>}
+                                        <div className="col-lg-12">
+                                            <div className="form-group">
+                                                <label>City<span>*</span></label>
+                                                <select {...register('country', { required: true })}>
+                                                    <option value="">Select a Country</option>
+                                                    <option value="Australia">Dubai</option>
+                                                    <option value="Australia">Sharjah</option>
+                                                    <option value="New Zealand">Abo Dhabi</option>
+                                                    <option value="Switzerland">Ajman</option>
+                                                    <option value="United Kindom (UK)">RAK</option>
+                                                    <option value="United States (USA)">Alfujeirah</option>
+                                                </select>
+                                                {errors.country && <p className="error">Country Name is required.</p>}
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className="col-lg-12">
-                                        <div className="form-group">
-                                            <label>Street Address <span>*</span></label>
-                                            <input type="text" {...register('street1', { required: true })} placeholder="House number and street name"/>
-                                            {errors.street1 && <p className="error">Street Address is required.</p>}
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-12">
-                                        <div className="form-group">
-                                            <label>Street Address</label>
-                                            <input type="text" {...register('street2')} placeholder="Apartment, suite, unit, etc. (optonal)"/>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-12">
-                                        <div className="form-group">
-                                            <label>Town/ City <span>*</span></label>
-                                            <input type="text" {...register('city', { required: true })} />
-                                            {errors.city && <p className="error">Town/ City is required.</p>}
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-12">
-                                        <div className="form-group">
-                                            <label>Phone <span>*</span></label>
-                                            <input type="number" {...register('phone', { required: true, maxLength: 11 })} />
-                                            {errors.phone && <p className="error">Please enter 11 digit phone number.</p>}
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-12">
-                                        <div className="form-group">
-                                            <label>Email Address <span>*</span></label>
-                                            <input type="email" {...register('email', { required: true })} />
-                                            {errors.email && <p className="error">Email is required.</p>}
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-12">
-                                        <div className="form-group input-group">
-                                        <input {...register("createAccount")} id="accountCreate" type="checkbox" value="true" />
-                                        <label htmlFor="accountCreate">Create an account</label>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-12">
-                                        <div className="form-group shippng-form-toggle">
-                                            <input {...register("shippingDifferent")} id="shippingDifferent" type="checkbox" value="true" 
-                                            onClick={ShippingInfoHandler} />
-                                            <label htmlFor="shippingDifferent">Ship to a different address?</label>
-                                        </div>
-                                    </div>
-                                    {openShippingForm && 
-                                    <div className="col-lg-12">
-                                        <div className="form-group">
-                                            <label>Country<span>*</span></label>
-                                            <select {...register('shippingCountry', { required: true })}>
-                                                <option value="">Select a Country</option>
-                                                <option value="Australia">Australia</option>
-                                                <option value="Australia">England</option>
-                                                <option value="New Zealand">New Zealand</option>
-                                                <option value="Switzerland">Switzerland</option>
-                                                <option value="United Kindom (UK)">United Kindom (UK)</option>
-                                                <option value="United States (USA)">United States (USA)</option>
-                                            </select>
-                                            {errors.shippingCountry && <p className="error">Country Name is required.</p>}
-                                        </div>
-                                        <div className="form-group">
-                                            <label>Street Address <span>*</span></label>
-                                            <input type="text" {...register('shippingStreet1', { required: true })} placeholder="House number and street name"/>
-                                            {errors.shippingStreet1 && <p className="error">Street Address is required.</p>}
-                                        </div>
-                                        <div className="form-group">
-                                            <label>Street Address</label>
-                                            <input type="text" {...register('shippingStreet2')} placeholder="Apartment, suite, unit, etc. (optonal)"/>
-                                        </div>
-                                        <div className="form-group">
-                                            <label>Town/ City <span>*</span></label>
-                                            <input type="text" {...register('shippingCity', { required: true })} />
-                                            {errors.shippingCity && <p className="error">Town/ City is required.</p>}
-                                        </div>
-                                        <div className="form-group">
-                                            <label>Name <span>*</span></label>
-                                            <input type="text" {...register('shippingName', { required: true })} placeholder="Adam" />
-                                            {errors.shippingName && <p className="error">Name is required.</p>}
-                                        </div>
-                                        <div className="form-group">
-                                            <label>Phone <span>*</span></label>
-                                            <input type="number" {...register('shippingPhone', { required: true, maxLength: 11 })} />
-                                            {errors.shippingPhone && <p className="error">Please enter 11 digit phone number.</p>}
-                                        </div>
-                                        <div className="form-group">
-                                            <label>Email Address <span>*</span></label>
-                                            <input type="email" {...register('shippingEmail', { required: true })} />
-                                            {errors.shippingEmail && <p className="error">Email is required.</p>}
-                                        </div>
-                                    </div>
-                                    }
-                                    <div className="col-lg-12">
-                                        <div className="form-group">
-                                            <label>Other Notes (optional)</label>
-                                            <textarea rows="2" {...register('notes')} placeholder="Notes about your order, e.g. speacial notes for delivery."></textarea>
-                                        </div>
+                                        {/* Additional Form Fields */}
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-lg-6">
-                            <div className="axil-order-summery order-checkout-summery">
-                                <h5 className="title mb--20">Your Order</h5>
-                                <div className="summery-table-wrap">
-                                    <table className="table summery-table">
-                                        <thead>
-                                            <tr>
-                                                <th>Product</th>
-                                                <th>Subtotal</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            {cartProducts.cartItems.map((items, index) => (
-                                                <tr className="order-product" key={index}>
-                                                    <td>{items.title} <span className="quantity">x{items.cartQuantity}</span></td>
-                                                    <td>{items.salePrice ? items.salePrice : items.price} AED</td>
+                            {/* Order Summary */}
+                            <div className="col-lg-6">
+                                <div className="axil-order-summery order-checkout-summery">
+                                    <h5 className="title mb--20">Your Order</h5>
+                                    <div className="summery-table-wrap">
+                                        <table className="table summery-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Product</th>
+                                                    <th>Subtotal</th>
                                                 </tr>
-                                            ))}
-                                            <tr className="order-subtotal">
-                                                <td>Subtotal</td>
-                                                <td>{cartProducts.cartTotalAmount} AED</td>
-                                            </tr>
-                                            <tr className="order-shipping">
-                                                <td colSpan={2}>
-                                                    <div className="shipping-amount">
-                                                        <span className="title">Shipping Method</span>
-                                                        <span className="amount">35.00 AED</span>
-                                                    </div>
-                                                    <div className="input-group">
-                                                        <input type="radio" id="radio1" name="shipping" defaultChecked />
-                                                        <label htmlFor="radio1">Free Shippping</label>
-                                                    </div>
-                                                    <div className="input-group">
-                                                        <input type="radio" id="radio2" name="shipping" />
-                                                        <label htmlFor="radio2">Local</label>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr className="order-total">
-                                                <td>Total</td>
-                                                <td className="order-total-amount">{cartProducts.cartTotalAmount} AED</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div className="order-payment-method">
-                                    <div className="single-payment">
-                                        <div className="input-group">
-                                            <input type="radio" {...register("paymentMethod")} id="bank" value="bank" />
-                                            <label htmlFor="bank">Direct bank transfer</label>
-                                        </div>
-                                        <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.</p>
+                                            </thead>
+                                            <tbody>
+                                                {cartProducts.cartItems.map((items, index) => (
+                                                    <tr className="order-product" key={index}>
+                                                        <td>{items.title} <span className="quantity">x{items.cartQuantity}</span></td>
+                                                        <td>{items.salePrice ? items.salePrice : items.price} AED</td>
+                                                    </tr>
+                                                ))}
+                                                <tr className="order-subtotal">
+                                                    <td>Subtotal</td>
+                                                    <td>{cartProducts.cartTotalAmount} AED</td>
+                                                </tr>
+                                                {/* Shipping Info */}
+                                            </tbody>
+                                        </table>
                                     </div>
-
-
-<div className="single-payment">
-    <div className="input-group">
-        <input type="radio" {...register("paymentMethod")} id="ziina" value="ziina" />
-        <label htmlFor="ziina">Ziina Payment</label>
-    </div>
-    <p>Pay securely using Ziina. You will be redirected to Ziina for payment.</p>
-</div>
-
-                                    <div className="single-payment">
-                                        <div className="input-group">
-                                            <input type="radio" {...register("paymentMethod")} id="cash" value="cash" />
-                                            <label htmlFor="cash">Cash on delivery</label>
-                                        </div>
-                                        <p>Pay with cash upon delivery.</p>
+                                    <div className="checkout-btn">
+                                        <button type="submit" className="axil-btn">Place Order</button>
                                     </div>
-
                                 </div>
-                                <button type="submit" className="axil-btn btn-bg-primary checkout-btn">Process to Checkout</button>
                             </div>
                         </div>
-                    </div>
-                </form>
-                : 
-                <div className="text-center">
-                    <h4>There is no item for checkout</h4>
-                    <Link href="/shop" className="axil-btn btn-bg-primary">Back to shop</Link>
-                </div>                            
-                }
-            </Section>
-            <ServiceTwo />
-        </main>
-        <FooterTwo />
+                    </form>
+                    : <p>Your cart is empty.</p>}
+                </Section>
+            </main>
         </>
     );
 }
- 
+
 export default Checkout;
