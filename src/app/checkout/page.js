@@ -18,18 +18,19 @@ const Checkout = () => {
     const cartProducts = useSelector((state) => state.productData);
 
     const ShippingInfoHandler = (e) => {
-        setopenShippingForm(e.target.checked)
-    }
+        setopenShippingForm(e.target.checked);
+    };
+
     const {
         register,
         handleSubmit,
         formState: { errors },
-      } = useForm();
+    } = useForm();
 
-    const checkoutFormHandler = (data, e) => {
+    const checkoutFormHandler = async (data, e) => {
         if (data) {
-            router.push('checkout/order-received');
-            dispatch(addToOrder({
+            // Prepare the order details
+            const orderData = {
                 billingAddress: {
                     firstName: data.firstName,
                     lastName: data.lastName,
@@ -43,24 +44,62 @@ const Checkout = () => {
                     createAccount: data.createAccount,
                     notes: data.notes,
                     shippingDifferent: data.shippingDifferent,
-                    payment: data.paymentMethod
+                    payment: data.paymentMethod,
                 },
-                shippingAdress: data.shippingDifferent === "true" ?  {
+                shippingAddress: data.shippingDifferent === "true" ? {
                     name: data.shippingName,
                     email: data.shippingEmail,
                     phone: data.shippingPhone,
                     country: data.shippingCountry,
                     street1: data.shippingStreet1,
                     street2: data.shippingStreet2,
-                    city: data.shippingCity
+                    city: data.shippingCity,
                 } : null,
                 items: cartProducts.cartItems,
                 totalAmount: cartProducts.cartTotalAmount,
                 totalQuantity: cartProducts.cartQuantityTotal,
                 orderDate: new Date().toLocaleString(),
-            }));
+            };
+
+            dispatch(addToOrder(orderData));
+
+            try {
+                const paymentRequest = {
+                    amount: cartProducts.cartTotalAmount,
+                    currency: "AED",
+                    customer: {
+                        name: `${data.firstName} ${data.lastName}`,
+                        email: data.email,
+                        phone: data.phone,
+                    },
+                    description: "Order Payment",
+                    callback_url: "https://shisha-zeta.vercel.app/checkout/order-received",
+                };
+
+                const response = await fetch("https://ziina-payment-api-url.com/initiate", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${cFkpU9xjfM13OyZ84EWFEzGPSyHAMz89fghUmRtpyq6lkwRonwYEtsVJq0XnOAG1}`,
+                    },
+                    body: JSON.stringify(paymentRequest),
+                });
+
+                const paymentResponse = await response.json();
+
+                if (paymentResponse.status === "success") {
+                    router.push(paymentResponse.payment_url);
+                } else {
+                    console.error("Payment initiation failed", paymentResponse.message);
+                    alert("There was an issue with your payment. Please try again.");
+                }
+            } catch (error) {
+                console.error("Error processing payment", error);
+                alert("Payment processing failed. Please try again later.");
+            }
         }
-    }
+    };
+
 
     return ( 
         <>
@@ -264,6 +303,16 @@ const Checkout = () => {
                                         </div>
                                         <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.</p>
                                     </div>
+
+
+<div className="single-payment">
+    <div className="input-group">
+        <input type="radio" {...register("paymentMethod")} id="ziina" value="ziina" />
+        <label htmlFor="ziina">Ziina Payment</label>
+    </div>
+    <p>Pay securely using Ziina. You will be redirected to Ziina for payment.</p>
+</div>
+
                                     <div className="single-payment">
                                         <div className="input-group">
                                             <input type="radio" {...register("paymentMethod")} id="cash" value="cash" />
