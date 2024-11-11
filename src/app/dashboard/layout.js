@@ -66,7 +66,6 @@ const DahsboardLayout = ({children}) => {
                     </div>
                 </div>
             </div>
-            <NewsLetter />
             <ServiceTwo />
         </main>
         <FooterTwo />
