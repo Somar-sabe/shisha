@@ -76,7 +76,7 @@ const Checkout = () => {
                     callback_url: "https://shisha-zeta.vercel.app/checkout/order-received",
                 };
 
-                const response = await fetch("https://ziina-payment-api-url.com/payment_intent", {
+                const response = await fetch("https://api.ziina.com/v1/payments", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
