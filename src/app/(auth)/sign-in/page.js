@@ -36,7 +36,7 @@ const SignIn = () => {
     return ( 
         <AuthLayout bgImage="bg_image--9">
             <div className="axil-signin-form">
-                <h3 className="title">Sign in to eTrade.</h3>
+                <h3 className="title">Sign in to Holster.</h3>
                 <p className="b2 mb--55">Enter your detail below</p>
                 <form className="singin-form" onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-group">

@@ -80,7 +80,7 @@ const Home = () => {
                     subtitleIcon="far fa-shopping-basket"
                 />
                           <div className="row">
-                    {exploreProduct.slice(0, 8).map((data) => (
+                    {exploreProduct.slice(0, 4 ).map((data) => (
                         <div className="col-xl-3 col-lg-4 col-sm-6" key={data.id}>
                             <ProductSeven product={data} />
                         </div>

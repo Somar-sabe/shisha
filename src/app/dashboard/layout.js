@@ -36,7 +36,7 @@ const DahsboardLayout = ({children}) => {
                                 </div>
                                 <div className="media-body">
                                     <h5 className="title mb-0">Hello {userInfo.name}</h5>
-                                    <span className="joining-date">eTrade Member Since {userInfo.joinDate}</span>
+                                    <span className="joining-date">Holster Member Since {userInfo.joinDate}</span>
                                 </div>
                             </div>
                         </div>

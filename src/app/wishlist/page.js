@@ -27,7 +27,7 @@ const Wishlist = () => {
                         {getWishlist.length > 0 ?
                             <>
                                 <div className="product-table-heading">
-                                    <h4 className="title">My Wish List on eTrade</h4>
+                                    <h4 className="title">My Wish List on Holster</h4>
                                 </div>
                                 <div className="table-responsive">
                                     <table className="table axil-product-table axil-wishlist-table">
