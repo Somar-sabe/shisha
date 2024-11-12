@@ -12,15 +12,15 @@ const HeaderMenu = [
         "children": [
             {
                 name: "Shisha Tobacco",
-                url: "/shop?category=shisha-tobacco"  // Filter by Shisha Tobacco
+                url: "/shop"  // Filter by Shisha Tobacco
             },
             {
                 name: "Shisha / Water Pipe",
-                url: "/shop?category=water-pipe"  // Filter by Water Pipe
+                url: "/shop"  // Filter by Water Pipe
             },
             {
                 name: "Shisha Accessories",
-                url: "/shop?category=accessories"  // Filter by Accessories
+                url: "/shop"  // Filter by Accessories
             }
         ]
     },
