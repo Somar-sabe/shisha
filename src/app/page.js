@@ -47,7 +47,7 @@ const Home = () => {
             <PosterOne 
              subtitleIcon="far fa-couch"
              title="ICE KAKTUZ took first place in 2022 for the BEST FLAVOR on the market"
-             thumbnail="/images/product/poster/Group 6 Copy 4 (1).png"
+             thumbnail="/images/product/poster/URKUNDE_Ice_Kaktuz.png"
              thumbWidth={661}
              thumbHeight={502}
             />
