@@ -6,7 +6,7 @@ const ServiceData = [
     },
     {
         icon: "/images/icons/service2.webp",
-        title: "Money Back Guarantee",
+        title: "Next Level Pro Quality",
         text: "Within 10 days."
     },
     {

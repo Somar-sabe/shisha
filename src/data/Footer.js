@@ -71,7 +71,7 @@ const FooterData = {
 
 
     footerInfo: {
-        address: "B2B Tower - Office 1602, <br /> Dubai, Buissness bay,UAE.",
+        address: "B2B Tower - Office 1602, <br /> Dubai, Buissness Bay, UAE.",
         email: "Info@holster-tobacco.com",
         phone: "+971 55 429 1019"
     },

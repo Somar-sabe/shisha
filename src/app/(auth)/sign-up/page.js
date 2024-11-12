@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import AuthLayout from "../layout";
 
 const SignUp = () => {
     const [signupData, setSignupData] = useState(null);
@@ -15,7 +16,8 @@ const SignUp = () => {
     }
 
     return ( 
-        <div className="axil-signin-form">
+        <AuthLayout bgImage="bg_image--9">
+        <div className="axil-signin-form" bgImage="bg_image--9">
             <h3 className="title">I&apos;m New Here</h3>
             <p className="b2 mb--55">Enter your detail below</p>
             <form className="singin-form" onSubmit={handleSubmit(onSubmit)}>
@@ -40,6 +42,7 @@ const SignUp = () => {
                 </div>
             </form>
         </div>
+        </AuthLayout>
      );
 }
  

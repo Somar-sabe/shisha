@@ -124,13 +124,6 @@ const Checkout = () => {
                                     </div>
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>Town/ City <span>*</span></label>
-                                            <input type="text" {...register('city', { required: true })} />
-                                            {errors.city && <p className="error">Town/ City is required.</p>}
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-12">
-                                        <div className="form-group">
                                             <label>Phone <span>*</span></label>
                                             <input type="number" {...register('phone', { required: true, maxLength: 11 })} />
                                             {errors.phone && <p className="error">Please enter 11 digit phone number.</p>}
@@ -149,59 +142,8 @@ const Checkout = () => {
                                         <label htmlFor="accountCreate">Create an account</label>
                                         </div>
                                     </div>
-                                    <div className="col-lg-12">
-                                        <div className="form-group shippng-form-toggle">
-                                            <input {...register("shippingDifferent")} id="shippingDifferent" type="checkbox" value="true" 
-                                            onClick={ShippingInfoHandler} />
-                                            <label htmlFor="shippingDifferent">Ship to a different address?</label>
-                                        </div>
-                                    </div>
-                                    {openShippingForm && 
-                                    <div className="col-lg-12">
-                                        <div className="form-group">
-                                            <label>Country<span>*</span></label>
-                                            <select {...register('shippingCountry', { required: true })}>
-                                                <option value="">Select a Country</option>
-                                                <option value="Australia">Australia</option>
-                                                <option value="Australia">England</option>
-                                                <option value="New Zealand">New Zealand</option>
-                                                <option value="Switzerland">Switzerland</option>
-                                                <option value="United Kindom (UK)">United Kindom (UK)</option>
-                                                <option value="United States (USA)">United States (USA)</option>
-                                            </select>
-                                            {errors.shippingCountry && <p className="error">Country Name is required.</p>}
-                                        </div>
-                                        <div className="form-group">
-                                            <label>Street Address <span>*</span></label>
-                                            <input type="text" {...register('shippingStreet1', { required: true })} placeholder="House number and street name"/>
-                                            {errors.shippingStreet1 && <p className="error">Street Address is required.</p>}
-                                        </div>
-                                        <div className="form-group">
-                                            <label>Street Address</label>
-                                            <input type="text" {...register('shippingStreet2')} placeholder="Apartment, suite, unit, etc. (optonal)"/>
-                                        </div>
-                                        <div className="form-group">
-                                            <label>Town/ City <span>*</span></label>
-                                            <input type="text" {...register('shippingCity', { required: true })} />
-                                            {errors.shippingCity && <p className="error">Town/ City is required.</p>}
-                                        </div>
-                                        <div className="form-group">
-                                            <label>Name <span>*</span></label>
-                                            <input type="text" {...register('shippingName', { required: true })} placeholder="Adam" />
-                                            {errors.shippingName && <p className="error">Name is required.</p>}
-                                        </div>
-                                        <div className="form-group">
-                                            <label>Phone <span>*</span></label>
-                                            <input type="number" {...register('shippingPhone', { required: true, maxLength: 11 })} />
-                                            {errors.shippingPhone && <p className="error">Please enter 11 digit phone number.</p>}
-                                        </div>
-                                        <div className="form-group">
-                                            <label>Email Address <span>*</span></label>
-                                            <input type="email" {...register('shippingEmail', { required: true })} />
-                                            {errors.shippingEmail && <p className="error">Email is required.</p>}
-                                        </div>
-                                    </div>
-                                    }
+
+                                   
                                     <div className="col-lg-12">
                                         <div className="form-group">
                                             <label>Other Notes (optional)</label>
@@ -257,21 +199,14 @@ const Checkout = () => {
                                     </table>
                                 </div>
                                 <div className="order-payment-method">
-                                    <div className="single-payment">
-                                        <div className="input-group">
-                                            <input type="radio" {...register("paymentMethod")} id="bank" value="bank" />
-                                            <label htmlFor="bank">Direct bank transfer</label>
-                                        </div>
-                                        <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.</p>
-                                    </div>
 
 
 <div className="single-payment">
     <div className="input-group">
         <input type="radio" {...register("paymentMethod")} id="ziina" value="ziina" />
-        <label htmlFor="ziina">Ziina Payment</label>
+        <label htmlFor="ziina">Pay bay card</label>
     </div>
-    <p>Pay securely using Ziina. You will be redirected to Ziina for payment.</p>
+    <p>Pay securely using Straipe api. You will be redirected to Ziina for payment.</p>
 </div>
 
                                     <div className="single-payment">

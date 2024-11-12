@@ -1,97 +1,112 @@
 'use client';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { mapInSlices, slugify } from '@/utils';
-import FooterTwo from "@/components/footer/FooterTwo";
-import HeaderFive from "@/components/header/HeaderFive";
-import ProductsData from '@/data/Products';
-import Section from '@/components/elements/Section';
-import SectionTitle from '@/components/elements/SectionTitle';
-import ProductSeven from '@/components/product/ProductSeven';
-import WhyChoose from '@/components/why-choose/WhyChoose';
-import PosterOne from '@/components/poster/PosterOne';
-import BannerFive from '@/components/hero-banner/BannerFive';
+import { useState } from "react";
+import Section from "@/components/elements/Section";
+import ProductsData from "@/data/Products";
+import ProductSeven from "@/components/product/ProductSeven";
+import { slugify } from "@/utils";
+import { Category } from "@/data/ProductCategory";
 
-const HomeFurniture = () => {
-    const pathname = usePathname();
-    const split = pathname.split("/");
-    const pageCategory = split[split.length - 1];
-    const furnitureProduct = ProductsData.filter(data => slugify(data.cate) === pageCategory);
-    const transparentProduct = ProductsData.filter(data => slugify(data.cate) === pageCategory && data.thumbnailTransparent === true);
-    const exploreProduct = mapInSlices(furnitureProduct, 8);
-    
+const ShopWithSidebar = () => {
+    const [filterProduct, setFilterProduct] = useState(ProductsData);
+    const [productShow, setProductShow] = useState(9);
+    const [filterText, setFilterText] = useState('');
+    const [cateToggle, setcateToggle] = useState(true);
+    const [priceRangeToggle, setpriceRangeToggle] = useState(true);
+
+    // Category handler for filtering
+    const categoryHandler = (cateSelect) => {
+        const cateFilterProduct = ProductsData.filter((data) =>(slugify(data.pCate) === cateSelect));
+        setFilterProduct(cateFilterProduct);
+        setFilterText(cateSelect);
+    };
+
+    // Price range handler for filtering
+    const priceRangeHandler = (rangeSelect) => {
+        const getPriceData = ProductsData.filter(data => data.price <= rangeSelect);
+        setFilterProduct(getPriceData);
+        setFilterText(rangeSelect);
+    };
+
+    // Load more products
+    const ProductShowHandler = () => {
+        setProductShow(productShow + 3);
+    };
+
+    // Reset filter
+    const productFilterReset = () => {
+        setFilterProduct(ProductsData);
+        setFilterText('');
+    };
+
+    // Price range data for filtering
+    const priceRangeData = [
+        50,
+        100,
+        200,
+        300,
+        400,
+        500
+    ];
+
     return ( 
-        <>
-        <HeaderFive headerSlider />
-        <main className="main-wrapper">
-            
-            <BannerFive />
-          
+        <Section pClass="axil-shop-area">
+            <div className="row">
+                <div className="col-lg-3">
+                    <div className="axil-shop-sidebar">
+                        <div className="d-lg-none">
+                            <button className="sidebar-close filter-close-btn"><i className="fas fa-times" /></button>
+                        </div>
+                        {/* Category Filter */}
+                        <div className={`toggle-list product-categories ${cateToggle ? "active" : ""}`}>
+                            <h6 onClick={() => setcateToggle(!cateToggle)} className="title">CATEGORIES</h6>
+                            {cateToggle && 
+                                <div className="shop-submenu">
+                                    <ul>
+                                        {Category.map((data, index) => (
+                                            <li className={filterText === slugify(data.cate) ? "current-cat" : ""} key={index}>
+                                                <button onClick={() => categoryHandler(slugify(data.cate))}>{data.cate}</button>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            }
+                        </div> 
 
-      
-            <Section pClass="pb--0" borderBottom="pb--50">
-                <SectionTitle
-                title="Best Sellers"
-                subtitle="This Month"
-                subtitleIcon="far fa-shopping-basket"
-                subColor="highlighter-secondary"
-                />
-                <div className="row">
-                    {furnitureProduct.slice(0, 8).map((data) => (
-                        <div className="col-xl-3 col-lg-4 col-sm-6" key={data.id}>
-                            <ProductSeven product={data} />
+                        {/* Price Filter */}
+                        <div className={`toggle-list product-price-range ${priceRangeToggle ? "active" : ""}`}>
+                            <h6 onClick={() => setpriceRangeToggle(!priceRangeToggle)} className="title">PRICE</h6>
+                            {priceRangeToggle && 
+                            <div className="shop-submenu">
+                                <ul>
+                                    {priceRangeData?.map((data, index) => (
+                                        <li className={filterText === data ? "chosen" : ""} key={index}>
+                                            <button onClick={() => priceRangeHandler(data)}>{data}</button>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                            }
                         </div>
-                    ))}
-                </div>
-            </Section>
-            <PosterOne 
-             subtitleIcon="far fa-couch"
-             title="ICE KAKTUZ took first place in 2022 for the BEST FLAVOR on the market"
-             thumbnail="/images/product/poster/URKUNDE_Ice_Kaktuz.png"
-             thumbWidth={661}
-             thumbHeight={502}
-            />
-            <Section pClass="pb--0" borderBottom="pb--80">
-                <SectionTitle
-                title="Explore our Products"
-                subtitle="Our Products"
-                subtitleIcon="far fa-shopping-basket"
-                subColor="highlighter-secondary"
-                />
-                 <div className="row">
-                    {furnitureProduct.slice(0, 8).map((data) => (
-                        <div className="col-xl-3 col-lg-4 col-sm-6" key={data.id}>
-                            <ProductSeven product={data} />
-                        </div>
-                    ))}
-                </div>
-                <div className="row">
-                    <div className="col-lg-12 text-center mt--20 mt_sm--0">
-                        <Link href="/shop" className="axil-btn btn-bg-lighter btn-load-more">View All Products</Link>
+                        <button className="axil-btn btn-bg-primary" onClick={productFilterReset}>All Reset</button>
                     </div>
                 </div>
-            </Section>
-            <WhyChoose />
-   
-            <Section pClass="pb--50">
-                <SectionTitle 
-                    title="Accessoires"
-                    subtitle="This Week’s"
-                    subtitleIcon="far fa-shopping-basket"
-                />
-                          <div className="row">
-                    {furnitureProduct.slice(0, 8).map((data) => (
-                        <div className="col-xl-3 col-lg-4 col-sm-6" key={data.id}>
-                            <ProductSeven product={data} />
-                        </div>
-                    ))}
+                <div className="col-lg-9">
+                    <div className="row row--15">
+                        {filterProduct.length > 0 ? filterProduct.slice(0, productShow).map((data) => (
+                            <div className="col-xl-4 col-sm-6" key={data.id}>
+                                <ProductSeven product={data} pClass="mb--30" />
+                            </div>
+                        )) : <h4 className="text-center pt--30">No Product Found</h4>}
+                    </div>
+                    <div className="text-center pt--20">
+                        <button className={`axil-btn btn-bg-lighter btn-load-more ${filterProduct.length < productShow ? "disabled" : ""}`} onClick={ProductShowHandler}>
+                            {filterProduct.length < productShow ? "No More Data" : "Load more"}
+                        </button>
+                    </div>
                 </div>
-            </Section>
-           
-        </main>
-        <FooterTwo />
-        </>
-     );
-}
+            </div>
+        </Section>
+    );
+};
  
-export default HomeFurniture;
+export default ShopWithSidebar;

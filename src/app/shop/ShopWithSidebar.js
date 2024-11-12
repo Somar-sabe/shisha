@@ -13,7 +13,6 @@ const ShopWithSidebar = () => {
     const [productShow, setProductShow] = useState(9);
     const [filterText, setFilterText] = useState('');
     const [cateToggle, setcateToggle] = useState(true);
-    const [priceRangeToggle, setpriceRangeToggle] = useState(true);
 
     const categoryHandler = (cateSelect) => {
         const cateFilterProduct = ProductsData.filter((data) =>(slugify(data.pCate) === cateSelect));
@@ -21,30 +20,9 @@ const ShopWithSidebar = () => {
         setFilterText(cateSelect);
     }
 
-    const priceRangeHandler = (rangeSelect) => {
-        const getPriceData = ProductsData.filter(data => data.price <= rangeSelect);
-        setFilterProduct(getPriceData);
-        setFilterText(rangeSelect);
-    }
-
     const ProductShowHandler = () => {
         setProductShow(productShow + 3);
     }
-
-    const productFilterReset = () => {
-        setFilterProduct(ProductsData);
-        setFilterText('');
-    }
-
-    const priceRangeData = [
-        50,
-        100,
-        200,
-        300,
-        400,
-        500
-    ]
-
     return ( 
         <Section pClass="axil-shop-area">
             <div className="row">
@@ -68,22 +46,8 @@ const ShopWithSidebar = () => {
                                 </div>
                             }
                         </div> 
-                        {/* Price Filter  */}
-                        <div className={`toggle-list product-price-range ${priceRangeToggle ? "active" : ""}`}>
-                            <h6 onClick={() => setpriceRangeToggle(!priceRangeToggle)} className="title">PRICE</h6>
-                            {priceRangeToggle && 
-                            <div className="shop-submenu">
-                                <ul>
-                                    {priceRangeData?.map((data, index) => (
-                                        <li className={filterText === data ? "chosen" :""} key={index}>
-                                            <button onClick={() => priceRangeHandler(data)}>{data}</button>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                            }
-                        </div>
-                        <button className="axil-btn btn-bg-primary" onClick={() => productFilterReset()} >All Reset</button>
+
+                     
                     </div>
                 </div>
                 <div className="col-lg-9">

@@ -1,6 +1,6 @@
 'use client';
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import ProductsData from "@/data/Products";
 import ProductThumbnail from "@/components/product/elements/ProductThumbnail";
 import ProductTitle from "@/components/product/elements/ProductTitle";
@@ -11,6 +11,7 @@ import ActionButtons from "@/components/product/elements/ActionButtons";
 const ProductSearchModal = (props) => {
   const getProducts = ProductsData;
   const [productQuery, setProductQuery] = useState([]);
+  const inputRef = useRef(null); // Create a reference for the input field
  
   const SearchInputHandler = (inputValue) => {
     if (inputValue.length > 0) {
@@ -22,6 +23,17 @@ const ProductSearchModal = (props) => {
       setProductQuery([]);
     }
   };
+
+  // Focus on the input field when the modal opens with a slight delay
+  useEffect(() => {
+    let focusTimer;
+    if (props.toggler && inputRef.current) {
+      focusTimer = setTimeout(() => {
+        inputRef.current.focus();
+      }, 100); // Adjust the delay as needed
+    }
+    return () => clearTimeout(focusTimer); // Clear the timer on unmount
+  }, [props.toggler]);
 
   return (
     <>
@@ -39,6 +51,7 @@ const ProductSearchModal = (props) => {
                 type="search"
                 className="form-control"
                 placeholder="Write Something...."
+                ref={inputRef} // Attach the ref to the input field
                 onChange={(e) => SearchInputHandler(e.target.value)}
               />
               <button className="axil-btn btn-bg-primary">
@@ -55,20 +68,20 @@ const ProductSearchModal = (props) => {
               {productQuery &&
                 productQuery.map((data) => (
                   <div className="axil-product-list" key={data.id}>
-					<div onClick={props.toggleHandler}>
-						<ProductThumbnail
-						productThumb={data}
-						width={120}
-						height={120}
-						/>
-					</div>
+                    <div onClick={props.toggleHandler}>
+                      <ProductThumbnail
+                        productThumb={data}
+                        width={120}
+                        height={120}
+                      />
+                    </div>
                     <div className="product-content">
                       <ProductRating rating={data} />
-					  <div onClick={props.toggleHandler}>
-                      	<ProductTitle productTitle={data} titleTag="h6" />
-					  </div>
+                      <div onClick={props.toggleHandler}>
+                        <ProductTitle productTitle={data} titleTag="h6" />
+                      </div>
                       <ProductPrice price={data} />
-					  <ActionButtons productAction={data} wishlistBtn cartBtn/>
+                      <ActionButtons productAction={data} wishlistBtn cartBtn/>
                     </div>
                   </div>
                 ))}

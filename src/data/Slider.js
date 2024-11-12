@@ -3,19 +3,22 @@ const FurnitureSlider = [
         subTitle: "Hot Deal",
         subIcon: "fas fa-fire",
         titleKey: "slider.bestSellingFlavor",
-        thumbnail: "/images/product/furniture/Best Flavor (1).png"
+        thumbnail: "/images/product/furniture/Best Flavor (1).png",
+        href: "/products/3"
     },
     {
         subTitle: "Hot Deal",
         subIcon: "fas fa-fire",
         titleKey: "slider.starterPack",
-        thumbnail: "/images/product/furniture/Starter Pack.png"
+        thumbnail: "/images/product/furniture/Starter Pack.png",
+        href: "/shop"
     },
     {
         subTitle: "Hot Deal",
         subIcon: "fas fa-fire",
         titleKey: "slider.shishaAccessories",
-        thumbnail: "/images/product/furniture/Sisha Accesuares.png"
+        thumbnail: "/images/product/furniture/Sisha Accesuares.png",
+        href: "/shop"
     },
 ]
 

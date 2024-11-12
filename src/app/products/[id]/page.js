@@ -42,47 +42,15 @@ const ProductDetails = ({ params }) => {
     return (
         <>
             <ProductSingleLayout />
-            <Section pClass="pb--50 pb_sm--30">
+            <Section pClass="pb--0" borderBottom="pb--50">
                 <SectionTitle 
                     title="Viewed Items"
                     subtitle="Your Recently"
                     subtitleIcon="far fa-shopping-basket"
                     subColor="highlighter-primary"
                 />
-                <SlickSlider
-                class="recent-product-activation slick-layout-wrapper--15 axil-slick-arrow arrow-top-slide"
-                slidesToShow={4}
-                infinite={false}
-                responsive = {[
-                    {
-                      breakpoint: 1400,
-                      settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3,
-                      }
-                    },
-                    {
-                      breakpoint: 992,
-                      settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                      }
-                    },
-                    {
-                      breakpoint: 575,
-                      settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                      }
-                    },
-                  ]}
-                >
-                    {relatedProduct?.slice(0, 10).map((data) => (
-                        <ProductSeven product={data} key={data.id}/>
-                    ))}
-                </SlickSlider>
                 <div className="row">
-                {relatedProduct?.slice(0, 10).map((data) => (
+                {relatedProduct?.slice(0, 4).map((data) => (
                         <div className="col-xl-3 col-lg-4 col-sm-6" key={data.id}>
                             <ProductSeven product={data} />
                         </div>

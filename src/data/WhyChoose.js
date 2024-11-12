@@ -5,7 +5,7 @@ const WhyChooseData = [
     },
     {
         icon: "/images/icons/service7.png",
-        title: "Money Back Guarantee"
+        title: "Next Level Pro Quality"
     },
     {
         icon: "/images/icons/service8.png",
