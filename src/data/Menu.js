@@ -6,21 +6,21 @@ const HeaderMenu = [
        
     },
     {
-        "name": "Shop",
-        "url": "/shop",
-        "hasChildren": true,
-        "children": [
+        name: "Shop",
+        url: "/shop",
+        hasChildren: true,
+        children: [
             {
                 name: "Shisha Tobacco",
-                url: "/shop"  // Filter by Shisha Tobacco
+                url: "/shop?category=shisha-tobacco"
             },
             {
                 name: "Shisha / Water Pipe",
-                url: "/shop"  // Filter by Water Pipe
+                url: "/shop?category=shisha-water-pipe"
             },
             {
                 name: "Shisha Accessories",
-                url: "/shop"  // Filter by Accessories
+                url: "/shop?category=shisha-accessories"
             }
         ]
     },

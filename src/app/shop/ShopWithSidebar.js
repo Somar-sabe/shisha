@@ -1,88 +1,42 @@
 'use client';
-import { useState } from "react";
+
+import { useState, useEffect } from "react";
 import Section from "@/components/elements/Section";
 import ProductsData from "@/data/Products";
 import ProductSeven from "@/components/product/ProductSeven";
-import { slugify } from "@/utils";
-import { Category } from "@/data/ProductCategory";
+import { useSearchParams } from "next/navigation"; // Use the `useSearchParams` hook from Next.js
 
 const ShopWithSidebar = () => {
+    const searchParams = useSearchParams();
+    const category = searchParams.get("category"); // Get the category from query params
+
     const [filterProduct, setFilterProduct] = useState(ProductsData);
     const [productShow, setProductShow] = useState(9);
-    const [filterText, setFilterText] = useState('');
-    const [cateToggle, setcateToggle] = useState(true);
-    const [priceRangeToggle, setpriceRangeToggle] = useState(true);
 
-    const categoryHandler = (cateSelect) => {
-        const cateFilterProduct = ProductsData.filter((data) =>(slugify(data.pCate) === cateSelect));
-        setFilterProduct(cateFilterProduct)
-        setFilterText(cateSelect);
-    }
+    // Filter products based on category from URL
+    useEffect(() => {
+        if (category) {
+            // Normalize category string (replace spaces with hyphens and lowercase the string)
+            const normalizedCategory = category.toLowerCase().replace(/\s+/g, '-');
 
-    const priceRangeHandler = (rangeSelect) => {
-        const getPriceData = ProductsData.filter(data => data.price <= rangeSelect);
-        setFilterProduct(getPriceData);
-        setFilterText(rangeSelect);
-    }
+            const filtered = ProductsData.filter(product => 
+                product.pCate.toLowerCase().replace(/\s+/g, '-') === normalizedCategory
+            );
+            setFilterProduct(filtered);
+        } else {
+            setFilterProduct(ProductsData); // Show all products if no category is selected
+        }
+    }, [category]);
 
     const ProductShowHandler = () => {
         setProductShow(productShow + 3);
-    }
+    };
 
-    const productFilterReset = () => {
-        setFilterProduct(ProductsData);
-        setFilterText('');
-    }
-
-    const priceRangeData = [
-        50,
-        100,
-        200,
-        300,
-        400,
-        500
-    ]
-
-    return ( 
+    return (
         <Section pClass="axil-shop-area">
             <div className="row">
                 <div className="col-lg-3">
-                    <div className="axil-shop-sidebar">
-                        <div className="d-lg-none">
-                            <button className="sidebar-close filter-close-btn"><i className="fas fa-times" /></button>
-                        </div>
-                        {/* Category Filter */}
-                        <div className={`toggle-list product-categories ${cateToggle ? "active" : ""}`}>
-                            <h6 onClick={() => setcateToggle(!cateToggle)} className="title">CATEGORIES</h6>
-                            {cateToggle && 
-                                <div className="shop-submenu">
-                                    <ul>
-                                        {Category.map((data, index) => (
-                                            <li className={filterText === slugify(data.cate) ? "current-cat" :""} key={index}>
-                                                <button onClick={() => categoryHandler(slugify(data.cate))}>{data.cate}</button>
-                                            </li>
-                                            ))}
-                                    </ul>
-                                </div>
-                            }
-                        </div> 
-                        {/* Price Filter  */}
-                        <div className={`toggle-list product-price-range ${priceRangeToggle ? "active" : ""}`}>
-                            <h6 onClick={() => setpriceRangeToggle(!priceRangeToggle)} className="title">PRICE</h6>
-                            {priceRangeToggle && 
-                            <div className="shop-submenu">
-                                <ul>
-                                    {priceRangeData?.map((data, index) => (
-                                        <li className={filterText === data ? "chosen" :""} key={index}>
-                                            <button onClick={() => priceRangeHandler(data)}>{data}</button>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                            }
-                        </div>
-                        <button className="axil-btn btn-bg-primary" onClick={() => productFilterReset()} >All Reset</button>
-                    </div>
+                    {/* Sidebar and filters */}
                 </div>
                 <div className="col-lg-9">
                     <div className="row row--15">
@@ -93,13 +47,14 @@ const ShopWithSidebar = () => {
                         )) : <h4 className="text-center pt--30">No Product Found</h4>}
                     </div>
                     <div className="text-center pt--20">
-                        <button className={`axil-btn btn-bg-lighter btn-load-more ${filterProduct.length < productShow ? "disabled" : ""}`} onClick={ProductShowHandler}>{filterProduct.length < productShow ? "No More Data" : "Load more"}</button>
+                        <button className="axil-btn btn-bg-lighter btn-load-more" onClick={ProductShowHandler}>
+                            {filterProduct.length < productShow ? "No More Data" : "Load more"}
+                        </button>
                     </div>
                 </div>
             </div>
-
         </Section>
     );
-}
- 
+};
+
 export default ShopWithSidebar;
