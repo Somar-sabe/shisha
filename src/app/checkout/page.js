@@ -14,53 +14,33 @@ import { addToOrder } from '@/store/slices/productSlice';
 const Checkout = () => {
     const router = useRouter();
     const dispatch = useDispatch();
-    const [openShippingForm, setopenShippingForm] = useState(false);
     const cartProducts = useSelector((state) => state.productData);
-
-    const ShippingInfoHandler = (e) => {
-        setopenShippingForm(e.target.checked)
-    }
     const {
         register,
         handleSubmit,
         formState: { errors },
       } = useForm();
 
-    const checkoutFormHandler = (data, e) => {
-        if (data) {
-            router.push('checkout/order-received');
-            dispatch(addToOrder({
-                billingAddress: {
-                    firstName: data.firstName,
-                    lastName: data.lastName,
-                    companyName: data.companyName,
-                    country: data.country,
-                    street1: data.street1,
-                    street2: data.street2,
-                    city: data.city,
-                    phone: data.phone,
-                    email: data.email,
-                    createAccount: data.createAccount,
-                    notes: data.notes,
-                    shippingDifferent: data.shippingDifferent,
-                    payment: data.paymentMethod
-                },
-                shippingAdress: data.shippingDifferent === "true" ?  {
-                    name: data.shippingName,
-                    email: data.shippingEmail,
-                    phone: data.shippingPhone,
-                    country: data.shippingCountry,
-                    street1: data.shippingStreet1,
-                    street2: data.shippingStreet2,
-                    city: data.shippingCity
-                } : null,
-                items: cartProducts.cartItems,
-                totalAmount: cartProducts.cartTotalAmount,
-                totalQuantity: cartProducts.cartQuantityTotal,
-                orderDate: new Date().toLocaleString(),
-            }));
+      const checkoutFormHandler = async (data, e) => {
+        const { cartItems, cartTotalAmount } = cartProducts;
+    
+        try {
+            const response = await fetch('/api/create-checkout-session', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ cartItems, totalAmount: cartTotalAmount }),
+            });
+            
+            const session = await response.json();
+    
+            if (session.url) {
+                window.location.href = session.url; // Redirects to Stripe checkout page
+            }
+        } catch (error) {
+            console.error('Error creating Stripe checkout session:', error);
         }
-    }
+    };
+        
 
     return ( 
         <>
@@ -206,7 +186,7 @@ const Checkout = () => {
         <input type="radio" {...register("paymentMethod")} id="ziina" value="ziina" />
         <label htmlFor="ziina">Pay bay card</label>
     </div>
-    <p>Pay securely using Straipe api. You will be redirected to Ziina for payment.</p>
+    <p>Pay securely using Straipe api. You will be redirected to Stripe api for payment.</p>
 </div>
 
                                     <div className="single-payment">
