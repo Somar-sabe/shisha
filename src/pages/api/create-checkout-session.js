@@ -1,8 +1,6 @@
 // File: /pages/api/create-checkout-session.js
 import Stripe from 'stripe';
-
-const stripe = new Stripe(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);
-
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 export default async function handler(req, res) {
     if (req.method === 'POST') {
         const { cartItems, totalAmount } = req.body;
