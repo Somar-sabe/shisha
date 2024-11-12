@@ -12,15 +12,15 @@ const HeaderMenu = [
         children: [
             {
                 name: "Shisha Tobacco",
-                url: "/shop?category=shisha-tobacco"
+                url: "/shop"
             },
             {
                 name: "Shisha / Water Pipe",
-                url: "/shop?category=shisha-water-pipe"
+                url: "/shop"
             },
             {
                 name: "Shisha Accessories",
-                url: "/shop?category=shisha-accessories"
+                url: "/shop"
             }
         ]
     },
