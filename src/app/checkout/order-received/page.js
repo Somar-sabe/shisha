@@ -1,7 +1,10 @@
 'use client';
-
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import HeaderFive from './HeaderFive';  // Assuming you have a HeaderFive component
+import FooterTwo from './FooterTwo';    // Assuming you have a FooterTwo component
+import Section from './Section';        // Assuming you have a Section component
+
 
 const OrderReceived = () => {
   const [orderData, setOrderData] = useState(null);
