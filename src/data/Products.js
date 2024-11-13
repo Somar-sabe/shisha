@@ -877,6 +877,11 @@ const ProductsData = [
                     title: "Material",
                     text: "Polyvinyl Chloride and Silicone Blend"
                 },
+                {
+                    title: "Color",
+                    text: "Turquoise Blue"
+                },
+                
             ]
         },
         addInfo: [
@@ -908,7 +913,11 @@ const ProductsData = [
                 },
                 {
                     title: "Material",
-                    text: "Polyvinyl Chloride and Silicone Blend"
+                    text: "polyvinyl chloride - silicone mixture"
+                },
+                {
+                    title: "Color",
+                    text: "pink"
                 },
             ]
         },
@@ -944,6 +953,10 @@ const ProductsData = [
                     title: "Material",
                     text: "Polyvinyl Chloride and Silicone Blend"
                 },
+                {
+                    title: "Color",
+                    text: "Red"
+                },
             ]
         },
         addInfo: [
@@ -977,6 +990,10 @@ const ProductsData = [
                 {
                     title: "Material",
                     text: "Polyvinyl Chloride and Silicone Blend"
+                },
+                {
+                    title: "Color",
+                    text: "pink"
                 },
             ]
         },
