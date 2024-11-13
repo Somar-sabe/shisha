@@ -1,6 +1,11 @@
 /*-------------------------
 Team Style
 --------------------------*/
+.slick-track{
+	margin-left: 0;
+
+}
+
 .axil-team-area {
 	padding: 50px 0 55px;
 	.arrow-top-slide {
@@ -17,7 +22,7 @@ Team Style
 	margin-left: calc((100% - 1320px) / 2);
     overflow: hidden;
 	@media only screen and (max-width: 1349px) {
-		margin-left: auto;
+		
 		
 	}
 	.team-slide-activation {
