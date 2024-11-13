@@ -72,7 +72,7 @@ const Checkout = () => {
                                         <div className="form-group">
                                             <label>City<span>*</span></label>
                                             <select {...register('country', { required: true })}>
-                                                <option value="">Select a Country</option>
+                                                <option value="">Select a City</option>
                                                 <option value="Australia">Dubai</option>
                                                 <option value="Australia">Sharjah</option>
                                                 <option value="New Zealand">Abo Dhabi</option>
