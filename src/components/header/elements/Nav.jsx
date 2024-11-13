@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { HeaderMenu } from "@/data/Menu";
 import { mobileMenu } from "@/store/slices/menuSlice";
 
+
 const Nav = () => {
 	const dispatch = useDispatch();
 	const menuOption = useSelector((state) => state.menu);

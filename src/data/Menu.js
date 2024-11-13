@@ -10,19 +10,16 @@ const HeaderMenu = [
         hasChildren: true,
         children: [
             {
-                name: "Shisha Tobacco",
-                url: "/shop",
-                filterCategory: "shisha-tobacco", // category filter value
+                name: "Shisha Topaco",
+                url: "/shop?category=shisha-topaco", // Pass filterCategory in the URL
             },
             {
                 name: "Shisha / Water Pipe",
-                url: "/shop",
-                filterCategory: "shisha-water-pipe", // category filter value
+                url: "/shop?category=shisha-water-pipe",
             },
             {
                 name: "Shisha Accessories",
-                url: "/shop",
-                filterCategory: "shisha-accessories", // category filter value
+                url: "/shop?category=shisha-accssesores",
             }
         ]
     },

@@ -1,28 +1,40 @@
-'use client';
-import { useState } from "react";
+"use client";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import Section from "@/components/elements/Section";
 import ProductsData from "@/data/Products";
 import ProductSeven from "@/components/product/ProductSeven";
 import { slugify } from "@/utils";
 import { Category } from "@/data/ProductCategory";
 
-
-
 const ShopWithSidebar = () => {
+    const searchParams = useSearchParams();
+    const category = searchParams.get("category"); // Get the 'category' query parameter from the URL
+
     const [filterProduct, setFilterProduct] = useState(ProductsData);
     const [productShow, setProductShow] = useState(9);
     const [filterText, setFilterText] = useState('');
-    const [cateToggle, setcateToggle] = useState(true);
+    const [cateToggle, setCateToggle] = useState(true);
+
+    // Apply filter based on URL category parameter when component mounts or changes
+    useEffect(() => {
+        if (category) {
+            const filteredProducts = ProductsData.filter((data) => slugify(data.pCate) === category);
+            setFilterProduct(filteredProducts);
+            setFilterText(category);
+        }
+    }, [category]); // Run this effect when 'category' changes
 
     const categoryHandler = (cateSelect) => {
-        const cateFilterProduct = ProductsData.filter((data) =>(slugify(data.pCate) === cateSelect));
-        setFilterProduct(cateFilterProduct)
+        const cateFilterProduct = ProductsData.filter((data) => slugify(data.pCate) === cateSelect);
+        setFilterProduct(cateFilterProduct);
         setFilterText(cateSelect);
-    }
+    };
 
     const ProductShowHandler = () => {
         setProductShow(productShow + 3);
-    }
+    };
+
     return ( 
         <Section pClass="axil-shop-area">
             <div className="row">
@@ -33,21 +45,19 @@ const ShopWithSidebar = () => {
                         </div>
                         {/* Category Filter */}
                         <div className={`toggle-list product-categories ${cateToggle ? "active" : ""}`}>
-                            <h6 onClick={() => setcateToggle(!cateToggle)} className="title">CATEGORIES</h6>
+                            <h6 onClick={() => setCateToggle(!cateToggle)} className="title">CATEGORIES</h6>
                             {cateToggle && 
                                 <div className="shop-submenu">
                                     <ul>
                                         {Category.map((data, index) => (
-                                            <li className={filterText === slugify(data.cate) ? "current-cat" :""} key={index}>
+                                            <li className={filterText === slugify(data.cate) ? "current-cat" : ""} key={index}>
                                                 <button onClick={() => categoryHandler(slugify(data.cate))}>{data.cate}</button>
                                             </li>
-                                            ))}
+                                        ))}
                                     </ul>
                                 </div>
                             }
                         </div> 
-
-                     
                     </div>
                 </div>
                 <div className="col-lg-9">
@@ -63,7 +73,6 @@ const ShopWithSidebar = () => {
                     </div>
                 </div>
             </div>
-
         </Section>
     );
 }
