@@ -480,7 +480,6 @@ const ProductsData = [
         pCate: "Shisha Topaco",
        cate: "Furniture",
         price:65,
-        salePrice: 65,
         productType: "variable",
 
         shortDes: {
@@ -530,7 +529,6 @@ const ProductsData = [
         pCate: "Shisha Topaco",
         cate: "Furniture",
         price: 65,
-        salePrice: 65,
         productType: "simple",
         shortDes: {
             text: "Holster Noir Charly flavour is a tasty smoke that everyone can enjoy. Its rich and smooth taste makes your smoking experience better. Don't miss this delightful blend that promises satisfaction with every puff!.", 
