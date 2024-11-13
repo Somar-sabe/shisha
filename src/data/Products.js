@@ -44,10 +44,6 @@ const ProductsData = [
                 }
             ]
         },
-        addInfo: [
-
-           
-        ],
        
     },
     {
@@ -835,30 +831,18 @@ const ProductsData = [
         description: {
             textDesc: {
                 title: "About this Product",
-                text: "Grape Mint is one of the most popular grape flavours, known for creating special moments of enjoyment. With the new Holster Noir variety, you can now enjoy even more flavours with every puff. Experience the rich taste and delightful aromas!"
+                text: "Enhance your shisha setup with the Holster Bowl Coaster, designed to perfectly complement the Holster tobacco can. Made from a high-quality Polyvinyl Chloride and Silicone Blend, this coaster protects your surfaces by reducing the risk of scratches. Its wide base provides excellent stability, ensuring your shisha bowl remains secure during every session."
             },
             listDesc: [
                 
                 {
-                    title: "Weight",
-                    text: "250g"
+                    title: "Manufacturer",
+                    text: "Holster"
                 },
                 {
-                    title: "Aroma",
-                    text: "Fruity"
+                    title: "Material",
+                    text: "Polyvinyl Chloride and Silicone Blend"
                 },
-                {
-                    title: "Taste",
-                    text: "Fruity/refresh"
-                },
-                {
-                    title: "Type of tobacco",
-                    text: "Burley"
-                },
-                {
-                    title: "Country of origin",
-                    text: "Germany"
-                }
             ]
         },
         addInfo: [
@@ -882,30 +866,17 @@ const ProductsData = [
         description: {
             textDesc: {
                 title: "About this Product",
-                text: "Grape Mint is one of the most popular grape flavours, known for creating special moments of enjoyment. With the new Holster Noir variety, you can now enjoy even more flavours with every puff. Experience the rich taste and delightful aromas!"
+                text: "Introducing the Holster Headband Mat, now available in a vibrant Turquoise Blue color. Designed for convenience and durability, this mat is crafted from a premium silicone blend, making it the perfect surface for preparing shisha heads. The mat is easy to clean—just wash it after use—eliminating the need for disposable kitchen roll and reducing waste."
             },
             listDesc: [
-                
                 {
-                    title: "Weight",
-                    text: "250g"
+                    title: "Manufacturer",
+                    text: "Holster"
                 },
                 {
-                    title: "Aroma",
-                    text: "Fruity"
+                    title: "Material",
+                    text: "Polyvinyl Chloride and Silicone Blend"
                 },
-                {
-                    title: "Taste",
-                    text: "Fruity/refresh"
-                },
-                {
-                    title: "Type of tobacco",
-                    text: "Burley"
-                },
-                {
-                    title: "Country of origin",
-                    text: "Germany"
-                }
             ]
         },
         addInfo: [
@@ -928,30 +899,17 @@ const ProductsData = [
         description: {
             textDesc: {
                 title: "About this Product",
-                text: "Grape Mint is one of the most popular grape flavours, known for creating special moments of enjoyment. With the new Holster Noir variety, you can now enjoy even more flavours with every puff. Experience the rich taste and delightful aromas!"
+                text: "There are now holster Tree mats in different fernem. The mat consists of one silicone Mixture that is perfect for building heads. You can wash the pad at the end without any problems, so you save the kitchen roll."
             },
             listDesc: [
-                
                 {
-                    title: "Weight",
-                    text: "250g"
+                    title: "Manufacturer",
+                    text: "Holster"
                 },
                 {
-                    title: "Aroma",
-                    text: "Fruity"
+                    title: "Material",
+                    text: "Polyvinyl Chloride and Silicone Blend"
                 },
-                {
-                    title: "Taste",
-                    text: "Fruity/refresh"
-                },
-                {
-                    title: "Type of tobacco",
-                    text: "Burley"
-                },
-                {
-                    title: "Country of origin",
-                    text: "Germany"
-                }
             ]
         },
         addInfo: [
@@ -975,30 +933,17 @@ const ProductsData = [
         description: {
             textDesc: {
                 title: "About this Product",
-                text: "Grape Mint is one of the most popular grape flavours, known for creating special moments of enjoyment. With the new Holster Noir variety, you can now enjoy even more flavours with every puff. Experience the rich taste and delightful aromas!"
+                text: "Add a bold touch to your shisha setup with the Holster Headband Mat, now available in a vibrant Red color. Made from a durable Polyvinyl Chloride and Silicone Blend, this mat provides the ideal surface for preparing shisha heads. It’s easy to clean—simply wash it after use—making it a reusable and eco-friendly alternative to disposable kitchen rolls."
             },
             listDesc: [
-                
                 {
-                    title: "Weight",
-                    text: "250g"
+                    title: "Manufacturer",
+                    text: "Holster"
                 },
                 {
-                    title: "Aroma",
-                    text: "Fruity"
+                    title: "Material",
+                    text: "Polyvinyl Chloride and Silicone Blend"
                 },
-                {
-                    title: "Taste",
-                    text: "Fruity/refresh"
-                },
-                {
-                    title: "Type of tobacco",
-                    text: "Burley"
-                },
-                {
-                    title: "Country of origin",
-                    text: "Germany"
-                }
             ]
         },
         addInfo: [
@@ -1008,7 +953,7 @@ const ProductsData = [
     },
        {
         id: 21,
-        title: "Ice kaktuz Bowl Mat",
+        title: "Ice Kaktuz Bowl Mat",
         thumbnail: "/images/product/furniture/ice-kaktuz_bowl-mat_transparency.webp",
         pCate: "Shisha Accssesores",
         cate: "Furnitur",
@@ -1021,30 +966,18 @@ const ProductsData = [
         description: {
             textDesc: {
                 title: "About this Product",
-                text: "Grape Mint is one of the most popular grape flavours, known for creating special moments of enjoyment. With the new Holster Noir variety, you can now enjoy even more flavours with every puff. Experience the rich taste and delightful aromas!"
+                text: "Introducing the perfect companion for your Holster Ice Kaktuz tobacco: the matching Bowl Coaster! Designed for both style and functionality, this coaster is made from a durable polyvinyl chloride and silicone blend, providing excellent protection against scratches and wear. Its wide surface area ensures a stable base for your shisha bowl, offering a secure and stylish setup every time."
             },
             listDesc: [
                 
                 {
-                    title: "Weight",
-                    text: "250g"
+                    title: "Manufacturer",
+                    text: "Holster"
                 },
                 {
-                    title: "Aroma",
-                    text: "Fruity"
+                    title: "Material",
+                    text: "Polyvinyl Chloride and Silicone Blend"
                 },
-                {
-                    title: "Taste",
-                    text: "Fruity/refresh"
-                },
-                {
-                    title: "Type of tobacco",
-                    text: "Burley"
-                },
-                {
-                    title: "Country of origin",
-                    text: "Germany"
-                }
             ]
         },
         addInfo: [
