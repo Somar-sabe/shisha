@@ -8,7 +8,7 @@ const ProductsData = [
         hoverThumbnail: "/images/product/furniture/Double Apple_webshop_UAE.png",
         pCate: "Shisha Topaco",
         cate: "Furniture",
-        price: 85,
+        price: 65,
         productType: "variable",
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
@@ -56,7 +56,7 @@ const ProductsData = [
         thumbnail: "/images/product/furniture/Viva La Fiesta_webshop_UAE.png",
         pCate: "Shisha Topaco",
         cate: "Furniture",
-        price: 85,
+        price: 65,
         productType: "variable",
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
@@ -104,7 +104,7 @@ const ProductsData = [
         hoverThumbnail: "/images/product/furniture/Ice Kaktuz_webshop_UAE.png",
         cate: "Furniture",
         pCate: "Shisha Topaco",
-        price: 85,
+        price: 65,
         productType: "simple",
         shortDes: {
             text: "With a refreshing cactus taste, !ce Kaktuz offers a perfect balance of coolness and sour-sweetness. It’s a fan favourite and the best-seller at Holster. Try this blend that keeps customers returning for more.", 
@@ -160,7 +160,7 @@ const ProductsData = [
         hoverThumbnail: "/images/product/furniture/Love69_webshop_UAE.png",
         pCate: "Shisha Topaco",
         cate: "Furniture",
-        price: 85, 
+        price: 65, 
         productType: "variable",
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
@@ -210,7 +210,7 @@ const ProductsData = [
         hoverThumbnail: "/images/product/furniture/Lee Punch_webshop_UAE.png",
         pCate: "Accessorie",
         cate: "Furniture",
-        price: 85,
+        price: 65,
         productType: "variable",
       
         shortDes: {
@@ -263,7 +263,7 @@ const ProductsData = [
         hoverThumbnail: "/images/product/furniture/NOIR_Red Citruz_webshop_UAE.png",  
         pCate: "Shisha Topaco",
         cate: "Furniture",
-        price: 85,
+        price: 65,
         productType: "variable",
        
         shortDes: {
@@ -319,7 +319,7 @@ const ProductsData = [
         thumbnail: "/images/product/furniture/Joosy_webshop_UAE.png",
         pCate: "Shisha Topaco",
         cate: "Furniture",
-        price: 85,
+        price: 65,
         productType: "variable",
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
@@ -367,7 +367,7 @@ const ProductsData = [
         hoverThumbnail: "/images/product/electric/Kiwi P_webshop_UAE.png",
         pCate: "Shisha Topaco",
         cate: "Furniture",
-        price: 85,
+        price: 65,
         productType: "variable",
         sizeAttribute: [ 'XL', 'L', 'M', 'S', 'XS'],
 
@@ -528,7 +528,7 @@ const ProductsData = [
         
         pCate: "Shisha Topaco",
         cate: "Furniture",
-        price: 65,
+        price: 85,
         productType: "simple",
         shortDes: {
             text: "Holster Noir Charly flavour is a tasty smoke that everyone can enjoy. Its rich and smooth taste makes your smoking experience better. Don't miss this delightful blend that promises satisfaction with every puff!.", 
@@ -582,7 +582,7 @@ const ProductsData = [
         thumbnail: "/images/product/furniture/Ice Kaktuz_webshop_UAE.png",
         pCate: "Shisha Topaco",
        cate: "Furniture",
-        price: 65,
+        price: 85,
         productType: "simple",
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
@@ -627,7 +627,7 @@ const ProductsData = [
         thumbnail: "/images/product/furniture/NOIR_Joosy_webshop_UAE.png",
         pCate: "Shisha Topaco",
         cate: "Furniture",
-        price: 65,
+        price: 85,
         productType: "simple",
         shortDes: {
             text: "Holster Noir Joosy is an exciting new flavour of strawberry and raspberry. It is a big upgrade from the classic version, offering a richer taste. This dark blend of tobacco mixed with sweet and tart flavours is sure to please everyone.", 
