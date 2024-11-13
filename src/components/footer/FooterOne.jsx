@@ -85,7 +85,7 @@ const FooterOne = (props) => {
 				  <li>
                     © {new Date().getFullYear()}. All rights reserved by {" "}
                     <a target="_blank" href="https://Baylabs.com/">
-                      Baylabs
+                      Bay Labs
                     </a>
                     .
                   </li>
