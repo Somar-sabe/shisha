@@ -47,7 +47,7 @@ const SignIn = () => {
                     </div>
                     <div className="form-group">
                         <label>Password</label>
-                        <input type="password" className="form-control" {...register('password', { required: true, minLength: 4})} defaultValue={1234} />
+                        <input type="password" className="form-control" {...register('password', { required: true, minLength: 4})}  />
                         {errors.password && <p className="error">Password is required.</p>}
                     </div>
                     <div className="form-group d-flex align-items-center justify-content-between">
