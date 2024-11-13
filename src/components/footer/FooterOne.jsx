@@ -29,16 +29,16 @@ const FooterOne = (props) => {
                     }}
                   ></p>
                   <div className="social-share">
-                <a href={ScocialLink.facebook.url}>
+                <a href={ScocialLink.facebook.url} target="_blank" rel="noopener noreferrer">
                   <i className={ScocialLink.facebook.icon} />
                 </a>
-                <a href={ScocialLink.instagram.url}>
+                <a href={ScocialLink.instagram.url} target="_blank">
                   <i className={ScocialLink.instagram.icon} />
                 </a>
-                <a href={ScocialLink.whatsapp.url}>
+                <a href={ScocialLink.whatsapp.url} target="_blank">
                   <i className={ScocialLink.twitter.icon} />
                 </a>
-                <a href={ScocialLink.linkedin.url}>
+                <a href={ScocialLink.linkedin.url} target="_blank">
                   <i className={ScocialLink.linkedin.icon} />
                 </a>
               </div>
