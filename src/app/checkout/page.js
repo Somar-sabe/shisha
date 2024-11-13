@@ -20,28 +20,34 @@ const Checkout = () => {
         handleSubmit,
         formState: { errors },
       } = useForm();
-
       const checkoutFormHandler = async (data, e) => {
         const { cartItems, cartTotalAmount } = cartProducts;
+        const { paymentMethod } = data; // Get selected payment method from form data
     
         try {
-            const response = await fetch('/api/create-checkout-session', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ cartItems, totalAmount: cartTotalAmount }),
-            });
-            
-            const session = await response.json();
-    
-            if (session.url) {
-                window.location.href = session.url; // Redirects to Stripe checkout page
+            if (paymentMethod === "ziina") {
+                // If "Pay by card" is selected, proceed with Stripe checkout
+                const response = await fetch('/api/create-checkout-session', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ cartItems, totalAmount: cartTotalAmount }),
+                });
+                
+                const session = await response.json();
+        
+                if (session.url) {
+                    window.location.href = session.url; // Redirect to Stripe checkout page
+                }
+            } else if (paymentMethod === "cash") {
+                // If "Cash on delivery" is selected, redirect to the order received page
+                router.push('/checkout/order-received'); // Adjust this to your actual order received page route
             }
         } catch (error) {
-            console.error('Error creating Stripe checkout session:', error);
+            console.error('Error processing checkout:', error);
         }
     };
-        
-
+    
+      
     return ( 
         <>
         <HeaderFive headerSlider />
