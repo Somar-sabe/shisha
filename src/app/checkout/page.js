@@ -163,7 +163,7 @@ const Checkout = () => {
 <div className="single-payment">
     <div className="input-group">
         <input type="radio" {...register("paymentMethod")} id="ziina" value="ziina" />
-        <label htmlFor="ziina">Pay bay card</label>
+        <label htmlFor="ziina">Pay By card</label>
     </div>
     <p>Pay securely using Straipe api. You will be redirected to Stripe api for payment.</p>
 </div>
