@@ -10,7 +10,7 @@ const HeaderMenu = [
         hasChildren: true,
         children: [
             {
-                name: "Shisha Topaco",
+                name: "Shisha Tobaco",
                 url: "/shop?category=shisha-topaco", // Pass filterCategory in the URL
             },
             {
