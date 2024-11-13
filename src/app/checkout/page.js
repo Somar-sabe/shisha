@@ -88,10 +88,10 @@ const Checkout = () => {
                                                 <option value="">Select a City</option>
                                                 <option value="Australia">Dubai</option>
                                                 <option value="Australia">Sharjah</option>
-                                                <option value="New Zealand">Abo Dhabi</option>
+                                                <option value="New Zealand">Abu Dhabi</option>
                                                 <option value="Switzerland">Ajman</option>
                                                 <option value="United Kindom (UK)">RAK</option>
-                                                <option value="United States (USA)">Alfujeirah</option>
+                                                <option value="United States (USA)">Fujairah</option>
                                             </select>
                                             {errors.country && <p className="error">Country Name is required.</p>}
                                         </div>
