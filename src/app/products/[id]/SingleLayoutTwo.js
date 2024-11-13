@@ -71,7 +71,7 @@ const SingleLayoutTwo = ({singleData}) => {
                                         <div className="inner">
                                             <h2 className="product-title" style={{ paddingLeft: "25px" }}>{singleData.title}</h2>
                                             <div className="price-amount price-offer-amount" style={{ paddingLeft: "25px" }}>
-                                                <span className="price current-price">{convertPrice(singleData.price)} AED</span>
+                                                <span className="price current-price">{convertPrice(singleData.price)} {currency}</span>
                                             </div>
                                             {/* Start Product Action Wrapper  */}
                                             <div className="product-action-wrapper d-flex-center" style={{ paddingLeft: "25px" }}>
