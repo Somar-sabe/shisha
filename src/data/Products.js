@@ -685,7 +685,7 @@ const ProductsData = [
         thumbnail: "/images/product/furniture/NOIR_Red Citruz_webshop_UAE.png",
         pCate: "Shisha Topaco",
         cate: "Furniture",
-        price: 65,
+        price: 85,
         productType: "variable",
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
@@ -731,7 +731,7 @@ const ProductsData = [
         thumbnail: "/images/product/furniture/NOIR_Kiwi P_webshop_UAE.png",
         pCate: "Shisha Topaco",
       cate: "Furniture",
-        price: 65,
+        price: 85,
         productType: "simple",
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
@@ -779,7 +779,7 @@ const ProductsData = [
         thumbnail: "/images/product/furniture/NOIR_Grape Mint_webshop_UAE.png",
         pCate: "Shisha Topaco",
         cate: "Furniture",
-        price: 65,
+        price: 85,
         productType: "simple",
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
