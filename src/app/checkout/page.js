@@ -155,22 +155,7 @@ const Checkout = () => {
                                                 <td>Subtotal</td>
                                                 <td>{cartProducts.cartTotalAmount} AED</td>
                                             </tr>
-                                            <tr className="order-shipping">
-                                                <td colSpan={2}>
-                                                    <div className="shipping-amount">
-                                                        <span className="title">Shipping Method</span>
-                                                        <span className="amount">35.00 AED</span>
-                                                    </div>
-                                                    <div className="input-group">
-                                                        <input type="radio" id="radio1" name="shipping" defaultChecked />
-                                                        <label htmlFor="radio1">Free Shippping</label>
-                                                    </div>
-                                                    <div className="input-group">
-                                                        <input type="radio" id="radio2" name="shipping" />
-                                                        <label htmlFor="radio2">Local</label>
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                         
                                             <tr className="order-total">
                                                 <td>Total</td>
                                                 <td className="order-total-amount">{cartProducts.cartTotalAmount} AED</td>
