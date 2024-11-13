@@ -83,9 +83,6 @@ const mobileMneuHandler = (data) => {
               <li>
                 <Link href="dashboard/orders">Orders</Link>
               </li>
-              <li>
-                <Link href="dashboard/account-details">Settings</Link>
-              </li>
             </ul>
             <div className="login-btn">
               <Link href="/sign-in" className="axil-btn btn-bg-primary">
