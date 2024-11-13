@@ -76,7 +76,7 @@ return (
               <h3 className="cart-subtotal">
                 <span className="subtotal-title">Subtotal:</span>
                 <span className="subtotal-amount">
-                  ${getProducts.cartTotalAmount}
+                  {getProducts.cartTotalAmount} AED
                 </span>
               </h3>
               <div className="group-btn">
