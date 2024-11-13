@@ -24,6 +24,13 @@ const Checkout = () => {
         const { cartItems, cartTotalAmount } = cartProducts;
         const { paymentMethod } = data; // Get selected payment method from form data
     
+        const orderData = {
+            ...data,
+            cartItems,
+            totalAmount: cartTotalAmount,
+            paymentMethod,
+        };
+    
         try {
             if (paymentMethod === "ziina") {
                 // If "Pay by card" is selected, proceed with Stripe checkout
@@ -39,15 +46,15 @@ const Checkout = () => {
                     window.location.href = session.url; // Redirect to Stripe checkout page
                 }
             } else if (paymentMethod === "cash") {
-                // If "Cash on delivery" is selected, redirect to the order received page
-                router.push('/checkout/order-received'); // Adjust this to your actual order received page route
+                // If "Cash on delivery" is selected, save the data and redirect
+                localStorage.setItem('orderData', JSON.stringify(orderData)); // Save order data to localStorage
+                router.push('/checkout/order-received'); // Redirect to the order received page
             }
         } catch (error) {
             console.error('Error processing checkout:', error);
         }
     };
     
-      
     return ( 
         <>
         <HeaderFive headerSlider />
@@ -155,8 +162,7 @@ const Checkout = () => {
                                                 <td>Subtotal</td>
                                                 <td>{cartProducts.cartTotalAmount} AED</td>
                                             </tr>
-                                         
-                                            <tr className="order-total">
+                                          <tr className="order-total">
                                                 <td>Total</td>
                                                 <td className="order-total-amount">{cartProducts.cartTotalAmount} AED</td>
                                             </tr>
@@ -164,15 +170,13 @@ const Checkout = () => {
                                     </table>
                                 </div>
                                 <div className="order-payment-method">
-
-
-<div className="single-payment">
-    <div className="input-group">
-        <input type="radio" {...register("paymentMethod")} id="ziina" value="ziina" />
-        <label htmlFor="ziina">Pay By card</label>
-    </div>
-    <p>Pay securely using Straipe api. You will be redirected to Stripe api for payment.</p>
-</div>
+                                    <div className="single-payment">
+                                        <div className="input-group">
+                                            <input type="radio" {...register("paymentMethod")} id="ziina" value="ziina" />
+                                            <label htmlFor="ziina">Pay By card</label>
+                                        </div>
+                                        <p>Pay securely using Straipe api. You will be redirected to Stripe api for payment.</p>
+                                    </div>
 
                                     <div className="single-payment">
                                         <div className="input-group">
@@ -193,13 +197,14 @@ const Checkout = () => {
                     <h4>There is no item for checkout</h4>
                     <Link href="/shop" className="axil-btn btn-bg-primary">Back to shop</Link>
                 </div>                            
+
                 }
             </Section>
             <ServiceTwo />
         </main>
         <FooterTwo />
         </>
-    );
-}
- 
+    )
+};
+
 export default Checkout;
