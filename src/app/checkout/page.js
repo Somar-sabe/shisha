@@ -70,12 +70,6 @@ const Checkout = () => {
                                     </div>
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>Company Name</label>
-                                            <input type="text" {...register('companyName')} />
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-12">
-                                        <div className="form-group">
                                             <label>City<span>*</span></label>
                                             <select {...register('country', { required: true })}>
                                                 <option value="">Select a Country</option>
