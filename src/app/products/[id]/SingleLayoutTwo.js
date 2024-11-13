@@ -1,10 +1,16 @@
 'use client';
+
+import { useCurrency } from '@/app/contexts/CurrencyContext'; 
 import { useState } from "react";
 import Image from "next/image";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart, addToWishlist } from "@/store/slices/productSlice";
 
-
+const currencyRates = {
+    AED: 1,
+    USD: 0.27,
+    EUR: 0.22
+  };
 
 const SingleLayoutTwo = ({singleData}) => {
     const dispatch = useDispatch();
@@ -12,6 +18,7 @@ const SingleLayoutTwo = ({singleData}) => {
     const [productSize, setProductSize] = useState("");
     const getWishlist = useSelector((state) => state.productData.wishlistItems);
     const isWishlistAdded = getWishlist.filter((data) => data.id === singleData.id);
+    const { currency } = useCurrency(); // Access currency from context
 
     const decrementQuantity = () => {
         if (quantity > 0) {
@@ -33,7 +40,9 @@ const SingleLayoutTwo = ({singleData}) => {
     const handleAddToWishlist = (product) => {
         dispatch(addToWishlist(product));
     }
-    
+    const convertPrice = (price) => {
+        return (price * currencyRates[currency]).toFixed(2);
+      };
     return (
         <section className="axil-single-product-area bg-color-white" style={{ backgroundColor: "#f9f3f0" }}>
             <div className="single-product-thumb axil-section-gap pb--30 pb_sm--20">
@@ -62,7 +71,7 @@ const SingleLayoutTwo = ({singleData}) => {
                                         <div className="inner">
                                             <h2 className="product-title" style={{ paddingLeft: "25px" }}>{singleData.title}</h2>
                                             <div className="price-amount price-offer-amount" style={{ paddingLeft: "25px" }}>
-                                                <span className="price current-price">{singleData.price} AED</span>
+                                                <span className="price current-price">{convertPrice(singleData.price)} AED</span>
                                             </div>
                                             {/* Start Product Action Wrapper  */}
                                             <div className="product-action-wrapper d-flex-center" style={{ paddingLeft: "25px" }}>
