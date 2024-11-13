@@ -11,7 +11,7 @@ const FurnitureSlider = [
         subIcon: "fas fa-fire",
         titleKey: "slider.starterPack",
         thumbnail: "/images/product/furniture/Starter Pack.png",
-        href: "/shop"
+        href: "/shop?category=shisha-accssesores"
     },
     {
         subTitle: "Hot Deal",
