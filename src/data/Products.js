@@ -1018,35 +1018,11 @@ const ProductsData = [
         description: {
             textDesc: {
                 title: "About this Product",
-                text: "Grape Mint is one of the most popular grape flavours, known for creating special moments of enjoyment. With the new Holster Noir variety, you can now enjoy even more flavours with every puff. Experience the rich taste and delightful aromas!"
+                text: "A Symbiosis of Shisha Giants For the first time ever, two leading brands in the shisha world unite to create something extraordinary. This merger brings together unmatched quality and impeccable design. The striking aesthetics and innovative technology that define MIG and Holster set them apart in the industry. MIG, standing for Made in Germany, is synonymous with superior craftsmanship and quality—a true hallmark of excellence in the shisha industry. When paired with Holster, the dominant force in the world of shisha tobacco, this collaboration elevates the art of shisha smoking to an entirely new level. Experience the fusion of expertise, innovation, and design that redefines the future of shisha culture."
             },
-            listDesc: [
-                
-                {
-                    title: "Weight",
-                    text: "250g"
-                },
-                {
-                    title: "Aroma",
-                    text: "Fruity"
-                },
-                {
-                    title: "Taste",
-                    text: "Fruity/refresh"
-                },
-                {
-                    title: "Type of tobacco",
-                    text: "Burley"
-                },
-                {
-                    title: "Country of origin",
-                    text: "Germany"
-                }
-            ]
+
         },
-        addInfo: [
-           
-        ],
+
 
     },
     

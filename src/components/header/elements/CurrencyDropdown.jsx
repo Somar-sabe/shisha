@@ -1,4 +1,8 @@
-const CuurencyDropdown = () => {
+import { useCurrency } from "@/app/contexts/CurrencyContext";
+
+const CurrencyDropdown = () => {
+  const { currency, changeCurrency } = useCurrency();
+
   return (
     <div className="dropdown">
       <button
@@ -7,27 +11,26 @@ const CuurencyDropdown = () => {
         data-bs-toggle="dropdown"
         aria-expanded="false"
       >
-        AED
+        {currency}
       </button>
       <ul className="dropdown-menu">
-        <li>
-          <a className="dropdown-item" href="#">
-           AED
-          </a>
-        </li>
-        <li>
-          <a className="dropdown-item" href="#">
-            USD
-          </a>
-        </li>
-        <li>
-          <a className="dropdown-item" href="#">
-            EUR
-          </a>
-        </li>
+        {["AED", "USD", "EUR"].map((cur) => (
+          <li key={cur}>
+            <a
+              className="dropdown-item"
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                changeCurrency(cur);  // This will update the currency context
+              }}
+            >
+              {cur}
+            </a>
+          </li>
+        ))}
       </ul>
     </div>
   );
 };
 
-export default CuurencyDropdown;
+export default CurrencyDropdown;

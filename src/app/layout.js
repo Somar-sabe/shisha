@@ -4,6 +4,7 @@ import { Providers } from '@/store/provider';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import "@/styles/style.scss";
+import { CurrencyProvider } from '@/app/contexts/CurrencyContext';
 
 const  RootLayout = ({ children }) => {
 
@@ -31,7 +32,9 @@ const  RootLayout = ({ children }) => {
 			</head>
 			<body>
 				<Providers>
-					{children}
+				<CurrencyProvider>
+						{children}
+					</CurrencyProvider>
 				</Providers>
 			</body>
 		</html>
