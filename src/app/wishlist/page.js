@@ -65,7 +65,7 @@ const Wishlist = () => {
                                                         </Link>
                                                     </td>
                                                     <td className="product-price" data-title="Price">
-                                                        <span className="currency-symbol">$</span>
+                                                        <span className="currency-symbol">AED</span>
                                                         {product.salePrice ? product.salePrice : product.price}
                                                     </td>
                                                     <td className="product-stock-status" data-title="Status">In Stock</td>

@@ -54,7 +54,7 @@ return (
                         {data.title}
                       </h3>
                       <div className="item-price">
-                        <span className="currency-symbol">$</span>
+                        <span className="currency-symbol">AED</span>
                         {data.salePrice
                           ? data.salePrice
                           : data.price}
