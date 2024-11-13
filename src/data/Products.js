@@ -1061,7 +1061,7 @@ const ProductsData = [
         thumbnail: "/images/product/furniture/Shisha_Bowl_Transparency.webp",
         pCate: "Shisha / Water Pipe",
         cate: "Furniture",
-        price: 65,
+        price: 1500,
         productType: "simple",
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 

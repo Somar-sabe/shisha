@@ -1,10 +1,10 @@
 const ScocialLink = {
     facebook: {
-        url: "https://www.facebook.com/",
+        url: "https://www.facebook.com/profile.php?id=100064819175467",
         icon: "fab fa-facebook-f",
     },
     instagram: {
-        url: "https://www.instagram.com/",
+        url: "https://www.instagram.com/holster_uae?igsh=bmRxc2dkYWRlMnNt",
         icon: "fab fa-instagram",
     },
     whatsapp: {
@@ -12,7 +12,7 @@ const ScocialLink = {
         icon: "fab fa-whatsapp",
     },
     linkedin: {
-        url: "https://www.linkedin.com/",
+        url: "https://www.linkedin.com/company/holster-tobacco/",
         icon: "fab fa-linkedin-in",
     },
 
