@@ -1,11 +1,11 @@
 const UserLists = [
     {
         id: 1,
-        userName: "hasan",
-        password: "1234",
+        userName: ".",
+        password: "1",
         email: "admin@email.com",
-        phone: "1234 567890",
-        name: "Hasan",
+        phone: "0",
+        name: ".",
         avatar: "/images/product/author1.png",
         joinDate: "Sep 2020",
         shippingAddress: {
