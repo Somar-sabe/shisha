@@ -166,7 +166,7 @@ const Checkout = () => {
                                             {cartProducts.cartItems.map((items, index) => (
                                                 <tr className="order-product" key={index}>
                                                     <td>{items.title} <span className="quantity">x{items.cartQuantity}</span></td>
-                                                    <td>{convertPrice(items.salePrice) ? convertPrice(items.salePrice) : convertPrice(items.price)} {currency}</td>
+                                                    <td>{convertPrice(items.price)} {currency}</td>
                                                 </tr>
                                             ))}
                                             <tr className="order-subtotal">
