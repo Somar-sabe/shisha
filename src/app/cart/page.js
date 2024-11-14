@@ -120,7 +120,9 @@ const Cart = () => {
                                         </div>
                                     </div>
                                     <div className="update-btn">
-                                        <button className="axil-btn btn-outline" onClick={() => updateCartHandler()}>Update Cart</button>
+                                    <Link href="/checkout" className="axil-btn btn-bg-primary checkout-btn">
+                                                Process to Checkout
+                                            </Link>
                                     </div>
                                 </div>
                             </div> :
