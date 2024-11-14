@@ -13,7 +13,7 @@ const UserAddress = () => {
                     <div className="address-info mb--40">
                         <div className="addrss-header d-flex align-items-center justify-content-between">
                             <h4 className="title mb-0">Shipping Address</h4>
-                            <Link href="/dashboard/addresses-edit/shipping" className="address-edit"><i className="far fa-edit" /></Link>
+                            <Link href="/addresses-edit/shipping" className="address-edit"><i className="far fa-edit" /></Link>
                         </div>
                         <ul className="address-details">
                             <li>Name: {userAddress.shippingAddress.name}</li>

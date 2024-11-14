@@ -1,6 +1,4 @@
-
-const HeaderMenu = [
-    
+const HeaderMenu = [   
     {
         name: "Home",
         url: "/",
