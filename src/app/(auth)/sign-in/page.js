@@ -10,28 +10,35 @@ import { logIn } from "@/store/slices/authSlice";
 const SignIn = () => {
     const dispatch = useDispatch();
     const router = useRouter();
-    const [signInData, setSignInData] = useState(null);
     const [loginError, setLoginError] = useState(false);
     const {
         register,
         handleSubmit,
         formState: { errors },
-      } = useForm();
+    } = useForm();
 
-    const loginInfo = {
-        email: "admin@email.com",
-        password: "1234"
-    }
-    
-    const onSubmit = (data) => {
-        if (data.email === loginInfo.email &&  data.password === loginInfo.password) {
-            setSignInData(data);
-            dispatch(logIn(data.email));
-            router.push('/dashboard');
-        }else {
+    const onSubmit = async (data) => {
+        try {
+            const response = await fetch('/api/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+                const result = await response.json();
+                dispatch(logIn(data.email)); // Assuming this dispatches a login action
+                router.push('/dashboard');   // Redirect to the dashboard
+            } else {
+                setLoginError(true);
+            }
+        } catch (error) {
+            console.error("An error occurred:", error);
             setLoginError(true);
         }
-    }
+    };
 
     return ( 
         <AuthLayout bgImage="bg_image--9">
@@ -41,7 +48,6 @@ const SignIn = () => {
                 <form className="singin-form" onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-group">
                         <label>Email</label>
-                        
                         <input type="email" className="form-control" {...register('email', { required: true })} placeholder="admin@email.com" />
                         {errors.email && <p className="error">Email is required.</p>}
                     </div>
@@ -54,11 +60,11 @@ const SignIn = () => {
                         <button type="submit" className="axil-btn btn-bg-primary submit-btn">Sign In</button>
                         <Link href="/forgot-password" className="forgot-btn">Forget password?</Link>
                     </div>
-                    {loginError && <p className="error">User and Password doesn&apos;t match</p>}
+                    {loginError && <p className="error">Invalid email or password.</p>}
                 </form>
             </div>
         </AuthLayout>
      );
 }
- 
+
 export default SignIn;
