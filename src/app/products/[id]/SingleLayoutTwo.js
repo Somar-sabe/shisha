@@ -96,9 +96,20 @@ const SingleLayoutTwo = ({singleData}) => {
                                                         <li className="nav-item" role="presentation">
                                                             <a className="active" id="description-tab" data-bs-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
                                                         </li>
-                                                        <li className="nav-item " role="presentation">
-                                                            <a id="additional-info-tab" data-bs-toggle="tab" href="#additional-info" role="tab" aria-controls="additional-info" aria-selected="false">Mixology</a>
-                                                        </li>                                
+                                                        {singleData.addInfo && singleData.addInfo.length > 0 && (
+                <li className="nav-item" role="presentation">
+                    <a
+                        id="additional-info-tab"
+                        data-bs-toggle="tab"
+                        href="#additional-info"
+                        role="tab"
+                        aria-controls="additional-info"
+                        aria-selected="false"
+                    >
+                        Mixology
+                    </a>
+                </li>
+            )}                           
                                                     </ul>
                                                     <div className="tab-content" id="myTabContent">
                                                         <div className="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
