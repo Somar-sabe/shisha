@@ -26,18 +26,16 @@ const Cart = () => {
 
     const quantityIncreaseHandler = (data) => {
         dispatch(cartQuantityIncrease(data));
+        dispatch(updateCartAmount());
     };
 
     const quantityDecreaseHandler = (data) => {
         dispatch(cartQuantityDecrease(data));
+        dispatch(updateCartAmount());
     };
 
     const cartClearHandler = () => {
         dispatch(cartClear());
-    };
-
-    const updateCartHandler = () => {
-        dispatch(updateCartAmount());
     };
 
     // Function to convert prices based on selected currency
