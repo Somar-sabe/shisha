@@ -98,8 +98,7 @@ const SingleLayoutTwo = ({singleData}) => {
                                                         </li>
                                                         <li className="nav-item " role="presentation">
                                                             <a id="additional-info-tab" data-bs-toggle="tab" href="#additional-info" role="tab" aria-controls="additional-info" aria-selected="false">Mixology</a>
-                                                        </li>
-                                                     
+                                                        </li>                                
                                                     </ul>
                                                     <div className="tab-content" id="myTabContent">
                                                         <div className="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">

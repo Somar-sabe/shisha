@@ -67,9 +67,7 @@ return (
                       </h3>
                       <div className="item-price">
                         
-                        {convertPrice(data.salePrice)
-                          ? convertPrice(data.salePrice)
-                          : convertPrice(data.price)}
+                        {convertPrice(data.price)}
                           <span className="currency-symbol"> {currency}</span>
                         <strong>x{data.cartQuantity}</strong>
                       </div>
