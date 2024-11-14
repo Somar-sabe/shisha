@@ -7,28 +7,6 @@ import { Logo } from "@/data/Common";
 const AuthLayout = ({children, bgImage}) => {
     const pathname = usePathname();
     const slug = pathname.replace("/", "");
-    const onSubmit = async (data) => {
-        setSignupData(data);
-    
-        try {
-            const response = await fetch('/api/signup', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data),
-            });
-    
-            if (response.ok) {
-                console.log("User data saved successfully");
-            } else {
-                console.error("Failed to save user data");
-            }
-        } catch (error) {
-            console.error("An error occurred:", error);
-        }
-    };
-    
 
     return ( 
         <div className="axil-signin-area">
