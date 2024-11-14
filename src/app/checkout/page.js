@@ -10,6 +10,12 @@ import FooterTwo from "@/components/footer/FooterTwo";
 import HeaderFive from "@/components/header/HeaderFive";
 import ServiceTwo from "@/components/services/ServiceTwo";
 import { addToOrder } from '@/store/slices/productSlice';
+import { useCurrency } from '@/app/contexts/CurrencyContext'; // Import the custom hook
+const currencyRates = {
+  AED: 1,
+  USD: 0.27,
+  EUR: 0.22
+};
 
 const Checkout = () => {
     const router = useRouter();
@@ -54,7 +60,12 @@ const Checkout = () => {
             console.error('Error processing checkout:', error);
         }
     };
-    
+    const { currency } = useCurrency(); // Access currency from context
+
+    // Function to convert prices based on selected currency
+    const convertPrice = (price) => {
+      return (price * currencyRates[currency]).toFixed(2);
+    };
     return ( 
         <>
         <HeaderFive headerSlider />
@@ -155,16 +166,16 @@ const Checkout = () => {
                                             {cartProducts.cartItems.map((items, index) => (
                                                 <tr className="order-product" key={index}>
                                                     <td>{items.title} <span className="quantity">x{items.cartQuantity}</span></td>
-                                                    <td>{items.salePrice ? items.salePrice : items.price} AED</td>
+                                                    <td>{convertPrice(items.salePrice) ? convertPrice(items.salePrice) : convertPrice(items.price)} {currency}</td>
                                                 </tr>
                                             ))}
                                             <tr className="order-subtotal">
                                                 <td>Subtotal</td>
-                                                <td>{cartProducts.cartTotalAmount} AED</td>
+                                                <td>{convertPrice(cartProducts.cartTotalAmount)} {currency}</td>
                                             </tr>
                                           <tr className="order-total">
                                                 <td>Total</td>
-                                                <td className="order-total-amount">{cartProducts.cartTotalAmount} AED</td>
+                                                <td className="order-total-amount">{convertPrice(cartProducts.cartTotalAmount)} {currency}</td>
                                             </tr>
                                         </tbody>
                                     </table>

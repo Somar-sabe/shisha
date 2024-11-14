@@ -2,6 +2,13 @@ import Image from "next/image";
 import { useRouter } from 'next/navigation'
 import { useDispatch, useSelector } from "react-redux";
 import { removeCartItem, miniCartHandler } from "@/store/slices/productSlice";
+import { useCurrency } from '@/app/contexts/CurrencyContext'; // Import the custom hook
+const currencyRates = {
+  AED: 1,
+  USD: 0.27,
+  EUR: 0.22
+};
+
 
 const MiniCart = () => {
 const dispatch = useDispatch();
@@ -19,7 +26,12 @@ const miniCartFooterBtnHandler = (data) => {
 	router.push(data);
 	dispatch(miniCartHandler(false));
 }
+const { currency } = useCurrency(); // Access currency from context
 
+// Function to convert prices based on selected currency
+const convertPrice = (price) => {
+  return (price * currencyRates[currency]).toFixed(2);
+};
 return (
     <>
       <div className={`cart-dropdown ${getProducts.isMinicartOpen ? "open" : ""}`}>
@@ -55,10 +67,10 @@ return (
                       </h3>
                       <div className="item-price">
                         
-                        {data.salePrice
-                          ? data.salePrice
-                          : data.price}
-                          <span className="currency-symbol"> AED</span>
+                        {convertPrice(data.salePrice)
+                          ? convertPrice(data.salePrice)
+                          : convertPrice(data.price)}
+                          <span className="currency-symbol"> {currency}</span>
                         <strong>x{data.cartQuantity}</strong>
                       </div>
                       <div className="pro-qty item-quantity">
@@ -77,7 +89,7 @@ return (
               <h3 className="cart-subtotal">
                 <span className="subtotal-title">Subtotal:</span>
                 <span className="subtotal-amount">
-                  {getProducts.cartTotalAmount} AED
+                  {convertPrice(getProducts.cartTotalAmount)} {currency}
                 </span>
               </h3>
               <div className="group-btn">
