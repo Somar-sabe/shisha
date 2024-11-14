@@ -81,7 +81,7 @@ const Checkout = () => {
                                     <div className="col-lg-6">
                                         <div className="form-group">
                                             <label>First Name <span>*</span></label>
-                                            <input type="text" {...register('firstName', { required: true })} placeholder="Adam" />
+                                            <input type="text" {...register('firstName', { required: true })} placeholder="Adam"  />
                                             {errors.firstName && <p className="error">First Name is required.</p>}
                                         </div>
                                     </div>
@@ -130,7 +130,7 @@ const Checkout = () => {
                                     <div className="col-lg-12">
                                         <div className="form-group">
                                             <label>Email Address <span>*</span></label>
-                                            <input type="email" {...register('email', { required: true })} />
+                                            <input type="email" {...register('email', { required: true })}    name="email" autoComplete="email" />
                                             {errors.email && <p className="error">Email is required.</p>}
                                         </div>
                                     </div>
