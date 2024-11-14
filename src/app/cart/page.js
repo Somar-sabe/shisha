@@ -3,7 +3,7 @@ import { useCurrency } from '@/app/contexts/CurrencyContext'; // Import the cust
 import Image from "next/image";
 import Link from "next/link";
 import { useSelector, useDispatch } from "react-redux";
-import HeaderOne from "@/components/header/HeaderOne";
+import HeaderFive from "@/components/header/HeaderFive";
 import { slugify } from "@/utils";
 import { removeCartItem, cartQuantityIncrease, cartQuantityDecrease, cartClear, updateCartAmount } from "@/store/slices/productSlice";
 import FooterTwo from "@/components/footer/FooterTwo";
@@ -47,7 +47,7 @@ const Cart = () => {
 
     return (
         <>
-            <HeaderOne />
+            <HeaderFive headerSlider />
             <main className="main-wrapper">
                 <div className="axil-product-cart-area axil-section-gap">
                     <div className="container">
