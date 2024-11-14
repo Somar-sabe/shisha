@@ -54,10 +54,11 @@ return (
                         {data.title}
                       </h3>
                       <div className="item-price">
-                        <span className="currency-symbol">AED</span>
+                        
                         {data.salePrice
                           ? data.salePrice
                           : data.price}
+                          <span className="currency-symbol"> AED</span>
                         <strong>x{data.cartQuantity}</strong>
                       </div>
                       <div className="pro-qty item-quantity">

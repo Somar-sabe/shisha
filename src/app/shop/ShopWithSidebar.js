@@ -1,29 +1,50 @@
 'use client';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Section from "@/components/elements/Section";
 import ProductsData from "@/data/Products";
 import ProductSeven from "@/components/product/ProductSeven";
 import { slugify } from "@/utils";
 import { Category } from "@/data/ProductCategory";
 
-
-
 const ShopWithSidebar = () => {
     const [filterProduct, setFilterProduct] = useState(ProductsData);
     const [productShow, setProductShow] = useState(9);
     const [filterText, setFilterText] = useState('');
-    const [cateToggle, setcateToggle] = useState(true);
+    const [cateToggle, setCateToggle] = useState(true);
+
+    const getCategoryFromURL = () => {
+        const params = new URLSearchParams(window.location.search);
+        return params.get('category');
+    }
+
+    const updateCategoryInURL = (category) => {
+        const params = new URLSearchParams(window.location.search);
+        params.set('category', category); // Add or update the category parameter
+        window.history.pushState({}, '', '?' + params.toString());
+    }
 
     const categoryHandler = (cateSelect) => {
-        const cateFilterProduct = ProductsData.filter((data) =>(slugify(data.pCate) === cateSelect));
-        setFilterProduct(cateFilterProduct)
+        const cateFilterProduct = ProductsData.filter((data) => slugify(data.pCate) === cateSelect);
+        setFilterProduct(cateFilterProduct);
         setFilterText(cateSelect);
+        updateCategoryInURL(cateSelect); // Update the URL with the selected category
     }
 
     const ProductShowHandler = () => {
         setProductShow(productShow + 3);
     }
-    return ( 
+
+    useEffect(() => {
+        const categoryFromURL = getCategoryFromURL();
+        console.log('Category from URL:', categoryFromURL); // Debugging log
+        if (categoryFromURL) {
+            setFilterText(categoryFromURL);
+            const cateFilterProduct = ProductsData.filter((data) => slugify(data.pCate) === categoryFromURL);
+            setFilterProduct(cateFilterProduct);
+        }
+    }, []);
+
+    return (
         <Section pClass="axil-shop-area">
             <div className="row">
                 <div className="col-lg-3">
@@ -31,9 +52,8 @@ const ShopWithSidebar = () => {
                         <div className="d-lg-none">
                             <button className="sidebar-close filter-close-btn"><i className="fas fa-times" /></button>
                         </div>
-                        {/* Category Filter */}
                         <div className={`toggle-list product-categories ${cateToggle ? "active" : ""}`}>
-                            <h6 onClick={() => setcateToggle(!cateToggle)} className="title">CATEGORIES</h6>
+                            <h6 onClick={() => setCateToggle(!cateToggle)} className="title">CATEGORIES</h6>
                             {cateToggle && 
                                 <div className="shop-submenu">
                                     <ul>
@@ -41,13 +61,11 @@ const ShopWithSidebar = () => {
                                             <li className={filterText === slugify(data.cate) ? "current-cat" :""} key={index}>
                                                 <button onClick={() => categoryHandler(slugify(data.cate))}>{data.cate}</button>
                                             </li>
-                                            ))}
+                                        ))}
                                     </ul>
                                 </div>
                             }
-                        </div> 
-
-                     
+                        </div>
                     </div>
                 </div>
                 <div className="col-lg-9">
@@ -63,9 +81,8 @@ const ShopWithSidebar = () => {
                     </div>
                 </div>
             </div>
-
         </Section>
     );
 }
- 
+
 export default ShopWithSidebar;

@@ -168,10 +168,11 @@ const incrementQuantity = () => {
                             {getQuickViewItem.title}
                           </h3>
                           <span className="price-amount">
-                            <span className="currency-symbol">AED</span>
+                            
                             {getQuickViewItem.salePrice
                               ? getQuickViewItem.salePrice
                               : getQuickViewItem.price}
+                              <span className="currency-symbol"> AED</span>
                           </span>
                           {getQuickViewItem.shortDes && 
                           <>
