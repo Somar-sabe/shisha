@@ -1,5 +1,5 @@
 ---
-date: 'February 26th, 2022'
+date: 'November 1th, 2024'
 ---
 
 #### Our Commitment to Privacy

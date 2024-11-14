@@ -1,4 +1,10 @@
 {
+  "home": "Home",
+  "dashboard": "Dashboard",
+  "orders": "Orders",
+  "addresses": "Addresses",
+  "accountDetails": "Account Details",
+  "shop_now":"Shop Now",
   "best_sellers": "Best Sellers",
   "this_month": "This Month",
   "ice_kaktuz_award": "ICE KAKTUZ won first place in 2022 as the best flavor in the market",

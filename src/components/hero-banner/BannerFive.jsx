@@ -21,7 +21,7 @@ const BannerFive = () => {
                         </span>
                         <h1 className="title">{t(data.titleKey)}</h1>
                         <div className="shop-btn">
-                            <Link style={{ color: 'white', backgroundColor: '#EBA800' }} href={data.href} className="axil-btn btn-bg-white"><i className="fal fa-shopping-cart" /> Shop Now</Link>
+                            <Link style={{ color: 'white', backgroundColor: '#EBA800' }} href={data.href} className="axil-btn btn-bg-white"><i className="fal fa-shopping-cart" /> {t('shop_now')}</Link>
                         </div>
                       </div>
                       <div className="main-slider-thumb">

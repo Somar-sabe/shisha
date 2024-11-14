@@ -1,4 +1,6 @@
+
 const FurnitureSlider = [
+    
     {
         subTitle: "Hot Deal",
         subIcon: "fas fa-fire",
