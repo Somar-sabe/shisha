@@ -6,8 +6,6 @@ const UserOrders = () => {
     const [orders, setOrders] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-
-    // Fetch orders on component mount
     useEffect(() => {
         const fetchOrders = async () => {
             try {
@@ -52,9 +50,9 @@ const UserOrders = () => {
                             orders.map((order) => (
                                 <tr key={order._id}>  {/* Assuming order._id is the unique identifier */}
                                     <th scope="row">#{order.orderId}</th>
-                                    <td>{new Date(order.createdAt).toLocaleDateString()}</td>
-                                    <td>{order.status}</td>
-                                    <td>{order.totalAmount} AED for {order.items.length} items</td>
+                                    <td>{new Date(order.orderDate).toLocaleDateString()}</td>  {/* Adjusting to use `orderDate` */}
+                                    <td>{order.status || "N/A"}</td>  {/* Handling cases where `status` is missing */}
+                                    <td>{order.totalAmount} AED for {order.items ? order.items.length : 0} items</td>  {/* Defaulting to 0 items if `items` are not present */}
                                     <td>
                                         <Link href={`/dashboard/orders/view/${order._id}`} className="axil-btn view-btn">View</Link>
                                     </td>
