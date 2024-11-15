@@ -1,25 +1,42 @@
 import { MongoClient } from "mongodb";
 
 const uri = process.env.MONGO_URI;
-const client = new MongoClient(uri);
+let client;
+
+async function getClient() {
+  if (!client) {
+    client = new MongoClient(uri);
+  }
+  if (!client.isConnected()) {
+    await client.connect();
+  }
+  return client;
+}
 
 export default async function handler(req, res) {
     // Ensure that the request method is POST
     if (req.method === "POST") {
         console.log('Received POST request:', req.body); // Debugging request body
 
-        try {
-            // Connect to MongoDB
-            await client.connect();
-            const database = client.db();
-            const orders = database.collection("orders");
+        // Basic validation of the order object
+        const { orderId, customerName, totalAmount } = req.body;
+        if (!orderId || !customerName || !totalAmount) {
+            return res.status(400).json({
+                success: false,
+                message: "Missing required fields: orderId, customerName, totalAmount"
+            });
+        }
 
-            // Get order data from request body
-            const order = req.body;
+        try {
+            // Get MongoDB client
+            const client = await getClient();
+            const database = client.db();
+            const ordersCollection = database.collection("orders");
 
             // Insert order into database
-            const result = await orders.insertOne(order);
-            
+            const order = req.body;
+            const result = await ordersCollection.insertOne(order);
+
             console.log('Order saved successfully:', result); // Debugging result of insertion
 
             // Return success response
@@ -34,9 +51,6 @@ export default async function handler(req, res) {
                 success: false,
                 message: "Failed to save order"
             });
-        } finally {
-            // Close the MongoDB client after the operation
-            await client.close();
         }
     } else {
         // Handle non-POST methods (e.g., GET)
