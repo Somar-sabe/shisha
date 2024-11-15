@@ -40,6 +40,7 @@ export default async function handler(req, res) {
             console.log('Inserting order:', order); // Log the order being inserted
             const result = await ordersCollection.insertOne(order);
 
+            // Check if insertion was successful and log the result
             if (result.acknowledged) {
                 console.log('Order saved successfully:', result); // Debugging result of insertion
                 res.status(200).json({
@@ -55,10 +56,11 @@ export default async function handler(req, res) {
                 });
             }
         } catch (error) {
-            console.error("Error saving order:", error);
+            console.error("Error saving order:", error); // Log error if MongoDB insert fails
             res.status(500).json({
                 success: false,
-                message: "Failed to save order"
+                message: "Failed to save order",
+                error: error.message // Include error message in the response
             });
         }
     } else {
