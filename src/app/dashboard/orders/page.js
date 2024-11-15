@@ -51,8 +51,8 @@ const UserOrders = () => {
                                 <tr key={order._id}>  {/* Assuming order._id is the unique identifier */}
                                     <th scope="row">#{order.orderId}</th>
                                     <td>{new Date(order.orderDate).toLocaleDateString()}</td>  {/* Adjusting to use `orderDate` */}
-                                    <td>{order.status || "N/A"}</td>  {/* Handling cases where `status` is missing */}
-                                    <td>{order.totalAmount} AED for {order.items ? order.items.length : 0} items</td>  {/* Defaulting to 0 items if `items` are not present */}
+                                    <td>{order.status || "Processing"}</td>  {/* Handling cases where `status` is missing */}
+                                    <td>{order.totalAmount} AED </td>  {/* Defaulting to 0 items if `items` are not present */}
                                     <td>
                                         <Link href={`/dashboard/orders/view/${order._id}`} className="axil-btn view-btn">View</Link>
                                     </td>
