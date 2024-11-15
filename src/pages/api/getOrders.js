@@ -7,7 +7,7 @@ export default async function handler(req, res) {
     if (req.method === "GET") {
         try {
             await client.connect();
-            const database = client.db("ecommerce");
+            const database = client.db();
             const orders = database.collection("orders");
 
             const result = await orders.find({}).toArray();
