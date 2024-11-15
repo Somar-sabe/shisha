@@ -32,32 +32,14 @@ const Checkout = () => {
     
         const orderData = {
             ...data,
-            orderId: generateOrderId(),
-            customerName: `${data.firstName} ${data.lastName}`, 
-            customerEmail: data.email, 
             cartItems,
             totalAmount: cartTotalAmount,
             paymentMethod,
         };
     
         try {
-            // Call the saveOrder API to save the order in the database
-            const saveOrderResponse = await fetch('/api/saveOrder', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(orderData),
-            });
-    
-            const saveOrderResult = await saveOrderResponse.json();
-            
-            if (saveOrderResult.success) {
-                console.log('Order saved successfully!');
-            } else {
-                console.error('Failed to save order:', saveOrderResult.message);
-            }
-    
-            // Handle payment
             if (paymentMethod === "ziina") {
+                // If "Pay by card" is selected, proceed with Stripe checkout
                 const response = await fetch('/api/create-checkout-session', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -67,18 +49,18 @@ const Checkout = () => {
                 const session = await response.json();
         
                 if (session.url) {
-                    window.location.href = session.url;
+                    window.location.href = session.url; // Redirect to Stripe checkout page
                 }
             } else if (paymentMethod === "cash") {
-                localStorage.setItem('orderData', JSON.stringify(orderData)); 
-                router.push('/checkout/order-received');
+                // If "Cash on delivery" is selected, save the data and redirect
+                localStorage.setItem('orderData', JSON.stringify(orderData)); // Save order data to localStorage
+                router.push('/checkout/order-received'); // Redirect to the order received page
             }
         } catch (error) {
             console.error('Error processing checkout:', error);
         }
     };
-    
-    const { currency } = useCurrency();
+    const { currency } = useCurrency(); // Access currency from context
 
     // Function to convert prices based on selected currency
     const convertPrice = (price) => {
