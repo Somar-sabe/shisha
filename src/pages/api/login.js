@@ -1,5 +1,6 @@
 import clientPromise from '@/lib/mongodb';
 import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
 
 export default async function handler(req, res) {
     if (req.method === 'POST') {
@@ -22,8 +23,12 @@ export default async function handler(req, res) {
                 return res.status(401).json({ error: 'Invalid email or password' });
             }
 
-            // If the login is successful, send a success message
-            res.status(200).json({ message: 'Login successful' });
+            // Create a JWT token (you can customize the payload)
+            const payload = { email: user.email, userId: user._id };
+            const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1h' }); // Set expiration as needed
+
+            // If the login is successful, send the JWT token and success message
+            res.status(200).json({ message: 'Login successful', token });
         } catch (error) {
             console.error("Error during login:", error);
             res.status(500).json({ error: 'Login failed due to server error' });

@@ -29,8 +29,15 @@ const SignIn = () => {
 
             if (response.ok) {
                 const result = await response.json();
-                dispatch(logIn(data.email)); // Assuming this dispatches a login action
-                router.push('/dashboard');   // Redirect to the dashboard
+
+                // Save the token in localStorage (or cookies if preferred)
+                localStorage.setItem('token', result.token);
+
+                // Dispatch login action with the email (and optionally the token)
+                dispatch(logIn({ email: data.email, token: result.token }));
+
+                // Redirect the user to the dashboard
+                router.push('/dashboard');
             } else {
                 setLoginError(true);
             }
