@@ -56,7 +56,6 @@ const Checkout = () => {
     
             // Proceed with payment processing based on selected payment method
             if (paymentMethod === "ziina") {
-                // If "Pay by card" is selected, proceed with Stripe checkout
                 const response = await fetch('/api/create-checkout-session', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
