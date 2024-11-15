@@ -111,7 +111,7 @@ const Cart = () => {
                                     </table>
                                 </div>
                                 <div className="cart-update-btn-area">
-                                    <div className="input-group product-coupon">
+                                <div className="input-group product-coupon" style={{ flexWrap: "nowrap" }}>
                                         <input placeholder="Enter coupon code" type="text" />
                                         <div className="product-coupon-btn">
                                             <button type="submit" className="axil-btn btn-outline">Apply</button>
