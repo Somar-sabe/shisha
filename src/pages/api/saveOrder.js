@@ -1,6 +1,5 @@
 import { MongoClient } from "mongodb";
 
-// MongoDB URI and client initialization
 const uri = process.env.MONGO_URI;
 let client;
 
@@ -15,13 +14,14 @@ async function getClient() {
 }
 
 export default async function handler(req, res) {
-    // Ensure that the request method is POST
     if (req.method === "POST") {
         console.log('Received POST request:', req.body); // Debugging request body
 
         // Basic validation of the order object
         const { orderId, customerName, totalAmount } = req.body;
+
         if (!orderId || !customerName || !totalAmount) {
+            console.error("Missing fields:", { orderId, customerName, totalAmount });  // Debugging missing fields
             return res.status(400).json({
                 success: false,
                 message: "Missing required fields: orderId, customerName, totalAmount"
@@ -34,33 +34,26 @@ export default async function handler(req, res) {
             const database = client.db();
             const ordersCollection = database.collection("orders");
 
+            console.log("Inserting order:", req.body);  // Debugging the order before insertion
+
             // Insert order into database
             const order = req.body;
-
-            console.log('Inserting order:', order); // Log the order being inserted
             const result = await ordersCollection.insertOne(order);
 
-            // Check if insertion was successful and log the result
-            if (result.acknowledged) {
-                console.log('Order saved successfully:', result); // Debugging result of insertion
-                res.status(200).json({
-                    success: true,
-                    message: "Order saved successfully",
-                    orderId: result.insertedId
-                });
-            } else {
-                console.log('Failed to insert order:', result);
-                res.status(500).json({
-                    success: false,
-                    message: "Failed to save order"
-                });
-            }
+            console.log('Order saved successfully:', result); // Debugging result of insertion
+
+            // Return success response
+            res.status(200).json({
+                success: true,
+                message: "Order saved successfully",
+                orderId: result.insertedId
+            });
         } catch (error) {
-            console.error("Error saving order:", error); // Log error if MongoDB insert fails
+            console.error("Error saving order:", error);  // Debugging the error
             res.status(500).json({
                 success: false,
                 message: "Failed to save order",
-                error: error.message // Include error message in the response
+                error: error.message // Include the error message for debugging
             });
         }
     } else {
