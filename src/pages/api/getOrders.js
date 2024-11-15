@@ -1,18 +1,15 @@
-import { MongoClient } from "mongodb";
-
-const uri = process.env.MONGO_URI;
-const client = new MongoClient(uri);
+import clientPromise from '@/lib/mongodb';  // Using the client promise like in the saveOrder API
 
 export default async function handler(req, res) {
   if (req.method === "GET") {
     try {
-      // Connect to the MongoDB client
-      await client.connect();
-      const database = client.db();
-      const orders = database.collection("orders");
+      // Use the clientPromise to get the MongoDB client
+      const client = await clientPromise;
+      const db = client.db(); // Or specify your database: client.db('myDatabase')
+      const ordersCollection = db.collection("orders");
 
       // Fetch all orders from the collection (no filtering by user)
-      const result = await orders.find({}).toArray();  // Fetch all orders without filtering by email
+      const result = await ordersCollection.find({}).toArray();  // Fetch all orders without filtering by email
 
       // Return the orders if successful
       res.status(200).json({ success: true, orders: result });
@@ -25,8 +22,6 @@ export default async function handler(req, res) {
         message: "Failed to fetch orders",
         error: error.message
       });
-    } finally {
-      await client.close();
     }
   } else {
     res.status(405).json({ success: false, message: "Method not allowed" });

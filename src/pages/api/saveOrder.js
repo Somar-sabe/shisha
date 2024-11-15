@@ -1,29 +1,44 @@
-import clientPromise from '@/lib/mongodb';  // Using the client promise like in the saveOrder API
+import clientPromise from '@/lib/mongodb'; // Import the client promise
 
 export default async function handler(req, res) {
-  if (req.method === "GET") {
+  if (req.method === 'POST') {
+    const { orderId, customerName, totalAmount,customerEmail } = req.body;
+
+    // Check if the necessary fields are present
+    if (!orderId || !customerName || !totalAmount || !customerEmail) {
+      return res.status(400).json({
+        success: false,
+        message: "Missing required fields: orderId, customerName, totalAmount"
+      });
+    }
+
     try {
       // Use the clientPromise to get the MongoDB client
       const client = await clientPromise;
       const db = client.db(); // Or specify your database: client.db('myDatabase')
       const ordersCollection = db.collection("orders");
 
-      // Fetch all orders from the collection (no filtering by user)
-      const result = await ordersCollection.find({}).toArray();  // Fetch all orders without filtering by email
+      // Insert the order into the database
+      const result = await ordersCollection.insertOne(req.body);
 
-      // Return the orders if successful
-      res.status(200).json({ success: true, orders: result });
+      // Return a success response
+      return res.status(200).json({
+        success: true,
+        message: "Order saved successfully",
+        orderId: result.insertedId
+      });
     } catch (error) {
-      console.error("Error fetching orders:", error);
-      console.error(error.stack);  // Log the full error stack for debugging
-
-      res.status(500).json({
+      console.error("Error saving order:", error);
+      return res.status(500).json({
         success: false,
-        message: "Failed to fetch orders",
+        message: "Failed to save order",
         error: error.message
       });
     }
   } else {
-    res.status(405).json({ success: false, message: "Method not allowed" });
+    return res.status(405).json({
+      success: false,
+      message: `Method ${req.method} Not Allowed`
+    });
   }
 }
