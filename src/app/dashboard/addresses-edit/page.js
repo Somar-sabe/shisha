@@ -30,10 +30,10 @@ const UserAddress = () => {
                             <Link href="/dashboard/addresses-edit/billing" className="address-edit"><i className="far fa-edit" /></Link>
                         </div>
                         <ul className="address-details">
-                            <li>Name: {userAddress.billingAddress.name}</li>
-                            <li>Email: {userAddress.billingAddress.email}</li>
-                            <li>Phone: {userAddress.billingAddress.phone}</li>
-                            <li className="mt--30">{userAddress.billingAddress.street} <br /> {`${userAddress.billingAddress.state}, ${userAddress.billingAddress.city} ${userAddress.billingAddress.postCode}` }</li>
+                            <li>Name: </li>
+                            <li>Email: </li>
+                            <li>Phone:</li>
+                            <li className="mt--30"> <br /> </li>
                         </ul>
                     </div>
                 </div>
