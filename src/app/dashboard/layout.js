@@ -1,8 +1,9 @@
-
 'use client';
+import { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { useSelector } from "react-redux";
 import Breadcrumb from "@/components/breadcrumb/Breadcrumb";
 import FooterTwo from "@/components/footer/FooterTwo";
 import HeaderFive from "@/components/header/HeaderFive";
@@ -11,10 +12,25 @@ import { DashboardAsideMenu } from "@/data/Menu";
 import { UserLists } from "@/data/Users";
 
 const DashboardLayout = ({ children }) => {
-    const userInfo = UserLists[0];
+    const router = useRouter();
+    const authInfo = useSelector((state) => state.auth);
+    const isAuthenticated = authInfo && authInfo.userData; // Check if user data exists
+
     const pathname = usePathname();
     const split = pathname.split("/");
     const pageSlug = split[split.length - 1];
+
+    // Redirect to sign-in if user is not authenticated
+    useEffect(() => {
+        if (!isAuthenticated) {
+            router.push("/sign-in");
+        }
+    }, [isAuthenticated, router]);
+
+    // Don't render the dashboard layout if not authenticated
+    if (!isAuthenticated) {
+        return null;
+    }
 
     return ( 
         <>
@@ -31,7 +47,7 @@ const DashboardLayout = ({ children }) => {
                                             <div className="nav nav-tabs">
                                                 {DashboardAsideMenu.map((data, index) => (
                                                     <Link
-                                                        href={`/dashboard/${data.slug}`} // Added leading slash for href
+                                                        href={`/dashboard/${data.slug}`} 
                                                         className={`nav-item nav-link ${data.slug === pageSlug ? "active" : ""}`} 
                                                         key={index}
                                                     >
@@ -60,5 +76,5 @@ const DashboardLayout = ({ children }) => {
         </>
     );
 }
- 
+
 export default DashboardLayout;
