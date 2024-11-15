@@ -32,9 +32,9 @@ const Checkout = () => {
     
         const orderData = {
             ...data,
-            orderId: generateOrderId(), // You can generate a unique order ID or get it from elsewhere
-            customerName: `${data.firstName} ${data.lastName}`, // Combine first and last name
-            customerEmail: data.email, // Add customer email from form
+            orderId: generateOrderId(),
+            customerName: `${data.firstName} ${data.lastName}`, 
+            customerEmail: data.email, 
             cartItems,
             totalAmount: cartTotalAmount,
             paymentMethod,
@@ -42,7 +42,6 @@ const Checkout = () => {
     
         try {
             if (paymentMethod === "ziina") {
-                // If "Pay by card" is selected, proceed with Stripe checkout
                 const response = await fetch('/api/create-checkout-session', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
