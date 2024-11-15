@@ -1,20 +1,7 @@
-import { MongoClient } from "mongodb";
-
-const uri = process.env.MONGO_URI;  // Make sure your MONGO_URI is set correctly
-let client;
-
-async function getClient() {
-  if (!client) {
-    client = new MongoClient(uri);
-  }
-  if (!client.isConnected()) {
-    await client.connect();
-  }
-  return client;
-}
+import clientPromise from '@/lib/mongodb';  // This will handle your MongoDB client connection
 
 export default async function handler(req, res) {
-  if (req.method === "POST") {
+  if (req.method === 'POST') {
     const { orderId, customerName, totalAmount } = req.body;
 
     // Check if the necessary fields are present
@@ -26,13 +13,15 @@ export default async function handler(req, res) {
     }
 
     try {
-      const client = await getClient();
-      const database = client.db("myDatabase");  // Database name is "myDatabase"
-      const ordersCollection = database.collection("orders");
+      // Use the clientPromise to get the MongoDB client
+      const client = await clientPromise;
+      const db = client.db(); // or specify db name as client.db("myDatabase");
+      const ordersCollection = db.collection("orders");
 
       // Insert the order into the database
       const result = await ordersCollection.insertOne(req.body);
 
+      // Return a success response
       return res.status(200).json({
         success: true,
         message: "Order saved successfully",
