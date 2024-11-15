@@ -32,6 +32,9 @@ const Checkout = () => {
     
         const orderData = {
             ...data,
+            orderId: generateOrderId(), // You can generate a unique order ID or get it from elsewhere
+            customerName: `${data.firstName} ${data.lastName}`, // Combine first and last name
+            customerEmail: data.email, // Add customer email from form
             cartItems,
             totalAmount: cartTotalAmount,
             paymentMethod,
