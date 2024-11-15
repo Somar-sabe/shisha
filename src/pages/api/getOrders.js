@@ -30,7 +30,7 @@ export default async function handler(req, res) {
         });
       }
 
-      // Extract email from the decoded token
+      // The decoded token is no longer needed for fetching all orders, but you can still check the user
       const userEmail = decoded.email;
 
       if (!userEmail) {
@@ -45,8 +45,8 @@ export default async function handler(req, res) {
       const database = client.db();
       const orders = database.collection("orders");
 
-      // Fetch orders for the specific user using the email from the JWT
-      const result = await orders.find({ customerEmail: userEmail }).toArray();
+      // Fetch all orders from the collection (no filtering by user)
+      const result = await orders.find({}).toArray();  // Fetch all orders without filtering by email
 
       // Return the orders if successful
       res.status(200).json({ success: true, orders: result });
