@@ -1,5 +1,6 @@
 import { MongoClient } from "mongodb";
 
+// MongoDB URI and client initialization
 const uri = process.env.MONGO_URI;
 let client;
 
@@ -35,16 +36,24 @@ export default async function handler(req, res) {
 
             // Insert order into database
             const order = req.body;
+
+            console.log('Inserting order:', order); // Log the order being inserted
             const result = await ordersCollection.insertOne(order);
 
-            console.log('Order saved successfully:', result); // Debugging result of insertion
-
-            // Return success response
-            res.status(200).json({
-                success: true,
-                message: "Order saved successfully",
-                orderId: result.insertedId
-            });
+            if (result.acknowledged) {
+                console.log('Order saved successfully:', result); // Debugging result of insertion
+                res.status(200).json({
+                    success: true,
+                    message: "Order saved successfully",
+                    orderId: result.insertedId
+                });
+            } else {
+                console.log('Failed to insert order:', result);
+                res.status(500).json({
+                    success: false,
+                    message: "Failed to save order"
+                });
+            }
         } catch (error) {
             console.error("Error saving order:", error);
             res.status(500).json({
