@@ -31,7 +31,9 @@ export default async function handler(req, res) {
     try {
       // Get MongoDB client
       const client = await getClient();
-      const database = client.db();
+      
+      // Specify the database name "myDatabase"
+      const database = client.db("myDatabase");
       const ordersCollection = database.collection("orders");
 
       console.log("Inserting order:", req.body);  // Debugging the order before insertion
