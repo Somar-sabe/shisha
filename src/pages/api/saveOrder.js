@@ -1,4 +1,4 @@
-import clientPromise from '@/lib/mongodb';  // This will handle your MongoDB client connection
+import clientPromise from '@/lib/mongodb'; // Import the client promise
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
@@ -15,7 +15,7 @@ export default async function handler(req, res) {
     try {
       // Use the clientPromise to get the MongoDB client
       const client = await clientPromise;
-      const db = client.db(); // or specify db name as client.db("myDatabase");
+      const db = client.db(); // Or specify your database: client.db('myDatabase')
       const ordersCollection = db.collection("orders");
 
       // Insert the order into the database
