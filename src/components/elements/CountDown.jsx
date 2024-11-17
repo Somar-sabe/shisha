@@ -50,7 +50,7 @@ const CountDown = (props) => {
       }
     return ( 
         <>
-        {countDownStart && <Countdown date={props.date ? props.date : Date.now()} renderer={renderer}/>}
+        {countDownStart && <Countdown renderer={renderer}/>}
         </>
      );
 }

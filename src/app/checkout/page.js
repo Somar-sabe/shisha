@@ -28,17 +28,22 @@ const Checkout = () => {
       } = useForm();
       const checkoutFormHandler = async (data, e) => {
         const { cartItems, cartTotalAmount } = cartProducts;
-        const { paymentMethod } = data; // Get selected payment method from form data
+        const { paymentMethod, firstName, lastName } = data; // Get the selected payment method and customer name
+    
+        const orderId = `ORD-${Date.now()}`; // Generate an orderId using the current timestamp (you can replace this with a more sophisticated method if needed)
+        const customerName = `${firstName} ${lastName}`; // Combine first name and last name
     
         const orderData = {
-            ...data,
+            orderId,
+            customerName,
             cartItems,
             totalAmount: cartTotalAmount,
             paymentMethod,
         };
     
+    
         try {
-            // Call the saveOrder API to save the order data (proceed anyway regardless of success/failure)
+            // Call the saveOrder API to save the order data before proceeding with payment
             const saveOrderResponse = await fetch('/api/saveOrder', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -47,15 +52,16 @@ const Checkout = () => {
     
             const saveOrderResult = await saveOrderResponse.json();
             
-            // Optionally log if save was successful or not
             if (saveOrderResult.success) {
                 console.log('Order saved successfully!');
             } else {
                 console.error('Failed to save order:', saveOrderResult.message);
+                return; // If saving fails, stop further execution
             }
     
             // Proceed with payment processing based on selected payment method
             if (paymentMethod === "ziina") {
+                // If "Pay by card" is selected, proceed with Stripe checkout
                 const response = await fetch('/api/create-checkout-session', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -74,26 +80,8 @@ const Checkout = () => {
             }
         } catch (error) {
             console.error('Error processing checkout:', error);
-            // Proceed with checkout anyway even if an error occurs during order saving
-            if (paymentMethod === "ziina") {
-                const response = await fetch('/api/create-checkout-session', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ cartItems, totalAmount: cartTotalAmount }),
-                });
-                
-                const session = await response.json();
-        
-                if (session.url) {
-                    window.location.href = session.url; // Redirect to Stripe checkout page
-                }
-            } else if (paymentMethod === "cash") {
-                localStorage.setItem('orderData', JSON.stringify(orderData)); // Save order data to localStorage
-                router.push('/checkout/order-received'); // Redirect to the order received page
-            }
         }
     };
-    
     
     const { currency } = useCurrency(); // Access currency from context
 
