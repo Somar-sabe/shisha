@@ -62,7 +62,7 @@ const UserOrders = () => {
                                     <td>{order.status || "Processing"}</td>  {/* Handling cases where `status` is missing */}
                                     <td>{order.totalAmount} AED </td>  {/* Defaulting to 0 items if `items` are not present */}
                                     <td>
-                                        <Link href={`/dashboard/orders/view/${order._id}`} className="axil-btn view-btn">View</Link>
+                                    <Link href={`/dashboard/orders/view/${order.orderId}`} className="axil-btn view-btn">View</Link>
                                     </td>
                                 </tr>
                             ))
