@@ -2,7 +2,8 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
-export const dynamic = "force-dynamic"; // Ensure the page renders dynamically at runtime
+// Use dynamic import to disable SSR for this page
+import dynamic from "next/dynamic";
 
 const OrderView = () => {
     const [order, setOrder] = useState(null);
@@ -131,4 +132,4 @@ const OrderView = () => {
     );
 };
 
-export default OrderView;
+export default dynamic(() => Promise.resolve(OrderView), { ssr: false });
