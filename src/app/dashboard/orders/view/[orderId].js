@@ -2,22 +2,22 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
-// Use dynamic import to disable SSR for this page
-import dynamic from "next/dynamic";
+// Remove dynamic import unless you have a specific reason
+// import dynamic from "next/dynamic";
 
 const OrderView = () => {
     const [order, setOrder] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const router = useRouter();
-    const { id } = router.query; // Get the order ID from the route
+    const { orderId } = router.query; // Corrected the query to use `orderId`
 
     useEffect(() => {
-        if (!id) return; // Wait for the ID to be available
+        if (!orderId) return; // Wait for the orderId to be available
 
         const fetchOrderDetails = async () => {
             try {
-                const res = await fetch(`/api/order?orderId=${id}`);
+                const res = await fetch(`/api/order?orderId=${orderId}`);
                 if (!res.ok) {
                     throw new Error("Failed to fetch order details");
                 }
@@ -35,7 +35,7 @@ const OrderView = () => {
         };
 
         fetchOrderDetails();
-    }, [id]);
+    }, [orderId]);
 
     if (loading) return <div>Loading...</div>;
     if (error) return <div>Error: {error}</div>;
@@ -136,4 +136,4 @@ const OrderView = () => {
     );
 };
 
-export default dynamic(() => Promise.resolve(OrderView), { ssr: false });
+export default OrderView;
