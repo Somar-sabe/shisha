@@ -2,6 +2,7 @@ import clientPromise from '@/lib/mongodb'; // Import the client promise
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
+
     const { orderId, customerName, totalAmount,customerEmail } = req.body;
 
     // Check if the necessary fields are present
@@ -13,6 +14,7 @@ export default async function handler(req, res) {
     }
 
     try {
+      req.body.orderDate = new Date();
       // Use the clientPromise to get the MongoDB client
       const client = await clientPromise;
       const db = client.db("Shisha"); // Or specify your database: client.db('myDatabase')
