@@ -1,6 +1,8 @@
-"use client"; // Since you're using hooks
+"use client"; // Required for using hooks in a client-side component
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+
+export const dynamic = "force-dynamic"; // Ensure the page renders dynamically at runtime
 
 const OrderView = () => {
     const [order, setOrder] = useState(null);
@@ -14,7 +16,7 @@ const OrderView = () => {
 
         const fetchOrderDetails = async () => {
             try {
-                const res = await fetch(`/api/getOrder?id=${id}`);
+                const res = await fetch(`/api/order?id=${id}`);
                 if (!res.ok) {
                     throw new Error("Failed to fetch order details");
                 }
@@ -22,7 +24,7 @@ const OrderView = () => {
                 if (data.success) {
                     setOrder(data.order);
                 } else {
-                    throw new Error(data.message);
+                    throw new Error(data.message || "Unknown error occurred");
                 }
             } catch (err) {
                 setError(err.message);
