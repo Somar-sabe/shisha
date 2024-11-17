@@ -26,16 +26,17 @@ const SignIn = () => {
                 },
                 body: JSON.stringify(data),
             });
-
+    
             if (response.ok) {
                 const result = await response.json();
-
-                // Save the token in localStorage (or cookies if preferred)
+    
+                // Save the token and email in localStorage
                 localStorage.setItem('token', result.token);
-
-                // Dispatch login action with the email (and optionally the token)
+                localStorage.setItem('userEmail', data.email);
+    
+                // Dispatch login action
                 dispatch(logIn({ email: data.email, token: result.token }));
-
+    
                 // Redirect the user to the dashboard
                 router.push('/dashboard');
             } else {
@@ -46,6 +47,7 @@ const SignIn = () => {
             setLoginError(true);
         }
     };
+    
 
     return ( 
         <AuthLayout bgImage="bg_image--9">

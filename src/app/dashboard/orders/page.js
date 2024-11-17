@@ -8,14 +8,21 @@ const UserOrders = () => {
     const [error, setError] = useState(null);
     useEffect(() => {
         const fetchOrders = async () => {
+            const email = localStorage.getItem('userEmail'); // Retrieve the email from localStorage
+            if (!email) {
+                setError("User email not found. Please log in again.");
+                setLoading(false);
+                return;
+            }
+    
             try {
-                const res = await fetch("/api/getOrders");  // Assuming the API is accessible here
+                const res = await fetch(`/api/getOrders?email=${encodeURIComponent(email)}`);
                 if (!res.ok) {
                     throw new Error("Failed to fetch orders");
                 }
                 const data = await res.json();
                 if (data.success) {
-                    setOrders(data.orders); // Set the fetched orders to state
+                    setOrders(data.orders);
                 } else {
                     throw new Error(data.message);
                 }
@@ -25,9 +32,10 @@ const UserOrders = () => {
                 setLoading(false);
             }
         };
-
+    
         fetchOrders();
     }, []);
+    
 
     if (loading) return <div>Loading...</div>;
     if (error) return <div>Error: {error}</div>;
