@@ -57,19 +57,19 @@ const OrderView = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {order.items.map((item, index) => (
+                        {order.cartItems.map((item, index) => (
                             <tr key={index}>
                                 <td>
-                                    {item.name} <strong>X {item.quantity}</strong>
+                                    {item.title} <strong>X {item.cartQuantity}</strong>
                                 </td>
-                                <td>{item.total} AED</td>
+                                <td>{item.price * item.cartQuantity} AED</td>
                             </tr>
                         ))}
                     </tbody>
                     <tfoot>
                         <tr>
                             <th>Subtotal:</th>
-                            <th>{order.subtotal} AED</th>
+                            <th>{order.totalAmount} AED</th>
                         </tr>
                         <tr>
                             <th>Shipping:</th>
@@ -92,42 +92,46 @@ const OrderView = () => {
                     </tfoot>
                 </table>
             </div>
-            <div className="order-address">
-                <h2 className="block-title">Billing address</h2>
-                <address>
-                    {order.billingAddress.name} <br />
-                    {order.billingAddress.company} <br />
-                    {order.billingAddress.address1} <br />
-                    {order.billingAddress.address2} <br />
-                    {order.billingAddress.city}, {order.billingAddress.state} <br />
-                    {order.billingAddress.zip} <br />
-                    {order.billingAddress.country} <br />
-                    <p className="address-phone">
-                        <i className="far fa-phone"></i> {order.billingAddress.phone}
-                    </p>
-                    <p className="address-email">
-                        <i className="far fa-envelope"></i> {order.billingAddress.email}
-                    </p>
-                </address>
-            </div>
-            <div className="order-address">
-                <h2 className="block-title">Shipping address</h2>
-                <address>
-                    {order.shippingAddress.name} <br />
-                    {order.shippingAddress.company} <br />
-                    {order.shippingAddress.address1} <br />
-                    {order.shippingAddress.address2} <br />
-                    {order.shippingAddress.city}, {order.shippingAddress.state} <br />
-                    {order.shippingAddress.zip} <br />
-                    {order.shippingAddress.country} <br />
-                    <p className="address-phone">
-                        <i className="far fa-phone"></i> {order.shippingAddress.phone}
-                    </p>
-                    <p className="address-email">
-                        <i className="far fa-envelope"></i> {order.shippingAddress.email}
-                    </p>
-                </address>
-            </div>
+            {order.billingAddress && (
+                <div className="order-address">
+                    <h2 className="block-title">Billing address</h2>
+                    <address>
+                        {order.billingAddress.name} <br />
+                        {order.billingAddress.company} <br />
+                        {order.billingAddress.address1} <br />
+                        {order.billingAddress.address2} <br />
+                        {order.billingAddress.city}, {order.billingAddress.state} <br />
+                        {order.billingAddress.zip} <br />
+                        {order.billingAddress.country} <br />
+                        <p className="address-phone">
+                            <i className="far fa-phone"></i> {order.billingAddress.phone}
+                        </p>
+                        <p className="address-email">
+                            <i className="far fa-envelope"></i> {order.billingAddress.email}
+                        </p>
+                    </address>
+                </div>
+            )}
+            {order.shippingAddress && (
+                <div className="order-address">
+                    <h2 className="block-title">Shipping address</h2>
+                    <address>
+                        {order.shippingAddress.name} <br />
+                        {order.shippingAddress.company} <br />
+                        {order.shippingAddress.address1} <br />
+                        {order.shippingAddress.address2} <br />
+                        {order.shippingAddress.city}, {order.shippingAddress.state} <br />
+                        {order.shippingAddress.zip} <br />
+                        {order.shippingAddress.country} <br />
+                        <p className="address-phone">
+                            <i className="far fa-phone"></i> {order.shippingAddress.phone}
+                        </p>
+                        <p className="address-email">
+                            <i className="far fa-envelope"></i> {order.shippingAddress.email}
+                        </p>
+                    </address>
+                </div>
+            )}
         </div>
     );
 };
