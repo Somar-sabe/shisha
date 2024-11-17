@@ -9,7 +9,6 @@ import Section from "@/components/elements/Section";
 import FooterTwo from "@/components/footer/FooterTwo";
 import HeaderFive from "@/components/header/HeaderFive";
 import ServiceTwo from "@/components/services/ServiceTwo";
-import { addToOrder } from '@/store/slices/productSlice';
 import { useCurrency } from '@/app/contexts/CurrencyContext'; // Import the custom hook
 const currencyRates = {
   AED: 1,
@@ -39,7 +38,9 @@ const Checkout = () => {
             cartItems,
             totalAmount: cartTotalAmount,
             paymentMethod,
-        };
+            customerEmail: data.email, // Add customer email if it's missing
+          };
+          
     
     
         try {
