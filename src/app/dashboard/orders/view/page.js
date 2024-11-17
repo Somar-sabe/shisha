@@ -17,7 +17,7 @@ const OrderView = () => {
 
         const fetchOrderDetails = async () => {
             try {
-                const res = await fetch(`/api/order?id=${id}`);
+                const res = await fetch(`/api/order?orderId=${id}`);
                 if (!res.ok) {
                     throw new Error("Failed to fetch order details");
                 }
