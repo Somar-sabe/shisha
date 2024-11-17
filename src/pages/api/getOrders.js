@@ -19,7 +19,8 @@ export default async function handler(req, res) {
       const ordersCollection = db.collection("orders");
 
       // Fetch orders for the given email
-      const result = await ordersCollection.find({ userEmail: email }).toArray();
+      const result = await ordersCollection.find({ customerEmail: email }).toArray();
+
 
       if (result.length === 0) {
         return res.status(404).json({
