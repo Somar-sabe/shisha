@@ -28,14 +28,11 @@ const ProductsPage = () => {
     },
   });
   const [orders, setOrders] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const router = useRouter();
 
   useEffect(() => {
       const fetchOrders = async () => {
           try {
-              const res = await fetch('/api/order');
+              const res = await fetch('/api/orderb');
               if (!res.ok) {
                   throw new Error("Failed to fetch orders");
               }
@@ -140,7 +137,7 @@ const ProductsPage = () => {
       </div>
       {activeTab === "order" && (
       <div className="table-responsive">
-                <table className="table" >
+                <table className="table" style={{  width: "700px" }}>
                     <thead>
                         <tr>
                             <th scope="col">Order</th>
