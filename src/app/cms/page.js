@@ -302,7 +302,9 @@ const ProductsPage = () => {
                 name="thumbnail"
            
               />
-                      <button style={styles.button} type="submit">
+                      <button style={styles.button} type="submit"
+                      onClick={() => alert("Your changes were successful!")}
+                      >
               Confirm
             </button>
               </div>
@@ -338,7 +340,8 @@ const ProductsPage = () => {
                 name="thumbnail"
            
               />
-                      <button style={styles.button} type="submit">
+                      <button style={styles.button} type="submit"
+                      onClick={() => alert("Your changes were successful!")}>
               Confirm
             </button>
               </div>
@@ -373,7 +376,8 @@ const ProductsPage = () => {
                 name="thumbnail"
            
               />
-                      <button style={styles.button} type="submit">
+                      <button style={styles.button} type="submit"
+                      onClick={() => alert("Your changes were successful!")}>
               Add Team Member
             </button>
               </div>
