@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 const ProductsPage = () => {
-  const [activeTab, setActiveTab] = useState("addProduct"); // Default tab is 'addProduct'
+  const [activeTab, setActiveTab] = useState("addProduct"); 
   const [productData, setProductData] = useState({
     title: "",
     thumbnail: "",
@@ -68,32 +68,32 @@ const ProductsPage = () => {
       <div style={styles.fullContainer}>
       <div style={styles.tabsContainer}>
         <button
-          style={styles.tabButton}
+          style={activeTab === "addProduct" ? styles.activeTabButton : styles.tabButton}
           onClick={() => setActiveTab("addProduct")}
         >
           Add Product
         </button>
         <button
-          style={styles.tabButton}
+          style={activeTab === "aboutUs" ? styles.activeTabButton : styles.tabButton}
           onClick={() => setActiveTab("aboutUs")}
         >
           About Us Section
         </button>
         <button
-          style={styles.tabButton}
+          style={activeTab === "contact" ? styles.activeTabButton : styles.tabButton}
           onClick={() => setActiveTab("contact")}
         >
           Contact Section
         </button>
         <button
-          style={styles.tabButton}
+          style={activeTab === "homeSlider" ? styles.activeTabButton : styles.tabButton}
           onClick={() => setActiveTab("homeSlider")}
         >
           Home Page Slider Content
         </button>
 
         <button
-          style={styles.tabButton}
+          style={activeTab === "team" ? styles.activeTabButton : styles.tabButton}
           onClick={() => setActiveTab("team")}
         >
           Management Team
@@ -487,6 +487,16 @@ const styles = {
     marginTop: "5px",
     borderRadius: "4px",
     border: "1px solid #ccc",
+    
+  },
+  activeTabButton: {
+    backgroundColor: "#eba800", 
+    color: "white",
+    padding: "10px 20px",
+    border: "1px solid #ccc",
+    cursor: "pointer",
+    borderRadius: "4px",
+    fontSize: "16px",
   },
 };
 

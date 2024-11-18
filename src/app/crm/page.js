@@ -214,7 +214,7 @@ const ProductsPage = () => {
           <div >
             
               <div style={styles.teamCard}>
-              <label>Chang email</label>
+              <label>Change email</label>
               <input
                 style={styles.input}
                 type="text"
