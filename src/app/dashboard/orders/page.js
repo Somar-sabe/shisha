@@ -1,5 +1,6 @@
 "use client"
 import { useEffect, useState } from "react";
+import { useRouter } from 'next/navigation';
 import Link from "next/link";
 import '../../../lib/i18n';
 
@@ -7,6 +8,7 @@ const UserOrders = () => {
     const [orders, setOrders] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const router = useRouter(); 
     useEffect(() => {
         const fetchOrders = async () => {
             const email = localStorage.getItem('userEmail'); // Retrieve the email from localStorage
@@ -63,7 +65,7 @@ const UserOrders = () => {
                                     <td>{order.status || "Processing"}</td>  
                                     <td>{order.totalAmount} AED </td>  
                                     <td>
-                                    <Link href={`/dashboard/orders/view`} className="axil-btn view-btn">View</Link>
+                                    <Link href={`/dashboard/orders/view/${order.orderId}`} className="axil-btn view-btn">View</Link>
                                     </td>
                                 </tr>
                             ))
