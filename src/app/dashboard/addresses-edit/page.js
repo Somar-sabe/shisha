@@ -23,20 +23,6 @@ const UserAddress = () => {
                         </ul>
                     </div>
                 </div>
-                <div className="col-lg-6">
-                    <div className="address-info">
-                        <div className="addrss-header d-flex align-items-center justify-content-between">
-                            <h4 className="title mb-0">Billing Address</h4>
-                            <Link href="/dashboard/addresses-edit/billing" className="address-edit"><i className="far fa-edit" /></Link>
-                        </div>
-                        <ul className="address-details">
-                            <li>Name: </li>
-                            <li>Email: </li>
-                            <li>Phone:</li>
-                            <li className="mt--30"> <br /> </li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </div>
     );
