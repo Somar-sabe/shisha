@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import ProductsData from '@/data/Products';
 import Link from "next/link";
 import Image from 'next/image';
-import Sidebar from "@/components/sidebar";
+import HeaderFive from "@/components/header/HeaderFive";
 const ProductsPage = () => {
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -96,6 +96,7 @@ const ProductsPage = () => {
   return (
     
     <div style={styles.container}>
+    <HeaderFive headerSlider />
       <h1 style={styles.header}>Admin Panel</h1>
       <div style={styles.fullContainer}>
       <div style={styles.tabsContainer}>
@@ -579,7 +580,7 @@ const styles = {
   tabButton: {
     padding: "10px 20px",
     backgroundColor: "#f0f0f0",
-    border: "1px solid #ccc",
+    
     cursor: "pointer",
     borderRadius: "4px",
     fontSize: "16px",
@@ -633,7 +634,7 @@ const styles = {
     backgroundColor: "#eba800", 
     color: "white",
     padding: "10px 20px",
-    border: "1px solid #ccc",
+    
     cursor: "pointer",
     borderRadius: "4px",
     fontSize: "16px",
