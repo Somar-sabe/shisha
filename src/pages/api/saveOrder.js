@@ -15,6 +15,7 @@ export default async function handler(req, res) {
 
     try {
       req.body.orderDate = new Date();
+      req.body.status = "Processing"; 
       // Use the clientPromise to get the MongoDB client
       const client = await clientPromise;
       const db = client.db("Shisha"); // Or specify your database: client.db('myDatabase')

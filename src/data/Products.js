@@ -374,7 +374,7 @@ const ProductsData = [
         description: {
             textDesc: {
                 title: "About this Product",
-                text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis culpa error modi tenetur ratione inventore ipsam voluptate praesentium quod nemo."
+                text: "Fresh green kiwis are picked and washed in ice water, full of juicy flavour. Each drop of juice is carefully squeezed to ensure pure kiwi taste. Kiwi. P is a delicious blend of tangy and sweet that shisha lovers will enjoy."
             },
             listDesc: [
                 

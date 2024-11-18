@@ -1,10 +1,10 @@
 "use client";
-
 import { useEffect, useState } from "react";
 import { useRouter } from 'next/navigation';
 import ProductsData from '@/data/Products';
 import Link from "next/link";
 import Image from 'next/image';
+import Sidebar from "@/components/sidebar";
 const ProductsPage = () => {
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -61,31 +61,32 @@ const ProductsPage = () => {
       [name]: value,
     });
   };
-
-  const handleShortDesChange = (e) => {
-    const { name, value } = e.target;
-    setProductData({
-      ...productData,
-      shortDes: {
-        ...productData.shortDes,
-        [name]: value,
-      },
-    });
+  const handleStatusChange = (orderId, status) => {
+    // Update the order status in the frontend state
+    const updatedOrders = orders.map((order) =>
+      order._id === orderId ? { ...order, status: status } : order
+    );
+    setOrders(updatedOrders);
+  
+    // Optionally, send the updated status to the server
+    fetch(`/api/update-status`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ orderId: orderId, status: status }), // Pass 'orderId' and 'status' correctly
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          console.log("Order status updated successfully");
+        } else {
+          console.error("Failed to update order status");
+        }
+      })
+      .catch((error) => {
+        console.error("Error updating order status:", error);
+      });
   };
-
-  const handleDescriptionChange = (e) => {
-    const { name, value } = e.target;
-    setProductData({
-      ...productData,
-      description: {
-        ...productData.description,
-        textDesc: {
-          ...productData.description.textDesc,
-          [name]: value,
-        },
-      },
-    });
-  };
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -144,6 +145,7 @@ const ProductsPage = () => {
       </div>
       {activeTab === "orders" && (
       <div className="table-responsive">
+
       <table className="table" style={{ width: "900px" }}>
                     <thead>
                         <tr>
@@ -160,7 +162,17 @@ const ProductsPage = () => {
                                 <tr key={order._id}>  
                                     <th scope="row">#{order.orderId}</th>
                                     <td>{new Date(order.orderDate).toLocaleDateString()}</td>  
-                                    <td>{order.status || "Processing"}</td>  
+                                    <td>
+
+                                    <select
+                        value={order.status || "Processing"} // Default value
+                        onChange={(e) => handleStatusChange(order._id, e.target.value)} // Handler for dropdown change
+                        className="status-dropdown"
+                    >
+                        <option value="Processing">Processing</option>
+                        <option value="Delivered">Delivered</option>
+                    </select>
+                                    </td>  
                                     <td>{order.totalAmount} AED </td>  
                                     <td>
                                     <Link href={`/dashboard/orders/view/${order.orderId}`} className="axil-btn view-btn">View</Link>
@@ -179,24 +191,40 @@ const ProductsPage = () => {
             {activeTab === "products" && (
   <div>
     <h2>Products</h2>
-    <div style={styles.productsContainer}>
-      {ProductsData.map((product) => (
-        <div key={product.id} style={styles.productCard}>
-        <Image
-            src={product.thumbnail}
-            alt={product.title}
-            width={200}
-            height={200}
-        />
-          <h3>{product.title}</h3>
-          <p><strong>Price:</strong> AED {product.price}</p>
-          <p>{product.description.textDesc.text}</p>
-          <button style={styles.button}>Edit Product</button>
-        </div>
-      ))}
-    </div>
+    <table style={styles.table}>
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Title</th>
+          <th>Price</th>
+          <th>Description</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {ProductsData.map((product) => (
+          <tr key={product.id}>
+            <td>
+              <Image
+                src={product.thumbnail}
+                alt={product.title}
+                width={100}
+                height={100}
+              />
+            </td>
+            <td>{product.title}</td>
+            <td>AED {product.price}</td>
+            <td>{product.description.textDesc.text}</td>
+            <td>
+              <button style={styles.button}>Edit Product</button>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   </div>
 )}
+
 
       {activeTab === "addProduct" && (
         <div>
@@ -269,7 +297,7 @@ const ProductsPage = () => {
                 style={styles.textarea}
                 name="text"
                 value={productData.shortDes.text}
-                onChange={handleShortDesChange}
+                
               />
             </div>
             <div style={styles.formGroup}>
@@ -278,7 +306,7 @@ const ProductsPage = () => {
                 style={styles.textarea}
                 name="listItem"
                 value={productData.shortDes.listItem}
-                onChange={handleShortDesChange}
+                
               />
             </div>
             <div style={styles.formGroup}>
@@ -287,8 +315,8 @@ const ProductsPage = () => {
                 style={styles.input}
                 type="text"
                 name="title"
-                value={productData.description.textDesc.title}
-                onChange={handleDescriptionChange}
+               
+               
               />
             </div>
             <div style={styles.formGroup}>
@@ -296,8 +324,8 @@ const ProductsPage = () => {
               <textarea
                 style={styles.textarea}
                 name="text"
-                value={productData.description.textDesc.text}
-                onChange={handleDescriptionChange}
+                
+                
               />
             </div>
             <button style={styles.button} type="submit">
@@ -534,9 +562,9 @@ const styles = {
     display:"flex"
   },
   container: {
-    width: "80vw",
+   
     margin: "0 auto",
-    padding: "20px",
+   
   },
   header: {
     textAlign: "center",
