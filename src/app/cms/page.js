@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
-
+import FooterTwo from "@/components/footer/FooterTwo";
+import HeaderFive from "@/components/header/HeaderFive";
 const ProductsPage = () => {
   const [activeTab, setActiveTab] = useState("addProduct"); // Default tab is 'addProduct'
   const [productData, setProductData] = useState({
@@ -65,6 +66,7 @@ const ProductsPage = () => {
   return (
     
     <div style={styles.container}>
+    <HeaderFive headerSlider />
       <h1 style={styles.header}>Admin Panel</h1>
       <div style={styles.fullContainer}>
       <div style={styles.tabsContainer}>
@@ -409,7 +411,7 @@ const ProductsPage = () => {
   </div>
 )}
 </div>
-
+ <FooterTwo />
     </div>
   );
 };
