@@ -417,7 +417,10 @@ const ProductsPage = () => {
           <input style={styles.input} type="text" defaultValue="/products/3" />
         </div>
       </div>
-
+      <button style={styles.button} type="submit"
+                      onClick={() => alert("Your changes were successful!")}>
+              Add 
+            </button>
       {/* Slider 2 */}
       <div style={styles.sliderItem}>
         <h3>Slider 2</h3>
@@ -446,7 +449,10 @@ const ProductsPage = () => {
           <input style={styles.input} type="text" defaultValue="/shop?category=shisha-accssesores" />
         </div>
       </div>
-
+      <button style={styles.button} type="submit"
+                      onClick={() => alert("Your changes were successful!")}>
+              Add 
+            </button>
       {/* Slider 3 */}
       <div style={styles.sliderItem}>
         <h3>Slider 3</h3>
@@ -475,6 +481,10 @@ const ProductsPage = () => {
           <input style={styles.input} type="text" defaultValue="/shop" />
         </div>
       </div>
+      <button style={styles.button} type="submit"
+                      onClick={() => alert("Your changes were successful!")}>
+              Add 
+            </button>
     </form>
   </div>
 )}
