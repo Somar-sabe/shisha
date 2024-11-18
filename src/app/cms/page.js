@@ -144,7 +144,7 @@ const ProductsPage = () => {
       </div>
       {activeTab === "orders" && (
       <div className="table-responsive">
-                <table className="table">
+      <table className="table" style={{ width: "900px" }}>
                     <thead>
                         <tr>
                             <th scope="col">Order</th>
