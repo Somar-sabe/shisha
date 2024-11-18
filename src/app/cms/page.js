@@ -1,7 +1,10 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import { useRouter } from 'next/navigation';
+import ProductsData from '@/data/Products';
 import Link from "next/link";
+import Image from 'next/image';
 const ProductsPage = () => {
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -127,6 +130,12 @@ const ProductsPage = () => {
           Management Team
         </button>
         <button
+          style={activeTab === "products" ? styles.activeTabButton : styles.tabButton}
+          onClick={() => setActiveTab("products")}
+        >
+          Products
+        </button>
+        <button
           style={activeTab === "orders" ? styles.activeTabButton : styles.tabButton}
           onClick={() => setActiveTab("orders")}
         >
@@ -167,6 +176,28 @@ const ProductsPage = () => {
                 </table>
             </div>
             )}
+            {activeTab === "products" && (
+  <div>
+    <h2>Products</h2>
+    <div style={styles.productsContainer}>
+      {ProductsData.map((product) => (
+        <div key={product.id} style={styles.productCard}>
+        <Image
+            src={product.thumbnail}
+            alt={product.title}
+            width={200}
+            height={200}
+        />
+          <h3>{product.title}</h3>
+          <p><strong>Price:</strong> AED {product.price}</p>
+          <p>{product.description.textDesc.text}</p>
+          <button style={styles.button}>Edit Product</button>
+        </div>
+      ))}
+    </div>
+  </div>
+)}
+
       {activeTab === "addProduct" && (
         <div>
           <h2>Add New Product</h2>
@@ -281,7 +312,7 @@ const ProductsPage = () => {
           <div >
             
               <div style={styles.teamCard}>
-              <label>Chang email</label>
+              <label>Change email</label>
               <input
                 style={styles.input}
                 type="text"
