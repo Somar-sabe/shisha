@@ -4,7 +4,6 @@ import { useRouter } from 'next/navigation';
 import ProductsData from '@/data/Products';
 import Link from "next/link";
 import Image from 'next/image';
-import HeaderFive from "@/components/header/HeaderFive";
 const ProductsPage = () => {
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -96,7 +95,7 @@ const ProductsPage = () => {
   return (
     
     <div style={styles.container}>
-    <HeaderFive headerSlider />
+    
       <h1 style={styles.header}>Admin Panel</h1>
       <div style={styles.fullContainer}>
       <div style={styles.tabsContainer}>
