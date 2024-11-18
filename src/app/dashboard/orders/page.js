@@ -1,6 +1,7 @@
 "use client"
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import '../../../lib/i18n';
 
 const UserOrders = () => {
     const [orders, setOrders] = useState([]);
@@ -56,13 +57,13 @@ const UserOrders = () => {
                     <tbody>
                         {orders.length > 0 ? (
                             orders.map((order) => (
-                                <tr key={order._id}>  {/* Assuming order._id is the unique identifier */}
+                                <tr key={order._id}>  
                                     <th scope="row">#{order.orderId}</th>
-                                    <td>{new Date(order.orderDate).toLocaleDateString()}</td>  {/* Adjusting to use `orderDate` */}
-                                    <td>{order.status || "Processing"}</td>  {/* Handling cases where `status` is missing */}
-                                    <td>{order.totalAmount} AED </td>  {/* Defaulting to 0 items if `items` are not present */}
+                                    <td>{new Date(order.orderDate).toLocaleDateString()}</td>  
+                                    <td>{order.status || "Processing"}</td>  
+                                    <td>{order.totalAmount} AED </td>  
                                     <td>
-                                    <Link href={`/dashboard/orders/view/${order.orderId}`} className="axil-btn view-btn">View</Link>
+                                    <Link href={`/dashboard/orders/view`} className="axil-btn view-btn">View</Link>
                                     </td>
                                 </tr>
                             ))
