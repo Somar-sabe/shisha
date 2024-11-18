@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 const ProductsPage = () => {
+
   const [activeTab, setActiveTab] = useState("addProduct"); 
   const [productData, setProductData] = useState({
     title: "",
@@ -22,6 +23,8 @@ const ProductsPage = () => {
       listDesc: [],
     },
   });
+
+
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
