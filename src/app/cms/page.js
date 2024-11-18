@@ -35,7 +35,7 @@ const ProductsPage = () => {
   useEffect(() => {
       const fetchOrders = async () => {
           try {
-              const res = await fetch('/api/order');
+              const res = await fetch('/api/orderb');
               if (!res.ok) {
                   throw new Error("Failed to fetch orders");
               }
