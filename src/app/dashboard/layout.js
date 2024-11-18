@@ -34,9 +34,9 @@ const DashboardLayout = ({ children }) => {
 
     return ( 
         <>
-           
+           <HeaderFive headerSlider />
             <main className="main-wrapper">
-                
+                <Breadcrumb />
                 <div className="axil-dashboard-area axil-section-gap">
                     <div className="container">
                         <div className="axil-dashboard-warp">
@@ -72,7 +72,7 @@ const DashboardLayout = ({ children }) => {
                 </div>
               
             </main>
-         
+         <FooterTwo/>
         </>
     );
 }

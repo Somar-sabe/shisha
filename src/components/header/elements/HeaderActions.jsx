@@ -81,7 +81,7 @@ const mobileMneuHandler = (data) => {
                 <Link href="/dashboard">My Account</Link>
               </li>
               <li>
-                <Link href="/orders">Orders</Link>
+                <Link href="/dashboard/orders">Orders</Link>
               </li>
             </ul>
             <div className="login-btn">
