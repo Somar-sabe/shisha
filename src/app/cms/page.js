@@ -1,8 +1,6 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import FooterTwo from "@/components/footer/FooterTwo";
-import { useRouter } from 'next/navigation';
-import Link from "next/link";
 import HeaderFive from "@/components/header/HeaderFive";
 
 const ProductsPage = () => {
@@ -35,7 +33,7 @@ const ProductsPage = () => {
   useEffect(() => {
       const fetchOrders = async () => {
           try {
-              const res = await fetch('/api/orderb');
+              const res = await fetch('/api/getOrders'); // No email filter
               if (!res.ok) {
                   throw new Error("Failed to fetch orders");
               }
@@ -108,12 +106,6 @@ const ProductsPage = () => {
         </button>
         <button
           style={styles.tabButton}
-          onClick={() => setActiveTab("order")}
-        >
-          Orders
-        </button>
-        <button
-          style={styles.tabButton}
           onClick={() => setActiveTab("aboutUs")}
         >
           About Us Section
@@ -138,41 +130,7 @@ const ProductsPage = () => {
           Management Team
         </button>
       </div>
-      {activeTab === "order" && (
-      <div className="table-responsive">
-                <table className="table" style={{  width: "700px" }}>
-                    <thead>
-                        <tr>
-                            <th scope="col">Order</th>
-                            <th scope="col">Date</th>
-                            <th scope="col">Status</th>
-                            <th scope="col">Total</th>
-                            <th scope="col">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {orders.length > 0 ? (
-                            orders.map((order) => (
-                                <tr key={order._id}>
-                                    <th scope="row">#{order.orderId}</th>
-                                    <td>{new Date(order.orderDate).toLocaleDateString()}</td>
-                                    <td>{order.status || "Processing"}</td>
-                                    <td>{order.totalAmount} AED</td>
-                                    <td>
-                                        <Link href={`/dashboard/orders/view/${order.orderId}`} className="axil-btn view-btn">View</Link>
-                                    </td>
-                                </tr>
-                            ))
-                        ) : (
-                            <tr>
-                                <td colSpan="5">No orders found</td>
-                            </tr>
-                        )}
-                    </tbody>
-                </table>
-            </div>
 
-)}
       {activeTab === "addProduct" && (
         <div>
           <h2>Add New Product</h2>
@@ -389,6 +347,7 @@ const ProductsPage = () => {
       )}
 
 
+      
       {activeTab === "homeSlider" && (
   <div>
     <h2>Home Page Slider Content</h2>
