@@ -26,7 +26,7 @@ const Logo = {
 }
 
 const StoreInfo = {
-    address: "B2B Tower - Office 1602, Dubai, Buissness Bay, UAE.",
+    address: "B2B Tower - Office 1602, Dubai, Business Bay, UAE.",
     phone: "+971 55 429 1019",
     email: "Info@holster-tobacco.com",
     opening: {
