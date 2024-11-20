@@ -21,13 +21,13 @@
     "shishaAccessories": "Shisha Accessories"
   },
   
-    "whoWeAreTitle": "Who We Are",
-    "whoWeAreText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe.",
-    "aboutStoreSubtitle": "About Store",
-    "aboutStoreTitle": "Welcome to Holster Tobacco GmbH,",
-    "aboutStoreHighlight": "Since the founding of Mr. N. Akgül in 2012, we have been committed to the highest quality standards in the tobacco industry.",
-    "employeesTitle": "50+ Employees",
-    "employeesText": "Over 50 dedicated professionals ensuring the finest quality tobacco, crafted in Germany and enjoyed worldwide."
-  
+    "aboutStore": {
+      "subtitle": "About Store",
+      "title": "Welcome to Holster Tobacco GmbH,",
+      "higlightLine": "Since the founding of Mr. N. Akgül in 2012, we have been committed to the highest quality standards in the tobacco industry.",
+      "description1": "We at Holster Tobacco work with high-quality Virginia tobacco and have expanded our portfolio with the Dark Leaf. The products are produced exclusively in Germany, and our bestseller 'Ice Kaktuz' is one of the best-selling tobacco varieties in the hookah world.",
+      "description2": "With more than eight years of experience, we are one of the largest traditional companies in Europe. We present our products in 18 countries and are currently expanding to Spain and the Arab Emirates."
+    }
+
   
 }

@@ -1,21 +1,4 @@
-const WhoAreData = [
-    {
-        title: "Who We Are",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe."
-    },
-    {
-        title: "What Do We Do",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe."
-    },
-    {
-        title: "How Do We Help",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe."
-    },
-    {
-        title: "Create success story",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe."
-    },
-] 
+
 const WhoAreGallery = ["/images/about/Image 10151 Copy.jpg", "/images/about/Image 10152 Copy.jpg", "/images/about/Image 10153 Copy.jpg"]
 
 const AboutStore = {
@@ -47,21 +30,7 @@ const AboutAchievment = [
     }
 ]
 
-const AboutFeatures = [
-    {
-        subtitle:"Features #01",
-        title: "Solutions that work together",
-        text: "Thanks to our annual global trade fair presence and our highly effective marketing, we capture the current trends of the hookah scene. So we are always ready for innovative ways to offer you the best possible quality.",
-        thumbnail: "/images/about/about-02.png"
-    },
-    {
-        subtitle:"Features #02",
-        title: "Solutions that work together",
-        text: "Publish your eCommerce site quickly with our easy-to-use store builder— no coding required. Migrate your items from your point of sale system or turn your Instagram feed into a shopping site and start selling fast. Square Online works for all kinds of businesses—retail, restaurants, services.",
-        thumbnail: "/images/about/about-03.png"
-    }
 
-]
     
 
-export{WhoAreData, WhoAreGallery, AboutFeatures, AboutStore, AboutAchievment};
+export{ WhoAreGallery, AboutStore, AboutAchievment};

@@ -12,7 +12,6 @@ import ServiceTwo from "@/components/services/ServiceTwo";
 import { AboutAchievment, AboutFeatures, AboutStore } from "@/data/About";
 import { TeamData } from "@/data/Team";
 
-
 const AboutUs = () => {
     return ( 
         <>
