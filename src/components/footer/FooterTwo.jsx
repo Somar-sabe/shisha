@@ -5,8 +5,11 @@ import { useSelector } from "react-redux";
 import { ScocialLink } from "@/data/Common";
 import { FooterData } from "@/data/Footer";
 import ProductQuickView from "../product/elements/ProductQuickView";
+import { useTranslation } from "react-i18next";
+import "../../lib/i18n"
 
 const FooterTwo = () => {
+  const { t } = useTranslation();
   const getQuickView = useSelector((state) => state.productData);
 
   return (
@@ -17,11 +20,11 @@ const FooterTwo = () => {
             <div className="row" style={{    display: "flex",   justifyContent: "space-around" }}>
               <div className="col-lg-3 col-sm-6">
                 <div className="axil-footer-widget">
-                  <h5 className="widget-title">Support</h5>
+                  <h5 className="widget-title">{t("footer.support")}</h5>
                   <div className="inner">
                     <p
                       dangerouslySetInnerHTML={{
-                        __html: FooterData.footerInfo.address,
+                        __html: t("footer.address"),
                       }}
                     ></p>
                     <ul className="support-list-item">

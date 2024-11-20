@@ -1,4 +1,30 @@
 {
+  "higlightLine": "Since the founding of Mr. N. Akgül in 2012, we have been committed to the highest quality standards in the tobacco industry.",
+  "subtitle": "About Store",
+  "title": "Welcome to Holster Tobacco GmbH,",
+  "description1": "We at Holster Tobacco work with high-quality Virginia tobacco and have expanded our portfolio with the Dark Leaf.",
+  "description2": "With more than eight years of experience, we are one of the largest traditional companies in Europe.",
+  
+  
+      "aboutAchievement": {
+          "title1": "50+ Employees",
+          "text1": "Over 50 dedicated professionals ensuring the finest quality tobacco.",
+          "title2": "20 Countries",
+          "text2": "Now available in over 20 countries.",
+          "iconAlt": "Achievement icon"
+      },
+      "breadcrumb": {
+          "activeItem": "About Us",
+          "title": "About"
+      },
+      "team": {
+          "title": "Our Team",
+          "subtitle": "Meet the professionals behind our success"
+   
+  },
+  
+  
+
   "home": "Home",
   "dashboard": "Dashboard",
   "orders": "Orders",
@@ -20,14 +46,13 @@
     "starterPack": "Starter Pack 10%",
     "shishaAccessories": "Shisha Accessories"
   },
-  
-    "aboutStore": {
-      "subtitle": "About Store",
-      "title": "Welcome to Holster Tobacco GmbH,",
-      "higlightLine": "Since the founding of Mr. N. Akgül in 2012, we have been committed to the highest quality standards in the tobacco industry.",
-      "description1": "We at Holster Tobacco work with high-quality Virginia tobacco and have expanded our portfolio with the Dark Leaf. The products are produced exclusively in Germany, and our bestseller 'Ice Kaktuz' is one of the best-selling tobacco varieties in the hookah world.",
-      "description2": "With more than eight years of experience, we are one of the largest traditional companies in Europe. We present our products in 18 countries and are currently expanding to Spain and the Arab Emirates."
-    }
 
+      "footer": {
+        "address": "B2B Tower - Office 1602, <br /> Dubai, Business Bay, UAE.",
+        "email": "Info@holster-tobacco.com",
+        "phone": "+971 55 429 1019",
+        "support":"support"
+      }
+    
   
 }

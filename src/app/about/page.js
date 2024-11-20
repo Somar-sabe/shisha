@@ -7,12 +7,13 @@ import SectionTitle from "@/components/elements/SectionTitle";
 import SlickSlider from "@/components/elements/SlickSlider";
 import FooterTwo from "@/components/footer/FooterTwo";
 import HeaderFive from "@/components/header/HeaderFive";
-import NewsLetter from "@/components/newsletter/NewsLetter";
-import ServiceTwo from "@/components/services/ServiceTwo";
 import { AboutAchievment, AboutFeatures, AboutStore } from "@/data/About";
 import { TeamData } from "@/data/Team";
+import { useTranslation } from "react-i18next";
+import "../../lib/i18n"
 
 const AboutUs = () => {
+    const { t } = useTranslation();
     return ( 
         <>
         <HeaderFive headerSlider/>
@@ -38,16 +39,17 @@ const AboutUs = () => {
                     <div className="col-xl-8 col-lg-6">
                         <div className="about-content content-right">
                             <span className="title-highlighter highlighter-primary2"> 
-                                <i className={AboutStore.subtitleIcon} />{AboutStore.subtitle}
+                                <i className={AboutStore.subtitleIcon} />{t("subtitle")}
                             </span>
-                            <h3 className="title">{AboutStore.title}</h3>
-                            <span className="text-heading">{AboutStore.higlightLine}</span>
+                            <h3 className="title">{t("title")}</h3>
+                            <span className="text-heading">{t("higlightLine")}</span>
                             <div className="row">
-                                {AboutStore.description?.map((data, index) => (
-                                    <div className="col-xl-6" key={index}>
-                                        <p>{data}</p>
-                                    </div>
-                                ))}
+                            <div className="col-xl-6">
+                <p>{t("description1")}</p>
+            </div>
+            <div className="col-xl-6">
+                <p>{t("description2")}</p>
+            </div>
                             </div>
                         </div>
                     </div>

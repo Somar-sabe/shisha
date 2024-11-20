@@ -2,8 +2,11 @@ import { WhoAreData, WhoAreGallery } from "@/data/About";
 import SectionTitle from "../elements/SectionTitle";
 import Image from "next/image";
 import { mapInSlices } from "@/utils";
+import { useTranslation } from "react-i18next";
+import "../../lib/i18n"
 
 const WhoWeAre = () => {
+  const { t } = useTranslation();
 	const whoAreGallery = mapInSlices(WhoAreGallery, 2);
 
   return (
@@ -22,8 +25,8 @@ const WhoWeAre = () => {
                 <div className="col-sm-6" key={index}>
                   <div className="about-features">
                     <div className="spam sl-number">{index + 1}.</div>
-                    <h4 className="title">{data.title}</h4>
-                    <p>{data.text}</p>
+                    <h4 className="title">{t("title")}</h4>
+                    <p>{t("AboutStore.text")}</p>
                   </div>
                 </div>
               ))}
