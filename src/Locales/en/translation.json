@@ -13,9 +13,21 @@
   "view_all_products": "View All Products",
   "new_arrivals": "Accessoires",
   "this_weeks": "This Week",
+  "aboutStoreDescription1": "We at Holster Tobacco work with the high quality Virginia tobacco and have expanded our portfolio with the Dark Leaf.",
+  "aboutStoreDescription2": "With more than eight years of experience, we are one of the largest traditional companies in Europe.",
   "slider": {
     "bestSellingFlavor": "BEST SELLING FLAVOUR!",
     "starterPack": "Starter Pack 10%",
     "shishaAccessories": "Shisha Accessories"
-  }
+  },
+  
+    "whoWeAreTitle": "Who We Are",
+    "whoWeAreText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe.",
+    "aboutStoreSubtitle": "About Store",
+    "aboutStoreTitle": "Welcome to Holster Tobacco GmbH,",
+    "aboutStoreHighlight": "Since the founding of Mr. N. Akgül in 2012, we have been committed to the highest quality standards in the tobacco industry.",
+    "employeesTitle": "50+ Employees",
+    "employeesText": "Over 50 dedicated professionals ensuring the finest quality tobacco, crafted in Germany and enjoyed worldwide."
+  
+  
 }

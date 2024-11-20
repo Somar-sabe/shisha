@@ -1,6 +1,6 @@
 const Category = [
     {
-        cate: "Shisha Topaco",
+        cate: "Shisha Tobacco",
         cateThumb: "/images/product/categories/jewelry-2.png",
         hasSub: false,
       
