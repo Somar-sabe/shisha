@@ -1,4 +1,21 @@
+
 {
+  "menu": {
+    "home": "الرئيسية",
+    "shop": "التسوق",
+    "shisha_tobacco": "تبغ الشيشة",
+    "shisha_water_pipe": "الشيشة / أنبوب الماء",
+    "shisha_accessories": "إكسسوارات الشيشة",
+    "about": "معلومات عنا",
+    "contact": "تواصل معنا"
+  },
+  "dashboard": {
+    "dashboard": "لوحة التحكم",
+    "orders": "الطلبات",
+    "addresses": "العناوين",
+    "account_details": "تفاصيل الحساب"
+  },
+
   "subtitle": "عن المتجر",
   "title": "مرحبًا بكم في هولستر توباكو GmbH،",
  
@@ -19,7 +36,6 @@
   "shisha_accessories": "إكسسوارات الشيشة",
   "about": "من نحن",
   "contact": "اتصل بنا",
-  "dashboard": "لوحة القيادة",
   "orders": "الطلبات",
   "addresses": "العناوين",
   "account_details": "تفاصيل الحساب",

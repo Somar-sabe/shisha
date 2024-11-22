@@ -46,6 +46,38 @@ const HeaderAsideMenu = () => {
 	}
 
 	useEffect(() => {
+    const asideMobileMenuHandler = () => {
+      let windowWidthCheck = window.innerWidth;
+      setWindowWidth(windowWidthCheck);
+      window.addEventListener("resize", (e) => {
+        let windowWidth = window.innerWidth;
+        setWindowWidth(windowWidth);
+      });
+      let subMenuToggler = document.getElementsByClassName("has-megamenu");
+      if (windowWidth < 1200) {
+        for (let i = 0; i < subMenuToggler.length; i++) {
+          let element = subMenuToggler[i];
+          element.addEventListener("click", function (e) {
+          e.preventDefault();
+          if (element.offsetParent.classList.contains("open")) {
+            for (let j = 0; j < subMenuToggler.length; j++) {
+            const subElem = subMenuToggler[j];
+            subElem.offsetParent.classList.remove("open");
+            subElem.nextSibling.style.display = "none";
+            }
+          } else {
+            for (let j = 0; j < subMenuToggler.length; j++) {
+              const subElem = subMenuToggler[j];
+              subElem.offsetParent.classList.remove("open");
+              subElem.nextSibling.style.display = "none";
+            }
+            element.offsetParent.classList.add("open");
+            element.nextSibling.style.display = "block";
+          }
+          });
+        }
+      }
+    }
 		asideMobileMenuHandler();
 	}, [windowWidth]);
 

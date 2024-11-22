@@ -1,4 +1,19 @@
 {
+  "menu": {
+    "home": "Home",
+    "shop": "Shop",
+    "shisha_tobacco": "Shisha Tobacco",
+    "shisha_water_pipe": "Shisha / Water Pipe",
+    "shisha_accessories": "Shisha Accessories",
+    "about": "About",
+    "contact": "Contact"
+},
+"dashboard": {
+    "dashboard": "Dashboard",
+    "orders": "Orders",
+    "addresses": "Addresses",
+    "account_details": "Account Details"
+},
   "higlightLine": "Since the founding of Mr. N. Akgül in 2012, we have been committed to the highest quality standards in the tobacco industry.",
   "subtitle": "About Store",
   "title": "Welcome to Holster Tobacco GmbH,",
@@ -26,7 +41,6 @@
   
 
   "home": "Home",
-  "dashboard": "Dashboard",
   "orders": "Orders",
   "addresses": "Addresses",
   "accountDetails": "Account Details",

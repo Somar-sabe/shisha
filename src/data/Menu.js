@@ -1,39 +1,40 @@
 const HeaderMenu = [   
     {
-        name: "Home",
+        name: "menu.home", // Match this key to your JSON file
         url: "/",
         hasChildren: false,
     },
     {
-        name: "Shop",
+        name: "menu.shop",
         url: "/shop",
         hasChildren: true,
         children: [
             {
-                name: "Shisha Tobacco",
-                url: "/shop?category=shisha-tobacco", // Pass filterCategory in the URL
+                name: "menu.shisha_tobacco",
+                url: "/shop?category=shisha-tobacco",
             },
             {
-                name: "Shisha / Water Pipe",
+                name: "menu.shisha_water_pipe",
                 url: "/shop?category=shisha-water-pipe",
             },
             {
-                name: "Shisha Accessories",
+                name: "menu.shisha_accessories",
                 url: "/shop?category=shisha-accssesores",
             }
         ]
     },
     {
-        name: "About",
+        name: "menu.about",
         url: "/about",
         hasChildren: false,
     },
     {
-        name: "Contact",
+        name: "menu.contact",
         url: "/contact",
         hasChildren: false,
     },
 ];
+
 
 const DashboardAsideMenu = [
     {
