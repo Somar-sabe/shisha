@@ -74,7 +74,20 @@
         "address": "برج بي تو بي - المكتب 1602، <br /> دبي، الخليج التجاري، الإمارات.",
         "email": "Info@holster-tobacco.com",
         "phone": "+971 55 429 1019",
-        "support":"دعم"
+        "support":"دعم",
+        "quick_link": "روابط سريعة",
+        "about_us": "معلومات عنا",
+        "privacy_policy": "سياسة الخصوصية",
+        "terms_of_use": "شروط الاستخدام",
+        "contact": "اتصل بنا",
+        "copyright": "© جميع الحقوق محفوظة لشركة باي لابز",
+        "account": "الحساب",
+        "my_account": "حسابي",
+        "login": "تسجيل الدخول",
+        "cart": "السلة",
+        "wishlist": "قائمة الرغبات",
+        "shop": "التسوق",
+        "services": "الخدمات"
       }
     
   

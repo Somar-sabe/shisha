@@ -80,7 +80,20 @@
         "address": "B2B Tower - Office 1602, <br /> Dubai, Business Bay, UAE.",
         "email": "Info@holster-tobacco.com",
         "phone": "+971 55 429 1019",
-        "support":"support"
+        "support":"support",
+        "quick_link": "Quick Links",
+        "about_us": "About Us",
+        "privacy_policy": "Privacy Policy",
+        "terms_of_use": "Terms of Use",
+        "contact": "Contact",
+        "copyright": "© All rights reserved by Bay Labs",
+        "account": "Account",
+        "my_account": "My Account",
+        "login": "Login",
+        "cart": "Cart",
+        "wishlist": "Wishlist",
+        "shop": "Shop"
+
       }
     
   

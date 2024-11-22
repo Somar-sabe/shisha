@@ -2,73 +2,73 @@
 const FooterData = {
     footerLink: [
         {
-            label: "Account",
-            linkList: [
-                {
-                    name: "My Account",
-                    url: "/dashboard"
-                },
-                {
-                    name: "Login",
-                    url: "/sign-in"
-                },
-                {
-                    name: "Cart",
-                    url: "/cart"
-                },
-                {
-                    name: "Wishlist",
-                    url: "/wishlist"
-                },
-                {
-                    name: "Shop",
-                    url: "/shop"
-                }
-            ]
+          label: "footer.account",
+          linkList: [
+            {
+              name: "footer.my_account", 
+              url: "/dashboard"
+            },
+            {
+              name: "footer.login", 
+              url: "/sign-in"
+            },
+            {
+              name: "footer.cart", 
+              url: "/cart"
+            },
+            {
+              name: "footer.wishlist", 
+              url: "/wishlist"
+            },
+            {
+              name: "footer.shop", 
+              url: "/shop"
+            }
+          ]
         },
         {
-            label: "Quick Link",
-            linkList: [
-                {
-                    name: "About Us",
-                    url: "/about"
-                },
-                {
-                    name: "Privacy Policy",
-                    url: "/privacy-policy"
-                },
-                {
-                    name: "Terms Of Use",
-                    url: "/terms-of-use"
-                },
-                {
-                    name: "Contact",
-                    url: "/contact"
-                },
-            ]
+          label: "footer.quick_link",
+          linkList: [
+            {
+              name: "footer.about_us",
+              url: "/about"
+            },
+            {
+              name: "footer.privacy_policy",
+              url: "/privacy-policy"
+            },
+            {
+              name: "footer.terms_of_use",
+              url: "/terms-of-use"
+            },
+            {
+              name: "footer.contact",
+              url: "/contact"
+            },
+          ]
         },
         {
-            label: "Quick Link",
-            linkList: [
-                {
-                    name: "About Us",
-                    url: "/about"
-                },
-                {
-                    name: "Privacy Policy",
-                    url: "/privacy-policy"
-                },
-                {
-                    name: "Terms Of Use",
-                    url: "/terms-of-use"
-                },
-                {
-                    name: "Contact",
-                    url: "/contact"
-                },
-            ]
+          label: "footer.quick_link",
+          linkList: [
+            {
+              name: "footer.about_us",
+              url: "/about"
+            },
+            {
+              name: "footer.privacy_policy",
+              url: "/privacy-policy"
+            },
+            {
+              name: "footer.terms_of_use",
+              url: "/terms-of-use"
+            },
+            {
+              name: "footer.contact",
+              url: "/contact"
+            },
+          ]
         }
-    ],
+      ],
 
 
     footerInfo: {
