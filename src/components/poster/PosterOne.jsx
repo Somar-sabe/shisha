@@ -15,7 +15,7 @@ const PosterOne = (props) => {
               <div className="col-xl-5 col-lg-6">
                 <div className="poster-countdown-content">
                   <SectionTitle 
-                     title={t('kaky.ice_kaktuz_title')}
+                     title={t('kak.ice_kaktuz_title')}
                      subtitle={props.subtitle ?? t('kak.dont_miss')}
                     subColor={props.subColor ?? "highlighter-secondary"}
                     subtitleIcon={props.subtitleIcon ?? "fal fa-headphones-alt"}
