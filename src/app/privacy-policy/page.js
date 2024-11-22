@@ -22,7 +22,7 @@ const PrivacyPolicy = () => {
             <div className="col-lg-10">
               <div className="axil-privacy-policy">
                 <span className="policy-published">
-                {t("privacy_policy.published_on", { date: privacy_policy.effective_date })}
+                Privace policy published date: November 1th, 2024 
                 </span>
                 <h2>{t("privacy_policy.commitment_to_privacy_title")}</h2>
                 <p>{t("privacy_policy.commitment_to_privacy_content")}</p>

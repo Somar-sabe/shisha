@@ -1,29 +1,29 @@
 const ServiceData = [
     {
         icon: "/images/icons/service1.webp",
-        title: "Fast & Secure Delivery",
-        text: "Tell about your service."
+        title: "service1_title",  // Use translation key
+        text: "service1_text"    // Use translation key
     },
     {
         icon: "/images/icons/service2.webp",
-        title: "Next Level Pro Quality",
-        text: "Within 10 days."
+        title: "service2_title",
+        text: "service2_text"
     },
     {
         icon: "/images/icons/service3.webp",
-        title: "24 Hour Return Policy",
-        text: "No question ask."
+        title: "service3_title",
+        text: "service3_text"
     },
     {
         icon: "/images/icons/service4.webp",
-        title: "Pro Quality Support",
-        text: "24/7 Live support."
+        title: "service4_title",
+        text: "service4_text"
     },
     {
         icon: "/images/icons/service5.webp",
-        title: "Next Level Pro Quality",
-        text: "Exclusive Premium Service."
+        title: "service5_title",
+        text: "service5_text"
     }
 ]
 
-export {ServiceData};
+export { ServiceData };

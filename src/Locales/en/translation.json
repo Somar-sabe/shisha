@@ -1,5 +1,15 @@
 
 {
+  "service1_title": "Fast & Secure Delivery",
+  "service1_text": "Tell about your service.",
+  "service2_title": "Next Level Pro Quality",
+  "service2_text": "Within 10 days.",
+  "service3_title": "24 Hour Return Policy",
+  "service3_text": "No question ask.",
+  "service4_title": "Pro Quality Support",
+  "service4_text": "24/7 Live support.",
+  "service5_title": "Next Level Pro Quality",
+  "service5_text": "Exclusive Premium Service.",
   "terms": {
     "overview_title": "Overview",
     "overview_content": "This website (holster-uae.com) is operated by Holster Tobacco GmbH, headquartered in Germany. Throughout the site, the terms 'we', 'us', and 'our' refer to Holster Tobacco GmbH. By accessing or using this website, including any information, tools, or services provided through it, you agree to be bound by the following Terms of Use ('Terms'), including all additional terms, conditions, and policies referenced herein and/or available by hyperlink. These Terms apply to all users of the site, including browsers, vendors, customers, and merchants.",
@@ -148,4 +158,6 @@
     "updates_to_privacy_policy_content": "We may update this Privacy Policy to reflect changes in our practices or legal requirements. Any updates will be posted on this page, with the effective date listed below.",
     "contact_us": "For questions or feedback, please contact us through our website."
   }      
+
+
 }
