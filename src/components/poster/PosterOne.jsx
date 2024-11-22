@@ -3,8 +3,10 @@ import Link from "next/link";
 import SectionTitle from "../elements/SectionTitle";
 import CountDown from "../elements/CountDown";
 import Image from "next/image";
+import { useTranslation } from 'react-i18next';
 
 const PosterOne = (props) => {
+  const { t } = useTranslation();
     return (
       <div className="axil-poster-countdown">
         <div className="container">
@@ -13,8 +15,8 @@ const PosterOne = (props) => {
               <div className="col-xl-5 col-lg-6">
                 <div className="poster-countdown-content">
                   <SectionTitle 
-                     title={`<span style="font-weight: bold; color: #EBA800;">ICE KAKTUZ</span> took first place in 2022 for the <span style="font-weight: bold; color: #EBA800;">BEST FLAVOR</span> on the market`}
-                    subtitle={props.subtitle ?? "Don’t Miss!!"}
+                     title={t('kaky.ice_kaktuz_title')}
+                     subtitle={props.subtitle ?? t('kak.dont_miss')}
                     subColor={props.subColor ?? "highlighter-secondary"}
                     subtitleIcon={props.subtitleIcon ?? "fal fa-headphones-alt"}
                   />       
