@@ -48,7 +48,6 @@
   "shisha_water_pipe": "شيشة / أنبوب ماء",
   "shisha_accessories": "إكسسوارات الشيشة",
   "about": "من نحن",
-  "contact": "اتصل بنا",
   "orders": "الطلبات",
   "addresses": "العناوين",
   "account_details": "تفاصيل الحساب",
@@ -67,7 +66,32 @@
     "shishaAccessories": "إكسسوارات الشيشة"
   },
   
-
+"contact": {
+    "title": "اتصل بنا",
+    "form_title": "نود أن نسمع منك.",
+    "form_description": "إذا كنت قد صنعت منتجات رائعة أو ترغب في العمل معنا، فلا تتردد في التواصل معنا.",
+    "form_name": "الاسم",
+    "form_phone": "الهاتف",
+    "form_email": "البريد الإلكتروني",
+    "form_message": "رسالتك",
+    "form_send_button": "إرسال الرسالة",
+    "form_success_message": "تم إرسال الرسالة بنجاح",
+    "store": {
+      "title": "متجرنا",
+      "address": "برج بي تو بي - المكتب 1602، دبي، الخليج التجاري، الإمارات العربية المتحدة.",
+      "phone": "الهاتف",
+      "email": "البريد الإلكتروني"
+    },
+    "careers": {
+      "title": "الوظائف",
+      "description": "بدلاً من شراء ستة أشياء، اختر شيئاً تحبه حقًا."
+    },
+    "opening_hours": {
+      "title": "ساعات العمل:",
+      "mon_to_sat": "من الإثنين إلى السبت",
+      "sunday": "الأحد"
+    }
+  },
     
 
       "footer": {

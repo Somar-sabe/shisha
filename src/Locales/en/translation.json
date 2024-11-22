@@ -94,6 +94,32 @@
         "wishlist": "Wishlist",
         "shop": "Shop"
 
+      },
+      "contact": {
+        "title": "Contact With Us",
+        "form_title": "We would love to hear from you.",
+        "form_description": "If you’ve got great products you're making or looking to work with us then drop us a line.",
+        "form_name": "Name",
+        "form_phone": "Phone",
+        "form_email": "E-mail",
+        "form_message": "Your Message",
+        "form_send_button": "Send Message",
+        "form_success_message": "Message has been sent successfully",
+        "store": {
+          "title": "Our Store",
+          "address": "B2B Tower - Office 1602, Dubai, Business Bay, UAE.",
+          "phone": "Phone",
+          "email": "Email"
+        },
+        "careers": {
+          "title": "Careers",
+          "description": "Instead of buying six things, one that you really like."
+        },
+        "opening_hours": {
+          "title": "Opening Hours:",
+          "mon_to_sat": "Monday to Saturday",
+          "sunday": "Sundays"
+        }
       }
     
   

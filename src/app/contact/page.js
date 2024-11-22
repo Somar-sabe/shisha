@@ -7,40 +7,36 @@ import FooterTwo from "@/components/footer/FooterTwo";
 import HeaderFive from "@/components/header/HeaderFive";
 import ServiceTwo from "@/components/services/ServiceTwo";
 import { StoreInfo } from "@/data/Common";
+import { useTranslation } from 'react-i18next';  // Import the translation hook
 
 const ContactUs = () => {
 
     const [ result, showresult ] = useState(false);
-    const {
-        register,
-        handleSubmit,
-        reset,
-        formState: { errors },
-    } = useForm();
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
+    const { t } = useTranslation();  // Get the translation function
 
-const sendEmail = (formData) => {
-	emailjs.send('service_g3aufzu', 'template_sk4dqiz', formData, '9L_sRsO66U253zcxC')
-		.then((result) => {
-			console.log(result.text);
-		}, (error) => {
-			console.log(error.text);
-		});
-		reset();
-		showresult(true);
-	};
+    const sendEmail = (formData) => {
+        emailjs.send('service_g3aufzu', 'template_sk4dqiz', formData, '9L_sRsO66U253zcxC')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+        reset();
+        showresult(true);
+    };
 
-	setTimeout(() => {
-		showresult(false);
-	}, 2000);
-
+    setTimeout(() => {
+        showresult(false);
+    }, 2000);
 
     return ( 
         <>
         <HeaderFive headerSlider />
         <main className="main-wrapper">
             <Breadcrumb 
-            activeItem="Contact"
-            title="Contact With Us"
+                activeItem={t('contact.title')}
+                title={t('contact.title')}
             />
             <div className="axil-contact-page-area axil-section-gap">
                 <div className="container">
@@ -49,41 +45,41 @@ const sendEmail = (formData) => {
                             <div className="col-lg-8">
                                 <div className="contact-form">
                                     <div>
-                                        <h3 className="title mb--10">We would love to hear from you.</h3>
-                                        <p>If you’ve got great products your making or looking to work with us then drop us a line.</p>
+                                        <h3 className="title mb--10">{t('contact.form_title')}</h3>
+                                        <p>{t('contact.form_description')}</p>
                                         <form onSubmit={handleSubmit(sendEmail)}>
                                             <div className="row row--10">
                                                 <div className="col-lg-4">
                                                     <div className="form-group">
-                                                        <label>Name <span>*</span></label>
+                                                        <label>{t('contact.form_name')} <span>*</span></label>
                                                         <input type="text" {...register('name', { required: true })} />
-                                                        {errors.name && <p className="error">Name is required.</p>}
+                                                        {errors.name && <p className="error">{t('contact.form_name')} {t('common.required')}</p>}
                                                     </div>
                                                 </div>
                                                 <div className="col-lg-4">
                                                     <div className="form-group">
-                                                        <label>Phone <span>*</span></label>
+                                                        <label>{t('contact.form_phone')} <span>*</span></label>
                                                         <input type="text" {...register('phone', { required: true })} />
-                                                        {errors.phone && <p className="error">Phone is required.</p>}
+                                                        {errors.phone && <p className="error">{t('contact.form_phone')} {t('common.required')}</p>}
                                                     </div>
                                                 </div>
                                                 <div className="col-lg-4">
                                                     <div className="form-group">
-                                                        <label>E-mail <span>*</span></label>
+                                                        <label>{t('contact.form_email')} <span>*</span></label>
                                                         <input type="email" {...register('email', { required: true })} />
-                                                        {errors.email && <p className="error">Email is required.</p>}
+                                                        {errors.email && <p className="error">{t('contact.form_email')} {t('common.required')}</p>}
                                                     </div>
                                                 </div>
                                                 <div className="col-12">
                                                     <div className="form-group">
-                                                        <label>Your Message</label>
+                                                        <label>{t('contact.form_message')}</label>
                                                         <textarea {...register('message')} cols={1} rows={2}  />
                                                     </div>
                                                 </div>
                                                 <div className="col-12">
                                                     <div className="form-group mb--0">
-                                                        <button name="submit" type="submit" className="axil-btn btn-bg-primary">Send Message</button>
-                                                        {result && <p className="success">Message has been sent successfully</p>}
+                                                        <button name="submit" type="submit" className="axil-btn btn-bg-primary">{t('contact.form_send_button')}</button>
+                                                        {result && <p className="success">{t('contact.form_success_message')}</p>}
                                                     </div>
                                                 </div>
                                             </div>
@@ -93,36 +89,35 @@ const sendEmail = (formData) => {
                             </div> 
                             <div className="col-lg-4">
                                 <div className="contact-location mb--40">
-                                    <h4 className="title mb--20">Our Store</h4>
-                                    <span className="address mb--20">{StoreInfo.address}</span>
-                                    <span className="phone">Phone: {StoreInfo.phone}</span>
-                                    <span className="email">Email: {StoreInfo.email}</span>
+                                    <h4 className="title mb--20">{t('contact.store.title')}</h4>
+                                    <span className="address mb--20">{t('contact.store.address')}</span>
+                                    <span className="phone">{t('contact.store.phone')}: {StoreInfo.phone}</span>
+                                    <span className="email">{t('contact.store.email')}: {StoreInfo.email}</span>
                                 </div>
                                 <div className="contact-career mb--40">
-                                    <h4 className="title mb--20">Careers</h4>
-                                    <p>Instead of buying six things, one that you really like.</p>
+                                    <h4 className="title mb--20">{t('contact.careers.title')}</h4>
+                                    <p>{t('contact.careers.description')}</p>
                                 </div>
                                 <div className="opening-hour">
-                                    <h4 className="title mb--20">Opening Hours:</h4>
-                                    <p>Monday to Saturday: {StoreInfo.opening.monToSat}
-                                        <br /> Sundays: {StoreInfo.opening.othersDay}
+                                    <h4 className="title mb--20">{t('contact.opening_hours.title')}</h4>
+                                    <p>{t('contact.opening_hours.mon_to_sat')}: {StoreInfo.opening.monToSat}
+                                        <br /> {t('contact.opening_hours.sunday')}: {StoreInfo.opening.othersDay}
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="axil-google-map-wrap axil-section-gap pb--0">
-                    <div className="mapouter">
-    <div className="gmap_canvas">
-        <iframe
-            width={1080}
-            height={500}
-            id="gmap_canvas"
-            src="https://maps.google.com/maps?q=25.191207741825014,55.28528176591077&t=&z=13&ie=UTF8&iwloc=&output=embed"
-        />
-    </div>
-</div>
-
+                        <div className="mapouter">
+                            <div className="gmap_canvas">
+                                <iframe
+                                    width={1080}
+                                    height={500}
+                                    id="gmap_canvas"
+                                    src="https://maps.google.com/maps?q=25.191207741825014,55.28528176591077&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -130,7 +125,7 @@ const sendEmail = (formData) => {
         </main>
         <FooterTwo />
         </>
-     );
+    );
 }
- 
+
 export default ContactUs;
