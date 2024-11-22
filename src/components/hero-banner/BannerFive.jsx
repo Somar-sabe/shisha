@@ -17,7 +17,7 @@ const BannerFive = () => {
                   <div className="single-slide">
                       <div className="main-slider-content">
                         <span className="subtitle">
-                          <i className={data.subIcon} /> {data.subTitle}
+                          <i className={data.subIcon} /> {t("hotdeal")}
                         </span>
                         <h1 className="title">{t(data.titleKey)}</h1>
                         <div className="shop-btn">

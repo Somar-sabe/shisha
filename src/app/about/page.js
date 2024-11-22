@@ -56,30 +56,62 @@ const AboutUs = () => {
                 </div>
             </Section>
             <section className="about-info-area">
-                <div className="container">
-                    <div className="row row--20">
-                        {AboutAchievment?.map((data, index) => (
-                            <div className="col-lg-4" key={index}>
-                                <div className="about-info-box">
-                                    <div className="thumb">
-                                        <Image 
-                                            src={data.icon} 
-                                            width={60}
-                                            height={60}
-                                            alt="Shape"
-                                        />
-                                    </div>
-                                    <div className="content">
-                                        <h6 className="title">{data.title}</h6>
-                                        <p>{data.text}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
+    <div className="container">
+        <div className="row row--20">
+            <div className="col-lg-4">
+                <div className="about-info-box">
+                    <div className="thumb">
+                        <Image 
+                            src="/images/about/shape-01.png" 
+                            width={60}
+                            height={60}
+                            alt="Achievement Icon 1"
+                        />
+                    </div>
+                    <div className="content">
+                        <h6 className="title">{t("AchievementTitle1")}</h6>
+                        <p>{t("AchievementDescription1")}</p>
                     </div>
                 </div>
+            </div>
 
-            </section>
+            <div className="col-lg-4">
+                <div className="about-info-box">
+                    <div className="thumb">
+                        <Image 
+                            src="/images/about/shape-02.png" 
+                            width={60}
+                            height={60}
+                            alt="Achievement Icon 2"
+                        />
+                    </div>
+                    <div className="content">
+                        <h6 className="title">{t("AchievementTitle2")}</h6>
+                        <p>{t("AchievementDescription2")}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className="col-lg-4">
+                <div className="about-info-box">
+                    <div className="thumb">
+                        <Image 
+                            src="/images/about/shape-03.png" 
+                            width={60}
+                            height={60}
+                            alt="Achievement Icon 3"
+                        />
+                    </div>
+                    <div className="content">
+                        <h6 className="title">{t("AchievementTitle3")}</h6>
+                        <p>{t("AchievementDescription3")}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
             <section className="axil-team-area axil-section-gap bg-wild-sand">
                 <div className="team-left-fullwidth">
                     <div className="container ml--xxl-0">

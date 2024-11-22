@@ -5,14 +5,14 @@
   "description1": "We at Holster Tobacco work with high-quality Virginia tobacco and have expanded our portfolio with the Dark Leaf.",
   "description2": "With more than eight years of experience, we are one of the largest traditional companies in Europe.",
   
-  
-      "aboutAchievement": {
-          "title1": "50+ Employees",
-          "text1": "Over 50 dedicated professionals ensuring the finest quality tobacco.",
-          "title2": "20 Countries",
-          "text2": "Now available in over 20 countries.",
-          "iconAlt": "Achievement icon"
-      },
+
+          "AchievementTitle1": "50+ Employees",
+          "AchievementDescription1": "Over 50 dedicated professionals ensuring the finest quality tobacco.",
+          "AchievementTitle2": "20 Countries",
+          "AchievementDescription2": "Now available in over 20 countries.",
+          "AchievementTitle3": "Own Production",
+          "AchievementDescription3": "Produced entirely in-house in Germany, ensuring premium quality in every product we deliver worldwide.",
+
       "breadcrumb": {
           "activeItem": "About Us",
           "title": "About"
@@ -31,6 +31,7 @@
   "addresses": "Addresses",
   "accountDetails": "Account Details",
   "shop_now":"Shop Now",
+  "hotdeal":"Hot Deal",
   "best_sellers": "Best Sellers",
   "this_month": "This Month",
   "ice_kaktuz_award": "ICE KAKTUZ won first place in 2022 as the best flavor in the market",
