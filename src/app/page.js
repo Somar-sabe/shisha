@@ -67,7 +67,7 @@ const Home = () => {
                 </div>
                 <div className="row">
                     <div className="col-lg-12 text-center mt--20 mt_sm--0">
-                        <Link href="/shop" className="axil-btn btn-bg-lighter btn-load-more">View All Products</Link>
+                        <Link href="/shop" className="axil-btn btn-bg-lighter btn-load-more">{t('viewAllProducts')}</Link>
                     </div>
                 </div>
             </Section>
