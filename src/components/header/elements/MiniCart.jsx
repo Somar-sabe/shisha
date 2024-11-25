@@ -3,6 +3,7 @@ import { useRouter } from 'next/navigation'
 import { useDispatch, useSelector } from "react-redux";
 import { removeCartItem, miniCartHandler } from "@/store/slices/productSlice";
 import { useCurrency } from '@/app/contexts/CurrencyContext'; // Import the custom hook
+import { useTranslation } from 'next-i18next';
 const currencyRates = {
   AED: 1,
   USD: 0.27,
@@ -11,6 +12,7 @@ const currencyRates = {
 
 
 const MiniCart = () => {
+  const { t } = useTranslation(); 
 const dispatch = useDispatch();
 const getProducts = useSelector((state) => state.productData);
 const router = useRouter();
@@ -91,8 +93,8 @@ return (
                 </span>
               </h3>
               <div className="group-btn">
-				<button className="axil-btn btn-bg-primary viewcart-btn" onClick={() => miniCartFooterBtnHandler("/cart")}>View Cart</button>
-				<button className="axil-btn btn-bg-secondary checkout-btn" onClick={() => miniCartFooterBtnHandler("/checkout")}>Checkout</button>
+				<button className="axil-btn btn-bg-primary viewcart-btn" onClick={() => miniCartFooterBtnHandler("/cart")}>{t('viewCart')}</button>
+				<button className="axil-btn btn-bg-secondary checkout-btn" onClick={() => miniCartFooterBtnHandler("/checkout")}>{t('checkout')}</button>
               </div>
             </div>
           ) : (
