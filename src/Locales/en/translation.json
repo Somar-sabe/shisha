@@ -1,5 +1,11 @@
 
 {
+  "quickLinks": "QUICKLINKS",
+  "myAccount": "My Account",
+  "orde": "Orders",
+  "login": "Login",
+  "noAccount": "No account yet?",
+  "registerHere": "REGISTER HERE.",
       "noMoreData": "No More Data",
     "loadMore": "Load more",
   "viewAllProducts": "View All Products",

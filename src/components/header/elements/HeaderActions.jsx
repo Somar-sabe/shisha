@@ -77,24 +77,24 @@ const mobileMneuHandler = (data) => {
           <div
             className={`my-account-dropdown ${accountDropdown ? "open" : ""}`}
           >
-            <span className="title">QUICKLINKS</span>
+            <span className="title">{t('quickLinks')}</span>
             <ul>
               <li>
-                <Link href="/dashboard">My Account</Link>
+                <Link href="/dashboard">{t('myAccount')}</Link>
               </li>
               <li>
-                <Link href="/dashboard/orders">Orders</Link>
+                <Link href="/dashboard/orders">{t('orde')}</Link>
               </li>
             </ul>
             <div className="login-btn">
               <Link href="/sign-in" className="axil-btn btn-bg-primary">
-                Login
+              {t('login')}
               </Link>
             </div>
             <div className="reg-footer text-center">
-              No account yet?
+            {t('noAccount')}
               <Link href="/sign-up" className="btn-link">
-                REGISTER HERE.
+              {t('registerHere')}
               </Link>
             </div>
           </div>
