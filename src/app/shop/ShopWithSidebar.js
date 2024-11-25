@@ -79,7 +79,7 @@ const ShopWithSidebar = () => {
                         )) : <h4 className="text-center pt--30">No Product Found</h4>}
                     </div>
                     <div className="text-center pt--20">
-                        <button className={`axil-btn btn-bg-lighter btn-load-more ${filterProduct.length < productShow ? "disabled" : ""}`} onClick={ProductShowHandler}>{filterProduct.length < productShow ? "No More Data" : "Load more"}</button>
+                        <button className={`axil-btn btn-bg-lighter btn-load-more ${filterProduct.length < productShow ? "disabled" : ""}`} onClick={ProductShowHandler}>{filterProduct.length < productShow ? t('noMoreData') : t('loadMore')}</button>
                     </div>
                 </div>
             </div>
