@@ -39,7 +39,7 @@ return (
       <div className={`cart-dropdown ${getProducts.isMinicartOpen ? "open" : ""}`}>
         <div className="cart-content-wrap">
           <div className="cart-header">
-            <h2 className="header-title">Cart review</h2>
+            <h2 className="header-title">{t('review')}</h2>
             <button
               className="cart-close sidebar-close"
               onClick={() => cartHandler(false)}
@@ -87,7 +87,7 @@ return (
           {getProducts.cartItems.length > 0 ? (
             <div className="cart-footer">
               <h3 className="cart-subtotal">
-                <span className="subtotal-title">{t('subtotal')}:</span>
+                <span className="subtotal-title">{t('subtotal')}</span>
                 <span className="subtotal-amount">
                   {convertPrice(getProducts.cartTotalAmount)} {currency}
                 </span>
