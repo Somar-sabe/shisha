@@ -74,7 +74,7 @@ const SingleLayoutTwo = ({singleData}) => {
                                 <div className="position-sticky sticky-top">
                                     <div className="single-product-content nft-single-product-content">
                                         <div className="inner">
-                                            <h2 className="product-title" style={{ paddingLeft: "25px" }}>{singleData.title}</h2>
+                                            <h2 className="product-title" style={{ paddingLeft: "25px" }}>{t(`products.${productKey}.title`)}</h2>
                                             <div className="price-amount price-offer-amount" style={{ paddingLeft: "25px" }}>
                                                 <span className="price current-price">{convertPrice(singleData.price)} {currency}</span>
                                             </div>
