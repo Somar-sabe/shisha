@@ -5,8 +5,10 @@ import ProductsData from "@/data/Products";
 import ProductSeven from "@/components/product/ProductSeven";
 import { slugify } from "@/utils";
 import { Category } from "@/data/ProductCategory";
+import { useTranslation } from "react-i18next";
 
 const ShopWithSidebar = () => {
+    const { t } = useTranslation();
     const [filterProduct, setFilterProduct] = useState(ProductsData);
     const [productShow, setProductShow] = useState(9);
     const [filterText, setFilterText] = useState('');
@@ -53,7 +55,7 @@ const ShopWithSidebar = () => {
                             <button className="sidebar-close filter-close-btn"><i className="fas fa-times" /></button>
                         </div>
                         <div className={`toggle-list product-categories ${cateToggle ? "active" : ""}`}>
-                            <h6 onClick={() => setCateToggle(!cateToggle)} className="title">CATEGORIES</h6>
+                            <h6 onClick={() => setCateToggle(!cateToggle)} className="title">{t("explore_products")}</h6>
                             {cateToggle && 
                                 <div className="shop-submenu">
                                     <ul>

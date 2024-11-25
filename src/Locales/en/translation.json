@@ -1,5 +1,8 @@
 
 {
+  "shob": "Shop",
+    "explore_products": "CATEGORIES",
+    "search_placeholder": "What are you looking for?",
 
     "products": {
       "doubleapple": {

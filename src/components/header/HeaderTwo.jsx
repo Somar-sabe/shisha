@@ -11,8 +11,10 @@ import HeaderActions from "@/components/header/elements/HeaderActions";
 import HeaderAsideMenu from "./elements/HeaderAsideMenu";
 import CountDown from "@/components/elements/CountDown";
 import ProductSearchModal from "./elements/ProductSearchModal";
+import { useTranslation } from "react-i18next";
 
 const HeaderTwo = () => {
+  const { t } = useTranslation();
   const menuOption = useSelector((state) => state.menu);
 	const [searchToggle, setSearchToggle] = useState(false);
 	const searchBoxToggleHandler = () => {
@@ -42,7 +44,7 @@ const HeaderTwo = () => {
                     type="search"
                     className="placeholder product-search-input"
                     name="search2"
-                    placeholder="What are you looking for?"
+                    placeholder={t("search_placeholder")}
                     autoComplete="off"
                   />
                   <button type="submit" className="icon wooc-btn-search">

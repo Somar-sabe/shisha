@@ -5,8 +5,10 @@ import ProductSearchModal from "@/components/header/elements/ProductSearchModal"
 import MiniCart from "@/components/header/elements/MiniCart";
 import { miniCartHandler } from "@/store/slices/productSlice";
 import { mobileMenu } from "@/store/slices/menuSlice";
+import { useTranslation } from "react-i18next";
 
 const HeaderActions = (props) => {
+  const { t } = useTranslation();
   const [searchToggle, setSearchToggle] = useState(false);
   const [accountDropdown, setaccountDropdown] = useState(false);
 
@@ -35,7 +37,7 @@ const mobileMneuHandler = (data) => {
               type="search"
               className="placeholder product-search-input"
               name="search2"
-              placeholder="What are you looking for?"
+              placeholder={t("search_placeholder")}
               autoComplete="off"
             />
             <button type="submit" className="icon wooc-btn-search">
