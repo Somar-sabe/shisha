@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart, removeWishlistItem } from "@/store/slices/productSlice";
 import HeaderFive from "@/components/header/HeaderOne";
-import FooterOne from "@/components/footer/FooterTwo";
+import FooterTwo from "@/components/footer/FooterTwo";
 
 const Wishlist = () => {
     const dispatch = useDispatch();
@@ -86,7 +86,7 @@ const Wishlist = () => {
                     </div>
                 </div>
             </main>
-            <FooterOne />
+            <FooterTwo />
         </>
     );
 }
