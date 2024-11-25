@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { useTranslation } from 'next-i18next';
 import { useDispatch, useSelector } from "react-redux";
 import {
   addToCart,
@@ -8,6 +9,7 @@ import {
 } from "@/store/slices/productSlice";
 
 const ActionButtons = (props) => {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const getWishlist = useSelector((state) => state.productData.wishlistItems);
   const isWishlistAdded = getWishlist.filter((data) => data.id === props.productAction.id);
@@ -44,7 +46,7 @@ const ActionButtons = (props) => {
             </Link>
           ) : (
             <button onClick={() => handleAddToCart(props.productAction)}>
-              Add to Cart
+            {t('addToCart')}
             </button>
           )}
         </li>
