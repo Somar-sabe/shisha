@@ -5,6 +5,8 @@ import { useState } from "react";
 import Image from "next/image";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart, addToWishlist } from "@/store/slices/productSlice";
+import { useTranslation } from "react-i18next";
+
 
 const currencyRates = {
     AED: 1,
@@ -13,6 +15,9 @@ const currencyRates = {
   };
 
 const SingleLayoutTwo = ({singleData}) => {
+    const productKey = singleData.title.replace(/\s+/g, "").toLowerCase(); // Example: "Double Apple" -> "doubleapple"
+
+    const { t } = useTranslation();
     const dispatch = useDispatch();
     const [quantity, setquantity] = useState(1);
     const [productSize, setProductSize] = useState("");
@@ -94,7 +99,7 @@ const SingleLayoutTwo = ({singleData}) => {
                                                 <div className="container">
                                                     <ul className="nav tabs" id="myTab" role="tablist">
                                                         <li className="nav-item" role="presentation">
-                                                            <a className="active" id="description-tab" data-bs-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+                                                            <a className="active" id="description-tab" data-bs-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="true">{t('prodescrip')}</a>
                                                         </li>
                                                         {singleData.addInfo && singleData.addInfo.length > 0 && (
                 <li className="nav-item" role="presentation">
@@ -106,7 +111,7 @@ const SingleLayoutTwo = ({singleData}) => {
                         aria-controls="additional-info"
                         aria-selected="false"
                     >
-                        Mixology
+                        {t('mixology')}
                     </a>
                 </li>
             )}                           
@@ -114,8 +119,8 @@ const SingleLayoutTwo = ({singleData}) => {
                                                     <div className="tab-content" id="myTabContent">
                                                         <div className="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
                                                             <div className="product-additional-info">
-                                                                <p className="mb--15"><strong>{singleData.description.textDesc.title}</strong></p>
-                                                                <p>{singleData.description.textDesc.text}</p>
+                                                                <p className="mb--15"><strong>{t("aboutthis")}</strong></p>
+                                                                <p>{t(`products.${productKey}.textDesc`)}</p>
                                                                 <div className="table-responsive">
                                                                     <table>
                                                                         <tbody>

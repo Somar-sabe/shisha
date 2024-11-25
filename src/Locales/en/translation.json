@@ -1,5 +1,44 @@
 
 {
+
+    "products": {
+      "doubleapple": {
+        "textDesc": "Double Apple is a blend of red and green apple flavours with a hint of anise. It tastes like fresh apples with a gentle anise note. This mix combines classic flavours with a modern touch for a unique smoking experience."
+      },
+      "vivalafiesta": {
+        "textDesc": "Viva La Fiesta is a tropical fruit mix that brings you to Africa. It has fresh, juicy fruits that smell great and are perfect for relaxing with friends or after a long day. Enjoy this tasty mix and let your worries go!"
+      },
+      "icekaktuz": {
+        "textDesc": "With a refreshing cactus taste, Ice Kaktuz offers a perfect balance of coolness and sour-sweetness. It’s a fan favourite and the best-seller at Holster. Try this blend that keeps customers returning for more."
+      },
+      "love69gold": {
+        "textDesc": "Enjoy “Love 69,” a refreshing mix of juicy melons and sweet passion fruit. Each puff gives you a tasty and energetic experience that is vibrant and memorable. Let “Love 69” take you on a journey of tropical flavours and fun."
+      },
+      "leepunch": {
+        "textDesc": "Introducing Lee Punch, a lively new flavour in the Holster Punch lineup! Its exotic lemon flavour delivers an exciting burst, blending juicy lemon juice with a hint of freshness. The refreshing aroma and sour kick create a smooth sensation that feels energetic."
+      },
+      "redcitruz": {
+        "textDesc": "Holster Noir is a mix of dark blend tobacco, giving it a strong, earthy flavour. This flavour blends well with the sweet and fruity taste of grapefruit and the rich notes of blood orange in every puff. Each puff feels special and enjoyable."
+      },
+      "joosy": {
+  "textDesc": "Juicy raspberries and sweet strawberries blend together in this fruity mix. JOOSY captures the best berry flavour, making it a top choice for fruit lovers. It uses only the ripest and juiciest fruits for the best taste!"
+}
+,"kiwip": {
+  "textDesc": "Fresh green kiwis are picked and washed in ice water, full of juicy flavour. Each drop of juice is carefully squeezed to ensure pure kiwi taste. Kiwi. P is a delicious blend of tangy and sweet that shisha lovers will enjoy."
+}
+,
+"grapemint": {
+  "textDesc": "Grape Mint blends sour black grape with a hint of fresh mint for a refreshing taste. Sweet white grapes add smoothness, creating a perfect balance. This mix brings the juicy flavour of ripe fruit, perfect for relaxing after a long day."
+}
+
+      
+    },
+  
+  
+   "mixology": "Mixology",
+   "prodescrip": "Description",
+   "aboutthis":"About This Product",
+
   "service1_title": "Fast & Secure Delivery",
   "service1_text": "Tell about your service.",
   "service2_title": "Next Level Pro Quality",
