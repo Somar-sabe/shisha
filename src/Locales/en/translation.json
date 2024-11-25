@@ -1,5 +1,7 @@
 
 {
+      "empty": "Your cart is empty",
+    "subtotal": "Subtotal",
     "viewCart": "View Cart",
   "checkout": "Checkout",
   "addToCart": "Add to Cart",

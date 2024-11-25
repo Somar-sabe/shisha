@@ -80,14 +80,14 @@ return (
                   </li>
                 ))
               ) : (
-                <h4 className="text-center">Your cart are empty</h4>
+                <h4 className="text-center">{t('empty')}</h4>
               )}
             </ul>
           </div>
           {getProducts.cartItems.length > 0 ? (
             <div className="cart-footer">
               <h3 className="cart-subtotal">
-                <span className="subtotal-title">Subtotal:</span>
+                <span className="subtotal-title">{t('subtotal')}:</span>
                 <span className="subtotal-amount">
                   {convertPrice(getProducts.cartTotalAmount)} {currency}
                 </span>
