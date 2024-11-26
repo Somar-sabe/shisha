@@ -2,6 +2,9 @@ import clientPromise from '@/lib/mongodb';
 import bcrypt from 'bcrypt';
 
 export default async function handler(req, res) {
+    res.setHeader('Access-Control-Allow-Origin', '*'); // Replace '*' with a specific domain if needed
+    res.setHeader('Access-Control-Allow-Methods', 'POST');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
     if (req.method === 'POST') {
         const { userName, email, password } = req.body;
 
