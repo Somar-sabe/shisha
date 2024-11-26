@@ -5,6 +5,10 @@ export default async function handler(req, res) {
     res.setHeader('Access-Control-Allow-Origin', '*'); // Replace '*' with a specific domain if needed
     res.setHeader('Access-Control-Allow-Methods', 'POST');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    if (req.method === 'OPTIONS') {
+        return res.status(200).end(); // Respond with a 200 status code to handle preflight requests
+    }
+    
     if (req.method === 'POST') {
         const { userName, email, password } = req.body;
 
