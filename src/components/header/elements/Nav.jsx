@@ -10,7 +10,7 @@ const Nav = () => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
   const menuOption = useSelector((state) => state.menu);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(0); 
   const [openMenu, setOpenMenu] = useState(null);
 
   const mobileMenuHandler = (data) => {
