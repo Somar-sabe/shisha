@@ -1,4 +1,3 @@
-'use client';
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -23,14 +22,22 @@ const Nav = () => {
   };
 
   useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
 
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    if (typeof window !== "undefined") {
+      // Set the initial window width
+      setWindowWidth(window.innerWidth);
+  
+      // Update window width on resize
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
+  
+      window.addEventListener("resize", handleResize);
+  
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
   }, []);
 
   return (
