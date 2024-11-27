@@ -7,60 +7,37 @@ import { HeaderMenu } from "@/data/Menu";
 import { mobileMenu } from "@/store/slices/menuSlice";
 
 const Nav = () => {
-  const { t } = useTranslation(); 
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const menuOption = useSelector((state) => state.menu);
-  const [windowWidth, setWindowWidth] = useState();
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [openMenu, setOpenMenu] = useState(null);
 
-  const mobileMneuHandler = (data) => {
+  const mobileMenuHandler = (data) => {
     dispatch(mobileMenu(data));
   };
 
- 
+  const toggleSubMenu = (index) => {
+    setOpenMenu(openMenu === index ? null : index);
+  };
 
   useEffect(() => {
-    const mobileMenuToggleHandler = () => {
-      let windowWidthCheck = window.innerWidth;
-      setWindowWidth(windowWidthCheck);
-      window.addEventListener("resize", (e) => {
-        let windowWidth = window.innerWidth;
-        setWindowWidth(windowWidth);
-      });
-  
-      let subMenuToggler = document.getElementsByClassName("submenu-link");
-      if (windowWidth < 992) {
-        for (let i = 0; i < subMenuToggler.length; i++) {
-          let element = subMenuToggler[i];
-          element.addEventListener("click", function (e) {
-            e.preventDefault();
-            if (element.offsetParent.classList.contains("open")) {
-              for (let j = 0; j < subMenuToggler.length; j++) {
-                const subElem = subMenuToggler[j];
-                subElem.offsetParent.classList.remove("open");
-                subElem.nextSibling.style.display = "none";
-              }
-            } else {
-              for (let j = 0; j < subMenuToggler.length; j++) {
-                const subElem = subMenuToggler[j];
-                subElem.offsetParent.classList.remove("open");
-                subElem.nextSibling.style.display = "none";
-              }
-              element.offsetParent.classList.add("open");
-              element.nextSibling.style.display = "block";
-            }
-          });
-        }
-      }
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
     };
-    mobileMenuToggleHandler();
-  }, [windowWidth]);
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <>
       <nav className="mainmenu-nav">
         <button
           className="mobile-close-btn mobile-nav-toggler"
-          onClick={() => mobileMneuHandler(false)}
+          onClick={() => mobileMenuHandler(false)}
         >
           <i className="fas fa-times" />
         </button>
@@ -76,16 +53,42 @@ const Nav = () => {
         </div>
         <ul className="mainmenu">
           {HeaderMenu.map((menuItem, index) => (
-            <li className={menuItem.hasChildren ? "menu-item-has-children" : ""} key={index}>
-              <Link className="submenu-link" href={menuItem.url}>
-                {t(menuItem.name)} 
+            <li
+              className={`menu-item-has-children ${
+                openMenu === index ? "open" : ""
+              }`}
+              key={index}
+            >
+              <Link
+                className="submenu-link"
+                href={menuItem.url}
+                onClick={(e) => {
+                  if (windowWidth < 992 && menuItem.hasChildren) {
+                    e.preventDefault();
+                    toggleSubMenu(index);
+                  }
+                }}
+              >
+                {t(menuItem.name)}
+                {/* Render dropdown icon only for "Shop" */}
+                {menuItem.name === "Shop" && menuItem.hasChildren && (
+                  <span className="dropdown-icon">▼</span>
+                )}
               </Link>
               {menuItem.hasChildren && (
-                <ul className="axil-submenu">
+                <ul
+                  className="axil-submenu"
+                  style={{
+                    display: openMenu === index ? "block" : "none",
+                  }}
+                >
                   {menuItem.children.map((submenu, subIndex) => (
                     <li key={subIndex}>
-                      <Link onClick={() => mobileMneuHandler(false)} href={submenu.url}>
-                        {t(submenu.name)} 
+                      <Link
+                        onClick={() => mobileMenuHandler(false)}
+                        href={submenu.url}
+                      >
+                        {t(submenu.name)}
                       </Link>
                     </li>
                   ))}
@@ -96,7 +99,7 @@ const Nav = () => {
         </ul>
       </nav>
       {menuOption.isMobileMenuOpen && windowWidth < 992 && (
-        <div className="closeMask" onClick={() => mobileMneuHandler(false)}></div>
+        <div className="closeMask" onClick={() => mobileMenuHandler(false)}></div>
       )}
     </>
   );
