@@ -50,7 +50,7 @@ const Nav = () => {
           <i className="fas fa-times" />
         </button>
         <div className="mobile-nav-brand">
-          <Link href="/home/furniture" className="logo">
+          <Link href="/" className="logo">
             <Image
               src="/images/logo/Holsterfont.png"
               alt="Site Logo"
