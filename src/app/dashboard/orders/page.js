@@ -63,7 +63,7 @@ const UserOrders = () => {
                                 <tr key={order._id}>  
                                     <th scope="row">#{order.orderId}</th>
                                     <td>{new Date(order.orderDate).toLocaleDateString()}</td>  
-                                    <th scope="row">#{order.phone}</th>
+                                    <th scope="row">{order.phone}</th>
                                     <td>{order.status || "Processing"}</td>  
                                     <td>{order.totalAmount} AED </td>  
                                     <td>
