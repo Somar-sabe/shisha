@@ -29,12 +29,10 @@ const Nav = () => {
       let menuLinks = document.getElementsByClassName("submenu-link");
 
       if (windowWidth < 992) {
-        // Attach click handler to both submenu and non-submenu items
         for (let i = 0; i < menuLinks.length; i++) {
           const element = menuLinks[i];
 
           element.addEventListener("click", function (e) {
-            // Prevent default behavior
             e.preventDefault();
 
             const isSubMenu = element.offsetParent.classList.contains("menu-item-has-children");
@@ -50,9 +48,7 @@ const Nav = () => {
               }
             }
 
-            // Toggle clicked menu or redirect if no submenu
             if (isSubMenu) {
-              // Open the submenu if it's not already open
               if (!isOpen) {
                 element.offsetParent.classList.add("open");
                 if (element.nextSibling && element.nextSibling.style) {
@@ -60,15 +56,15 @@ const Nav = () => {
                 }
               }
             } else {
-              // For non-submenu items, just handle the navigation
+          
               window.location.href = element.href;
-              mobileMneuHandler(false); // Close mobile menu after clicking
+              mobileMneuHandler(false); 
             }
           });
         }
       }
 
-      // Cleanup on unmount
+      
       return () => {
         window.removeEventListener("resize", updateWindowWidth);
       };

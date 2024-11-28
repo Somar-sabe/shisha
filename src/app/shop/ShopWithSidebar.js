@@ -6,6 +6,7 @@ import ProductSeven from "@/components/product/ProductSeven";
 import { slugify } from "@/utils";
 import { Category } from "@/data/ProductCategory";
 import { useTranslation } from "react-i18next";
+import { useSearchParams } from "next/navigation";
 
 const ShopWithSidebar = () => {
     const { t } = useTranslation();
@@ -13,23 +14,21 @@ const ShopWithSidebar = () => {
     const [productShow, setProductShow] = useState(9);
     const [filterText, setFilterText] = useState('');
     const [cateToggle, setCateToggle] = useState(true);
+    const searchParams = useSearchParams();
 
     const getCategoryFromURL = () => {
-        const params = new URLSearchParams(window.location.search);
-        return params.get('category');
-    }
-
-    const updateCategoryInURL = (category) => {
-        const params = new URLSearchParams(window.location.search);
-        params.set('category', category); // Add or update the category parameter
-        window.history.pushState({}, '', '?' + params.toString());
+        return searchParams.get('category'); // Fetch the category from the query parameters
     }
 
     const categoryHandler = (cateSelect) => {
         const cateFilterProduct = ProductsData.filter((data) => slugify(data.pCate) === cateSelect);
         setFilterProduct(cateFilterProduct);
         setFilterText(cateSelect);
-        updateCategoryInURL(cateSelect); // Update the URL with the selected category
+
+        // Update the URL with the selected category (client-side only)
+        const params = new URLSearchParams(window.location.search);
+        params.set('category', cateSelect);
+        window.history.pushState({}, '', '?' + params.toString());
     }
 
     const ProductShowHandler = () => {
@@ -38,13 +37,14 @@ const ShopWithSidebar = () => {
 
     useEffect(() => {
         const categoryFromURL = getCategoryFromURL();
-        console.log('Category from URL:', categoryFromURL); // Debugging log
         if (categoryFromURL) {
             setFilterText(categoryFromURL);
             const cateFilterProduct = ProductsData.filter((data) => slugify(data.pCate) === categoryFromURL);
             setFilterProduct(cateFilterProduct);
+        } else {
+            setFilterProduct(ProductsData); // Reset to show all products if no category is selected
         }
-    }, []);
+    }, [searchParams]); // Re-run when searchParams change
 
     return (
         <Section pClass="axil-shop-area">
