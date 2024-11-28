@@ -1,5 +1,7 @@
 import clientPromise from '@/lib/mongodb'; // Import the client promise
 import nodemailer from 'nodemailer'; // Import Nodemailer
+import { google } from 'googleapis'; // Import Google APIs for OAuth2
+import { OAuth2Client } from 'google-auth-library';
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
@@ -23,20 +25,37 @@ export default async function handler(req, res) {
       // Insert the order into the database
       const result = await ordersCollection.insertOne(req.body);
 
-      // Set up Nodemailer transporter
+      // Initialize OAuth2 client
+      const oauth2Client = new OAuth2Client(
+        '671566195739-2kd8bmgock8gggnag28ur6uqdibjcq19.apps.googleusercontent.com', // Your client ID
+        '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', // Your client secret
+        'https://www.holster-uae.com/saveOrder' // Your redirect URI
+      );
+
+      // Set the tokens (you would have received these tokens after the OAuth authorization flow)
+      oauth2Client.setCredentials({
+        refresh_token: 'your-refresh-token' // This refresh token will be generated after OAuth authorization
+      });
+
+      // Get the access token using the refresh token
+      const { token } = await oauth2Client.getAccessToken();
+
+      // Create a Nodemailer transporter using the OAuth2 token
       const transporter = nodemailer.createTransport({
-        host: 'smtp.gmail.com', 
-        port: 587, 
-        secure: false, 
+        service: 'gmail',
         auth: {
-          user: 'sabesofteng@gmail.com', 
-          pass: '0934491127sS@', 
+          type: 'OAuth2',
+          user: 'sabesofteng@gmail.com', // The email you want to send from
+          clientId: '671566195739-2kd8bmgock8gggnag28ur6uqdibjcq19.apps.googleusercontent.com',
+          clientSecret: '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',
+          refreshToken: 'your-refresh-token', // The refresh token you obtained
+          accessToken: token.token, // The access token you obtained
         },
       });
 
       // Email content
       const mailOptions = {
-        from: '"Holster Tobacco" ', // Sender address
+        from: '"Holster Tobacco" <sabesofteng@gmail.com>', // Sender address
         to: 'sabesofteng@gmail.com', // Recipient address
         subject: `New Order Received - ${orderId}`, // Subject line
         text: `A new order has been received.\n\nDetails:\nOrder ID: ${orderId}\nCustomer: ${customerName}\nTotal Amount: ${totalAmount}\nPhone: ${phone}`, // Plain text body
