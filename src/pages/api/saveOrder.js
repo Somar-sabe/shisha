@@ -32,7 +32,8 @@ export default async function handler(req, res) {
                <p><strong>Order ID:</strong> ${orderId}</p>
                <p><strong>Customer:</strong> ${customerName}</p>
                <p><strong>Total Amount:</strong> ${totalAmount}</p>
-               <p><strong>Phone:</strong> ${phone}</p>`, // HTML body
+               <p><strong>Phone:</strong> ${phone}</p>
+               <p><strong>Cart items:</strong> ${cartItems}</p>`,  // HTML body
       };
 
       // Send the email
