@@ -3,10 +3,10 @@ import clientPromise from '@/lib/mongodb'; // Import the client promise
 export default async function handler(req, res) {
   if (req.method === 'POST') {
 
-    const { orderId, customerName, totalAmount,customerEmail } = req.body;
+    const { orderId, customerName, totalAmount,customerEmail,phone} = req.body;
 
     // Check if the necessary fields are present
-    if (!orderId || !customerName || !totalAmount || !customerEmail) {
+    if (!orderId || !customerName || !totalAmount || !customerEmail || !phone) {
       return res.status(400).json({
         success: false,
         message: "Missing required fields: orderId, customerName, totalAmount"
