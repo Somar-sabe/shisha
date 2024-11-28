@@ -2,10 +2,10 @@ import nodemailer from 'nodemailer';
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
-    const { orderId, customerName, totalAmount, customerEmail, phone } = req.body;
+    const { orderId, customerName, totalAmount, customerEmail, phone,cartItems } = req.body;
 
     // Check if the necessary fields are present
-    if (!orderId || !customerName || !totalAmount || !customerEmail || !phone) {
+    if (!orderId || !customerName || !totalAmount || !customerEmail || !phone  || !cartItems) {
       return res.status(400).json({
         success: false,
         message: "Missing required fields: orderId, customerName, totalAmount, customerEmail, or phone"
@@ -27,7 +27,7 @@ export default async function handler(req, res) {
         from: `"Holster Tobacco" <${process.env.EMAIL_USER}>`, // Sender address
         to: 'J.Nihad@holster-tobacco.com', // Recipient address
         subject: `New Order Received - ${orderId}`, // Subject line
-        text: `A new order has been received.\n\nDetails:\nOrder ID: ${orderId}\nCustomer: ${customerName}\nTotal Amount: ${totalAmount}\nPhone: ${phone}`, // Plain text body
+        text: `A new order has been received.\n\nDetails:\nOrder ID: ${orderId}\nCustomer: ${customerName}\nTotal Amount: ${totalAmount}\nPhone: ${phone}\nCart items: ${cartItems}`, // Plain text body
         html: `<h1>New Order Received</h1>
                <p><strong>Order ID:</strong> ${orderId}</p>
                <p><strong>Customer:</strong> ${customerName}</p>
