@@ -17,6 +17,7 @@
     "eslint-config-next": "13.4.3",
     "fs": "^0.0.1-security",
     "fslightbox-react": "^1.7.4",
+    "git-filter-repo": "^0.0.30",
     "googleapis": "^144.0.0",
     "gray-matter": "^4.0.3",
     "i18next": "^23.16.4",
