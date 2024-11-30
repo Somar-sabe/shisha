@@ -773,7 +773,7 @@ const ProductsData = [
         thumbnail: "/images/product/furniture/NOIR_Grape Mint_webshop_UAE.png",
         pCate: "Shisha Tobacco",
         cate: "Furniture",
-        price: 85,
+        price: 65,
         productType: "simple",
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
@@ -820,7 +820,7 @@ const ProductsData = [
         thumbnail: "/images/product/furniture/holster_bowl-mat_transparency.webp",
         pCate: "Shisha Accssesores",
         cate: "Furniture",
-        price: 45,
+        price: 65,
         productType: "simple",
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
@@ -855,7 +855,7 @@ const ProductsData = [
         thumbnail: "/images/product/furniture/holster_mat-turquoise_trans.webp",
         pCate: "Shisha Accssesores",
         cate: "Furniture",
-        price: 58.64,
+        price: 65,
         productType: "simple",
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
@@ -893,7 +893,7 @@ const ProductsData = [
         thumbnail: "/images/product/furniture/holster_mat-pink_trans.webp",
         pCate: "Shisha Accssesores",
         cate: "Furniture",
-        price: 58.64,
+        price: 65,
         productType: "simple",
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
@@ -931,7 +931,7 @@ const ProductsData = [
         thumbnail: "/images/product/furniture/holster_mat-red_trans.webp",
         pCate: "Shisha Accssesores",
         cate: "Furniture",
-        price: 58.64,
+        price: 65,
         productType: "simple",
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
@@ -968,7 +968,7 @@ const ProductsData = [
         thumbnail: "/images/product/furniture/ice-kaktuz_bowl-mat_transparency.webp",
         pCate: "Shisha Accssesores",
         cate: "Furnitur",
-        price: 45,
+        price: 65,
         productType: "simple",
         shortDes: {
             text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
