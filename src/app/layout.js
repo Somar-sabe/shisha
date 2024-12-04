@@ -5,6 +5,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick-theme.css";
 import "@/styles/style.scss";
 import { CurrencyProvider } from '@/app/contexts/CurrencyContext';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 const RootLayout = ({ children }) => {
   useEffect(() => {
