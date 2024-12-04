@@ -24,7 +24,15 @@ const RootLayout = ({ children }) => {
             gtag('config', 'G-BQB515MRLF');
           `,
         }} />
-        {/* Fonts and Styles */}
+                <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16808256824"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-16808256824');
+          `,
+        }} />
         <link rel="stylesheet" href="/css/font-awesome.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />

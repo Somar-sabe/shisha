@@ -7,7 +7,7 @@ import FooterTwo from "@/components/footer/FooterTwo";
 import HeaderFive from "@/components/header/HeaderFive";
 import ServiceTwo from "@/components/services/ServiceTwo";
 import { StoreInfo } from "@/data/Common";
-import { useTranslation } from 'react-i18next';  // Import the translation hook
+import { useTranslation } from 'react-i18next';  
 
 const ContactUs = () => {
 
