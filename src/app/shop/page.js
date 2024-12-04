@@ -3,11 +3,11 @@ import FooterTwo from "@/components/footer/FooterTwo";
 import HeaderFive from "@/components/header/HeaderFive";
 import ServiceTwo from "@/components/services/ServiceTwo";
 import ShopWithSidebar from "./ShopWithSidebar";
-import { useTranslation } from 'react-i18next'; 
+import { useTranslation } from 'react-i18next';
 
 
 const Shop = () => {
-    const { t } = useTranslation(); 
+    const { t } = useTranslation();
     return ( 
         <>
         <HeaderFive headerCampaign />
