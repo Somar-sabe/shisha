@@ -18,9 +18,10 @@ const AboutUs = () => {
         <>
         <HeaderFive headerSlider/>
         <main className="main-wrapper">
-            <Breadcrumb 
-            activeItem="About Us"
-            title="About Our Store"
+
+                    <Breadcrumb 
+                activeItem={t('about-us')}
+                title={t('about-our-store')}
             />
             <Section pClass="axil-about-area about-style-1">
                 <div className="row align-items-center">
