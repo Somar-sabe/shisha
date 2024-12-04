@@ -37,7 +37,7 @@ const RootLayout = ({ children }) => {
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta
           name="description"
-          content="eTrade eCommerce React Next JS Template"
+          content="Holster UAE - Premium Tobacco, Premium Moments"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <title>{`Holster UAE - Premium Tobacco, Premium Moments`}</title>
