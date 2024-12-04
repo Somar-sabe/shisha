@@ -11,7 +11,6 @@ const Shop = () => {
     return ( 
         <>
         <HeaderFive headerCampaign />
-        <Breadcrumb activeItem="Shop" title="Explore All Products" />
         <Breadcrumb 
                 activeItem={t('explor')}
                 title={t('explore')}
