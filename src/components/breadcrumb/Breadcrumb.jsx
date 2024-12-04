@@ -1,8 +1,10 @@
 'use client';
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 const Breadcrumb = (props) => {
+  const { t } = useTranslation();
     return (
       <div className="axil-breadcrumb-area">
         <div className="container">
@@ -11,7 +13,7 @@ const Breadcrumb = (props) => {
               <div className="inner">
                 <ul className="axil-breadcrumb">
                   <li className="axil-breadcrumb-item">
-                    <Link href="/">Home</Link>
+                    <Link href="/">{t("bait")}</Link>
                   </li>
                   <li className="separator" />
                   <li
