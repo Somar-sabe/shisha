@@ -1,8 +1,5 @@
 import nodemailer from 'nodemailer';
-import { MongoClient } from 'mongodb';
-
-// MongoDB connection URI
-const mongoURI = process.env.MONGODB_URI;
+import clientPromise from '@/lib/mongodb'; // Import the MongoDB clientPromise
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
@@ -17,8 +14,8 @@ export default async function handler(req, res) {
     }
 
     try {
-      // Connect to MongoDB
-      const client = await MongoClient.connect(mongoURI);
+      // Use the clientPromise to get the MongoDB client
+      const client = await clientPromise;
       const db = client.db(); // Use your database name if it's different
 
       // Create the order object to be inserted
