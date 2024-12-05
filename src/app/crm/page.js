@@ -39,7 +39,7 @@ const ProductsPage = () => {
             if (data.success) {
                 // Sort orders in reverse chronological order
                 const sortedOrders = data.orders.sort(
-                    (a, b) => new Date(b.orderDate) - new Date(a.orderDate)
+                    (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
                 );
                 setOrders(sortedOrders);
             } else {
@@ -154,7 +154,7 @@ const ProductsPage = () => {
                             orders.map((order) => (
                                 <tr key={order._id}>  
                                     <th scope="row">#{order.orderId}</th>
-                                    <td>{new Date(order.orderDate).toLocaleDateString()}</td>  
+                                    <td>{new Date(order.createdAt).toLocaleDateString()}</td>  
                                     <td>{order.status || "Processing"}</td>  
                                     <td>{order.totalAmount} AED </td>  
                                     <td>
