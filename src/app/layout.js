@@ -47,6 +47,14 @@ const RootLayout = ({ children }) => {
           name="description"
           content="Holster UAE - Premium Tobacco, Premium Moments"
         />
+                <meta 
+          name="keywords" 
+          content="
+            Shisha tobacco UAE, Premium Shisha flavors, Buy Shisha online UAE, Holster Shisha tobacco, Best Shisha tobacco in UAE, 
+            Shisha flavor shop Dubai, Top Shisha brands UAE, Wholesale Shisha tobacco UAE, Exotic Shisha flavors, Hookah tobacco UAE, 
+            Fruity Shisha flavors, Online Shisha store UAE, Tobacco-free Shisha options, Shisha delivery Dubai, Affordable Shisha tobacco UAE, Smooth Shisha blends
+          " 
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <title>{`Holster UAE - Premium Tobacco, Premium Moments`}</title>
         <link rel="icon" href="/favicon.ico" />
