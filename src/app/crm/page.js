@@ -30,7 +30,6 @@ const ProductsPage = () => {
   });
   useEffect(() => {
     const fetchOrders = async () => {
-      
         try {
             const res = await fetch('/api/orderb');
             if (!res.ok) {
@@ -38,7 +37,11 @@ const ProductsPage = () => {
             }
             const data = await res.json();
             if (data.success) {
-                setOrders(data.orders);
+                // Sort orders in reverse chronological order
+                const sortedOrders = data.orders.sort(
+                    (a, b) => new Date(b.orderDate) - new Date(a.orderDate)
+                );
+                setOrders(sortedOrders);
             } else {
                 throw new Error(data.message);
             }
@@ -51,6 +54,7 @@ const ProductsPage = () => {
 
     fetchOrders();
 }, []);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setProductData({
