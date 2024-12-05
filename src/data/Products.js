@@ -198,7 +198,7 @@ const ProductsData = [
     },
   
     {
-        id: 100,
+        id: 5,
         title: "Lee Punch",
         thumbnail: "/images/product/furniture/Lee Punch_webshop_UAE.png",
         hoverThumbnail: "/images/product/furniture/Lee Punch_webshop_UAE.png",

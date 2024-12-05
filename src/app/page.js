@@ -18,6 +18,7 @@ const Home = () => {
     const split = pathname.split("/");
     const pageCategory = split[split.length - 1];
     const furnitureProduct = ProductsData.slice(0, 4);
+    const furnitureProduc = ProductsData.slice(4, 8);
     const exploreProduct = ProductsData.filter(data => data.pCate === "Shisha Accssesores");
 
     return ( 
@@ -59,7 +60,7 @@ const Home = () => {
                 subColor="highlighter-secondary"
                 />
                  <div className="row">
-                    {furnitureProduct.slice(0,8).map((data) => (
+                    {furnitureProduc.slice(0,4).map((data) => (
                         <div className="col-xl-3 col-lg-4 col-sm-6" key={data.id}>
                             <ProductSeven product={data} />
                         </div>
