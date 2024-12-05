@@ -1,11 +1,15 @@
 import nodemailer from 'nodemailer';
+import { MongoClient } from 'mongodb';
+
+// MongoDB connection URI
+const mongoURI = process.env.MONGODB_URI;
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
-    const { orderId, customerName, totalAmount, customerEmail, phone,cartItems } = req.body;
+    const { orderId, customerName, totalAmount, customerEmail, phone, cartItems } = req.body;
 
     // Check if the necessary fields are present
-    if (!orderId || !customerName || !totalAmount || !customerEmail || !phone  || !cartItems) {
+    if (!orderId || !customerName || !totalAmount || !customerEmail || !phone || !cartItems) {
       return res.status(400).json({
         success: false,
         message: "Missing required fields: orderId, customerName, totalAmount, customerEmail, or phone"
@@ -13,12 +17,31 @@ export default async function handler(req, res) {
     }
 
     try {
+      // Connect to MongoDB
+      const client = await MongoClient.connect(mongoURI);
+      const db = client.db(); // Use your database name if it's different
+
+      // Create the order object to be inserted
+      const orderData = {
+        orderId,
+        customerName,
+        totalAmount,
+        customerEmail,
+        phone,
+        cartItems,
+        createdAt: new Date(),
+      };
+
+      // Insert the order into the 'orders' collection
+      await db.collection('orders').insertOne(orderData);
+      console.log('Order saved to database.');
+
       // Create Nodemailer transporter using your Gmail credentials
       const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
           user: process.env.EMAIL_USER, // Your Gmail address (e.g., 'your-email@gmail.com')
-          pass: 'crse tyut xdcq bxib' // Replace with your generated App Password
+          // No password needed here, as it's assumed you are using OAuth or app password
         }
       });
 
