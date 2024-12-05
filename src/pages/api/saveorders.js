@@ -1,5 +1,5 @@
+import nodemailer from 'nodemailer';
 import clientPromise from '@/lib/mongodb'; // Import the MongoDB clientPromise
-import nodemailer from 'nodemailer'; // Import Nodemailer
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
@@ -9,14 +9,14 @@ export default async function handler(req, res) {
     if (!orderId || !customerName || !totalAmount || !customerEmail || !phone || !cartItems) {
       return res.status(400).json({
         success: false,
-        message: "Missing required fields: orderId, customerName, totalAmount, customerEmail, or phone",
+        message: "Missing required fields: orderId, customerName, totalAmount, customerEmail, or phone"
       });
     }
 
     try {
       // Use the clientPromise to get the MongoDB client
       const client = await clientPromise;
-      const db = client.db('Shisha'); // Use the correct database name
+      const db = client.db(); // Use your database name if it's different
 
       // Create the order object to be inserted
       const orderData = {
@@ -33,18 +33,18 @@ export default async function handler(req, res) {
       await db.collection('orders').insertOne(orderData);
       console.log('Order saved to database.');
 
-      // Create Nodemailer transporter using your Gmail credentials (hardcoded password)
+      // Create Nodemailer transporter using your Gmail credentials
       const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-          user: 'sabesofteng@gmail.com', // Your Gmail address
-          pass: 'crse tyut xdcq bxib',  // Hardcoded Gmail app password
-        },
+          user: process.env.EMAIL_USER, // Your Gmail address (e.g., 'your-email@gmail.com')
+          // No password needed here, as it's assumed you are using OAuth or app password
+        }
       });
 
       // Email content
       const mailOptions = {
-        from: `"Holster Tobacco" sabesofteng@gmail.com`, // Sender address
+        from: `"Holster Tobacco" <${process.env.EMAIL_USER}>`, // Sender address
         to: 'J.Nihad@holster-tobacco.com', // Recipient address
         subject: `New Order Received - ${orderId}`, // Subject line
         text: `A new order has been received.\n\nDetails:\nOrder ID: ${orderId}\nCustomer: ${customerName}\nTotal Amount: ${totalAmount}\nPhone: ${phone}\nCart items: ${cartItems}`, // Plain text body
@@ -64,45 +64,13 @@ export default async function handler(req, res) {
       // Return a success response
       return res.status(200).json({
         success: true,
-        message: "Order saved successfully and email sent",
+        message: "Order saved and email sent successfully",
       });
     } catch (error) {
       console.error("Error saving order or sending email:", error);
       return res.status(500).json({
         success: false,
         message: "Failed to save order or send email",
-        error: error.message,
-      });
-    }
-  } else if (req.method === 'GET') {
-    try {
-      // Use the clientPromise to get the MongoDB client
-      const client = await clientPromise;
-      const db = client.db('Shisha'); // Use the correct database name
-
-      // Fetch all orders and sort by createdAt in descending order
-      const orders = await db.collection('orders')
-        .find({})
-        .sort({ createdAt: -1 }) // Sorting in descending order based on createdAt
-        .toArray();
-
-      if (orders.length === 0) {
-        return res.status(404).json({
-          success: false,
-          message: "No orders found.",
-        });
-      }
-
-      // Return the orders sorted with the newest first
-      return res.status(200).json({
-        success: true,
-        orders,
-      });
-    } catch (error) {
-      console.error("Error fetching orders:", error);
-      return res.status(500).json({
-        success: false,
-        message: "Failed to fetch orders",
         error: error.message,
       });
     }

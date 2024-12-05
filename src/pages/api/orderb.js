@@ -18,8 +18,16 @@ export default async function handler(req, res) {
         });
       }
 
-      // Return all orders if successful
-      res.status(200).json({ success: true, orders: result });
+      // Ensure dates are properly formatted
+      const ordersWithFormattedDates = result.map(order => {
+        return {
+          ...order,
+          createdAt: order.createdAt ? order.createdAt.toISOString() : null, // Convert createdAt to ISO string
+        };
+      });
+
+      // Return all orders with formatted dates
+      res.status(200).json({ success: true, orders: ordersWithFormattedDates });
     } catch (error) {
       console.error("Error fetching orders:", error);
       res.status(500).json({

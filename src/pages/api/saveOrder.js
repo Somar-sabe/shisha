@@ -1,4 +1,6 @@
+
 import clientPromise from '@/lib/mongodb'; // Import the MongoDB clientPromise
+import nodemailer from 'nodemailer'; // Import Nodemailer
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
@@ -32,16 +34,44 @@ export default async function handler(req, res) {
       await db.collection('orders').insertOne(orderData);
       console.log('Order saved to database.');
 
+      // Create Nodemailer transporter using your Gmail credentials (hardcoded password)
+      const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+          user: 'sabesofteng@gmail.com', // Your Gmail address
+          pass: 'crse tyut xdcq bxib',  // Hardcoded Gmail app password
+        },
+      });
+
+      // Email content
+      const mailOptions = {
+        from: `"Holster Tobacco" sabesofteng@gmail.com`, // Sender address
+        to: 'J.Nihad@holster-tobacco.com', // Recipient address
+        subject: `New Order Received - ${orderId}`, // Subject line
+        text: `A new order has been received.\n\nDetails:\nOrder ID: ${orderId}\nCustomer: ${customerName}\nTotal Amount: ${totalAmount}\nPhone: ${phone}\nCart items: ${cartItems}`, // Plain text body
+        html: `<h1>New Order Received</h1>
+               <p><strong>Order ID:</strong> ${orderId}</p>
+               <p><strong>Customer:</strong> ${customerName}</p>
+               <p><strong>Total Amount:</strong> ${totalAmount}</p>
+               <p><strong>Phone:</strong> ${phone}</p>
+               <p><strong>Cart items:</strong> ${cartItems}</p>`,  // HTML body
+      };
+
+      // Send the email
+      await transporter.sendMail(mailOptions);
+
+      console.log('Email sent successfully.');
+
       // Return a success response
       return res.status(200).json({
         success: true,
-        message: "Order saved successfully",
+        message: "Order saved successfully and email sent",
       });
     } catch (error) {
-      console.error("Error saving order:", error);
+      console.error("Error saving order or sending email:", error);
       return res.status(500).json({
         success: false,
-        message: "Failed to save order",
+        message: "Failed to save order or send email",
         error: error.message,
       });
     }
