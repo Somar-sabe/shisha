@@ -1,9 +1,5 @@
 import nodemailer from 'nodemailer';
-import { MongoClient } from 'mongodb'; // Assuming MongoDB, adjust accordingly if using another database
-
-const client = new MongoClient(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
-const dbName = 'Shisha';
-const collectionName = 'orders';
+import clientPromise from '@/lib/mongodb'; // Use clientPromise for MongoDB connection
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
@@ -18,10 +14,10 @@ export default async function handler(req, res) {
     }
 
     try {
-      // Connect to MongoDB and save the order to the database
-      await client.connect();
-      const db = client.db(dbName);
-      const collection = db.collection(collectionName);
+      // Use the clientPromise to get the MongoDB client
+      const client = await clientPromise;
+      const db = client.db('Shisha');
+      const collection = db.collection('orders');
 
       // Insert the order into the database
       const order = {
@@ -80,9 +76,6 @@ export default async function handler(req, res) {
         message: "Failed to save order or send email",
         error: error.message,
       });
-    } finally {
-      // Ensure that MongoDB connection is closed
-      await client.close();
     }
   } else {
     return res.status(405).json({
