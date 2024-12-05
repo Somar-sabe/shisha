@@ -27,7 +27,7 @@ export default async function handler(req, res) {
         customerEmail,
         phone,
         cartItems,
-        createdAt: new Date().toISOString(),
+        createdAt: new Date(),
       };
 
       // Insert the order into the 'orders' collection
