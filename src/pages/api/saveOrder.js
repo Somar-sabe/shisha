@@ -29,6 +29,19 @@ export default async function handler(req, res) {
         cartItems,
         createdAt: new Date(),
       };
+      const formattedCartItemsText = cartItems
+  .map(item => ` - ${item.title}: ${item.price} AED x ${item.cartQuantity}`)
+  .join('\n');
+
+// Format cart items as an HTML list for the HTML email
+const formattedCartItemsHtml = cartItems
+  .map(item => `
+    <li>
+      <strong>Title:</strong> ${item.title} <br>
+      <strong>Price:</strong> ${item.price} AED <br>
+      <strong>Quantity:</strong> ${item.cartQuantity}
+    </li>`)
+  .join('');
 
       // Insert the order into the 'orders' collection
       await db.collection('orders').insertOne(orderData);
@@ -54,7 +67,7 @@ export default async function handler(req, res) {
                <p><strong>Customer:</strong> ${customerName}</p>
                <p><strong>Total Amount:</strong> ${totalAmount}</p>
                <p><strong>Phone:</strong> ${phone}</p>
-               <p><strong>Cart items:</strong> ${cartItems}</p>`,  // HTML body
+                <ul>${formattedCartItemsHtml}</ul>`  // HTML body
       };
 
       // Send the email
