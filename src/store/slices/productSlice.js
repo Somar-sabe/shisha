@@ -49,17 +49,23 @@ const productSlice = createSlice({
             state.cartQuantityTotal = filteredItemQuantity.length;
             state.cartItems = filteredCartItem;
         },
-        cartQuantityIncrease(state, action) {
-            const findItem = state.cartItems.findIndex((item) => item.id === action.payload.id);
-            state.cartItems[findItem].cartQuantity += 1;
-        },
-        cartQuantityDecrease(state, action) {
-            const findItem = state.cartItems.findIndex((item) => item.id === action.payload.id);
-            if (state.cartItems[findItem].cartQuantity > 1) {
-                state.cartItems[findItem].cartQuantity -= 1;
-            }
+// Inside your productSlice
+cartQuantityIncrease(state, action) {
+    const findItem = state.cartItems.findIndex((item) => item.id === action.payload.id);
+    if (findItem >= 0) {
+        state.cartItems[findItem].cartQuantity += 1;
+        state.cartTotalAmount = calculateTotalAmount(state.cartItems); // Recalculate total amount
+    }
+},
 
-        },
+cartQuantityDecrease(state, action) {
+    const findItem = state.cartItems.findIndex((item) => item.id === action.payload.id);
+    if (findItem >= 0 && state.cartItems[findItem].cartQuantity > 1) {
+        state.cartItems[findItem].cartQuantity -= 1;
+        state.cartTotalAmount = calculateTotalAmount(state.cartItems); // Recalculate total amount
+    }
+},
+
         cartClear(state, action) {
             state.cartItems = [];
             state.cartQuantityTotal = 0;

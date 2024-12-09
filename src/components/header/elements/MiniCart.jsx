@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useRouter } from 'next/navigation'
 import { useDispatch, useSelector } from "react-redux";
-import { removeCartItem, miniCartHandler } from "@/store/slices/productSlice";
+import { removeCartItem, miniCartHandler, cartQuantityIncrease, cartQuantityDecrease,  } from "@/store/slices/productSlice";
 import { useCurrency } from '@/app/contexts/CurrencyContext'; // Import the custom hook
 import { useTranslation } from 'next-i18next';
 const currencyRates = {
@@ -34,6 +34,14 @@ const { currency } = useCurrency(); // Access currency from context
 const convertPrice = (price) => {
   return (price * currencyRates[currency]).toFixed(2);
 };
+const quantityIncreaseHandler = (product) => {
+  dispatch(cartQuantityIncrease({ id: product.id }));
+};
+
+const quantityDecreaseHandler = (product) => {
+  dispatch(cartQuantityDecrease({ id: product.id }));
+};
+
 return (
     <>
       <div className={`cart-dropdown ${getProducts.isMinicartOpen ? "open" : ""}`}>
@@ -73,9 +81,13 @@ return (
                           <span className="currency-symbol"> {currency}</span>
                         <strong>x{data.cartQuantity}</strong>
                       </div>
-                      <div className="pro-qty item-quantity">
-                        <input type="number" className="quantity-input" />
-                      </div>
+                      <td className="product-quantity" data-title="Qty">
+                        <div className="pro-qty">
+                          <span className="qtybtn" onClick={() => quantityDecreaseHandler(data)}>-</span>
+                          <input type="number" className="quantity-input" value={data.cartQuantity} readOnly />
+                          <span className="qtybtn" onClick={() => quantityIncreaseHandler(data)}>+</span>
+                        </div>
+                      </td>
                     </div>
                   </li>
                 ))
