@@ -20,8 +20,7 @@ const productSlice = createSlice({
             const ItemIndex = state.cartItems.findIndex((item) => item.id === action.payload.id);
             if (ItemIndex >= 0) {
                 state.cartItems[ItemIndex].cartQuantity += action.payload.cartQuantity ?? 1;
-                state.cartQuantityTotal += action.payload.cartQuantity ?? 1
-                state.isMinicartOpen = true;
+                state.cartQuantityTotal += action.payload.cartQuantity ?? 1;
 
             } else {
                 const tempProduct = { 
@@ -37,7 +36,7 @@ const productSlice = createSlice({
                 }
                 state.cartItems.push(tempProduct);
                 state.cartQuantityTotal += action.payload.cartQuantity ?? 1;
-                state.isMinicartOpen = true;
+               
             }
 
             state.cartTotalAmount = calculateTotalAmount(state.cartItems);
