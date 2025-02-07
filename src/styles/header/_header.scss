@@ -54,6 +54,15 @@
         }
     }
 }
+@media only screen and (width: 1024px) and (max-width: 1366px) {
+    .mainmenu {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 -90px;
+    }
+}
 
 .header-style-1 {
     background-color: #f9f3f0;
