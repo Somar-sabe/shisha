@@ -101,18 +101,7 @@ const ContactUs = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="axil-google-map-wrap axil-section-gap pb--0">
-                        <div className="mapouter">
-                            <div className="gmap_canvas">
-                                <iframe
-                                    width={1080}
-                                    height={500}
-                                    id="gmap_canvas"
-                                    src="https://maps.google.com/maps?q=25.191207741825014,55.28528176591077&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                                />
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
 
