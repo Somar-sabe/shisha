@@ -2,10 +2,10 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
-import Breadcrumb from "@/components/breadcrumb/Breadcrumb";
+
 import FooterTwo from "@/components/footer/FooterTwo";
 import HeaderFive from "@/components/header/HeaderFive";
-import ServiceTwo from "@/components/services/ServiceTwo";
+
 import { StoreInfo } from "@/data/Common";
 import { useTranslation } from 'react-i18next';  
 const ContactUs = () => {
@@ -99,6 +99,13 @@ const ContactUs = () => {
                                     </p>
                                 </div>
                             </div>
+                            <div className="col-lg-4">
+                                                    <div className="form-group">
+                                                        <label>{t('contact.form_name')} <span>*</span></label>
+                                                        <input type="text" {...register('name', { required: true })} />
+                                                        {errors.name && <p className="error">{t('contact.form_name')} {t('common.required')}</p>}
+                                                    </div>
+                                                </div>
                         </div>
                     </div>
 
