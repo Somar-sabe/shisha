@@ -8,9 +8,7 @@ import HeaderFive from "@/components/header/HeaderFive";
 import ServiceTwo from "@/components/services/ServiceTwo";
 import { StoreInfo } from "@/data/Common";
 import { useTranslation } from 'react-i18next';  
-
 const ContactUs = () => {
-
     const [ result, showresult ] = useState(false);
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const { t } = useTranslation();  // Get the translation function
@@ -34,10 +32,6 @@ const ContactUs = () => {
         <>
         <HeaderFive headerSlider />
         <main className="main-wrapper">
-            <Breadcrumb 
-                activeItem={t('contact.title')}
-                title={t('contact.title')}
-            />
             <div className="axil-contact-page-area axil-section-gap">
                 <div className="container">
                     <div className="axil-contact-page">
@@ -121,7 +115,7 @@ const ContactUs = () => {
                     </div>
                 </div>
             </div>
-            <ServiceTwo />
+
         </main>
         <FooterTwo />
         </>
