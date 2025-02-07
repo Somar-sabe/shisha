@@ -64,6 +64,20 @@ const ContactUs = () => {
                                                         {errors.email && <p className="error">{t('contact.form_email')} {t('common.required')}</p>}
                                                     </div>
                                                 </div>
+                                                <div className="col-lg-4">
+                                                    <div className="form-group">
+                                                        <label>Company<span>*</span></label>
+                                                        <input type="text" {...register('name', { required: true })} />
+                                                        {errors.name && <p className="error">{t('contact.form_name')} {t('common.required')}</p>}
+                                                    </div>
+                                                </div>
+                                                <div className="col-lg-4">
+                                                    <div className="form-group">
+                                                        <label>Position<span>*</span></label>
+                                                        <input type="text" {...register('name', { required: true })} />
+                                                        {errors.name && <p className="error">{t('contact.form_name')} {t('common.required')}</p>}
+                                                    </div>
+                                                </div>
                                                 <div className="col-12">
                                                     <div className="form-group">
                                                         <label>{t('contact.form_message')}</label>
@@ -99,13 +113,7 @@ const ContactUs = () => {
                                     </p>
                                 </div>
                             </div>
-                            <div className="col-lg-4">
-                                                    <div className="form-group">
-                                                        <label>{t('contact.form_name')} <span>*</span></label>
-                                                        <input type="text" {...register('name', { required: true })} />
-                                                        {errors.name && <p className="error">{t('contact.form_name')} {t('common.required')}</p>}
-                                                    </div>
-                                                </div>
+
                         </div>
                     </div>
 
