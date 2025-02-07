@@ -54,7 +54,7 @@
         }
     }
 }
-@media only screen and (width: 1024px) and (max-width: 1366px) {
+@media only screen and (width: 1024px) and (height: 1366px) {
     .mainmenu {
         display: flex;
         align-items: center;
@@ -296,7 +296,7 @@
         justify-content: flex-start;
         margin: 0 -20px;
         @media (max-width: 1199px) {
-            margin: 0 -15px;
+            margin: 0 -90px;
         }
         >li {
             margin: 0 20px;
