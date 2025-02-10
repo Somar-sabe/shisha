@@ -115,7 +115,11 @@ const ContactUs = () => {
                                                 <div className="col-12">
                                                     <div className="form-group mb--0">
                                                         <button name="submit" type="submit" className="axil-btn btn-bg-primary">
-                                                            {isLoading ? 'Submitting...' : t('contact.form_send_button')}
+                                                            {isLoading ? (
+                                                                <div className="spinner">Submitting...</div>  // Preloader here
+                                                            ) : (
+                                                                t('contact.form_send_button')
+                                                            )}
                                                         </button>
                                                         {result && <p className="success">{t('contact.form_success_message')}</p>}
                                                     </div>
@@ -149,6 +153,23 @@ const ContactUs = () => {
             </div>
         </main>
         <FooterTwo />
+
+        {/* Add your CSS in the same file */}
+        <style jsx>{`
+            .spinner {
+                width: 24px;
+                height: 24px;
+                border: 4px solid transparent;
+                border-top: 4px solid #333;
+                border-radius: 50%;
+                animation: spin 1s linear infinite;
+            }
+
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+        `}</style>
         </>
     );
 }
