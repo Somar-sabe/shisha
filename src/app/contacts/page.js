@@ -120,10 +120,10 @@ const ContactUs = () => {
                                                             {isLoading ? (
                                                                 <div className="spinner"></div>  // Spinner here
                                                             ) : (
-                                                                t('contact.form_send_button')
+                                                               'Submit' 
                                                             )}
                                                         </button>
-                                                       
+                                                        {result && <p className="success">Thank you !</p>}
                                                     </div>
                                                 </div>
                                             </div>
@@ -156,18 +156,9 @@ const ContactUs = () => {
         </main>
         <FooterTwo />
 
-        {/* Popup Style */}
-        <div className={`popup ${showPopup ? 'show' : ''}`}>
-            <div className="popup-content">
-                {isLoading ? (
-                    <div className="spinner"></div>  // Spinner inside the popup
-                ) : (
-                    <p>Thank you</p>  // Success message
-                )}
-            </div>
-        </div>
+       
 
-        {/* Add your CSS in the same file */}
+     
         <style jsx>{`
             .popup {
                 position: fixed;
