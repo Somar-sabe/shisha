@@ -123,7 +123,7 @@ const ContactUs = () => {
                                                                'Submit' 
                                                             )}
                                                         </button>
-                                                        {result && <p className="success">Thank you !</p>}
+                                                        {result && <p className="success">Your Message Submitted !</p>}
                                                     </div>
                                                 </div>
                                             </div>
