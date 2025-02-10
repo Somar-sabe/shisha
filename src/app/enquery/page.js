@@ -13,13 +13,31 @@ const ContactUs = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const { t } = useTranslation();  // Get the translation function
 
-    const sendEmail = (formData) => {
-        emailjs.send('service_g3aufzu', 'template_sk4dqiz', formData, '9L_sRsO66U253zcxC')
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
+    const sendEmail = async (formData) => {
+        try {
+            // Send the form data to your backend to save in MongoDB
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
             });
+    
+            const data = await response.json();
+    
+            if (data.success) {
+                console.log('Form data saved to MongoDB');
+            } else {
+                console.log('Error saving form data to MongoDB:', data.message);
+            }
+    
+            // Send the email using emailjs
+            await emailjs.send('service_g3aufzu', 'template_sk4dqiz', formData, '9L_sRsO66U253zcxC');
+        } catch (error) {
+            console.error('Error submitting form:', error);
+        }
+    
         reset();
         showresult(true);
     };
@@ -67,22 +85,22 @@ const ContactUs = () => {
                                                 <div className="col-lg-4">
                                                     <div className="form-group">
                                                         <label>Company<span>*</span></label>
-                                                        <input type="text" {...register('name', { required: true })} />
-                                                        {errors.name && <p className="error">{t('contact.form_name')} {t('common.required')}</p>}
+                                                        <input type="text" {...register('company', { required: true })} />
+                                                        {errors.name && <p className="error">{t('contact.form_company')} {t('common.required')}</p>}
                                                     </div>
                                                 </div>
                                                 <div className="col-lg-4">
                                                     <div className="form-group">
                                                         <label>Position<span>*</span></label>
-                                                        <input type="text" {...register('name', { required: true })} />
-                                                        {errors.name && <p className="error">{t('contact.form_name')} {t('common.required')}</p>}
+                                                        <input type="text" {...register('position', { required: true })} />
+                                                        {errors.name && <p className="error">{t('contact.form_position')} {t('common.required')}</p>}
                                                     </div>
                                                 </div>
                                                 <div className="col-lg-4">
                                                     <div className="form-group">
                                                         <label>Country<span>*</span></label>
-                                                        <input type="text" {...register('name', { required: true })} />
-                                                        {errors.name && <p className="error">{t('contact.form_name')} {t('common.required')}</p>}
+                                                        <input type="text" {...register('country', { required: true })} />
+                                                        {errors.name && <p className="error">{t('contact.form_country')} {t('common.required')}</p>}
                                                     </div>
                                                 </div>
                                                 <div className="col-12">
