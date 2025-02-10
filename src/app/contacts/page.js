@@ -123,7 +123,7 @@ const ContactUs = () => {
                                                                 t('contact.form_send_button')
                                                             )}
                                                         </button>
-                                                        {result && <p className="success">{t('contact.form_success_message')}</p>}
+                                                       
                                                     </div>
                                                 </div>
                                             </div>
