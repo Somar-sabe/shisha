@@ -10,11 +10,14 @@ import { useTranslation } from 'react-i18next';
 const ContactUs = () => {
     const [result, showResult] = useState(false);
     const [isLoading, setIsLoading] = useState(false); // Added loading state
+    const [showPopup, setShowPopup] = useState(false); // State for the popup
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const { t } = useTranslation();  // Get the translation function
 
     const sendEmail = async (formData) => {
         setIsLoading(true); // Show loading state when submitting the form
+        setShowPopup(true); // Show popup while form is submitting
+
         try {
             // Send the form data to your backend to save in MongoDB
             const response = await fetch('/api/contact', {
@@ -42,12 +45,11 @@ const ContactUs = () => {
         }
     
         reset();
-        showResult(true);
+        setTimeout(() => {
+            showResult(true); // Show the "Thanks" message
+            setShowPopup(false); // Hide the popup
+        }, 2000); // Wait for 2 seconds before showing the success message
     };
-
-    setTimeout(() => {
-        showResult(false);
-    }, 2000);
 
     return ( 
         <>
@@ -80,7 +82,7 @@ const ContactUs = () => {
                                                 </div>
                                                 <div className="col-lg-4">
                                                     <div className="form-group">
-                                                        <label>{t('contact.form_email')} <span>*</span></label>
+                                                        <label>{t('contact.form_email')} <span> *</span></label>
                                                         <input type="email" {...register('email', { required: true })} />
                                                         {errors.email && <p className="error">{t('contact.form_email')} {t('common.required')}</p>}
                                                     </div>
@@ -154,8 +156,40 @@ const ContactUs = () => {
         </main>
         <FooterTwo />
 
+        {/* Popup Style */}
+        <div className={`popup ${showPopup ? 'show' : ''}`}>
+            <div className="popup-content">
+                {isLoading ? (
+                    <div className="spinner">Submitting...</div>  // Preloader inside the popup
+                ) : (
+                    <p>{t('contact.form_success_message')}</p>  // Success message
+                )}
+            </div>
+        </div>
+
         {/* Add your CSS in the same file */}
         <style jsx>{`
+            .popup {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5);
+                display: none;
+                justify-content: center;
+                align-items: center;
+            }
+            .popup.show {
+                display: flex;
+            }
+            .popup-content {
+                background-color: white;
+                padding: 20px;
+                border-radius: 10px;
+                text-align: center;
+                width: 300px;
+            }
             .spinner {
                 width: 24px;
                 height: 24px;
@@ -164,7 +198,6 @@ const ContactUs = () => {
                 border-radius: 50%;
                 animation: spin 1s linear infinite;
             }
-
             @keyframes spin {
                 0% { transform: rotate(0deg); }
                 100% { transform: rotate(360deg); }
