@@ -1,19 +1,20 @@
-'use client';
+'use client'; 
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
-
 import FooterTwo from "@/components/footer/FooterTwo";
 import HeaderFive from "@/components/header/HeaderFive";
-
 import { StoreInfo } from "@/data/Common";
 import { useTranslation } from 'react-i18next';  
+
 const ContactUs = () => {
-    const [ result, showresult ] = useState(false);
+    const [result, showResult] = useState(false);
+    const [isLoading, setIsLoading] = useState(false); // Added loading state
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const { t } = useTranslation();  // Get the translation function
 
     const sendEmail = async (formData) => {
+        setIsLoading(true); // Show loading state when submitting the form
         try {
             // Send the form data to your backend to save in MongoDB
             const response = await fetch('/api/contact', {
@@ -36,14 +37,16 @@ const ContactUs = () => {
             await emailjs.send('service_g3aufzu', 'template_sk4dqiz', formData, '9L_sRsO66U253zcxC');
         } catch (error) {
             console.error('Error submitting form:', error);
+        } finally {
+            setIsLoading(false); // Hide loading state once submission is complete
         }
     
         reset();
-        showresult(true);
+        showResult(true);
     };
 
     setTimeout(() => {
-        showresult(false);
+        showResult(false);
     }, 2000);
 
     return ( 
@@ -111,7 +114,9 @@ const ContactUs = () => {
                                                 </div>
                                                 <div className="col-12">
                                                     <div className="form-group mb--0">
-                                                        <button name="submit" type="submit" className="axil-btn btn-bg-primary">{t('contact.form_send_button')}</button>
+                                                        <button name="submit" type="submit" className="axil-btn btn-bg-primary">
+                                                            {isLoading ? 'Submitting...' : t('contact.form_send_button')}
+                                                        </button>
                                                         {result && <p className="success">{t('contact.form_success_message')}</p>}
                                                     </div>
                                                 </div>
@@ -138,13 +143,10 @@ const ContactUs = () => {
                                     </p>
                                 </div>
                             </div>
-
                         </div>
                     </div>
-
                 </div>
             </div>
-
         </main>
         <FooterTwo />
         </>
