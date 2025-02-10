@@ -162,7 +162,7 @@ const ContactUs = () => {
                 {isLoading ? (
                     <div className="spinner"></div>  // Spinner inside the popup
                 ) : (
-                    <p>{t('contact.form_success_message')}</p>  // Success message
+                    <p>Thank you</p>  // Success message
                 )}
             </div>
         </div>
