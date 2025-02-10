@@ -118,7 +118,7 @@ const ContactUs = () => {
                                                     <div className="form-group mb--0">
                                                         <button name="submit" type="submit" className="axil-btn btn-bg-primary">
                                                             {isLoading ? (
-                                                                <div className="spinner">Submitting...</div>  // Preloader here
+                                                                <div className="spinner"></div>  // Spinner here
                                                             ) : (
                                                                 t('contact.form_send_button')
                                                             )}
@@ -160,7 +160,7 @@ const ContactUs = () => {
         <div className={`popup ${showPopup ? 'show' : ''}`}>
             <div className="popup-content">
                 {isLoading ? (
-                    <div className="spinner">Submitting...</div>  // Preloader inside the popup
+                    <div className="spinner"></div>  // Spinner inside the popup
                 ) : (
                     <p>{t('contact.form_success_message')}</p>  // Success message
                 )}
@@ -197,6 +197,7 @@ const ContactUs = () => {
                 border-top: 4px solid #333;
                 border-radius: 50%;
                 animation: spin 1s linear infinite;
+                margin: 0 auto;  // Center the spinner
             }
             @keyframes spin {
                 0% { transform: rotate(0deg); }
