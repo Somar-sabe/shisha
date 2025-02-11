@@ -1,99 +1,203 @@
-'use client';
-import { useTranslation } from 'react-i18next';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+'use client'; 
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import emailjs from '@emailjs/browser';
 import FooterTwo from "@/components/footer/FooterTwo";
 import HeaderFive from "@/components/header/HeaderFive";
-import ProductsData from '@/data/Products';
-import Section from '@/components/elements/Section';
-import SectionTitle from '@/components/elements/SectionTitle';
-import ProductSeven from '@/components/product/ProductSeven';
-import PosterOne from '@/components/poster/PosterOne';
-import BannerFive from '@/components/hero-banner/BannerFive';
-import ChatWidget from '@/components/widget/ChatWidget';
-import '../lib/i18n';
-const Home = () => {
-    const { t } = useTranslation(); 
-    const pathname = usePathname();
-    const split = pathname.split("/");
-    const pageCategory = split[split.length - 1];
-    const furnitureProduct = ProductsData.slice(0, 4);
-    const furnitureProduc = ProductsData.slice(4, 8);
-    const exploreProduct = ProductsData.filter(data => data.pCate === "Shisha Accssesores");
+import { StoreInfo } from "@/data/Common";
+import { useTranslation } from 'react-i18next';  
+
+const ContactUs = () => {
+    const [result, showResult] = useState(false);
+    const [isLoading, setIsLoading] = useState(false); // Added loading state
+    const [showPopup, setShowPopup] = useState(false); // State for the popup
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
+    const { t } = useTranslation();  // Get the translation function
+
+    const sendEmail = async (formData) => {
+        setIsLoading(true); // Show loading state when submitting the form
+        setShowPopup(true); // Show popup while form is submitting
+
+        try {
+            // Send the form data to yourbackend to save in MongoDB
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+    
+            const data = await response.json();
+    
+            if (data.success) {
+                console.log('Form data saved to MongoDB');
+            } else {
+                console.log('Error saving form data to MongoDB:', data.message);
+            }
+    
+            // Send the email using emailjs
+            await emailjs.send('service_g3aufzu', 'template_sk4dqiz', formData, '9L_sRsO66U253zcxC');
+        } catch (error) {
+            console.error('Error submitting form:', error);
+        } finally {
+            setIsLoading(false); // Hide loading state once submission is complete
+        }
+    
+        reset();
+        setTimeout(() => {
+            showResult(true); // Show the "Thanks" message
+            setShowPopup(false); // Hide the popup
+        }, 2000); // Wait for 2 seconds before showing the success message
+    };
 
     return ( 
         <>
         <HeaderFive headerSlider />
         <main className="main-wrapper">
-            
-            <BannerFive />
-          
-
-      
-            <Section pClass="pb--0" borderBottom="pb--50">
-                <SectionTitle
-                        title={t('best_sellers')} // Translated text
-                        subtitle={t('this_month')} // Translated text
-                subtitleIcon="far fa-shopping-basket"
-                subColor="highlighter-secondary"
-                />
-                <div className="row">
-                    {furnitureProduct.slice(0, 8).map((data) => (
-                        <div className="col-xl-3 col-lg-4 col-sm-6" key={data.id}>
-                            <ProductSeven product={data} />
+            <div className="axil-contact-page-area axil-section-gap">
+                <div className="container">
+                    <div className="axil-contact-page">
+                        <div className="row row--30">
+                            <div className="col-lg-8">
+                                <div className="contact-form">
+                                    <div>
+                                        <h3 className="title mb--10">{t('contact.form_title')}</h3>
+                                        <p>{t('contact.form_description')}</p>
+                                        <form onSubmit={handleSubmit(sendEmail)}>
+                                            <div className="row row--10">
+                                                <div className="col-lg-4">
+                                                    <div className="form-group">
+                                                        <label>{t('contact.form_name')} <span>*</span></label>
+                                                        <input type="text" {...register('name', { required: true })} />
+                                                        {errors.name && <p className="error">{t('contact.form_name')} {t('common.required')}</p>}
+                                                    </div>
+                                                </div>
+                                                <div className="col-lg-4">
+                                                    <div className="form-group">
+                                                        <label>{t('contact.form_phone')} <span>*</span></label>
+                                                        <input type="text" {...register('phone', { required: true })} />
+                                                        {errors.phone && <p className="error">{t('contact.form_phone')} {t('common.required')}</p>}
+                                                    </div>
+                                                </div>
+                                                <div className="col-lg-4">
+                                                    <div className="form-group">
+                                                        <label>{t('contact.form_email')} <span> *</span></label>
+                                                        <input type="email" {...register('email', { required: true })} />
+                                                        {errors.email && <p className="error">{t('contact.form_email')} {t('common.required')}</p>}
+                                                    </div>
+                                                </div>
+                                                <div className="col-lg-4">
+                                                    <div className="form-group">
+                                                        <label>Company<span>*</span></label>
+                                                        <input type="text" {...register('company', { required: true })} />
+                                                        {errors.name && <p className="error">{t('contact.form_company')} {t('common.required')}</p>}
+                                                    </div>
+                                                </div>
+                                                <div className="col-lg-4">
+                                                    <div className="form-group">
+                                                        <label>Position<span>*</span></label>
+                                                        <input type="text" {...register('position', { required: true })} />
+                                                        {errors.name && <p className="error">{t('contact.form_position')} {t('common.required')}</p>}
+                                                    </div>
+                                                </div>
+                                                <div className="col-lg-4">
+                                                    <div className="form-group">
+                                                        <label>Country<span>*</span></label>
+                                                        <input type="text" {...register('country', { required: true })} />
+                                                        {errors.name && <p className="error">{t('contact.form_country')} {t('common.required')}</p>}
+                                                    </div>
+                                                </div>
+                                                <div className="col-12">
+                                                    <div className="form-group">
+                                                        <label>{t('contact.form_message')}</label>
+                                                        <textarea {...register('message')} cols={1} rows={2}  />
+                                                    </div>
+                                                </div>
+                                                <div className="col-12">
+                                                    <div className="form-group mb--0">
+                                                        <button name="submit" type="submit" className="axil-btn btn-bg-primary">
+                                                            {isLoading ? (
+                                                                <div className="spinner"></div>  // Spinner here
+                                                            ) : (
+                                                               'Submit' 
+                                                            )}
+                                                        </button>
+                                                        {result && <p className="success">Your Message Submitted !</p>}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div className="col-lg-4">
+                                <div className="contact-location mb--40">
+                                    <h4 className="title mb--20">{t('contact.store.title')}</h4>
+                                    <span className="address mb--20">{t('contact.store.address')}</span>
+                                    <span className="phone">{t('contact.store.phone')}: {StoreInfo.phone}</span>
+                                    <span className="email">{t('contact.store.email')}: {StoreInfo.email}</span>
+                                </div>
+                                <div className="contact-career mb--40">
+                                    <h4 className="title mb--20">{t('contact.careers.title')}</h4>
+                                    <p>{t('contact.careers.description')}</p>
+                                </div>
+                                <div className="opening-hour">
+                                    <h4 className="title mb--20">{t('contact.opening_hours.title')}</h4>
+                                    <p>{t('contact.opening_hours.mon_to_sat')}: {StoreInfo.opening.monToSat}
+                                        <br /> {t('contact.opening_hours.sunday')}: {StoreInfo.opening.othersDay}
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                    ))}
-                </div>
-            </Section>
-            <PosterOne 
-             subtitleIcon="far fa-couch"
-             title="ICE KAKTUZ took first place in 2022 for the BEST FLAVOR on the market"
-             thumbnail="/images/product/poster/URKUNDE_Ice_Kaktuz.png"
-             thumbWidth={661}
-             thumbHeight={502}
-            />
-            <Section pClass="pb--0" borderBottom="pb--80">
-                <SectionTitle
-                        title={t('explore_our_products')} // Translated text
-                        subtitle={t('our_products')} // Translated text
-                subtitleIcon="far fa-shopping-basket"
-                subColor="highlighter-secondary"
-                />
-                 <div className="row">
-                    {furnitureProduc.slice(0,4).map((data) => (
-                        <div className="col-xl-3 col-lg-4 col-sm-6" key={data.id}>
-                            <ProductSeven product={data} />
-                        </div>
-                    ))}
-                </div>
-                <div className="row">
-                    <div className="col-lg-12 text-center mt--20 mt_sm--0">
-                        <Link href="/shop" className="axil-btn btn-bg-lighter btn-load-more">{t('viewAllProducts')}</Link>
                     </div>
                 </div>
-            </Section>
-          
-   
-            <Section pClass="pb--50">
-                <SectionTitle 
-                        title={t('new_arrivals')} // Translated text
-                        subtitle={t('this_weeks')} // Translated text
-                    subtitleIcon="far fa-shopping-basket"
-                />
-                          <div className="row">
-                    {exploreProduct.slice(0, 4 ).map((data) => (
-                        <div className="col-xl-3 col-lg-4 col-sm-6" key={data.id}>
-                            <ProductSeven product={data} />
-                        </div>
-                    ))}
-                </div>
-            </Section>
-            <ChatWidget />
+            </div>
         </main>
         <FooterTwo />
-        
+
+       
+
+     
+        <style jsx>{`
+            .popup {
+                position: fixed;
+                z-index:99999;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5);
+                display: none;
+                justify-content: center;
+                align-items: center;
+            }
+            .popup.show {
+                display: flex;
+            }
+            .popup-content {
+                background-color: white;
+                padding: 20px;
+                border-radius: 10px;
+                text-align: center;
+                width: 300px;
+            }
+            .spinner {
+                width: 24px;
+                height: 24px;
+                border: 4px solid transparent;
+                border-top: 4px solid #333;
+                border-radius: 50%;
+                animation: spin 1s linear infinite;
+                margin: 0 auto;  // Center the spinner
+            }
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+        `}</style>
         </>
-     );
+    );
 }
- 
-export default Home;
+
+export default ContactUs;
