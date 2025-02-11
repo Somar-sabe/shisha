@@ -1,55 +1,59 @@
-import nodemailer from 'nodemailer'; // Import Nodemailer
+import clientPromise from '@/lib/mongodb';
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
-    const { name, email, phone, company, position, country, message } = req.body;
+    // Destructure form data from the request body
+    const {
+      name,
+      phone,
+      email,
+      company,
+      position,
+      country,
+      message
+    } = req.body;
 
-    // Check if all required fields are provided
-    if (!name || !email || !phone || !company || !position || !country || !message) {
+    // Validate the required fields
+    if (!name || !phone || !email || !company || !position || !country) {
       return res.status(400).json({
         success: false,
-        message: "Missing required fields",
+        message: "Missing required fields: name, phone, email, company, position, country"
       });
     }
 
     try {
-      // Create Nodemailer transporter using environment variables for credentials
-      const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-          user: process.env.GMAIL_USER,  // Gmail address from env variable
-          pass: process.env.GMAIL_APP_PASSWORD, // Gmail app password from env variable
-        },
+      // Use the clientPromise to get the MongoDB client
+      const client = await clientPromise;
+      const db = client.db("Shisha"); // Specify the database name
+      const contactCollection = db.collection("contacts"); // Specify the collection name
+
+      // Insert the form data into the collection
+      const result = await contactCollection.insertOne({
+        name,
+        phone,
+        email,
+        company,
+        position,
+        country,
+        message,
+        createdAt: new Date(),
       });
-
-      // Email content
-      const mailOptions = {
-        from: email, // Sender address
-        to: 'contact@holster-tobacco.com', // Recipient address
-        subject: `New message from ${name}`, // Subject line
-        text: `You have a new message from the contact form.\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nCompany: ${company}\nPosition: ${position}\nCountry: ${country}\nMessage: ${message}`, // Plain text content
-        html: `<h1>New Contact Form Submission</h1><p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Phone:</strong> ${phone}</p><p><strong>Company:</strong> ${company}</p><p><strong>Position:</strong> ${position}</p><p><strong>Country:</strong> ${country}</p><p><strong>Message:</strong></p><p>${message}</p>`, // HTML content
-      };
-
-      // Send the email
-      await transporter.sendMail(mailOptions);
-      console.log('Email sent successfully.');
 
       // Return a success response
       return res.status(200).json({
         success: true,
-        message: "Email sent successfully",
+        message: "Form data saved successfully",
+        contactId: result.insertedId,
       });
     } catch (error) {
-      console.error("Error sending email:", error);
+      console.error("Error saving form data:", error);
       return res.status(500).json({
         success: false,
-        message: "Failed to send email",
+        message: "Failed to save form data",
         error: error.message,
       });
     }
   } else {
-    // Handle other HTTP methods (e.g., GET)
     return res.status(405).json({
       success: false,
       message: `Method ${req.method} Not Allowed`,
