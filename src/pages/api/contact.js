@@ -12,8 +12,8 @@ export default async function handler(req, res) {
         try {
             // Connect to MongoDB and save the contact form data
             await client.connect();
-            const database = client.db('shisha');  // Replace with your database name
-            const collection = database.collection('contacts');
+            const database = client.db('your_db_name');  // Replace with your database name
+            const collection = database.collection('contact_form');
 
             const formData = {
                 name,
@@ -33,8 +33,8 @@ export default async function handler(req, res) {
             const transporter = nodemailer.createTransport({
                 service: 'gmail',
                 auth: {
-                    user: 'your-email@gmail.com',  // Your Gmail address
-                    pass: 'your-gmail-app-password',  // Gmail app password (not your Gmail password)
+                  user: 'sabesofteng@gmail.com', // Your Gmail address
+          pass: 'crse tyut xdcq bxib', // Gmail app password (not your Gmail password)
                 },
             });
 
