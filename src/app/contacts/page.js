@@ -1,6 +1,7 @@
 'use client'; 
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import emailjs from '@emailjs/browser';
 import FooterTwo from "@/components/footer/FooterTwo";
 import HeaderFive from "@/components/header/HeaderFive";
 import { StoreInfo } from "@/data/Common";
@@ -18,7 +19,7 @@ const ContactUs = () => {
         setShowPopup(true); // Show popup while form is submitting
 
         try {
-            // Send the form data to your backend to save in MongoDB and send the email
+            // Send the form data to yourbackend to save in MongoDB
             const response = await fetch('/api/contact', {
                 method: 'POST',
                 headers: {
@@ -26,20 +27,23 @@ const ContactUs = () => {
                 },
                 body: JSON.stringify(formData),
             });
-
+    
             const data = await response.json();
-
+    
             if (data.success) {
-                console.log('Form submitted and email sent successfully');
+                console.log('Form data saved to MongoDB');
             } else {
-                console.log('Error submitting form:', data.message);
+                console.log('Error saving form data to MongoDB:', data.message);
             }
+    
+            // Send the email using emailjs
+            await emailjs.send('service_g3aufzu', 'template_sk4dqiz', formData, '9L_sRsO66U253zcxC');
         } catch (error) {
             console.error('Error submitting form:', error);
         } finally {
             setIsLoading(false); // Hide loading state once submission is complete
         }
-
+    
         reset();
         setTimeout(() => {
             showResult(true); // Show the "Thanks" message
@@ -151,7 +155,48 @@ const ContactUs = () => {
             </div>
         </main>
         <FooterTwo />
-    </>
+
+       
+
+     
+        <style jsx>{`
+            .popup {
+                position: fixed;
+                z-index:99999;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5);
+                display: none;
+                justify-content: center;
+                align-items: center;
+            }
+            .popup.show {
+                display: flex;
+            }
+            .popup-content {
+                background-color: white;
+                padding: 20px;
+                border-radius: 10px;
+                text-align: center;
+                width: 300px;
+            }
+            .spinner {
+                width: 24px;
+                height: 24px;
+                border: 4px solid transparent;
+                border-top: 4px solid #333;
+                border-radius: 50%;
+                animation: spin 1s linear infinite;
+                margin: 0 auto;  // Center the spinner
+            }
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+        `}</style>
+        </>
     );
 }
 
