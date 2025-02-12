@@ -32,21 +32,7 @@ const HeaderFive = (props) => {
   }, []);
   return (
     <header className="header axil-header header-style-3" ref={axilHeader}>
-      <div className="axil-header-top">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-sm-6">
-              <div className="header-top-dropdown">
-                <LangDropdown />
-                <CuurencyDropdown />
-              </div>
-            </div>
-            <div className="col-sm-6">
-              <HeaderQuickLink />
-            </div>
-          </div>
-        </div>
-      </div>
+
       <div id="axil-sticky-placeholder" ref={axilPlaceholder}/>
       <div className="axil-mainmenu" ref={axilMainmenu}>
         <div className="container">
