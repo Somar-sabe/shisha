@@ -166,11 +166,17 @@ const Home = () => {
                 .popup-buttons .btn-yes {
                     background-color: #eba800;
                     color: white;
+                    border-radius: 3px;
+                    width:5vw;
                 }
 
                 .popup-buttons .btn-no {
                     background-color: #eba800;
                     color: white;
+                    border-radius: 3px;
+                    width:5vw;
+
+
                 }
             `}</style>
         
