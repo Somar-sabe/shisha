@@ -274,6 +274,12 @@ display: flex
     height: 48px;
     gap: 10px;
 }
+    .modal .popup-years__block-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
                
             `}</style>
         
