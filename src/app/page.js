@@ -248,7 +248,7 @@ display: flex;
     line-height: 24;
     padding: 12px 16px;
     border-radius: 8px;
-    background-color: #e30613;
+    background-color: #eba800;
     transition: .3sease;
     }
 .exit{
@@ -263,7 +263,7 @@ display: flex
     line-height: 24;
     padding: 12px 16px;
     border-radius: 8px;
-    background-color: #eba800;
+    background-color: black;
     transition: .3sease;}
     .modal .popup-years__block-button {
     display: flex
