@@ -175,6 +175,14 @@ const Home = () => {
     padding: 50px 10px;
     overflow: hidden;
 }
+    .modal .popup-years__block {
+    display: flex
+;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
 @media (min-width: 568px) {
     .modal__container {
         width: 90%;
