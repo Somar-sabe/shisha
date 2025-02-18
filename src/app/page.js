@@ -280,7 +280,10 @@ display: flex
     align-items: center;
     gap: 15px;
 }
-               
+          .header-brand{
+          display:flex;
+          justify-content:center;
+          align-items:center;}     
             `}</style>
         
         </>
