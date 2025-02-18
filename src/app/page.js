@@ -11,6 +11,7 @@ import ProductSeven from '@/components/product/ProductSeven';
 import PosterOne from '@/components/poster/PosterOne';
 import BannerFive from '@/components/hero-banner/BannerFive';
 import ChatWidget from '@/components/widget/ChatWidget';
+import HeaderBrand from "@/components/header/elements/HeaderBrand";
 import '../lib/i18n';
 import { useState, useEffect } from 'react';
 const Home = () => {
@@ -53,16 +54,29 @@ const Home = () => {
         <main className="main-wrapper">
             
         {isPopupVisible && (
-                    <div className="popup-overlay">
-                        <div className="popup">
-                            <h2>are you 18 years of age or older?</h2>
-                            <p>You must be at least 18 to enter this</p>
-                            <div className="popup-buttons">
-                                <button onClick={handleYes} className="btn-yes">{t('yes')}</button>
-                                <button onClick={handleNo} className="btn-no">{t('no')}</button>
-                            </div>
-                        </div>
-                    </div>
+
+                    <div class="modal popup-years">
+            <div class="modal__wrapper">
+                <div class="modal__bg js-modal-close"></div>
+                <div class="modal__container">
+               
+                    <div class="modal__scroll"><div class="popup-years__block">
+                    <HeaderBrand />
+ <div class="popup-years__block-content">
+ <h1 class="title">Are you 18 years of age or older?</h1>
+<p class="subtext">You must be at least 18 to enter this site</p>
+ </div>
+ <div class="popup-years__block-button">
+ <button onClick={handleYes}  class="enter">Yes</button>
+ <a class="exit"  onClick={handleNo} >No</a>
+ </div>
+ </div> </div>
+                </div>
+                
+            </div>
+        </div>
+
+
                 )}
 
             <BannerFive />
@@ -131,53 +145,114 @@ const Home = () => {
         </main>
         <FooterTwo />
         <style jsx>{`
-                .popup-overlay {
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    background-color: rgba(0, 0, 0, 0.5);
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    z-index: 999;
-                }
+.modal, .modal__wrapper {
+    width: 100%;
+    height: 100vh;
+}
 
-                .popup {
-                    background-color: #fff;
-                    padding: 20px;
-                    border-radius: 8px;
-                    text-align: center;
-                    width: 300px;
-                }
+.modal {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    animation: overlay-show .4sease-in-out;
+}
+    .modal__wrapper {
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+}
 
-                .popup h2 {
-                    margin-bottom: 20px;
-                }
-
-                .popup-buttons button {
-                    margin: 10px;
-                    padding: 10px 20px;
-                    font-size: 16px;
-                    cursor: pointer;
-                }
-
-                .popup-buttons .btn-yes {
-                    background-color: #eba800;
-                    color: white;
-                    border-radius: 3px;
-                    width:5vw;
-                }
-
-                .popup-buttons .btn-no {
-                    background-color: #eba800;
-                    color: white;
-                    border-radius: 3px;
-                    width:5vw;
-
-
-                }
+.modal, .modal__wrapper {
+    width: 100%;
+    height: 100vh;
+}
+    .modal.popup-years .modal__container {
+    width: 430px;
+    border-radius: 8px;
+    padding: 50px 10px;
+    overflow: hidden;
+}
+@media (min-width: 568px) {
+    .modal__container {
+        width: 90%;
+    }
+}
+    .modal__container {
+    position: relative;
+    width: 100%;
+    max-width: 1170px;
+    max-height: 100vh;
+    background: #fff;
+    padding: 40px 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    animation: overlay__container-show .8sease-in-out;
+}
+    @media (min-width: 1024px) {
+    .modal__scroll {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+.modal__scroll {
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+    .modal .popup-years__block {
+    display: flex
+;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+    .modal .popup-years__block-content .title {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 33px;
+    color: #1b1b1b;
+    text-align: center;
+}
+    .modal .popup-years__block-content .subtext {
+    margin: 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: #5e5e5e;
+    text-align: center;
+}
+    .enter{
+    display: flex
+;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    height: 48px;
+    font-size: 16px;
+    line-height: 24;
+    padding: 12px 16px;
+    border-radius: 8px;
+    background-color: #e30613;
+    transition: .3sease;}
+.exit{
+display: flex
+;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    height: 48px;
+    font-size: 16px;
+    line-height: 24;
+    padding: 12px 16px;
+    border-radius: 8px;
+    background-color: #eba800;
+    transition: .3sease;}
+               
             `}</style>
         
         </>
