@@ -55,20 +55,20 @@ const Home = () => {
             
         {isPopupVisible && (
 
-                    <div class="modal popup-years">
-            <div class="modal__wrapper">
-                <div class="modal__bg js-modal-close"></div>
-                <div class="modal__container">
+                    <div className="modal popup-years">
+            <div className="modal__wrapper">
+                <div className="modal__bg js-modal-close"></div>
+                <div className="modal__container">
                
-                    <div class="modal__scroll"><div class="popup-years__block">
+                    <div className="modal__scroll"><div class="popup-years__block">
                     <HeaderBrand />
- <div class="popup-years__block-content">
- <h1 class="title">Are you 18 years of age or older?</h1>
-<p class="subtext">You must be at least 18 to enter this site</p>
+ <div className="popup-years__block-content">
+ <h1 className="title">Are you 18 years of age or older?</h1>
+<p className="subtext">You must be at least 18 to enter this site</p>
  </div>
- <div class="popup-years__block-button">
+ <div className="popup-years__block-button">
  <button onClick={handleYes}  class="enter">Yes</button>
- <a class="exit"  onClick={handleNo} >No</a>
+ <a className="exit"  onClick={handleNo} >No</a>
  </div>
  </div> </div>
                 </div>
