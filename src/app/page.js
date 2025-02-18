@@ -280,6 +280,12 @@ display: flex
     align-items: center;
     gap: 15px;
 }
+    .modal__wrapper {
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+}
           .header-brand{
           display:flex;
           justify-content:center;
