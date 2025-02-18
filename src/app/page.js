@@ -55,7 +55,8 @@ const Home = () => {
         {isPopupVisible && (
                     <div className="popup-overlay">
                         <div className="popup">
-                            <h2>{t('are_you_over_18')}</h2>
+                            <h2>are you 18 years of age or older?</h2>
+                            <p>You must be at least 18 to enter this</p>
                             <div className="popup-buttons">
                                 <button onClick={handleYes} className="btn-yes">{t('yes')}</button>
                                 <button onClick={handleNo} className="btn-no">{t('no')}</button>
