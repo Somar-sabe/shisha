@@ -60,7 +60,7 @@ const Home = () => {
                 <div className="modal__bg js-modal-close"></div>
                 <div className="modal__container">
                
-                    <div className="modal__scroll"><div class="popup-years__block">
+                    <div className="modal__scroll"><div className="popup-years__block">
                     <HeaderBrand className="borg" />
  <div className="popup-years__block-content">
  <h1 className="title">Are you 18 years of age or older?</h1>
