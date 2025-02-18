@@ -172,7 +172,7 @@ const Home = () => {
     .modal.popup-years .modal__container {
     width: 430px;
     border-radius: 8px;
-    padding: 50px 10px;
+    padding: 0px 0px;
     overflow: hidden;
 }
     .modal .popup-years__block {
