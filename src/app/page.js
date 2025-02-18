@@ -61,7 +61,7 @@ const Home = () => {
                 <div className="modal__container">
                
                     <div className="modal__scroll"><div class="popup-years__block">
-                    <HeaderBrand />
+                    <HeaderBrand className="borg" />
  <div className="popup-years__block-content">
  <h1 className="title">Are you 18 years of age or older?</h1>
 <p className="subtext">You must be at least 18 to enter this site</p>
@@ -187,7 +187,12 @@ const Home = () => {
     .modal__container {
         width: 90%;
     }
+
 }
+    .borg{
+    display:flex;
+    justify-content:center;
+    align-items-center;}
     .modal__container {
     position: relative;
     width: 100%;
