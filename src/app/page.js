@@ -265,6 +265,15 @@ display: flex
     border-radius: 8px;
     background-color: #eba800;
     transition: .3sease;}
+    .modal .popup-years__block-button {
+    display: flex
+;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+    gap: 10px;
+}
                
             `}</style>
         
