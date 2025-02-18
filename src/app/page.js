@@ -12,6 +12,7 @@ import PosterOne from '@/components/poster/PosterOne';
 import BannerFive from '@/components/hero-banner/BannerFive';
 import ChatWidget from '@/components/widget/ChatWidget';
 import '../lib/i18n';
+import { useState, useEffect } from 'react';
 const Home = () => {
     const { t } = useTranslation(); 
     const pathname = usePathname();
@@ -21,11 +22,48 @@ const Home = () => {
     const furnitureProduc = ProductsData.slice(4, 8);
     const exploreProduct = ProductsData.filter(data => data.pCate === "Shisha Accssesores");
 
+    const [isPopupVisible, setIsPopupVisible] = useState(true); // Initially show the popup
+    const [isAdult, setIsAdult] = useState(false); // Track if user confirmed they are 18+
+
+    // Check localStorage to see if the user has already confirmed age
+    useEffect(() => {
+        const isUserAdult = localStorage.getItem('isAdult');
+        if (isUserAdult === 'true') {
+            setIsPopupVisible(false); // Hide the popup if the user is already confirmed as an adult
+        }
+    }, []);
+
+    // Handle user response
+    const handleYes = () => {
+        setIsAdult(true);
+        setIsPopupVisible(false); // Hide the popup
+        localStorage.setItem('isAdult', 'true'); // Store the response in localStorage
+    };
+
+    const handleNo = () => {
+        setIsAdult(false);
+        setIsPopupVisible(false); // Hide the popup
+        localStorage.setItem('isAdult', 'false'); // Optionally store the "no" response
+    };
+
+
     return ( 
         <>
         <HeaderFive headerSlider />
         <main className="main-wrapper">
             
+        {isPopupVisible && (
+                    <div className="popup-overlay">
+                        <div className="popup">
+                            <h2>{t('are_you_over_18')}</h2>
+                            <div className="popup-buttons">
+                                <button onClick={handleYes} className="btn-yes">{t('yes')}</button>
+                                <button onClick={handleNo} className="btn-no">{t('no')}</button>
+                            </div>
+                        </div>
+                    </div>
+                )}
+
             <BannerFive />
           
 
@@ -91,6 +129,49 @@ const Home = () => {
             <ChatWidget />
         </main>
         <FooterTwo />
+        <style jsx>{`
+                .popup-overlay {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 999;
+                }
+
+                .popup {
+                    background-color: #fff;
+                    padding: 20px;
+                    border-radius: 8px;
+                    text-align: center;
+                    width: 300px;
+                }
+
+                .popup h2 {
+                    margin-bottom: 20px;
+                }
+
+                .popup-buttons button {
+                    margin: 10px;
+                    padding: 10px 20px;
+                    font-size: 16px;
+                    cursor: pointer;
+                }
+
+                .popup-buttons .btn-yes {
+                    background-color: #eba800;
+                    color: white;
+                }
+
+                .popup-buttons .btn-no {
+                    background-color: #eba800;
+                    color: white;
+                }
+            `}</style>
         
         </>
      );
