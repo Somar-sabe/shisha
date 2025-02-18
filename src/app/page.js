@@ -67,7 +67,7 @@ const Home = () => {
 <p className="subtext">You must be at least 18 to enter this site</p>
  </div>
  <div className="popup-years__block-button">
- <button onClick={handleYes}  class="enter">Yes</button>
+ <button onClick={handleYes}  className="enter">Yes</button>
  <a className="exit"  onClick={handleNo} >No</a>
  </div>
  </div> </div>
@@ -238,8 +238,7 @@ const Home = () => {
     text-align: center;
 }
     .enter{
-    display: flex
-;
+display: flex;
     align-items: center;
     border: none;
     cursor: pointer;
@@ -250,7 +249,8 @@ const Home = () => {
     padding: 12px 16px;
     border-radius: 8px;
     background-color: #e30613;
-    transition: .3sease;}
+    transition: .3sease;
+    }
 .exit{
 display: flex
 ;
