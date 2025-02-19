@@ -45,6 +45,7 @@ const Home = () => {
         setIsAdult(false);
         setIsPopupVisible(false); // Hide the popup
         localStorage.setItem('isAdult', 'false'); // Optionally store the "no" response
+        window.location.href = "https://www.google.com";
     };
 
 
