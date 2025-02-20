@@ -12,7 +12,7 @@ const Category = [
       
     },
     {
-        cate: "Shisha Accssesores",
+        cate: "Shisha accessories",
         cateThumb: "/images/product/categories/jewelry-2.png",
         hasSub: false,
       

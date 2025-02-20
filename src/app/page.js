@@ -21,7 +21,7 @@ const Home = () => {
     const pageCategory = split[split.length - 1];
     const furnitureProduct = ProductsData.slice(0, 4);
     const furnitureProduc = ProductsData.slice(4, 8);
-    const exploreProduct = ProductsData.filter(data => data.pCate === "Shisha Accssesores");
+    const exploreProduct = ProductsData.filter(data => data.pCate === "Shisha accessories");
 
     const [isPopupVisible, setIsPopupVisible] = useState(true); // Initially show the popup
     const [isAdult, setIsAdult] = useState(false); // Track if user confirmed they are 18+

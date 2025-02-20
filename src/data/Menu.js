@@ -19,7 +19,7 @@ const HeaderMenu = [
             },
             {
                 name: "menu.shisha_accessories",
-                url: "/shop?category=shisha-accssesores",
+                url: "/shop?category=shisha-accessories",
             }
         ]
     },

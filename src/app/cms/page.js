@@ -507,7 +507,7 @@ const ProductsPage = () => {
 
         <div style={styles.formGroup}>
           <label>Link (Href)</label>
-          <input style={styles.input} type="text" defaultValue="/shop?category=shisha-accssesores" />
+          <input style={styles.input} type="text" defaultValue="/shop?category=shisha-accessories" />
         </div>
       </div>
       <button style={styles.button} type="submit"
