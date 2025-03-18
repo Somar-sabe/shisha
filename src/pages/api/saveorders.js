@@ -45,7 +45,7 @@ export default async function handler(req, res) {
       // Email content
       const mailOptions = {
         from: `"Holster Tobacco" <${process.env.EMAIL_USER}>`, // Sender address
-        to: 'J.Nihad@holster-tobacco.com', // Recipient address
+        to: 'g.mustafa@holster-tobacco.com', // Recipient address
         subject: `New Order Received - ${orderId}`, // Subject line
         text: `A new order has been received.\n\nDetails:\nOrder ID: ${orderId}\nCustomer: ${customerName}\nTotal Amount: ${totalAmount}\nPhone: ${phone}\nCart items: ${cartItems}`, // Plain text body
         html: `<h1>New Order Received</h1>
