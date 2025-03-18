@@ -37,6 +37,7 @@ const Checkout = () => {
             phone,
             customerName,
             cartItems,
+          country,
             totalAmount: cartTotalAmount,
             paymentMethod, // Set payment method to what the user selected (can be 'cash' or 'ziina')
             customerEmail: data.email, // Add customer email if it's missing
@@ -108,12 +109,12 @@ const Checkout = () => {
                                             <label>City<span>*</span></label>
                                             <select {...register('country', { required: true })}>
                                                 <option value="">Select a City</option>
-                                                <option value="Australia">Dubai</option>
-                                                <option value="Australia">Sharjah</option>
-                                                <option value="New Zealand">Abu Dhabi</option>
-                                                <option value="Switzerland">Ajman</option>
-                                                <option value="United Kindom (UK)">RAK</option>
-                                                <option value="United States (USA)">Fujairah</option>
+                                                <option value="dubai">Dubai</option>
+                                                <option value="sharjah">Sharjah</option>
+                                                <option value="abudhabi">Abu Dhabi</option>
+                                                <option value="ajman">Ajman</option>
+                                                <option value="rak">RAK</option>
+                                                <option value="fujairah">Fujairah</option>
                                             </select>
                                             {errors.country && <p className="error">Country Name is required.</p>}
                                         </div>
