@@ -27,7 +27,7 @@ const Checkout = () => {
       } = useForm();
       const checkoutFormHandler = async (data, e) => {
         const { cartItems, cartTotalAmount } = cartProducts;
-        const { paymentMethod, firstName, lastName, phone } = data; // Get the selected payment method and customer name
+        const { paymentMethod, firstName, lastName, phone, country } = data; // Get the selected payment method and customer name
     
         const orderId = `ORD-${Date.now()}`; // Generate an orderId using the current timestamp
         const customerName = `${firstName} ${lastName}`; // Combine first name and last name
