@@ -3,7 +3,7 @@ import clientPromise from '@/lib/mongodb'; // Import the MongoDB clientPromise
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
-    const { orderId, customerName, totalAmount, customerEmail, phone, cartItems } = req.body;
+    const { orderId, customerName, totalAmount, customerEmail, phone, cartItems, country } = req.body;
 
     // Check if the necessary fields are present
     if (!orderId || !customerName || !totalAmount || !customerEmail || !phone || !cartItems) {
@@ -26,6 +26,7 @@ export default async function handler(req, res) {
         customerEmail,
         phone,
         cartItems,
+        country,
         createdAt: new Date(),
       };
 
@@ -52,6 +53,7 @@ export default async function handler(req, res) {
                <p><strong>Order ID:</strong> ${orderId}</p>
                <p><strong>Customer:</strong> ${customerName}</p>
                <p><strong>Total Amount:</strong> ${totalAmount}</p>
+               <p><strong>Country:</strong> ${country}</p>
                <p><strong>Phone:</strong> ${phone}</p>
                <p><strong>Cart items:</strong> ${cartItems}</p>`,  // HTML body
       };
