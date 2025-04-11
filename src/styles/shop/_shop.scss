@@ -436,7 +436,9 @@
                 top: -20px;
                 right: 20px;
                 a, button {
-                    display: inline-block;
+                    display: flex;
+                    justify-content:center;
+                    align-items:center;
                     text-align: center;
                     height: 45px;
                     width: 45px;
