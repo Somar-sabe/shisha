@@ -25,7 +25,7 @@ const ProductSeven = ({product}) => {
       <div className="axil-product product-style-seven">
         <div className="product-content">
           <div className="cart-btn">
-            <button onClick={() => handleAddToCart(product)}><i className="far fa-shopping-cart" /></button>
+            <button   style={{display: 'flex',alignItems: 'center', justifyContent: 'center'}} onClick={() => handleAddToCart(product)}><i className="far fa-shopping-cart" /></button>
           </div>
           <div className="inner">
             <ProductTitle productTitle={product}/>
