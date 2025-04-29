@@ -92,6 +92,53 @@ const ProductsData = [
         ],
     },
     {
+        id: 42,
+        title: "Marbello",
+        thumbnail: "/images/product/furniture/Marbello_webshop_Inner page.webp",
+        pCate: "Shisha Tobacco",
+        cate: "Furniture",
+        price: 65,
+        productType: "variable",
+        shortDes: {
+            text: "In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.", 
+            listItem: '<li><i class="fal fa-check"></i>In stock</li><li><i class="fal fa-check"></i>Free delivery available</li><li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>'
+        },
+        description: {
+            textDesc: {
+                title: "About this Product",
+                text: "Holster Marbella flavour is a tasty smoke that everyone can enjoy. Its rich and smooth taste makes your smoking experience better. Don't miss this delightful blend that promises satisfaction with every puff!"
+            },
+            listDesc: [
+                                
+                {
+                    title: "Weight",
+                    text: "250g"
+                },
+                {
+                    title: "Aroma",
+                    text: "Watermelom, Raspberry"
+                },
+                {
+                    title: "Taste",
+                    text: "Fruity/refresh"
+                },
+                {
+                    title: "Type of tobacco",
+                    text: "Virginia"
+                },
+                {
+                    title: "Country of origin",
+                    text: "Germany"
+                }
+
+                ],
+          
+        },
+        addInfo: [
+
+        ],
+    },
+    {
         id: 3,
         title: "Ice Kaktuz",
         thumbnail: "/images/product/furniture/Ice Kaktuz_webshop_UAE.png",
@@ -924,6 +971,7 @@ const ProductsData = [
         ],
 
     },
+    
     
     {
         id: 18,
