@@ -116,7 +116,7 @@ const AboutUs = () => {
                 <div className="team-left-fullwidth">
                     <div className="container ml--xxl-0">
                         <SectionTitle
-                        title="Expart Management Team"
+                        title="Management Team"
                         subtitle="Our Team"
                         subtitleIcon="fas fa-users"
                         subColor="highlighter-primary"
