@@ -93,7 +93,7 @@ const ProductsData = [
     },
     {
         id: 42,
-        title: "Marbello",
+        title: "Marbella",
         thumbnail: "/images/product/furniture/Marbello_webshop_Inner page.webp",
         pCate: "Shisha Tobacco",
         cate: "Furniture",
