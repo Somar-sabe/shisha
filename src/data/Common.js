@@ -4,7 +4,7 @@ const ScocialLink = {
         icon: "fab fa-facebook-f",
     },
     instagram: {
-        url: "https://www.instagram.com/holster_uae?igsh=bmRxc2dkYWRlMnNt",
+        url: "https://www.instagram.com/holster.uae",
         icon: "fab fa-instagram",
     },
     whatsapp: {
