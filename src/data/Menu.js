@@ -24,7 +24,7 @@ const HeaderMenu = [
         ]
     },
       {
-        name: "menu.media",
+        name: "Media",
         url: "https://www.dropbox.com/scl/fo/3ynitwi3rjq34osprt7ku/APtMMx_sxPLyIUTa8JxUVO8?rlkey=uijnl0a8sx7elq6qe9ae0c9na&e=1&st=yws9zjhq&dl=0",
         hasChildren: false,
     },
