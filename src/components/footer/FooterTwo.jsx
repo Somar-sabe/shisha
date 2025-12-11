@@ -93,11 +93,7 @@ const FooterTwo = () => {
                 <div className="copyright-left d-flex flex-wrap justify-content-center">
                   <ul className="quick-link">
                     <li>
-                      © 2024. {t('allRightsReserved')} {" "}
-                      <a target="_blank" href="https://baylabs.tech/">
-                        Bay Labs
-                      </a>
-                      .
+                      © 2025. {t('allRightsReserved')} {" "} .
                     </li>
                   </ul>
                 </div>
