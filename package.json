@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build || true",
+    "build": "next build --webpack",
     "start": "next start",
     "lint": "next lint"
   },
@@ -12,7 +12,7 @@
     "@emailjs/browser": "^3.11.0",
     "@reduxjs/toolkit": "^1.9.5",
     "bcrypt": "^5.1.1",
-    "bootstrap": "^5.3.3",
+    "bootstrap": "^5.3.8",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.3",
     "fs": "^0.0.1-security",
@@ -38,7 +38,7 @@
     "react-slick": "^0.29.0",
     "remark": "^14.0.3",
     "remark-html": "^15.0.2",
-    "sass": "^1.79.4",
+    "sass": "^1.96.0",
     "sharp": "^0.32.4",
     "slick-carousel": "^1.8.1",
     "stripe": "^17.3.1",
