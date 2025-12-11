@@ -83,11 +83,7 @@ const FooterOne = (props) => {
                 </ul>
                 <ul className="quick-link">
 				  <li>
-                    © {new Date().getFullYear()}. All rights reserved by {" "}
-                    <a target="_blank" href="https://Baylabs.com/">
-                      Bay Labs
-                    </a>
-                    .
+                    © 2025. All rights reserved.
                   </li>
                 </ul>
               </div>
