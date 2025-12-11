@@ -83,7 +83,7 @@ const FooterOne = (props) => {
                 </ul>
                 <ul className="quick-link">
 				  <li>
-                    © 2025. All rights reserved.
+                    © 2025. All rights reserved
                   </li>
                 </ul>
               </div>
