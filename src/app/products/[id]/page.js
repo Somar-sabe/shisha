@@ -1,34 +1,32 @@
 import ProductsData from "@/data/Products";
 import ProductSeven from "@/components/product/ProductSeven";
-import { slugify } from "@/utils";
-import SingleLayouThree from "./SingleLayouThree";
 import Section from "@/components/elements/Section";
 import SectionTitle from "@/components/elements/SectionTitle";
+import SingleLayouThree from "./SingleLayouThree";
 import SingleLayouSeven from "./SingleLayouSeven";
 import SingleLayoutOne from "./SingleLayoutOne";
 import SingleLayoutTwo from "./SingleLayoutTwo";
 import SingleLayoutFour from "./SingleLayoutFour";
+import { notFound } from "next/navigation";
 
-const ProductDetails = ({ params }) => {
-  // تنظيف المنتجات: استبعاد أي عنصر مفقود id أو pCate
-  const cleanProducts = ProductsData.filter(
-    (p) => p && typeof p.id === "string" && p.id.trim() && typeof p.pCate === "string" && p.pCate.trim()
-  );
+export default async function ProductDetails(props) {
+  // ✅ Next 16 / Turbopack: params ممكن يكون Promise
+  const params = await props.params;
+  const rawId = params?.id;
 
-  // البحث عن المنتج حسب params.id
-  const singleProduct = cleanProducts.find(
-    (p) => slugify(p.id) === slugify(params.id)
-  );
+  if (!rawId) return notFound();
 
-  if (!singleProduct) {
-    return <div>Product not found</div>;
-  }
+  const idNum = Number(rawId);
+  if (Number.isNaN(idNum)) return notFound();
 
-  // المنتجات المرتبطة
-  const relatedProduct = cleanProducts.filter(
+  const singleProduct = ProductsData.find((p) => Number(p?.id) === idNum);
+  if (!singleProduct) return notFound();
+
+  const relatedProduct = ProductsData.filter(
     (p) =>
-      p.id !== singleProduct.id &&
-      slugify(p.pCate) === slugify(singleProduct.pCate)
+      Number(p?.id) !== Number(singleProduct.id) &&
+      String(p?.pCate || "").trim().toLowerCase() ===
+        String(singleProduct.pCate || "").trim().toLowerCase()
   );
 
   const ProductSingleLayout = () => {
@@ -49,6 +47,7 @@ const ProductDetails = ({ params }) => {
   return (
     <>
       <ProductSingleLayout />
+
       <Section pClass="pb--0" borderBottom="pb--50">
         <SectionTitle
           title="Viewed Items"
@@ -58,7 +57,7 @@ const ProductDetails = ({ params }) => {
         />
         <div className="row">
           {relatedProduct.slice(0, 4).map((data) => (
-            <div className="col-xl-3 col-lg-4 col-sm-6" key={data.id}>
+            <div className="col-xl-3 col-lg-4 col-sm-6" key={String(data.id)}>
               <ProductSeven product={data} />
             </div>
           ))}
@@ -66,17 +65,8 @@ const ProductDetails = ({ params }) => {
       </Section>
     </>
   );
-};
+}
 
-export default ProductDetails;
-
-// توليد static params مع حماية ضد أي id غير موجود
-export async function generateStaticParams() {
-  const validProducts = ProductsData.filter(
-    (p) => p && typeof p.id === "string" && p.id.trim()
-  );
-
-  return validProducts.map((p) => ({
-    id: slugify(p.id),
-  }));
+export function generateStaticParams() {
+  return ProductsData.map((p) => ({ id: String(p.id) }));
 }
