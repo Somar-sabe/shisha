@@ -2,8 +2,8 @@ const ProductsData = [
     {
         id: 1,
         title: "Double Apple",
-        thumbnail: "/images/product/furniture/Double Apple_webshop_UAE.png",
-        hoverThumbnail: "/images/product/furniture/Double Apple_webshop_UAE.png",
+        thumbnail: "/images/product/furniture/Double_Apple_webshop_UAE.png",
+        hoverThumbnail: "/images/product/furniture/Double_Apple_webshop_UAE.png",
         pCate: "Shisha Tobacco",
         cate: "Furniture",
         price: 65,
@@ -620,7 +620,7 @@ const ProductsData = [
     {
         id: 12,
         title: "Ice Kaktuz Noir",
-        thumbnail: "/images/product/furniture/Ice Kaktuz_webshop_UAE.png",
+        thumbnail: "/images/product/furniture/IceKaktuz_webshop_UAE.png",
         pCate: "Shisha Tobacco",
        cate: "Furniture",
         price: 85,
