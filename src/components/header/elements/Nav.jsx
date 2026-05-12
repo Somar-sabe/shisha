@@ -86,7 +86,7 @@ const Nav = () => {
           <Link href="/home/furniture" className="logo">
             <Image
               src="/images/logo/holsterfont.png"
-              alt="Site Logo"
+              alt="Logo"
               height={40}
               width={150}
             />
