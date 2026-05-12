@@ -141,8 +141,8 @@ const ProductsData = [
     {
         id: 3,
         title: "Ice Kaktuz",
-        thumbnail: "/images/product/furniture/Ice Kaktuz_webshop_UAE.png",
-        hoverThumbnail: "/images/product/furniture/Ice Kaktuz_webshop_UAE.png",
+        thumbnail: "/images/product/furniture/IceKaktuz_webshop_UAE.png",
+        hoverThumbnail: "/images/product/furniture/IceKaktuz_webshop_UAE.png",
         cate: "Furniture",
         pCate: "Shisha Tobacco",
         price: 65,
