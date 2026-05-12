@@ -85,7 +85,7 @@ const Nav = () => {
         <div className="mobile-nav-brand">
           <Link href="/home/furniture" className="logo">
             <Image
-              src="/images/logo/Holsterfont.png"
+              src="/images/logo/holsterfont.png"
               alt="Site Logo"
               height={40}
               width={150}
