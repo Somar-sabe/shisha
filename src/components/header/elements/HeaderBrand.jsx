@@ -7,7 +7,7 @@ const HeaderBrand = (props) => {
             <Link href="/" className="logo">
             <Image
                 src={props.light ? Logo.light : Logo.dark}
-                alt="Site Logo"
+                alt="Logo"
                 height={40}
                 width={150}
             />
