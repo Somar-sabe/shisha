@@ -20,9 +20,9 @@ const ScocialLink = {
 }
 
 const Logo = {
-    light: "/images/logo/Holsterfont.png",
-    dark: "/images/logo/Holsterfont.png",
-    large: "/images/logo/Holsterfont.png"
+    light: "/images/logo/holsterfont.png",
+    dark: "/images/logo/holsterfont.png",
+    large: "/images/logo/holsterfont.png"
 }
 
 const StoreInfo = {
